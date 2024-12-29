@@ -1,0 +1,3301 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java类加载器 · Khaz's 知识库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Khaz">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro-fixed/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-d4t/style.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="SPI.html" />
+    
+    
+    <link rel="prev" href="Java泛型.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <a href="/"><div class="logo"></div></a>
+        <span class="title"></span>
+
+        <!-- Search -->
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+        <!-- Nav -->
+        <ul class="header-nav">
+            
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <div class="sidebar-nav-space"></div>
+        
+        
+        <nav role="navigation">
+            
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    01.渗透测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    01.信息收集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../01.渗透测试/01.信息收集/01.资产收集.html">
+            
+                <a href="../../../01.渗透测试/01.信息收集/01.资产收集.html">
+            
+                    
+                    01.资产收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../01.渗透测试/01.信息收集/02.指纹识别.html">
+            
+                <a href="../../../01.渗透测试/01.信息收集/02.指纹识别.html">
+            
+                    
+                    02.指纹识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../01.渗透测试/01.信息收集/03.敏感信息收集.html">
+            
+                <a href="../../../01.渗透测试/01.信息收集/03.敏感信息收集.html">
+            
+                    
+                    03.敏感信息收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    02.Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" >
+            
+                <span>
+            
+                    
+                    01.Sql注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" >
+            
+                <span>
+            
+                    
+                    Mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1.1" data-path="../../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                    
+                    Mysql基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.1.2" data-path="../../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                    
+                    Sql注入详解--Mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" >
+            
+                <span>
+            
+                    
+                    Sql Server
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.2.1" data-path="../../../01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                    
+                    Sql注入--MSSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../../../01.渗透测试/02.Web安全/01.Sql注入/配合其他.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/01.Sql注入/配合其他.html">
+            
+                    
+                    配合其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <span>
+            
+                    
+                    02.文件操作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" >
+            
+                <span>
+            
+                    
+                    文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1.1" data-path="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/01.漏洞了解.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.2" data-path="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                    
+                    02.黑名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.3" data-path="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/03.白名单绕过.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/03.白名单绕过.html">
+            
+                    
+                    03.白名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.4" data-path="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/04.WebShell上传.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/02.文件操作/文件上传/04.WebShell上传.html">
+            
+                    
+                    04.WebShell上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../../../01.渗透测试/02.Web安全/02.文件操作/文件包含.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/02.文件操作/文件包含.html">
+            
+                    
+                    文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.3" data-path="../../../01.渗透测试/02.Web安全/02.文件操作/文件读取和下载.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/02.文件操作/文件读取和下载.html">
+            
+                    
+                    任意文件读取和下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.4" data-path="../../../01.渗透测试/02.Web安全/02.文件操作/文件预览.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/02.文件操作/文件预览.html">
+            
+                    
+                    文件预览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    03.命令注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../../../01.渗透测试/02.Web安全/03.命令注入/01.漏洞了解.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/03.命令注入/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../../../01.渗透测试/02.Web安全/03.命令注入/02.漏洞利用.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/03.命令注入/02.漏洞利用.html">
+            
+                    
+                    02.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" data-path="../../../01.渗透测试/02.Web安全/03.命令注入/03.Dnslog.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/03.命令注入/03.Dnslog.html">
+            
+                    
+                    03.Dnslog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" >
+            
+                <span>
+            
+                    
+                    04.跨站脚本攻击
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../../../01.渗透测试/02.Web安全/04.跨站脚本攻击/01.前置知识.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/04.跨站脚本攻击/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../../../01.渗透测试/02.Web安全/04.跨站脚本攻击/02.漏洞了解.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/04.跨站脚本攻击/02.漏洞了解.html">
+            
+                    
+                    02.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.3" data-path="../../../01.渗透测试/02.Web安全/04.跨站脚本攻击/03.漏洞利用.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/04.跨站脚本攻击/03.漏洞利用.html">
+            
+                    
+                    03.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" >
+            
+                <span>
+            
+                    
+                    05.身份认证
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="../../../01.渗透测试/02.Web安全/05.身份认证/00.前置知识.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/05.身份认证/00.前置知识.html">
+            
+                    
+                    00.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" data-path="../../../01.渗透测试/02.Web安全/05.身份认证/01.登录框.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/05.身份认证/01.登录框.html">
+            
+                    
+                    01.登录框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.3" data-path="../../../01.渗透测试/02.Web安全/05.身份认证/02.越权.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/05.身份认证/02.越权.html">
+            
+                    
+                    02.越权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4" data-path="../../../01.渗透测试/02.Web安全/05.身份认证/03.JWT.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/05.身份认证/03.JWT.html">
+            
+                    
+                    JWT安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.5" data-path="../../../01.渗透测试/02.Web安全/05.身份认证/04.OAUTH.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/05.身份认证/04.OAUTH.html">
+            
+                    
+                    04.OAUTH
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.6" data-path="../../../01.渗透测试/02.Web安全/05.身份认证/05.一些案例.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/05.身份认证/05.一些案例.html">
+            
+                    
+                    05.一些案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" >
+            
+                <span>
+            
+                    
+                    06.API接口测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.6.1" data-path="../../../01.渗透测试/02.Web安全/06.API接口测试/01.前置知识.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/06.API接口测试/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6.2" data-path="../../../01.渗透测试/02.Web安全/06.API接口测试/03.Tips.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/06.API接口测试/03.Tips.html">
+            
+                    
+                    03.Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" >
+            
+                <span>
+            
+                    
+                    07.SSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.7.1" data-path="../../../01.渗透测试/02.Web安全/07.SSRF/SSRF.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/07.SSRF/SSRF.html">
+            
+                    
+                    SSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" >
+            
+                <span>
+            
+                    
+                    08.JSONP与CORS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.8.1" data-path="../../../01.渗透测试/02.Web安全/08.JSONP与CORS/CORS.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/08.JSONP与CORS/CORS.html">
+            
+                    
+                    CORS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8.2" data-path="../../../01.渗透测试/02.Web安全/08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                    
+                    JSONP跨域漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" >
+            
+                <span>
+            
+                    
+                    09.CSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.9.1" data-path="../../../01.渗透测试/02.Web安全/09.CSRF/CSRF.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/09.CSRF/CSRF.html">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" >
+            
+                <span>
+            
+                    
+                    10.XXE
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.10.1" data-path="../../../01.渗透测试/02.Web安全/10.XXE/XXE.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/10.XXE/XXE.html">
+            
+                    
+                    XXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" >
+            
+                <span>
+            
+                    
+                    11.逻辑漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.11.1" data-path="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                    
+                    01.短信验证码与图形验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.2" data-path="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                    
+                    02.任意用户密码重置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.3" data-path="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/03.支付漏洞.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/03.支付漏洞.html">
+            
+                    
+                    03.支付漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.4" data-path="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/04.其他.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/11.逻辑漏洞/04.其他.html">
+            
+                    
+                    04.其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" >
+            
+                <span>
+            
+                    
+                    12.微信小程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.12.1" data-path="../../../01.渗透测试/02.Web安全/12.微信小程序/小程序与公众号.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/12.微信小程序/小程序与公众号.html">
+            
+                    
+                    小程序与公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" >
+            
+                <span>
+            
+                    
+                    13.前端加密对抗
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.13.1" data-path="../../../01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.html">
+            
+                    
+                    前端加密渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="../../../01.渗透测试/02.Web安全/AI大模型.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/AI大模型.html">
+            
+                    
+                    AI大模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.15" data-path="../../../01.渗透测试/02.Web安全/Waf绕过学习.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/Waf绕过学习.html">
+            
+                    
+                    WAF绕过学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.16" data-path="../../../01.渗透测试/02.Web安全/其他.html">
+            
+                <a href="../../../01.渗透测试/02.Web安全/其他.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    03.云安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../../01.渗透测试/03.云安全/云安全.html">
+            
+                <a href="../../../01.渗透测试/03.云安全/云安全.html">
+            
+                    
+                    云安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    04.移动安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../../01.渗透测试/04.移动安全/APP渗透.html">
+            
+                <a href="../../../01.渗透测试/04.移动安全/APP渗透.html">
+            
+                    
+                    APP渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../../01.渗透测试/04.移动安全/环境.html">
+            
+                <a href="../../../01.渗透测试/04.移动安全/环境.html">
+            
+                    
+                    环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    05.漏洞复现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../../01.渗透测试/05.漏洞复现/Mysql%20Client 任意文件读取攻击.md">
+            
+                <span>
+            
+                    
+                    Mysql Client 任意文件读取攻击复现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../../01.渗透测试/05.漏洞复现/Redis漏洞.html">
+            
+                <a href="../../../01.渗透测试/05.漏洞复现/Redis漏洞.html">
+            
+                    
+                    Redis漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../../01.渗透测试/05.漏洞复现/shiro漏洞.html">
+            
+                <a href="../../../01.渗透测试/05.漏洞复现/shiro漏洞.html">
+            
+                    
+                    Shiro漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../../01.渗透测试/05.漏洞复现/spring漏洞复现.html">
+            
+                <a href="../../../01.渗透测试/05.漏洞复现/spring漏洞复现.html">
+            
+                    
+                    Spring框架漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../../01.渗透测试/05.漏洞复现/Tomcat.html">
+            
+                <a href="../../../01.渗透测试/05.漏洞复现/Tomcat.html">
+            
+                    
+                    Tomcat漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../../../01.渗透测试/05.漏洞复现/Weblogic.html">
+            
+                <a href="../../../01.渗透测试/05.漏洞复现/Weblogic.html">
+            
+                    
+                    Weblogic漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../../../01.渗透测试/05.漏洞复现/应用记录.html">
+            
+                <a href="../../../01.渗透测试/05.漏洞复现/应用记录.html">
+            
+                    
+                    渗透中常见应用记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="../../../01.渗透测试/05.漏洞复现/若依漏洞复现.html">
+            
+                <a href="../../../01.渗透测试/05.漏洞复现/若依漏洞复现.html">
+            
+                    
+                    若依漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    02.后渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../02.后渗透/Linux/Linux渗透.html">
+            
+                <a href="../../../02.后渗透/Linux/Linux渗透.html">
+            
+                    
+                    Linux渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Windows域渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../02.后渗透/Windows域渗透/Windows内网渗透.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/Windows内网渗透.html">
+            
+                    
+                    Windows内网渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../02.后渗透/Windows域渗透/入侵痕迹清理.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/入侵痕迹清理.html">
+            
+                    
+                    入侵痕迹清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../02.后渗透/Windows域渗透/后渗透之了解.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之了解.html">
+            
+                    
+                    后渗透之了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../../02.后渗透/Windows域渗透/后渗透之基础知识.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之基础知识.html">
+            
+                    
+                    后渗透之基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../../02.后渗透/Windows域渗透/后渗透之权限提升.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之权限提升.html">
+            
+                    
+                    后渗透之权限提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../../02.后渗透/Windows域渗透/后渗透之权限维持.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之权限维持.html">
+            
+                    
+                    后渗透之权限维持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    社会工程学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    近源
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1" data-path="../../../02.后渗透/社会工程学/近源/BadUsb.html">
+            
+                <a href="../../../02.后渗透/社会工程学/近源/BadUsb.html">
+            
+                    
+                    近源渗透之BadUSB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    钓鱼
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../../../02.后渗透/社会工程学/钓鱼/SPF伪造.html">
+            
+                <a href="../../../02.后渗透/社会工程学/钓鱼/SPF伪造.html">
+            
+                    
+                    初探邮件钓鱼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../../02.后渗透/隧道搭建.html">
+            
+                <a href="../../../02.后渗透/隧道搭建.html">
+            
+                    
+                    端口转发与代理搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    03.代码审计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    .Net
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../.Net/.net渗透.html">
+            
+                <a href="../../.Net/.net渗透.html">
+            
+                    
+                    .net渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    JAVA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" >
+            
+                <span>
+            
+                    
+                    01.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="Java反射.html">
+            
+                <a href="Java反射.html">
+            
+                    
+                    Java反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="Java泛型.html">
+            
+                <a href="Java泛型.html">
+            
+                    
+                    Java泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.1.3" data-path="Java类加载器.html">
+            
+                <a href="Java类加载器.html">
+            
+                    
+                    Java类加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="SPI.html">
+            
+                <a href="SPI.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" >
+            
+                <span>
+            
+                    
+                    02.基础漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../02.基础漏洞/代码注入.html">
+            
+                <a href="../02.基础漏洞/代码注入.html">
+            
+                    
+                    代码注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../02.基础漏洞/命令注入.html">
+            
+                <a href="../02.基础漏洞/命令注入.html">
+            
+                    
+                    命令注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../02.基础漏洞/模板注入.html">
+            
+                <a href="../02.基础漏洞/模板注入.html">
+            
+                    
+                    模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../02.基础漏洞/表达式注入.html">
+            
+                <a href="../02.基础漏洞/表达式注入.html">
+            
+                    
+                    表达式注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" >
+            
+                <span>
+            
+                    
+                    03.JavaWeb了解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../03.JavaWeb了解/Spring.html">
+            
+                <a href="../03.JavaWeb了解/Spring.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../03.JavaWeb了解/Struts2.html">
+            
+                <a href="../03.JavaWeb了解/Struts2.html">
+            
+                    
+                    Struts 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../03.JavaWeb了解/Tomcat.html">
+            
+                <a href="../03.JavaWeb了解/Tomcat.html">
+            
+                    
+                    Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" >
+            
+                <span>
+            
+                    
+                    04.反序列化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" >
+            
+                <span>
+            
+                    
+                    CC链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1.1" data-path="../04.反序列化/CC链/CC1--LazyMap.html">
+            
+                <a href="../04.反序列化/CC链/CC1--LazyMap.html">
+            
+                    
+                    JAVA反序列化之CC1--LazyMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.2" data-path="../04.反序列化/CC链/CC1-TransFormed.html">
+            
+                <a href="../04.反序列化/CC链/CC1-TransFormed.html">
+            
+                    
+                    Java反序列化之CC1-TransFormed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.3" data-path="../04.反序列化/CC链/URLDNS链.html">
+            
+                <a href="../04.反序列化/CC链/URLDNS链.html">
+            
+                    
+                    Java反序列化之URLDNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="../04.反序列化/FastJson.html">
+            
+                <a href="../04.反序列化/FastJson.html">
+            
+                    
+                    Fastjson漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="../04.反序列化/JNDI.html">
+            
+                <a href="../04.反序列化/JNDI.html">
+            
+                    
+                    JNDI注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Java-Thymeleaf模板注入.html">
+            
+                <a href="../Java-Thymeleaf模板注入.html">
+            
+                    
+                    Thymeleaf 模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../JavaAttack.html">
+            
+                <a href="../JavaAttack.html">
+            
+                    
+                    Java Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../Java代审--常见漏洞函数.html">
+            
+                <a href="../Java代审--常见漏洞函数.html">
+            
+                    
+                    Java代码审计--常见漏洞函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../PHP/phpinfo.html">
+            
+                <a href="../../PHP/phpinfo.html">
+            
+                    
+                    phpinfo中的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../PHP/PHP代码审计.html">
+            
+                <a href="../../PHP/PHP代码审计.html">
+            
+                    
+                    PHP代码审计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../PHP/php代码审计基础.html">
+            
+                <a href="../../PHP/php代码审计基础.html">
+            
+                    
+                    PHP代码审计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../PHP/php反序列化.html">
+            
+                <a href="../../PHP/php反序列化.html">
+            
+                    
+                    PHP反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../python反序列化.html">
+            
+                <a href="../../python反序列化.html">
+            
+                    
+                    Python反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    04.工具使用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../04.工具使用/00.注意.html">
+            
+                <a href="../../../04.工具使用/00.注意.html">
+            
+                    
+                    00.注意
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../04.工具使用/01.Cobal%20Strike.md">
+            
+                <span>
+            
+                    
+                    01.Cobal Strike
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../04.工具使用/02.MSF.html">
+            
+                <a href="../../../04.工具使用/02.MSF.html">
+            
+                    
+                    02.MSF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../04.工具使用/03.抓包工具.html">
+            
+                <a href="../../../04.工具使用/03.抓包工具.html">
+            
+                    
+                    03.抓包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../../04.工具使用/04.gogo.html">
+            
+                <a href="../../../04.工具使用/04.gogo.html">
+            
+                    
+                    04.gogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../../04.工具使用/05.辅助工具.html">
+            
+                <a href="../../../04.工具使用/05.辅助工具.html">
+            
+                    
+                    05.辅助工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    05.编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../../05.编程开发/Python/POC模板.html">
+            
+                <a href="../../../05.编程开发/Python/POC模板.html">
+            
+                    
+                    POC编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../../05.编程开发/Python/python命名空间.html">
+            
+                <a href="../../../05.编程开发/Python/python命名空间.html">
+            
+                    
+                    python命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../../05.编程开发/Python/python技巧.html">
+            
+                <a href="../../../05.编程开发/Python/python技巧.html">
+            
+                    
+                    python技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    工具原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../../05.编程开发/工具原理/sqlmap.html">
+            
+                <a href="../../../05.编程开发/工具原理/sqlmap.html">
+            
+                    
+                    Sqlmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../../05.编程开发/Nginx.html">
+            
+                <a href="../../../05.编程开发/Nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    06.WriteUp
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    CTF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                <a href="../../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                    
+                    2022 安洵杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                <a href="../../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                    
+                    bugku 应急响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../../06.WriteUp/CTF/BUU.md">
+            
+                <span>
+            
+                    
+                    BUUCTF刷题合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../../06.WriteUp/CTF/HNCTF.html">
+            
+                <a href="../../../06.WriteUp/CTF/HNCTF.html">
+            
+                    
+                    HNCTF 2022
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../../../06.WriteUp/CTF/misc.html">
+            
+                <a href="../../../06.WriteUp/CTF/misc.html">
+            
+                    
+                    MISC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                <a href="../../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                    
+                    New Star CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../../../06.WriteUp/CTF/NodeJs.html">
+            
+                <a href="../../../06.WriteUp/CTF/NodeJs.html">
+            
+                    
+                    NodeJs相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../../../06.WriteUp/CTF/NSSRound5.html">
+            
+                <a href="../../../06.WriteUp/CTF/NSSRound5.html">
+            
+                    
+                    NSS Round 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../../../06.WriteUp/CTF/NSSRound6.html">
+            
+                <a href="../../../06.WriteUp/CTF/NSSRound6.html">
+            
+                    
+                    NSS Round 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../../../06.WriteUp/CTF/环境变量注入.html">
+            
+                <a href="../../../06.WriteUp/CTF/环境变量注入.html">
+            
+                    
+                    环境变量注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    靶机
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                <a href="../../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                    
+                    Hack The Box Alert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                <a href="../../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                    
+                    Vulnhub--blue系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                <a href="../../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                    
+                    Vulnhub--DC系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../../06.WriteUp/靶机/红日靶场1.html">
+            
+                <a href="../../../06.WriteUp/靶机/红日靶场1.html">
+            
+                    
+                    红日靶场1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    07.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../../07.基础知识/Linux/linux-shell.html">
+            
+                <a href="../../../07.基础知识/Linux/linux-shell.html">
+            
+                    
+                    《Linux命令行与shell脚本编程大全》 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../../07.基础知识/Linux/Linux命令.html">
+            
+                <a href="../../../07.基础知识/Linux/Linux命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../../07.基础知识/Linux/Linux命令本质.html">
+            
+                <a href="../../../07.基础知识/Linux/Linux命令本质.html">
+            
+                    
+                    Linux命令本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    Windows
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../07.基础知识/Windows/windows基本操作.html">
+            
+                <a href="../../../07.基础知识/Windows/windows基本操作.html">
+            
+                    
+                    windows基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../../07.基础知识/计算机网络/ARP协议.html">
+            
+                <a href="../../../07.基础知识/计算机网络/ARP协议.html">
+            
+                    
+                    ARP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../../07.基础知识/计算机网络/DNS协议.html">
+            
+                <a href="../../../07.基础知识/计算机网络/DNS协议.html">
+            
+                    
+                    DNS协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                <a href="../../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                    
+                    计算机网络MOOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                <a href="../../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                    
+                    虚拟机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                <a href="../../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                    
+                    tombkeeper关于信息安全学习的分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../../07.基础知识/名词解释.html">
+            
+                <a href="../../../07.基础知识/名词解释.html">
+            
+                    
+                    常见名词与概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../../07.基础知识/渗透测试和红队的区别.html">
+            
+                <a href="../../../07.基础知识/渗透测试和红队的区别.html">
+            
+                    
+                    转载--渗透测试和红队的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../../07.基础知识/编码.html">
+            
+                <a href="../../../07.基础知识/编码.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    08.杂七杂八
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../08.杂七杂八/个人信息保护.html">
+            
+                <a href="../../../08.杂七杂八/个人信息保护.html">
+            
+                    
+                    个人信息保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../08.杂七杂八/华为安装谷歌.html">
+            
+                <a href="../../../08.杂七杂八/华为安装谷歌.html">
+            
+                    
+                    华为安装谷歌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../../08.杂七杂八/安全方向.html">
+            
+                <a href="../../../08.杂七杂八/安全方向.html">
+            
+                    
+                    安全方向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../../08.杂七杂八/手机VPN共享.html">
+            
+                <a href="../../../08.杂七杂八/手机VPN共享.html">
+            
+                    
+                    手机VPN共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../../08.杂七杂八/换内存条.html">
+            
+                <a href="../../../08.杂七杂八/换内存条.html">
+            
+                    
+                    如何更换内存条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../../08.杂七杂八/面试记录.html">
+            
+                <a href="../../../08.杂七杂八/面试记录.html">
+            
+                    
+                    笔/面记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+        
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <div class="book-anchor-title">ON THIS PAGE</div>
+        <div class="book-anchor-body">
+
+        </div>
+    </div>
+
+    <div class="book-body">
+        
+        <div class="body-inner">
+            
+            
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Java类加载器</a>
+    </h1>
+</div>
+
+
+
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                    <section class="normal markdown-section">
+                        
+                        <blockquote>
+<p>&#x8F6C;&#x8F7D;&#x81EA;<a href="https://xz.aliyun.com/t/9002#toc-0" target="_blank">JAVA&#x5B89;&#x5168;&#x57FA;&#x7840;&#xFF08;&#x4E00;&#xFF09;--&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF08;ClassLoader&#xFF09; - &#x5148;&#x77E5;&#x793E;&#x533A; (aliyun.com)</a></p>
+</blockquote>
+<h2 id="0x01-&#x6982;&#x5FF5;">0x01 &#x6982;&#x5FF5;</h2>
+<p>Java&#x7C7B;&#x52A0;&#x8F7D;&#x5668;(Java Classloader)&#x662F;Java&#x8FD0;&#x884C;&#x65F6;&#x73AF;&#x5883;(Java Runtime Environment)&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x8D1F;&#x8D23;&#x52A8;&#x6001;&#x52A0;&#x8F7D;Java&#x7C7B;&#x5230;Java&#x865A;&#x62DF;&#x673A;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;&#x7CFB;&#x7EDF;&#x3001;&#x7F51;&#x7EDC;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x6765;&#x6E90;&#x7684;&#x7C7B;&#x6587;&#x4EF6;&#x3002;Java&#x6E90;&#x4EE3;&#x7801;&#x901A;&#x8FC7;javac&#x7F16;&#x8BD1;&#x5668;&#x7F16;&#x8BD1;&#x6210;&#x7C7B;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;JVM&#x6765;&#x6267;&#x884C;&#x7C7B;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6765;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x3002;</p>
+<h2 id="0x02-java&#x7C7B;&#x8FD0;&#x884C;">0x02 Java&#x7C7B;&#x8FD0;&#x884C;</h2>
+<p><img src="../images/EsePjI7n9CtyqbA.png" alt="image-20230502220543579"></p>
+<p>&#x4E00;&#x5207;&#x7684;Java&#x7C7B;&#x90FD;&#x5FC5;&#x987B;&#x5148;&#x8F6C;&#x6362;&#x4E3A;&#x7C7B;&#x5B57;&#x8282;&#x7801;&#x7136;&#x540E;&#x7ECF;&#x8FC7;JVM&#x52A0;&#x8F7D;&#x540E;&#x624D;&#x80FD;&#x8FD0;&#x884C;&#xFF0C;&#x800C;<code>ClassLoader</code>&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x5C31;&#x662F;Java&#x7C7B;&#x6587;&#x4EF6;&#xFF08;&#x7C7B;&#x5B57;&#x8282;&#x7801;&#xFF09;&#x7684;&#x52A0;&#x8F7D;</p>
+<h2 id="0x03-&#x5E94;&#x7528;&#x573A;&#x666F;">0x03 &#x5E94;&#x7528;&#x573A;&#x666F;</h2>
+<h3 id="1&#x3001;&#x8D44;&#x6E90;&#x9694;&#x79BB;">1&#x3001;&#x8D44;&#x6E90;&#x9694;&#x79BB;</h3>
+<p>&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x9879;&#x76EE;&#x6216;&#x8005;&#x540C;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;jar&#x5305;&#x9694;&#x79BB;&#xFF0C;&#x907F;&#x514D;&#x96C6;&#x7FA4;&#x9519;&#x8BEF;&#x6216;&#x8005;&#x51B2;&#x7A81;&#x7684;&#x4EA7;&#x751F;&#x3002;</p>
+<h3 id="2&#x3001;&#x70ED;&#x90E8;&#x7F72;">2&#x3001;&#x70ED;&#x90E8;&#x7F72;</h3>
+<p>&#x5BF9;&#x4E8E;Java&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x8BF4;&#xFF0C;&#x70ED;&#x90E8;&#x7F72;&#x5C31;&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x66F4;&#x65B0;Java&#x7C7B;&#x6587;&#x4EF6;&#x3002;&#x5728;&#x57FA;&#x4E8E;Java&#x7684;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#x5B9E;&#x73B0;&#x70ED;&#x90E8;&#x7F72;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7C7B;&#x88C5;&#x5165;&#x5668;&#x626E;&#x6F14;&#x7740;&#x91CD;&#x8981;&#x7684;&#x89D2;&#x8272;&#x3002;&#x7C7B;&#x88C5;&#x5165;&#x5668;&#x4E0D;&#x80FD;&#x91CD;&#x65B0;&#x88C5;&#x5165;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x88C5;&#x5165;&#x7684;&#x7C7B;&#xFF0C;&#x4F46;&#x53EA;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7C7B;&#x88C5;&#x5165;&#x5668;&#x5B9E;&#x4F8B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x7C7B;&#x518D;&#x6B21;&#x88C5;&#x5165;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x5347;&#x7EA7;&#x8F6F;&#x4EF6;&#xFF0C;&#x5374;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x5E94;&#x7528;&#x3002;</p>
+<h3 id="3&#x3001;&#x4EE3;&#x7801;&#x4FDD;&#x62A4;">3&#x3001;&#x4EE3;&#x7801;&#x4FDD;&#x62A4;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x7684;ClassLoader&#x89E3;&#x5BC6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x518D;&#x52A0;&#x8F7D;&#x8FD9;&#x4E9B;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x5BF9;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x9879;&#x76EE;&#x52A0;&#x5BC6;&#x4FDD;&#x62A4;&#xFF0C;&#x522B;&#x4EBA;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x53CD;&#x7F16;&#x8BD1;&#x67E5;&#x770B;&#x6E90;&#x4EE3;&#x7801;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="0x04-&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;">0x04 &#x53CC;&#x4EB2;&#x59D4;&#x6D3E;</h2>
+<ul>
+<li><p>Bootstrap ClassLoader&#xFF08;&#x5F15;&#x5BFC;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF09;</p>
+<blockquote>
+<p>&#x5F15;&#x5BFC;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;(BootstrapClassLoader)&#xFF0C;&#x5E95;&#x5C42;&#x539F;&#x751F;&#x4EE3;&#x7801;&#x662F;C++&#x8BED;&#x8A00;&#x7F16;&#x5199;&#xFF0C;&#x5C5E;&#x4E8E;jvm&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x7EE7;&#x627F;java.lang.ClassLoader&#x7C7B;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x7236;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x52A0;&#x8F7D;&#x6838;&#x5FC3;java&#x5E93;(&#x5373;JVM&#x672C;&#x8EAB;)&#xFF0C;&#x5B58;&#x50A8;&#x5728;/jre/lib/rt.jar&#x76EE;&#x5F55;&#x5F53;&#x4E2D;</p>
+</blockquote>
+</li>
+<li><p>Extension ClassLoader&#xFF08;&#x6269;&#x5C55;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF09;</p>
+<blockquote>
+<p>&#x6269;&#x5C55;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;(ExtensionsClassLoader)&#x7528;&#x6765;&#x5728;/jre/lib/ext&#x6216;&#x8005;java.ext.dirs&#x4E2D;&#x6307;&#x660E;&#x7684;&#x76EE;&#x5F55;&#x52A0;&#x8F7D;java&#x7684;&#x6269;&#x5C55;&#x5E93;&#x3002;Java&#x865A;&#x62DF;&#x673A;&#x4F1A;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x6269;&#x5C55;&#x5E93;&#x76EE;&#x5F55;&#xFF0C;&#x6B64;&#x52A0;&#x8F7D;&#x5668;&#x5728;&#x76EE;&#x5F55;&#x91CC;&#x9762;&#x67E5;&#x627E;&#x5E76;&#x52A0;&#x8F7D;java&#x7C7B;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>App ClassLoader&#xFF08;&#x7CFB;&#x7EDF;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF09;</p>
+<blockquote>
+<p>&#x7CFB;&#x7EDF;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF08;App ClassLoader&#xFF09;&#x4E00;&#x822C;&#x901A;&#x8FC7;&#x901A;&#x8FC7;(java.class.path&#x6216;&#x8005;Classpath&#x73AF;&#x5883;&#x53D8;&#x91CF;)&#x6765;&#x52A0;&#x8F7D;Java&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5E38;&#x8BF4;&#x7684;classpath&#x8DEF;&#x5F84;&#x3002;</p>
+<p><code>AppClassLoader</code>&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x7C7B;&#x52A0;&#x8F7D;&#x65F6;&#x6211;&#x4EEC;&#x4E0D;&#x6307;&#x5B9A;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x4F7F;&#x7528;<code>AppClassLoader</code>&#x52A0;&#x8F7D;</p>
+</blockquote>
+</li>
+</ul>
+<p>&#x83B7;&#x5F97;&#x7C7B;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;</p>
+<pre class="language-"><code class="lang-java">xxx<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="../images/20210108151613-642298d0-5181-1.png" alt="20210108151613-642298d0-5181-1"></p>
+<p>&#x5982;&#x4E0A;&#x56FE;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x5C42;&#x6B21;&#x5173;&#x7CFB;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x79F0;&#x4E3A;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x7684;&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x6A21;&#x578B;&#x3002;&#x4F46;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4ED6;&#x4EEC;&#x4E4B;&#x95F4;&#x5E76;&#x4E0D;&#x662F;&quot;&#x7EE7;&#x627F;&quot;&#x4F53;&#x7CFB;&#xFF0C;&#x800C;&#x662F;&#x59D4;&#x6D3E;&#x4F53;&#x7CFB;&#x3002;&#x5F53;&#x4E0A;&#x8FF0;&#x7279;&#x5B9A;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x63A5;&#x5230;&#x52A0;&#x8F7D;&#x7C7B;&#x7684;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x4F1A;&#x5148;&#x5C06;&#x4EFB;&#x52A1;&#x59D4;&#x6258;&#x7ED9;&#x7236;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x63A5;&#x7740;&#x8BF7;&#x6C42;&#x7236;&#x7C7B;&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x7C7B;&#xFF0C;&#x5F53;&#x7236;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x65E0;&#x6CD5;&#x52A0;&#x8F7D;&#x65F6;&#xFF08;&#x5176;&#x76EE;&#x5F55;&#x641C;&#x7D20;&#x8303;&#x56F4;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6240;&#x9700;&#x8981;&#x7684;&#x7C7B;&#x65F6;&#xFF09;&#xFF0C;&#x5B50;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x624D;&#x4F1A;&#x8FDB;&#x884C;&#x52A0;&#x8F7D;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x6709;&#x4E9B;&#x7C7B;&#x88AB;&#x91CD;&#x590D;&#x52A0;&#x8F7D;&#x3002;</p>
+<blockquote>
+<h3 id="&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x597D;&#x5904;">&#x53CC;&#x4EB2;&#x59D4;&#x6D3E;&#x597D;&#x5904;</h3>
+<p>1&#x3001;&#x8FD9;&#x6837;&#x5C31;&#x662F;&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x6709;&#x4E9B;&#x7C7B;&#x907F;&#x514D;&#x91CD;&#x590D;&#x52A0;&#x8F7D;&#x4F7F;&#x7528;&#xFF0C;&#x76F4;&#x63A5;&#x5148;&#x7ED9;&#x7236;&#x52A0;&#x8F7D;&#x5668;&#x52A0;&#x8F7D;&#xFF0C;&#x4E0D;&#x7528;&#x5B50;&#x52A0;&#x8F7D;&#x5668;&#x518D;&#x6B21;&#x91CD;&#x590D;&#x52A0;&#x8F7D;&#x3002;</p>
+<p>2&#x3001;&#x4FDD;&#x8BC1;java&#x6838;&#x5FC3;&#x5E93;&#x7684;&#x7C7B;&#x578B;&#x5B89;&#x5168;&#x3002;&#x6BD4;&#x5982;&#x7F51;&#x7EDC;&#x4E0A;&#x4F20;&#x8F93;&#x4E86;&#x4E00;&#x4E2A;java.lang.Object&#x7C7B;&#xFF0C;&#x901A;&#x8FC7;&#x53CC;&#x4EB2;&#x6A21;&#x5F0F;&#x4F20;&#x9012;&#x5230;&#x542F;&#x52A8;&#x7C7B;&#x5F53;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x73B0;&#x5176;Object&#x7C7B;&#x65E9;&#x5DF2;&#x88AB;&#x52A0;&#x8F7D;&#x8FC7;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4E0D;&#x4F1A;&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x8FC7;&#x6765;&#x7684;java.lang.Object&#x7C7B;</p>
+</blockquote>
+<h2 id="classloader&#x7C7B;&#x6838;&#x5FC3;&#x65B9;&#x6CD5;">CLassLoader&#x7C7B;&#x6838;&#x5FC3;&#x65B9;&#x6CD5;</h2>
+<p>&#x9664;&#x4E86;&#x4E0A;&#x8FF0;BootstrapClassLoader&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x90FD;&#x662F;&#x7EE7;&#x627F;&#x4E86;CLassLoader&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E00;&#x8D77;&#x770B;&#x770B;&#x5176;&#x7C7B;&#x7684;&#x6838;&#x5FC3;&#x65B9;&#x6CD5;&#x3002;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x622A;&#x53D6;&#x4E86;&#x5176;&#x65B9;&#x6CD5;&#x7684;&#x6E90;&#x7801;&#x3002;</p>
+<h3 id="1&#x3001;loadclass">1&#x3001;loadClass</h3>
+<p><strong>&#x52A0;&#x8F7D;&#x6307;&#x5B9A;&#x7684;java&#x7C7B;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">protected</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token function">loadClass</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">boolean</span> resolve<span class="token punctuation">)</span>
+        <span class="token keyword">throws</span> <span class="token class-name">ClassNotFoundException</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token function">getClassLoadingLock</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// First, check if the class has already been loaded</span>
+            <span class="token class-name">Class</span> c <span class="token operator">=</span> <span class="token function">findLoadedClass</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">long</span> t0 <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">nanoTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>parent <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        c <span class="token operator">=</span> parent<span class="token punctuation">.</span><span class="token function">loadClass</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                        c <span class="token operator">=</span> <span class="token function">findBootstrapClassOrNull</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ClassNotFoundException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// ClassNotFoundException thrown if class not found</span>
+                    <span class="token comment">// from the non-null parent class loader</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// If still not found, then invoke findClass in order</span>
+                    <span class="token comment">// to find the class.</span>
+                    <span class="token keyword">long</span> t1 <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">nanoTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    c <span class="token operator">=</span> <span class="token function">findClass</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                    <span class="token comment">// this is the defining class loader; record the stats</span>
+                    <span class="token class-name"><span class="token namespace">sun<span class="token punctuation">.</span>misc<span class="token punctuation">.</span></span>PerfCounter</span><span class="token punctuation">.</span><span class="token function">getParentDelegationTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addTime</span><span class="token punctuation">(</span>t1 <span class="token operator">-</span> t0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token class-name"><span class="token namespace">sun<span class="token punctuation">.</span>misc<span class="token punctuation">.</span></span>PerfCounter</span><span class="token punctuation">.</span><span class="token function">getFindClassTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addElapsedTimeFrom</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token class-name"><span class="token namespace">sun<span class="token punctuation">.</span>misc<span class="token punctuation">.</span></span>PerfCounter</span><span class="token punctuation">.</span><span class="token function">getFindClasses</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>resolve<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">resolveClass</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> c<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;loadClass&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5B83;&#x5148;&#x4F7F;&#x7528;&#x4E86;findLoadedClass(String)&#x65B9;&#x6CD5;&#x6765;&#x68C0;&#x67E5;&#x8FD9;&#x4E2A;&#x7C7B;&#x662F;&#x5426;&#x88AB;&#x52A0;&#x8F7D;&#x8FC7;&#x3002;</p>
+<p>&#x63A5;&#x7740;&#x4F7F;&#x7528;&#x7236;&#x52A0;&#x8F7D;&#x5668;&#x8C03;&#x7528;loadClass&#xFF08;String&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x7236;&#x52A0;&#x8F7D;&#x5668;&#x4E3A;null&#xFF0C;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x52A0;&#x8F7D;jvm&#x5185;&#x7F6E;&#x7684;&#x52A0;&#x8F7D;&#x5668;&#x3002;</p>
+<p>&#x4E4B;&#x540E;&#x5C31;&#x8C03;&#x7528;findClass(String) &#x65B9;&#x6CD5;&#x88C5;&#x8F7D;&#x7C7B;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x6B65;&#x9AA4;&#x6211;&#x4EEC;&#x627E;&#x5230;&#x4E86;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x4E14;&#x63A5;&#x6536;&#x5230;&#x7684;resolve&#x53C2;&#x6570;&#x7684;&#x503C;&#x4E3A;true,&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x8C03;&#x7528;resolveClass(Class)&#x65B9;&#x6CD5;&#x6765;&#x5904;&#x7406;&#x7C7B;&#x3002;</p>
+<h3 id="2&#x3001;findclass">2&#x3001;findCLass</h3>
+<p><strong>&#x67E5;&#x627E;&#x6307;&#x5B9A;&#x7684;Java&#x7C7B;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">protected</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token function">findClass</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ClassNotFoundException</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ClassNotFoundException</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h3 id="3&#x3001;findloadedclass">3&#x3001;findLoadedClass</h3>
+<p><strong>&#x67E5;&#x627E;JVM&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x8FC7;&#x7684;&#x7C7B;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token function">findLoadedClass</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">checkName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">findLoadedClass0</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h3 id="4&#x3001;defineclass">4&#x3001;defineClass</h3>
+<p><strong>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Java&#x7C7B;&#xFF0C;&#x5C06;&#x5B57;&#x8282;&#x7801;&#x89E3;&#x6790;&#x6210;&#x865A;&#x62DF;&#x673A;&#x8BC6;&#x522B;&#x7684;Class&#x5BF9;&#x8C61;&#xFF08;&#x5C31;&#x662F;&#x5728;JVM&#x4E2D;&#x6CE8;&#x518C;&#x8BE5;&#x7C7B;&#xFF09;&#x3002;&#x5F80;&#x5F80;&#x548C;findClass()&#x65B9;&#x6CD5;&#x914D;&#x5408;&#x4F7F;&#x7528;&#x3002;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token function">defineClass</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> b<span class="token punctuation">,</span> <span class="token keyword">int</span> off<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span>
+        <span class="token keyword">throws</span> <span class="token class-name">ClassFormatError</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">defineClass</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> b<span class="token punctuation">,</span> off<span class="token punctuation">,</span> len<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h3 id="5&#x3001;resolveclass">5&#x3001;resolveClass</h3>
+<p><strong>&#x94FE;&#x63A5;&#x6307;&#x5B9A;Java&#x7C7B;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">resolveClass</span><span class="token punctuation">(</span><span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolveClass0</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">native</span> <span class="token keyword">void</span> <span class="token function">resolveClass0</span><span class="token punctuation">(</span><span class="token class-name">Class</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x8FC7;&#x7A0B;">&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x8FC7;&#x7A0B;</h2>
+<p>&#x56E0;&#x4E3A;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4EC5;&#x4EC5;&#x53EA;&#x5E0C;&#x671B;&#x4F7F;&#x7528;classpath&#x5F53;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x6216;&#x8005;jar&#x5305;&#x8FDB;&#x884C;&#x8C03;&#x7528;&#x4F7F;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x5E0C;&#x671B;&#x8C03;&#x7528;&#x672C;&#x5730;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x7F51;&#x7EDC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x5728;&#x4E0A;&#x9762;loadClass&#x65B9;&#x6CD5;&#x5206;&#x6790;&#x4E2D;&#xFF0C;&#x4ED6;&#x5185;&#x90E8;&#x5176;&#x5B9E;&#x662F;&#x8C03;&#x7528;findClass(String) &#x65B9;&#x6CD5;&#x6765;&#x88C5;&#x8F7D;&#x7C7B;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x60F3;&#x52A0;&#x8F7D;&#x81EA;&#x5DF1;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#xFF0C;&#x5C31;&#x662F;&#x8986;&#x76D6;&#x8FD9;&#x4E2A;findClass(String) &#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;loadClass&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x5C31;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p>1&#x3001;&#x7EE7;&#x627F;ClassLoader&#x7C7B;</p>
+<p>2&#x3001;&#x8986;&#x76D6;findClass()&#x65B9;&#x6CD5;</p>
+<p>3&#x3001;&#x5728;findClass()&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;defineClass()&#x65B9;&#x6CD5;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x501F;&#x52A9;&#x4E00;&#x4E2A;&#x52A0;&#x5BC6;java&#x7C7B;&#x5B57;&#x8282;&#x7801;&#x4F8B;&#x5B50;&#x6765;&#x8BB2;&#x89E3;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;CypherTest.java&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;java -d . CypherTest.java&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x80FD;&#x751F;&#x6210;CypherTest.class&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
+<p>CypherTest.java&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>test</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CypherTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;This experiment test is successful&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x4E86;CypherTest.class&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="E:/blog/source/images/20210108153058-73a8d0f6-5183-1.png" alt="20210108153058-73a8d0f6-5183-1"></p>
+<p>&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x52A0;&#x5BC6;&#x7C7B;Encryption&#xFF0C;&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x7684;&#x9010;&#x4F4D;&#x53D6;&#x53CD;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>testCypher</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Encryption</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">encode</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">&quot;/usr/local/com/test/CypherTest.class&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// &#x83B7;&#x53D6;&#x8DEF;&#x5F84;CypherTest.class&#x6587;&#x4EF6;</span>
+                <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">&quot;/usr/local/temp/com/test/CypherTest.class&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;temp&#x76EE;&#x5F55;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">encode</span><span class="token punctuation">(</span><span class="token class-name">File</span> src<span class="token punctuation">,</span> <span class="token class-name">File</span> dest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FileInputStream</span> fis <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">FileOutputStream</span> fos <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span>dest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// &#x9010;&#x4F4D;&#x53D6;&#x53CD;&#x64CD;&#x4F5C;</span>
+            <span class="token keyword">int</span> temp <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>temp <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">// &#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x8282;</span>
+                fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>temp <span class="token operator">^</span> <span class="token number">0xff</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// &#x53D6;&#x53CD;&#x8F93;&#x51FA;</span>
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span> <span class="token comment">// &#x5173;&#x95ED;&#x6570;&#x636E;&#x6D41;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>fis <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;This experiment test is successful&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x751F;&#x6210;&#x4E86;&#x52A0;&#x5BC6;&#x540E;&#x65B0;&#x7684;CypherTest.class&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="E:/blog/source/images/20210108153148-9133b8e8-5183-1.png" alt="20210108153148-9133b8e8-5183-1"></p>
+<p>&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x52A0;&#x5BC6;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x5DE5;&#x5177;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x53CD;&#x7F16;&#x8BD1;&#x64CD;&#x4F5C;&#x548C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;jvm&#x9ED8;&#x8BA4;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x53BB;&#x4F7F;&#x7528;&#x5B83;&#x3002;</p>
+<p>&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x518D;&#x7F16;&#x5199;&#x4E00;&#x4E2A;Dectyption&#x89E3;&#x5BC6;&#x7C7B;&#xFF0C;&#x5BF9;&#x65B0;&#x52A0;&#x5BC6;&#x7684;CypherTest.class&#x8FDB;&#x884C;&#x89E3;&#x5BC6;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>testCypher</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">ByteArrayOutputStream</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">FileInputStream</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">InputStream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Decryption</span> <span class="token keyword">extends</span> <span class="token class-name">ClassLoader</span> <span class="token punctuation">{</span> <span class="token comment">// &#x7EE7;&#x627F;ClassLoader&#x7C7B;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> rootDir<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Decryption</span><span class="token punctuation">(</span><span class="token class-name">String</span> rootDir<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>rootDir <span class="token operator">=</span> rootDir<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span> <span class="token comment">// &#x91CD;&#x5199;&#x8986;&#x76D6;findClass</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token function">findClass</span><span class="token punctuation">(</span><span class="token class-name">String</span> className<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ClassNotFoundException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> c <span class="token operator">=</span> <span class="token function">findLoadedClass</span><span class="token punctuation">(</span>className<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> c<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">ClassLoader</span> parent <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                c <span class="token operator">=</span> parent<span class="token punctuation">.</span><span class="token function">loadClass</span><span class="token punctuation">(</span>className<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ClassNotFoundException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// System.out.println(&quot;&#x7236;&#x7C7B;&#x65E0;&#x6CD5;&#x52A0;&#x8F7D;&#x4F60;&#x7684;class&#xFF0C;&#x629B;&#x51FA;ClassNotFoundException,&#x5DF2;&#x6355;&#x83B7;&#xFF0C;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&quot;);</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&#x7236;&#x7C7B;&#x6210;&#x529F;&#x52A0;&#x8F7D;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> c<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token comment">// &#x8BFB;&#x53D6;&#x6587;&#x4EF6; &#x8F6C;&#x5316;&#x6210;&#x5B57;&#x8282;&#x6570;&#x7EC4;</span>
+                <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> classData <span class="token operator">=</span> <span class="token function">getClassData</span><span class="token punctuation">(</span>className<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>classData <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ClassNotFoundException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token comment">// &#x8C03;&#x7528;defineClass()&#x65B9;&#x6CD5;</span>
+                    c <span class="token operator">=</span> <span class="token function">defineClass</span><span class="token punctuation">(</span>className<span class="token punctuation">,</span> classData<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> classData<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> c<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">getClassData</span><span class="token punctuation">(</span><span class="token class-name">String</span> className<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> path <span class="token operator">=</span> rootDir <span class="token operator">+</span> <span class="token string">&quot;/&quot;</span> <span class="token operator">+</span> className<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token char">&apos;.&apos;</span><span class="token punctuation">,</span> <span class="token char">&apos;/&apos;</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;.class&quot;</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x5C06;&#x6D41;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x8282;&#x6570;&#x7EC4;</span>
+        <span class="token class-name">InputStream</span> is <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">ByteArrayOutputStream</span> baos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ByteArrayOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            is <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> temp <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>temp <span class="token operator">=</span> is<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                baos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>temp <span class="token operator">^</span> <span class="token number">0xff</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> baos<span class="token punctuation">.</span><span class="token function">toByteArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>is <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    is<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>baos <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    baos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5C06;Decryption&#x7EE7;&#x627F;ClassLoader&#x7C7B;&#xFF0C;&#x4E4B;&#x540E;&#x8986;&#x76D6;findClass()&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4E14;&#x5728;findClass()&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;defineClass()&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#xFF0C;&#x6700;&#x540E;&#x52A0;&#x8F7D;&#x6211;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;getClassData&#x65B9;&#x6CD5;&#x53BB;&#x8FDB;&#x884C;&#x89E3;&#x5BC6;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;Demo&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x53BB;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x673A;&#x5236;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x83B7;&#x53D6;&#x5176;&#x8F93;&#x51FA;&#x7684;System.out.println&#x8BED;&#x53E5;&#xFF0C;&#x9700;&#x8981;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x53BB;&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x6211;&#x4EEC;&#x53EA;&#x5B66;&#x4E60;ClassLoader&#x7C7B;&#x5E94;&#x7528;&#xFF0C;&#x5C31;&#x4E0D;&#x53BB;&#x6D89;&#x53CA;&#x5176;&#x4ED6;&#x77E5;&#x8BC6;&#x70B9;&#xFF0C;&#x83B7;&#x53D6;&#x5176;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x67E5;&#x770B;&#x5373;&#x53EF;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>testCypher</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ClassNotFoundException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Decryption</span> deLoader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Decryption</span><span class="token punctuation">(</span><span class="token string">&quot;/usr/local/temp/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// &#x89E3;&#x5BC6;&#x52A0;&#x8F7D;&#x5668;</span>
+        <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> t1 <span class="token operator">=</span> deLoader<span class="token punctuation">.</span><span class="token function">loadClass</span><span class="token punctuation">(</span><span class="token string">&quot;com.test.CypherTest&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// &#x52A0;&#x8F7D;&#x5DF2;&#x52A0;&#x5BC6;&#x7684;&#x7C7B;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;c3 &#x7684;Class&#x662F;  &quot;</span> <span class="token operator">+</span> t1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="E:/blog/source/images/20210108153311-c27f545c-5183-1.png" alt="20210108153311-c27f545c-5183-1"></p>
+<h2 id="urlclassloader">URLClassLoader</h2>
+<p>&#x9664;&#x4E86;&#x4E0A;&#x8FF0;&#x81EA;&#x5B9A;&#x4E49;ClassLoader&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5B66;&#x4E60;URLClassLoader&#x3002;URLClassLoader&#x7C7B;&#x7EE7;&#x627F;ClassLoader&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x8F7D;&#x672C;&#x5730;&#x78C1;&#x76D8;&#x548C;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;jar&#x5305;&#x7C7B;&#x6587;&#x4EF6;&#x3002;</p>
+<h3 id="1-&#x672C;&#x5730;&#x78C1;&#x76D8;class&#x6587;&#x4EF6;&#x8C03;&#x7528;">1. &#x672C;&#x5730;&#x78C1;&#x76D8;class&#x6587;&#x4EF6;&#x8C03;&#x7528;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x5728;D&#x76D8;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;Test.java&#x6587;&#x4EF6;&#xFF0C;&#x5199;&#x4E86;&#x4E00;&#x6BB5;calc.exe&#x8BA1;&#x7B97;&#x673A;&#x5F39;&#x7A97;&#x4EE3;&#x7801;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x88AB;&#x6210;&#x529F;&#x89E3;&#x6790;&#x6267;&#x884C;&#xFF0C;&#x4F1A;&#x8F93;&#x51FA;Test success&#x5B57;&#x6BB5;&#x4E14;&#x5F39;&#x51FA;&#x8BA1;&#x7B97;&#x5668;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>test</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Test success!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token class-name">Runtime</span><span class="token punctuation">.</span><span class="token function">getRuntime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">&quot;cmd /c calc.exe&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x4F7F;&#x7528;javac&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x5728;D&#x76D8;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;class&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x518D;&#x4FEE;&#x6539;ClassLoaderTest&#x7C7B;&#xFF0C;&#x5229;&#x7528;URLClassLoader&#x65B9;&#x5F0F;&#x53BB;&#x83B7;&#x53D6;D&#x76D8;&#x4E2D;Test.class&#x6587;&#x4EF6;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span></span><span class="token class-name">Classloader</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">File</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>net<span class="token punctuation">.</span></span><span class="token class-name">URI</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>net<span class="token punctuation">.</span></span><span class="token class-name">URL</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>net<span class="token punctuation">.</span></span><span class="token class-name">URLClassLoader</span></span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClassLoaderTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span><span class="token punctuation">{</span>
+        <span class="token class-name">File</span> file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">&quot;d:/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">URI</span> uri <span class="token operator">=</span> file<span class="token punctuation">.</span><span class="token function">toURI</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">URL</span> url <span class="token operator">=</span> uri<span class="token punctuation">.</span><span class="token function">toURL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">URLClassLoader</span> classLoader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URLClassLoader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>url<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Class</span> clazz <span class="token operator">=</span> classLoader<span class="token punctuation">.</span><span class="token function">loadClass</span><span class="token punctuation">(</span><span class="token string">&quot;com.test.Test&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        clazz<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;File&#x83B7;&#x53D6;&#x7C7B;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x4E4B;&#x540E;&#x4F7F;&#x7528;URLClassLoader&#x83B7;&#x53D6;url&#x5730;&#x5740;&#x4E3A;D&#x76D8;&#xFF0C;&#x4E4B;&#x540E;&#x4F7F;&#x7528;loadClass&#x65B9;&#x6CD5;&#x83B7;&#x53D6;Test.class&#x6240;&#x542B;&#x5305;&#x540D;&#xFF0C;&#x7136;&#x540E;&#x5B9E;&#x4F8B;&#x5316;&#x3002;&#x8FD0;&#x884C;&#x53D1;&#x73B0;&#x89E3;&#x6790;&#x83B7;&#x53D6;&#x5230;&#x4E86;D&#x76D8;&#x4E2D;Test.class&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="../images/20210108153608-2c5edf50-5184-1.png" alt="20210108153608-2c5edf50-5184-1"></p>
+<h3 id="2-&#x7F51;&#x7EDC;&#x4F20;&#x8F93;class&#x6587;&#x4EF6;&#x8C03;&#x7528;">2. &#x7F51;&#x7EDC;&#x4F20;&#x8F93;class&#x6587;&#x4EF6;&#x8C03;&#x7528;</h3>
+<p>&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x5C06;Test.class&#x653E;&#x7F6E;&#x5230;&#x7535;&#x8111;&#x7684;Tomcat&#x670D;&#x52A1;&#x5668;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x7136;&#x540E;&#x542F;&#x52A8;Tomcat&#x3002;&#x4E4B;&#x540E;&#x65B0;&#x5EFA;&#x4E2A;ClassLoaderDemo&#x7C7B;&#x7F51;&#x7EDC;&#x52A0;&#x8F7D;Tomcat&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;Test.class.</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span></span><span class="token class-name">Classloader</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>net<span class="token punctuation">.</span></span><span class="token class-name">URL</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>net<span class="token punctuation">.</span></span><span class="token class-name">URLClassLoader</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClassLoaderDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">URL</span> url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">&quot;http://localhost:8080/examples/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">URLClassLoader</span> classLoader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URLClassLoader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>url<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Class</span> clazz <span class="token operator">=</span> classLoader<span class="token punctuation">.</span><span class="token function">loadClass</span><span class="token punctuation">(</span><span class="token string">&quot;com.test.Test&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        clazz<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;URLClassLoader&#x52A0;&#x8F7D;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;Tomcat&#x670D;&#x52A1;&#x5668;&#x76EE;&#x5F55;&#xFF0C;&#x6210;&#x529F;&#x89E3;&#x6790;&#x83B7;&#x53D6;&#x5230;&#x4E86;&#x76EE;&#x5F55;&#x4E0B;&#x7684;Test.class&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="../images/20210108154306-25852314-5185-1.png" alt="20210108154306-25852314-5185-1"></p>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>&#x901A;&#x8FC7;ClassLoader&#x7C7B;&#x7684;&#x5B66;&#x4E60;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E0D;&#x4EC5;&#x4EC5;&#x5C40;&#x9650;&#x4E8E;&#x5728;ClassPath&#x4E2D;&#x7C7B;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x8FD8;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;CLassLoader&#x7C7B;&#x6765;&#x52A0;&#x8F7D;&#x6211;&#x4EEC;&#x7279;&#x5B9A;&#x7684;&#x7C7B;&#x6765;&#x64CD;&#x4F5C;&#x5229;&#x7528;&#x3002;&#x5728;&#x5B89;&#x5168;&#x9886;&#x57DF;&#x5F53;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x4F1A;&#x4F7F;&#x7528;&#x5176;ClassLoader&#x7279;&#x6027;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6076;&#x610F;&#x7684;&#x7C7B;&#x52A0;&#x8F7D;webshell&#x5229;&#x7528;&#x4EE5;&#x53CA;&#x81EA;&#x5B9A;&#x4EE5;&#x7C7B;&#x5B57;&#x8282;&#x7801;&#x7684;native&#x65B9;&#x6CD5;&#x7ED5;&#x8FC7;RASP&#x68C0;&#x6D4B;&#x3002;&#x6240;&#x4EE5;&#x4E86;&#x89E3;ClassLoader&#x7279;&#x6027;&#x5E76;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#x7F16;&#x5199;&#xFF0C;&#x5BF9;&#x6211;&#x4EEC;&#x4E86;&#x89E3;java&#x5B89;&#x5168;&#x673A;&#x5236;&#x5341;&#x5206;&#x91CD;&#x8981;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Khaz 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-10-21 22:36:46
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                        
+                    </section>
+                    
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+        <a href="Java泛型.html" class="navigation navigation-prev " aria-label="Previous page: Java泛型">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        
+        
+        <a href="SPI.html" class="navigation navigation-next " aria-label="Next page: SPI">
+            <i class="fa fa-angle-right"></i>
+        </a>
+        
+        
+        
+    </div>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java类加载器","date":"2023/5/1 14:00:25","categories":["Java"],"level":"1.4.2.1.3","depth":4,"next":{"title":"SPI","level":"1.4.2.1.4","depth":4,"path":"03.代码审计/JAVA/01.基础知识/SPI.md","ref":"03.代码审计/JAVA/01.基础知识/SPI.md","articles":[]},"previous":{"title":"Java泛型","level":"1.4.2.1.2","depth":4,"path":"03.代码审计/JAVA/01.基础知识/Java泛型.md","ref":"03.代码审计/JAVA/01.基础知识/Java泛型.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","hide-element","code","theme-d4t","-lunr","-search","-sharing","search-pro-fixed","-highlight","chapter-fold","expandable-chapters","popup","donate","tbfed-pagefooter","github","flexible-alerts","prism","back-to-top-button","auto-scroll-table","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-d4t":{},"tbfed-pagefooter":{"copyright":"Copyright &copy Khaz 2024","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"],"lang":{"flow":"typescript"},"ignore":["mermaid","eval-js","ascii","result","manifest","payload","google","tree","java_out","log4j2","jsp","class","Exception","stack","c#","xml-dtd","C++","twig","jinja2","exception","tpl"]},"github":{"url":"https://github.com/"},"d4t":{"search-placeholder":"请输入关键字搜索","logo":"/README.assets/logo.svg","favicon":"/README.assets/favicon.ico"},"livereload":{},"splitter":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"search-pro-fixed":{},"donate":{"alipay":"/README.assets/gzh_1.png","alipayText":"点点广告🙏","button":"支持作者","title":"","wechat":"/README.assets/gzh_0.png","wechatText":"关闭Adblock"},"hide-element":{"elements":[".gitbook-link",".title",".treeview__copyright",".treeview__main-title"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Khaz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Khaz's 知识库","gitbook":"*","description":"个人的部分知识技能","theme-default":{"showLevel":true}},"file":{"path":"03.代码审计/JAVA/01.基础知识/Java类加载器.md","mtime":"2023-10-21T14:36:46.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-29T12:32:08.665Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro-fixed/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro-fixed/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-d4t/script.js"></script>
+        
+    
+
+    </body>
+</html>
+

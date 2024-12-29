@@ -1,0 +1,3636 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>前端加密渗透 · Khaz's 知识库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Khaz">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro-fixed/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-d4t/style.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../AI大模型.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <a href="/"><div class="logo"></div></a>
+        <span class="title"></span>
+
+        <!-- Search -->
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+        <!-- Nav -->
+        <ul class="header-nav">
+            
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <div class="sidebar-nav-space"></div>
+        
+        
+        <nav role="navigation">
+            
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    01.渗透测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    01.信息收集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../01.信息收集/01.资产收集.html">
+            
+                <a href="../../01.信息收集/01.资产收集.html">
+            
+                    
+                    01.资产收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../01.信息收集/02.指纹识别.html">
+            
+                <a href="../../01.信息收集/02.指纹识别.html">
+            
+                    
+                    02.指纹识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../01.信息收集/03.敏感信息收集.html">
+            
+                <a href="../../01.信息收集/03.敏感信息收集.html">
+            
+                    
+                    03.敏感信息收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    02.Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" >
+            
+                <span>
+            
+                    
+                    01.Sql注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" >
+            
+                <span>
+            
+                    
+                    Mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1.1" data-path="../01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                <a href="../01.Sql注入/Mysql/Web安全之Mysql基础.html">
+            
+                    
+                    Mysql基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.1.2" data-path="../01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                <a href="../01.Sql注入/Mysql/Web安全之Mysql注入.html">
+            
+                    
+                    Sql注入详解--Mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" >
+            
+                <span>
+            
+                    
+                    Sql Server
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.2.1" data-path="../01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                <a href="../01.Sql注入/SqlServer/Web安全之Sqlserver注入.html">
+            
+                    
+                    Sql注入--MSSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../01.Sql注入/配合其他.html">
+            
+                <a href="../01.Sql注入/配合其他.html">
+            
+                    
+                    配合其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <span>
+            
+                    
+                    02.文件操作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" >
+            
+                <span>
+            
+                    
+                    文件上传
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1.1" data-path="../02.文件操作/文件上传/01.漏洞了解.html">
+            
+                <a href="../02.文件操作/文件上传/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.2" data-path="../02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                <a href="../02.文件操作/文件上传/02.黑名单绕过.html">
+            
+                    
+                    02.黑名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.3" data-path="../02.文件操作/文件上传/03.白名单绕过.html">
+            
+                <a href="../02.文件操作/文件上传/03.白名单绕过.html">
+            
+                    
+                    03.白名单绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.1.4" data-path="../02.文件操作/文件上传/04.WebShell上传.html">
+            
+                <a href="../02.文件操作/文件上传/04.WebShell上传.html">
+            
+                    
+                    04.WebShell上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../02.文件操作/文件包含.html">
+            
+                <a href="../02.文件操作/文件包含.html">
+            
+                    
+                    文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.3" data-path="../02.文件操作/文件读取和下载.html">
+            
+                <a href="../02.文件操作/文件读取和下载.html">
+            
+                    
+                    任意文件读取和下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.4" data-path="../02.文件操作/文件预览.html">
+            
+                <a href="../02.文件操作/文件预览.html">
+            
+                    
+                    文件预览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    03.命令注入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../03.命令注入/01.漏洞了解.html">
+            
+                <a href="../03.命令注入/01.漏洞了解.html">
+            
+                    
+                    01.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../03.命令注入/02.漏洞利用.html">
+            
+                <a href="../03.命令注入/02.漏洞利用.html">
+            
+                    
+                    02.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" data-path="../03.命令注入/03.Dnslog.html">
+            
+                <a href="../03.命令注入/03.Dnslog.html">
+            
+                    
+                    03.Dnslog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" >
+            
+                <span>
+            
+                    
+                    04.跨站脚本攻击
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../04.跨站脚本攻击/01.前置知识.html">
+            
+                <a href="../04.跨站脚本攻击/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../04.跨站脚本攻击/02.漏洞了解.html">
+            
+                <a href="../04.跨站脚本攻击/02.漏洞了解.html">
+            
+                    
+                    02.漏洞了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.3" data-path="../04.跨站脚本攻击/03.漏洞利用.html">
+            
+                <a href="../04.跨站脚本攻击/03.漏洞利用.html">
+            
+                    
+                    03.漏洞利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" >
+            
+                <span>
+            
+                    
+                    05.身份认证
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="../05.身份认证/00.前置知识.html">
+            
+                <a href="../05.身份认证/00.前置知识.html">
+            
+                    
+                    00.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" data-path="../05.身份认证/01.登录框.html">
+            
+                <a href="../05.身份认证/01.登录框.html">
+            
+                    
+                    01.登录框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.3" data-path="../05.身份认证/02.越权.html">
+            
+                <a href="../05.身份认证/02.越权.html">
+            
+                    
+                    02.越权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4" data-path="../05.身份认证/03.JWT.html">
+            
+                <a href="../05.身份认证/03.JWT.html">
+            
+                    
+                    JWT安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.5" data-path="../05.身份认证/04.OAUTH.html">
+            
+                <a href="../05.身份认证/04.OAUTH.html">
+            
+                    
+                    04.OAUTH
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.6" data-path="../05.身份认证/05.一些案例.html">
+            
+                <a href="../05.身份认证/05.一些案例.html">
+            
+                    
+                    05.一些案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" >
+            
+                <span>
+            
+                    
+                    06.API接口测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.6.1" data-path="../06.API接口测试/01.前置知识.html">
+            
+                <a href="../06.API接口测试/01.前置知识.html">
+            
+                    
+                    01.前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6.2" data-path="../06.API接口测试/03.Tips.html">
+            
+                <a href="../06.API接口测试/03.Tips.html">
+            
+                    
+                    03.Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" >
+            
+                <span>
+            
+                    
+                    07.SSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.7.1" data-path="../07.SSRF/SSRF.html">
+            
+                <a href="../07.SSRF/SSRF.html">
+            
+                    
+                    SSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" >
+            
+                <span>
+            
+                    
+                    08.JSONP与CORS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.8.1" data-path="../08.JSONP与CORS/CORS.html">
+            
+                <a href="../08.JSONP与CORS/CORS.html">
+            
+                    
+                    CORS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8.2" data-path="../08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                <a href="../08.JSONP与CORS/JSONP跨域漏洞.html">
+            
+                    
+                    JSONP跨域漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" >
+            
+                <span>
+            
+                    
+                    09.CSRF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.9.1" data-path="../09.CSRF/CSRF.html">
+            
+                <a href="../09.CSRF/CSRF.html">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" >
+            
+                <span>
+            
+                    
+                    10.XXE
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.10.1" data-path="../10.XXE/XXE.html">
+            
+                <a href="../10.XXE/XXE.html">
+            
+                    
+                    XXE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" >
+            
+                <span>
+            
+                    
+                    11.逻辑漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.11.1" data-path="../11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                <a href="../11.逻辑漏洞/01.短信验证码与图形验证码.html">
+            
+                    
+                    01.短信验证码与图形验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.2" data-path="../11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                <a href="../11.逻辑漏洞/02.任意用户密码重置.html">
+            
+                    
+                    02.任意用户密码重置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.3" data-path="../11.逻辑漏洞/03.支付漏洞.html">
+            
+                <a href="../11.逻辑漏洞/03.支付漏洞.html">
+            
+                    
+                    03.支付漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11.4" data-path="../11.逻辑漏洞/04.其他.html">
+            
+                <a href="../11.逻辑漏洞/04.其他.html">
+            
+                    
+                    04.其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" >
+            
+                <span>
+            
+                    
+                    12.微信小程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.12.1" data-path="../12.微信小程序/小程序与公众号.html">
+            
+                <a href="../12.微信小程序/小程序与公众号.html">
+            
+                    
+                    小程序与公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" >
+            
+                <span>
+            
+                    
+                    13.前端加密对抗
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.2.13.1" data-path="前端加密渗透.html">
+            
+                <a href="前端加密渗透.html">
+            
+                    
+                    前端加密渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="../AI大模型.html">
+            
+                <a href="../AI大模型.html">
+            
+                    
+                    AI大模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.15" data-path="../Waf绕过学习.html">
+            
+                <a href="../Waf绕过学习.html">
+            
+                    
+                    WAF绕过学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.16" data-path="../其他.html">
+            
+                <a href="../其他.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    03.云安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../03.云安全/云安全.html">
+            
+                <a href="../../03.云安全/云安全.html">
+            
+                    
+                    云安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    04.移动安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../04.移动安全/APP渗透.html">
+            
+                <a href="../../04.移动安全/APP渗透.html">
+            
+                    
+                    APP渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../04.移动安全/环境.html">
+            
+                <a href="../../04.移动安全/环境.html">
+            
+                    
+                    环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    05.漏洞复现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../05.漏洞复现/Mysql%20Client 任意文件读取攻击.md">
+            
+                <span>
+            
+                    
+                    Mysql Client 任意文件读取攻击复现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../05.漏洞复现/Redis漏洞.html">
+            
+                <a href="../../05.漏洞复现/Redis漏洞.html">
+            
+                    
+                    Redis漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../05.漏洞复现/shiro漏洞.html">
+            
+                <a href="../../05.漏洞复现/shiro漏洞.html">
+            
+                    
+                    Shiro漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../05.漏洞复现/spring漏洞复现.html">
+            
+                <a href="../../05.漏洞复现/spring漏洞复现.html">
+            
+                    
+                    Spring框架漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../05.漏洞复现/Tomcat.html">
+            
+                <a href="../../05.漏洞复现/Tomcat.html">
+            
+                    
+                    Tomcat漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../../05.漏洞复现/Weblogic.html">
+            
+                <a href="../../05.漏洞复现/Weblogic.html">
+            
+                    
+                    Weblogic漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../../05.漏洞复现/应用记录.html">
+            
+                <a href="../../05.漏洞复现/应用记录.html">
+            
+                    
+                    渗透中常见应用记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="../../05.漏洞复现/若依漏洞复现.html">
+            
+                <a href="../../05.漏洞复现/若依漏洞复现.html">
+            
+                    
+                    若依漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    02.后渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../02.后渗透/Linux/Linux渗透.html">
+            
+                <a href="../../../02.后渗透/Linux/Linux渗透.html">
+            
+                    
+                    Linux渗透总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Windows域渗透
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../02.后渗透/Windows域渗透/Windows内网渗透.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/Windows内网渗透.html">
+            
+                    
+                    Windows内网渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../02.后渗透/Windows域渗透/入侵痕迹清理.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/入侵痕迹清理.html">
+            
+                    
+                    入侵痕迹清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../02.后渗透/Windows域渗透/后渗透之了解.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之了解.html">
+            
+                    
+                    后渗透之了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../../02.后渗透/Windows域渗透/后渗透之基础知识.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之基础知识.html">
+            
+                    
+                    后渗透之基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../../02.后渗透/Windows域渗透/后渗透之权限提升.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之权限提升.html">
+            
+                    
+                    后渗透之权限提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../../02.后渗透/Windows域渗透/后渗透之权限维持.html">
+            
+                <a href="../../../02.后渗透/Windows域渗透/后渗透之权限维持.html">
+            
+                    
+                    后渗透之权限维持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    社会工程学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    近源
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1" data-path="../../../02.后渗透/社会工程学/近源/BadUsb.html">
+            
+                <a href="../../../02.后渗透/社会工程学/近源/BadUsb.html">
+            
+                    
+                    近源渗透之BadUSB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    钓鱼
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../../../02.后渗透/社会工程学/钓鱼/SPF伪造.html">
+            
+                <a href="../../../02.后渗透/社会工程学/钓鱼/SPF伪造.html">
+            
+                    
+                    初探邮件钓鱼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../../02.后渗透/隧道搭建.html">
+            
+                <a href="../../../02.后渗透/隧道搭建.html">
+            
+                    
+                    端口转发与代理搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    03.代码审计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    .Net
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../../03.代码审计/.Net/.net渗透.html">
+            
+                <a href="../../../03.代码审计/.Net/.net渗透.html">
+            
+                    
+                    .net渗透
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    JAVA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" >
+            
+                <span>
+            
+                    
+                    01.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                <a href="../../../03.代码审计/JAVA/01.基础知识/Java反射.html">
+            
+                    
+                    Java反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                <a href="../../../03.代码审计/JAVA/01.基础知识/Java泛型.html">
+            
+                    
+                    Java泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" data-path="../../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                <a href="../../../03.代码审计/JAVA/01.基础知识/Java类加载器.html">
+            
+                    
+                    Java类加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" data-path="../../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                <a href="../../../03.代码审计/JAVA/01.基础知识/SPI.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" >
+            
+                <span>
+            
+                    
+                    02.基础漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                <a href="../../../03.代码审计/JAVA/02.基础漏洞/代码注入.html">
+            
+                    
+                    代码注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                <a href="../../../03.代码审计/JAVA/02.基础漏洞/命令注入.html">
+            
+                    
+                    命令注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.3" data-path="../../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                <a href="../../../03.代码审计/JAVA/02.基础漏洞/模板注入.html">
+            
+                    
+                    模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.4" data-path="../../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                <a href="../../../03.代码审计/JAVA/02.基础漏洞/表达式注入.html">
+            
+                    
+                    表达式注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" >
+            
+                <span>
+            
+                    
+                    03.JavaWeb了解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                <a href="../../../03.代码审计/JAVA/03.JavaWeb了解/Spring.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                <a href="../../../03.代码审计/JAVA/03.JavaWeb了解/Struts2.html">
+            
+                    
+                    Struts 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                <a href="../../../03.代码审计/JAVA/03.JavaWeb了解/Tomcat.html">
+            
+                    
+                    Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" >
+            
+                <span>
+            
+                    
+                    04.反序列化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" >
+            
+                <span>
+            
+                    
+                    CC链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1.1" data-path="../../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                <a href="../../../03.代码审计/JAVA/04.反序列化/CC链/CC1--LazyMap.html">
+            
+                    
+                    JAVA反序列化之CC1--LazyMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.2" data-path="../../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                <a href="../../../03.代码审计/JAVA/04.反序列化/CC链/CC1-TransFormed.html">
+            
+                    
+                    Java反序列化之CC1-TransFormed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.1.3" data-path="../../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                <a href="../../../03.代码审计/JAVA/04.反序列化/CC链/URLDNS链.html">
+            
+                    
+                    Java反序列化之URLDNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="../../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                <a href="../../../03.代码审计/JAVA/04.反序列化/FastJson.html">
+            
+                    
+                    Fastjson漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="../../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                <a href="../../../03.代码审计/JAVA/04.反序列化/JNDI.html">
+            
+                    
+                    JNDI注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                <a href="../../../03.代码审计/JAVA/Java-Thymeleaf模板注入.html">
+            
+                    
+                    Thymeleaf 模板注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../../03.代码审计/JAVA/JavaAttack.html">
+            
+                <a href="../../../03.代码审计/JAVA/JavaAttack.html">
+            
+                    
+                    Java Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                <a href="../../../03.代码审计/JAVA/Java代审--常见漏洞函数.html">
+            
+                    
+                    Java代码审计--常见漏洞函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../../03.代码审计/PHP/phpinfo.html">
+            
+                <a href="../../../03.代码审计/PHP/phpinfo.html">
+            
+                    
+                    phpinfo中的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../../03.代码审计/PHP/PHP代码审计.html">
+            
+                <a href="../../../03.代码审计/PHP/PHP代码审计.html">
+            
+                    
+                    PHP代码审计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../../03.代码审计/PHP/php代码审计基础.html">
+            
+                <a href="../../../03.代码审计/PHP/php代码审计基础.html">
+            
+                    
+                    PHP代码审计基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../../03.代码审计/PHP/php反序列化.html">
+            
+                <a href="../../../03.代码审计/PHP/php反序列化.html">
+            
+                    
+                    PHP反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../03.代码审计/python反序列化.html">
+            
+                <a href="../../../03.代码审计/python反序列化.html">
+            
+                    
+                    Python反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    04.工具使用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../04.工具使用/00.注意.html">
+            
+                <a href="../../../04.工具使用/00.注意.html">
+            
+                    
+                    00.注意
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../04.工具使用/01.Cobal%20Strike.md">
+            
+                <span>
+            
+                    
+                    01.Cobal Strike
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../04.工具使用/02.MSF.html">
+            
+                <a href="../../../04.工具使用/02.MSF.html">
+            
+                    
+                    02.MSF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../04.工具使用/03.抓包工具.html">
+            
+                <a href="../../../04.工具使用/03.抓包工具.html">
+            
+                    
+                    03.抓包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../../04.工具使用/04.gogo.html">
+            
+                <a href="../../../04.工具使用/04.gogo.html">
+            
+                    
+                    04.gogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../../04.工具使用/05.辅助工具.html">
+            
+                <a href="../../../04.工具使用/05.辅助工具.html">
+            
+                    
+                    05.辅助工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    05.编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../../05.编程开发/Python/POC模板.html">
+            
+                <a href="../../../05.编程开发/Python/POC模板.html">
+            
+                    
+                    POC编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../../05.编程开发/Python/python命名空间.html">
+            
+                <a href="../../../05.编程开发/Python/python命名空间.html">
+            
+                    
+                    python命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../../05.编程开发/Python/python技巧.html">
+            
+                <a href="../../../05.编程开发/Python/python技巧.html">
+            
+                    
+                    python技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    工具原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../../05.编程开发/工具原理/sqlmap.html">
+            
+                <a href="../../../05.编程开发/工具原理/sqlmap.html">
+            
+                    
+                    Sqlmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../../05.编程开发/Nginx.html">
+            
+                <a href="../../../05.编程开发/Nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    06.WriteUp
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    CTF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                <a href="../../../06.WriteUp/CTF/2022安洵杯.html">
+            
+                    
+                    2022 安洵杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                <a href="../../../06.WriteUp/CTF/bugku应急响应.html">
+            
+                    
+                    bugku 应急响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../../06.WriteUp/CTF/BUU.md">
+            
+                <span>
+            
+                    
+                    BUUCTF刷题合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../../06.WriteUp/CTF/HNCTF.html">
+            
+                <a href="../../../06.WriteUp/CTF/HNCTF.html">
+            
+                    
+                    HNCTF 2022
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../../../06.WriteUp/CTF/misc.html">
+            
+                <a href="../../../06.WriteUp/CTF/misc.html">
+            
+                    
+                    MISC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                <a href="../../../06.WriteUp/CTF/NewstarCTF.html">
+            
+                    
+                    New Star CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../../../06.WriteUp/CTF/NodeJs.html">
+            
+                <a href="../../../06.WriteUp/CTF/NodeJs.html">
+            
+                    
+                    NodeJs相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../../../06.WriteUp/CTF/NSSRound5.html">
+            
+                <a href="../../../06.WriteUp/CTF/NSSRound5.html">
+            
+                    
+                    NSS Round 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../../../06.WriteUp/CTF/NSSRound6.html">
+            
+                <a href="../../../06.WriteUp/CTF/NSSRound6.html">
+            
+                    
+                    NSS Round 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../../../06.WriteUp/CTF/环境变量注入.html">
+            
+                <a href="../../../06.WriteUp/CTF/环境变量注入.html">
+            
+                    
+                    环境变量注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    靶机
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                <a href="../../../06.WriteUp/靶机/HackTheBox--Alert.html">
+            
+                    
+                    Hack The Box Alert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                <a href="../../../06.WriteUp/靶机/Vulnhub-blue系列.html">
+            
+                    
+                    Vulnhub--blue系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                <a href="../../../06.WriteUp/靶机/Vulnhub-DC系列.html">
+            
+                    
+                    Vulnhub--DC系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../../../06.WriteUp/靶机/红日靶场1.html">
+            
+                <a href="../../../06.WriteUp/靶机/红日靶场1.html">
+            
+                    
+                    红日靶场1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    07.基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../../07.基础知识/Linux/linux-shell.html">
+            
+                <a href="../../../07.基础知识/Linux/linux-shell.html">
+            
+                    
+                    《Linux命令行与shell脚本编程大全》 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../../07.基础知识/Linux/Linux命令.html">
+            
+                <a href="../../../07.基础知识/Linux/Linux命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../../07.基础知识/Linux/Linux命令本质.html">
+            
+                <a href="../../../07.基础知识/Linux/Linux命令本质.html">
+            
+                    
+                    Linux命令本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    Windows
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../07.基础知识/Windows/windows基本操作.html">
+            
+                <a href="../../../07.基础知识/Windows/windows基本操作.html">
+            
+                    
+                    windows基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../../07.基础知识/计算机网络/ARP协议.html">
+            
+                <a href="../../../07.基础知识/计算机网络/ARP协议.html">
+            
+                    
+                    ARP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../../07.基础知识/计算机网络/DNS协议.html">
+            
+                <a href="../../../07.基础知识/计算机网络/DNS协议.html">
+            
+                    
+                    DNS协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                <a href="../../../07.基础知识/计算机网络/湖科大mooc.html">
+            
+                    
+                    计算机网络MOOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                <a href="../../../07.基础知识/计算机网络/虚拟机网络.html">
+            
+                    
+                    虚拟机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                <a href="../../../07.基础知识/tombkeeper关于信息安全学习的分享.html">
+            
+                    
+                    tombkeeper关于信息安全学习的分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../../07.基础知识/名词解释.html">
+            
+                <a href="../../../07.基础知识/名词解释.html">
+            
+                    
+                    常见名词与概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../../07.基础知识/渗透测试和红队的区别.html">
+            
+                <a href="../../../07.基础知识/渗透测试和红队的区别.html">
+            
+                    
+                    转载--渗透测试和红队的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../../07.基础知识/编码.html">
+            
+                <a href="../../../07.基础知识/编码.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    08.杂七杂八
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../08.杂七杂八/个人信息保护.html">
+            
+                <a href="../../../08.杂七杂八/个人信息保护.html">
+            
+                    
+                    个人信息保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../08.杂七杂八/华为安装谷歌.html">
+            
+                <a href="../../../08.杂七杂八/华为安装谷歌.html">
+            
+                    
+                    华为安装谷歌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../../08.杂七杂八/安全方向.html">
+            
+                <a href="../../../08.杂七杂八/安全方向.html">
+            
+                    
+                    安全方向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../../08.杂七杂八/手机VPN共享.html">
+            
+                <a href="../../../08.杂七杂八/手机VPN共享.html">
+            
+                    
+                    手机VPN共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../../08.杂七杂八/换内存条.html">
+            
+                <a href="../../../08.杂七杂八/换内存条.html">
+            
+                    
+                    如何更换内存条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../../08.杂七杂八/面试记录.html">
+            
+                <a href="../../../08.杂七杂八/面试记录.html">
+            
+                    
+                    笔/面记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+        
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <div class="book-anchor-title">ON THIS PAGE</div>
+        <div class="book-anchor-body">
+
+        </div>
+    </div>
+
+    <div class="book-body">
+        
+        <div class="body-inner">
+            
+            
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >前端加密渗透</a>
+    </h1>
+</div>
+
+
+
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                    <section class="normal markdown-section">
+                        
+                        <blockquote>
+<p>Yakit&#xFF1A;&#x70ED;&#x52A0;&#x8F7D;</p>
+<p>burp&#xFF1A;&#x63D2;&#x4EF6;burpcrypto&#xFF0C;autodecoder</p>
+</blockquote>
+<h1 id="&#x524D;&#x7F6E;&#x76F8;&#x5173;&#x77E5;&#x8BC6;">&#x524D;&#x7F6E;&#x76F8;&#x5173;&#x77E5;&#x8BC6;</h1>
+<h2 id="js&#x53D1;&#x8D77;http&#x8BF7;&#x6C42;">js&#x53D1;&#x8D77;http&#x8BF7;&#x6C42;</h2>
+<p>&#x5728;JavaScript&#x4E2D;&#xFF0C;&#x53D1;&#x8D77;HTTP&#x8BF7;&#x6C42;&#x4E3B;&#x8981;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x548C;&#x9700;&#x6C42;&#xFF1A;</p>
+<h3 id="1-xmlhttprequest">1. XMLHttpRequest</h3>
+<p><code>XMLHttpRequest</code> &#x662F;&#x4E00;&#x4E2A;&#x5728;&#x8F83;&#x65E9;&#x7248;&#x672C;&#x7684;JavaScript&#x4E2D;&#x7528;&#x4E8E;&#x53D1;&#x8D77;HTTP&#xFF08;&#x6216;HTTPS&#xFF09;&#x8BF7;&#x6C42;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5B83;&#x5E7F;&#x6CDB;&#x7528;&#x4E8E;AJAX&#x7F16;&#x7A0B;&#x4E2D;&#x4EE5;&#x5F02;&#x6B65;&#x65B9;&#x5F0F;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x5237;&#x65B0;&#x9875;&#x9762;&#x3002;</p>
+<p>&#x200C;<strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#x200C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;https://api.example.com/data&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="2-fetch-api">2. Fetch API</h3>
+<p><code>Fetch API</code> &#x662F;&#x4E00;&#x4E2A;&#x73B0;&#x4EE3;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x8FDB;&#x884C;HTTP&#x8BF7;&#x6C42;&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x66F4;&#x7B80;&#x5355;&#x548C;&#x7075;&#x6D3B;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x548C;&#x5904;&#x7406;&#x54CD;&#x5E94;&#xFF0C;&#x6BD4;<code>XMLHttpRequest</code>&#x66F4;&#x76F4;&#x89C2;&#x3002;</p>
+<p>&#x200C;<strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#x200C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;https://api.example.com/data&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&apos;Error:&apos;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="3-jqueryajax">3. jQuery.ajax()</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;jQuery&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>$.ajax()</code>&#x65B9;&#x6CD5;&#x8F7B;&#x677E;&#x53D1;&#x8D77;HTTP&#x8BF7;&#x6C42;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7075;&#x6D3B;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x80FD;&#x591F;&#x5904;&#x7406;&#x591A;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7BA1;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x6210;&#x529F;&#x548C;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x200C;<strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#x200C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js">$<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">&quot;https://api.example.com/data&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">error</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">xhr<span class="token punctuation">,</span> status<span class="token punctuation">,</span> error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;Error: &quot;</span> <span class="token operator">+</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="4-axios">4. Axios</h3>
+<p><code>Axios</code> &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;Promise&#x7684;HTTP&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x548C;node.js&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x66F4;&#x73B0;&#x4EE3;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x53D1;&#x8D77;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x6BD4;&#x539F;&#x751F;&#x7684;<code>XMLHttpRequest</code>&#x548C;<code>Fetch API</code>&#x90FD;&#x8981;&#x6613;&#x7528;&#x3002;</p>
+<p>&#x200C;<strong>&#x5B89;&#x88C5;</strong>&#x200C;&#xFF08;&#x5728;Node.js&#x73AF;&#x5883;&#x4E0B;&#x6216;&#x901A;&#x8FC7;npm/yarn&#x5728;&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4E2D;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">npm</span> <span class="token function">install</span> axios
+</code></pre>
+<p>&#x200C;<strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#x200C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js">javascriptCopy Codeimport axios <span class="token keyword">from</span> <span class="token string">&apos;axios&apos;</span><span class="token punctuation">;</span>
+
+axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&apos;https://api.example.com/data&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&apos;Error:&apos;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x5BC6;&#x7801;&#x5B66;">&#x5BC6;&#x7801;&#x5B66;</h2>
+<h3 id="&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;">&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;</h3>
+<p>&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x662F;&#x4E00;&#x79CD;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&#x53D1;&#x9001;&#x65B9;&#x548C;&#x63A5;&#x6536;&#x65B9;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x5BC6;&#x94A5;&#x6765;&#x52A0;&#x5BC6;&#x548C;&#x89E3;&#x5BC6;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7684;&#x5B89;&#x5168;&#x6027;&#x53D6;&#x51B3;&#x4E8E;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x7684;&#x4FDD;&#x5BC6;&#x6027;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;&#x56E0;&#x5176;&#x6548;&#x7387;&#x9AD8;&#x3001;&#x901F;&#x5EA6;&#x5FEB;&#x800C;&#x88AB;&#x5E7F;&#x6CDB;&#x5E94;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x5927;&#x91CF;&#x6570;&#x636E;&#x52A0;&#x5BC6;&#x7684;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>AES</li>
+<li>DES&#x4E0E;3DES</li>
+<li>SM4</li>
+</ul>
+<p>DES&#x7B97;&#x6CD5;&#x4E0D;&#x591F;&#x5B89;&#x5168;&#xFF08;&#x53EF;&#x88AB;&#x66B4;&#x529B;&#x7834;&#x89E3;&#xFF09;&#xFF0C;&#x73B0;&#x4EE3;&#x5927;&#x90FD;&#x91C7;&#x7528;AES&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#xFF0C;SM4&#x4E3A;&#x56FD;&#x5BC6;&#x7B97;&#x6CD5;&#x3002;</p>
+<h3 id="&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;--&#x516C;&#x94A5;&#x7B97;&#x6CD5;">&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;--&#x516C;&#x94A5;&#x7B97;&#x6CD5;</h3>
+<p>&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x4F7F;&#x7528;&#x4E00;&#x5BF9;&#x5BC6;&#x94A5;&#xFF1A;&#x4E00;&#x4E2A;&#x516C;&#x94A5;&#x548C;&#x4E00;&#x4E2A;&#x79C1;&#x94A5;&#x3002;&#x516C;&#x94A5;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5206;&#x53D1;&#xFF0C;&#x7528;&#x4E8E;&#x52A0;&#x5BC6;&#x4FE1;&#x606F;&#xFF1B;&#x79C1;&#x94A5;&#x5219;&#x5FC5;&#x987B;&#x4FDD;&#x5BC6;&#xFF0C;&#x7528;&#x4E8E;&#x89E3;&#x5BC6;&#x4FE1;&#x606F;&#x3002;</p>
+<ul>
+<li>RSA</li>
+<li>SM2</li>
+<li>ESC</li>
+<li>DSA</li>
+<li>DH&#x5BC6;&#x94A5;&#x4EA4;&#x6362;</li>
+</ul>
+<p>&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x867D;&#x7136;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x9AD8;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x5176;&#x8BA1;&#x7B97;&#x590D;&#x6742;&#x5EA6;&#x8F83;&#x9AD8;&#xFF0C;&#x5904;&#x7406;&#x901F;&#x5EA6;&#x901A;&#x5E38;&#x6162;&#x4E8E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x7ECF;&#x5E38;&#x5C06;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x4E0E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x4F7F;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x5EFA;&#x7ACB;&#x5B89;&#x5168;&#x8FDE;&#x63A5;&#x65F6;&#x4F7F;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x4EA4;&#x6362;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x5B89;&#x5168;&#x4E0E;&#x6548;&#x7387;&#x7684;&#x5E73;&#x8861;&#x3002;</p>
+<h3 id="&#x52A0;&#x5BC6;&#x6A21;&#x5F0F;">&#x52A0;&#x5BC6;&#x6A21;&#x5F0F;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x52A0;&#x5BC6;&#x6A21;&#x5F0F;</th>
+<th>CBC</th>
+<th>ECB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV&#xFF08;&#x521D;&#x59CB;&#x5757;&#xFF09;</td>
+<td>&#x9700;&#x8981;</td>
+<td>&#x4E0D;&#x9700;&#x8981;</td>
+</tr>
+<tr>
+<td>KEY &#x7684;&#x957F;&#x5EA6;</td>
+<td>16/24/32 &#x5B57;&#x8282;</td>
+<td>16/24/32 &#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>&#x52A0;&#x5BC6;&#x540E;&#x7279;&#x5F81;</td>
+<td><strong>IV&#x4E0D;&#x540C;&#xFF0C;&#x5BC6;&#x6587;&#x4E5F;&#x4E0D;&#x76F8;&#x540C;</strong></td>
+<td>&#x660E;&#x6587;&#x662F;<strong>&#x9759;&#x6001;</strong>&#x7684; - &#x4E24;&#x4E2A;&#x660E;&#x6587;&#x76F8;&#x540C;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x4EEC;&#x5BC6;&#x6587;&#x4E5F;&#x76F8;&#x540C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x524D;&#x7AEF;&#x52A0;&#x5BC6;&#x5E93;">&#x524D;&#x7AEF;&#x52A0;&#x5BC6;&#x5E93;</h2>
+<p>&#x524D;&#x7AEF;&#x52A0;&#x5BC6;&#x4E00;&#x822C;&#x5E38;&#x7528;&#x7684;&#x662F;&#x4E24;&#x4E2A;&#x5E93;&#xFF0C;CryptoJS &#x548C; jsrsasign&#xFF0C;&#x4ED6;&#x4EEC;&#x5F7C;&#x6B64;&#x4FA7;&#x91CD;&#x70B9;&#x5176;&#x5B9E;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF1A;</p>
+<h3 id="cryptojs">CryptoJS</h3>
+<p>CryptoJS &#x4E3B;&#x8981;&#x63D0;&#x4F9B; AES&#xFF0C;SHA&#xFF0C;HMAC&#xFF0C;PBKDF2 &#x7B49;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;</p>
+<p>AES&#xFF1A;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;CBC&#x6A21;&#x5F0F;&#xFF0C;PKCS#7&#x586B;&#x5145;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x5F15;&#x5165; CryptoJS &#x5E93;</span>
+<span class="token keyword">const</span> CryptoJS <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;crypto-js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x793A;&#x4F8B;&#x660E;&#x6587;</span>
+<span class="token keyword">const</span> word <span class="token operator">=</span> <span class="token string">&quot;Hello, World!&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x5BC6;&#x94A5;&#x548C;&#x521D;&#x59CB;&#x5316;&#x5411;&#x91CF;</span>
+<span class="token keyword">const</span> key <span class="token operator">=</span> CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&apos;1234567890123456&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 16&#x5B57;&#x8282;&#x5BC6;&#x94A5;</span>
+<span class="token keyword">const</span> iv <span class="token operator">=</span> CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&apos;1234567890123456&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 16&#x5B57;&#x8282;IV</span>
+
+<span class="token comment">// &#x52A0;&#x5BC6;</span>
+<span class="token keyword">const</span> encrypted <span class="token operator">=</span> CryptoJS<span class="token punctuation">.</span><span class="token constant">AES</span><span class="token punctuation">.</span><span class="token function">encrypt</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">iv</span><span class="token operator">:</span> iv <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Encrypted Data:&quot;</span><span class="token punctuation">,</span> encrypted<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x89E3;&#x5BC6;</span>
+<span class="token keyword">const</span> decrypted <span class="token operator">=</span> CryptoJS<span class="token punctuation">.</span><span class="token constant">AES</span><span class="token punctuation">.</span><span class="token function">decrypt</span><span class="token punctuation">(</span>encrypted<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">iv</span><span class="token operator">:</span> iv <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Decrypted Data:&quot;</span><span class="token punctuation">,</span> decrypted<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="jsencrypt">jsencrypt</h3>
+<p><code>jsencrypt</code> &#x662F;&#x4E00;&#x4E2A;&#x7528; JavaScript &#x7F16;&#x5199;&#x7684;&#x5E93;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x5B9E;&#x73B0; RSA &#x52A0;&#x5BC6;&#x548C;&#x89E3;&#x5BC6;&#x3002;<strong>&#x52A0;&#x89E3;&#x5BC6;&#x65F6;&#x9ED8;&#x8BA4;&#x586B;&#x5145;&#x6A21;&#x5F0F;</strong>&#xFF1A;PKCS#1 v1.5</p>
+<p>&#x751F;&#x6210;&#x5BC6;&#x94A5;&#x5BF9;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> encrypt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JSEncrypt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+encrypt<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x751F;&#x6210;&#x5BC6;&#x94A5;&#x5BF9;</span>
+<span class="token keyword">var</span> pub_key <span class="token operator">=</span> encrypt<span class="token punctuation">.</span><span class="token function">getPublicKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x83B7;&#x53D6;&#x516C;&#x94A5;</span>
+<span class="token keyword">var</span> pri_key <span class="token operator">=</span> encrypt<span class="token punctuation">.</span><span class="token function">getPrivateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x83B7;&#x53D6;&#x79C1;&#x94A5;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Public Key:&quot;</span><span class="token punctuation">,</span> pub_key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Private Key:&quot;</span><span class="token punctuation">,</span> pri_key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x52A0;&#x5BC6;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> encrypt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JSEncrypt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+encrypt<span class="token punctuation">.</span><span class="token function">setPublicKey</span><span class="token punctuation">(</span>pubkey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> text <span class="token operator">=</span> <span class="token string">&quot;Hello, World!&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> encrypted <span class="token operator">=</span> encrypt<span class="token punctuation">.</span><span class="token function">encrypt</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>encrypted<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x52A0;&#x5BC6;&#x540E;&#x7684;&#x6587;&#x672C;</span>
+</code></pre>
+<p>&#x89E3;&#x5BC6;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> decrypt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JSEncrypt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+decrypt<span class="token punctuation">.</span><span class="token function">setPrivateKey</span><span class="token punctuation">(</span>pri_key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> decrypted <span class="token operator">=</span> decrypt<span class="token punctuation">.</span><span class="token function">decrypt</span><span class="token punctuation">(</span>encrypted<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Decrypted Text:&quot;</span><span class="token punctuation">,</span> decrypted<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x89E3;&#x5BC6;&#x540E;&#x7684;&#x6587;&#x672C;</span>
+</code></pre>
+<h3 id="tostring&#x7F16;&#x7801;">toString&#x7F16;&#x7801;</h3>
+<ul>
+<li><p>CryptoJS &#x7684; key &#x5728;&#x6CA1;&#x6709;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684; <code>toString</code> &#x65B9;&#x6CD5;&#x5C06;&#x8F93;&#x51FA;&#x5341;&#x516D;&#x8FDB;&#x5236; (Hex) &#x683C;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> key <span class="token operator">=</span> CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&apos;1234567890123456&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &#x8F93;&#x51FA; &quot;31323334353637383930313233343536&quot;</span>
+
+<span class="token comment">//&#x5176;&#x4ED6;&#x7F16;&#x7801;</span>
+key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Base64<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &#x8F93;&#x51FA; &quot;MTIzNDU2Nzg5MDEyMzQ1Ng==&quot;</span>
+key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &#x8F93;&#x51FA; &quot;1234567890123456&quot;</span>
+</code></pre>
+</li>
+<li><p><strong>&#x52A0;&#x5BC6;&#x51FD;&#x6570;&#x7684;toString()&#x901A;&#x5E38;&#x90FD;&#x662F;&#x4F7F;&#x7528;base64&#x65B9;&#x6CD5;&#x5BF9;&#x5F97;&#x5230;&#x7684;&#x5B57;&#x8282;&#x5BC6;&#x6587;&#x8FDB;&#x884C;&#x7F16;&#x7801;</strong></p>
+</li>
+</ul>
+<p>&#x200B;    </p>
+<h1 id="&#x57FA;&#x7840;&#x6848;&#x4F8B;">&#x57FA;&#x7840;&#x6848;&#x4F8B;</h1>
+<p>yakit&#x81EA;&#x5E26;&#x9776;&#x573A;</p>
+<p><a href="https://github.com/SwagXz/encrypt-labs" target="_blank">https://github.com/SwagXz/encrypt-labs</a></p>
+<h2 id="&#x9632;&#x7BE1;&#x6539;">&#x9632;&#x7BE1;&#x6539;</h2>
+<pre class="language-"><code class="lang-js"><span class="token comment">//&#x5BC6;&#x94A5;&#x83B7;&#x53D6;</span>
+<span class="token keyword">function</span> <span class="token function">generateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span>  CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&quot;1234123412341234&quot;</span><span class="token punctuation">)</span>  <span class="token comment">// &#x5341;&#x516D;&#x4F4D;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x4F5C;&#x4E3A;&#x5BC6;&#x94A5;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> key <span class="token operator">=</span> <span class="token function">generateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// &#x52A0;&#x5BC6;&#x65B9;&#x6CD5;</span>
+<span class="token keyword">function</span> <span class="token function">Encrypt</span><span class="token punctuation">(</span><span class="token parameter">word</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span>  CryptoJS<span class="token punctuation">.</span><span class="token function">HmacSHA256</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+
+
+<span class="token keyword">function</span> <span class="token function">outputObj</span><span class="token punctuation">(</span><span class="token parameter">jsonData</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> word <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">username=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>jsonData<span class="token punctuation">.</span>username<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;password=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>jsonData<span class="token punctuation">.</span>password<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;signature&quot;</span><span class="token operator">:</span> <span class="token function">Encrypt</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string-property property">&quot;key&quot;</span><span class="token operator">:</span> key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">username</span><span class="token operator">:</span> jsonData<span class="token punctuation">.</span>username<span class="token punctuation">,</span> <span class="token literal-property property">password</span><span class="token operator">:</span> jsonData<span class="token punctuation">.</span>password<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x539F;&#x7406;</strong></p>
+<p>&#x524D;&#x7AEF;&#xFF1A;&#x628A;&#x6570;&#x636E;<code>&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x683C;&#x5F0F;</code>&#x4F7F;&#x7528;&#x54C8;&#x5E0C;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;<code>&#x79D8;&#x94A5;&#x54C8;&#x5E0C;</code>&#x8FD0;&#x7B97;&#x751F;&#x6210;<code>&#x54C8;&#x5E0C;&#x503C;</code>&#xFF0C;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5305;&#x643A;&#x5E26;&#x8FD9;&#x4E2A;<code>&#x54C8;&#x5E0C;&#x503C;&#x548C;key</code></p>
+<p>&#x540E;&#x7AEF;&#xFF1A;&#x6B64;&#x65F6;&#x540E;&#x7AEF;&#x62FF;&#x5230;&#x6570;&#x636E;&#x6709;&#xFF08;&#x4EE5;&#x4E0A;&#x8FB9;&#x9776;&#x573A;&#x4E3A;&#x4F8B;&#xFF09;&#xFF1A;signature&#x3001;key&#x3001;username&#x3001;password&#x3002;&#x628A;username&#x548C;password&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x683C;&#x5F0F;&#x5728;&#x8FDB;&#x884C;&#x79D8;&#x94A5;&#x54C8;&#x5E0C;&#x8FD0;&#x7B97;&#x751F;&#x6210;&#x7684;&#x503C;&#x4E0E;signature&#x5BF9;&#x6BD4;&#xFF0C;&#x82E5;&#x4E00;&#x6837;&#x9A8C;&#x8BC1;&#x901A;&#x8FC7;&#xFF01;</p>
+<p><img src="../../images/image-20241031102141609.png" alt="image-20241031102141609"></p>
+<p>&#x89E3;&#x51B3;</p>
+<p>&#x70ED;&#x52A0;&#x8F7D;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-js">sign <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">password</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    key <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">1234123412341234</span><span class="token template-punctuation string">`</span></span>
+    data<span class="token operator">=</span>f<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">username=admin&amp;password=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>password<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    signature <span class="token operator">=</span> codec<span class="token punctuation">.</span><span class="token function">EncodeToHex</span><span class="token punctuation">(</span>codec<span class="token punctuation">.</span><span class="token function">HmacSha256</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> signature    
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x70ED;&#x52A0;&#x8F7D;</p>
+<p><img src="../../images/&#x6279;&#x6CE8; 2024-10-31 102704.png" alt="&#x6279;&#x6CE8; 2024-10-31 102704"></p>
+<p><a href="http://127.0.0.1:8787/crypto/sign/rsa/hmacsha256" target="_blank">&#x5148; HMAC-SHA256 &#x518D; RSA</a></p>
+<pre class="language-"><code class="lang-js"><span class="token comment">//&#x516C;&#x94A5;&#x83B7;&#x53D6;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;/crypto/js/rsa/public/key&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">rsp</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        pubkey <span class="token operator">=</span> <span class="token keyword">await</span> rsp<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;submit&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;submit&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">&apos;&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x6570;&#x636E;&apos;</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>pubkey<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">300</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="../../images/image-20241031103104142.png" alt="image-20241031103104142"></p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">generateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>  CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&quot;1234123412341234&quot;</span><span class="token punctuation">)</span>  <span class="token comment">// &#x5341;&#x516D;&#x4F4D;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x4F5C;&#x4E3A;&#x5BC6;&#x94A5;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> key <span class="token operator">=</span> <span class="token function">generateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// &#x52A0;&#x5BC6;&#x65B9;&#x6CD5;</span>
+<span class="token keyword">function</span> <span class="token function">Encrypt</span><span class="token punctuation">(</span><span class="token parameter">word</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span>  <span class="token constant">KEYUTIL</span><span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span>pubkey<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">encrypt</span><span class="token punctuation">(</span>CryptoJS<span class="token punctuation">.</span><span class="token function">HmacSHA256</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">outputObj</span><span class="token punctuation">(</span><span class="token parameter">jsonData</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> word <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">username=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>jsonData<span class="token punctuation">.</span>username<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;password=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>jsonData<span class="token punctuation">.</span>password<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;signature&quot;</span><span class="token operator">:</span> <span class="token function">Encrypt</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;key&quot;</span><span class="token operator">:</span> key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">username</span><span class="token operator">:</span> jsonData<span class="token punctuation">.</span>username<span class="token punctuation">,</span> <span class="token literal-property property">password</span><span class="token operator">:</span> jsonData<span class="token punctuation">.</span>password<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="../../images/image-20241031103213946.png" alt="image-20241031103213946"></p>
+<pre class="language-"><code class="lang-js">sign <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">password</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    key <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">1234123412341234</span><span class="token template-punctuation string">`</span></span>
+    data<span class="token operator">=</span>f<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">username=admin&amp;password=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>password<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    pem <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvbwzeHs99hoATSTO6ZQg
+HHYr9U0ZV3l5KDhgwcFAe2nhBfyX4Po2OT8bb0te68y2pyl3/zrYxn5WJY2WXgNa
+cZycgYCBkESkXUWrAV6zsUQFmIX8CMqv6lCElZDiO5aNEB4c4cM0P+tECtPHgbQK
+t1QQD1iD9Dlw800eIPE8tPoeHLcdyQJYrLZgHgAPN4J6vwhtThyyqjUJWFNp/V2J
+bgo3GsxKZaU2emrFWXqcGVQP78mVUih4YlWHGFPyEnOLqg0noAb0vttsUILJvLrn
+v2pOcnxj1zgK8CghMrehJ9XycGaKI9JIisD4noE70videPMYIZxzyA7YB+k4nEMs
+8QIDAQAB
+-----END PUBLIC KEY-----</span><span class="token template-punctuation string">`</span></span>
+    <span class="token comment">//KEYUTIL.getKey(pubkey).encrypt(CryptoJS.HmacSHA256(word, key.toString(CryptoJS.enc.Utf8)).toString());</span>
+    signature <span class="token operator">=</span> codec<span class="token punctuation">.</span><span class="token function">EncodeToHex</span><span class="token punctuation">(</span>codec<span class="token punctuation">.</span><span class="token function">HmacSha256</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    signature <span class="token operator">=</span> codec<span class="token punctuation">.</span><span class="token function">EncodeToHex</span><span class="token punctuation">(</span>codec<span class="token punctuation">.</span><span class="token function">RSAEncryptWithPKCS1v15</span><span class="token punctuation">(</span>pem<span class="token punctuation">,</span>signature<span class="token punctuation">)</span><span class="token operator">~</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> signature    
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x8BF7;&#x6C42;&#x52A0;&#x5BC6;">&#x8BF7;&#x6C42;&#x52A0;&#x5BC6;</h2>
+<h3 id="aes-cbc&#x6A21;&#x5F0F;&#xFF08;keyiv&#x524D;&#x7AEF;&#x751F;&#x6210;&#xFF09;">AES CBC&#x6A21;&#x5F0F;&#xFF08;KEY/IV&#x524D;&#x7AEF;&#x751F;&#x6210;&#xFF09;</h3>
+<pre class="language-"><code class="lang-js"><span class="token comment">//&#x751F;&#x6210;IV</span>
+<span class="token keyword">var</span> iv <span class="token operator">=</span> CryptoJS<span class="token punctuation">.</span>lib<span class="token punctuation">.</span>WordArray<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">128</span><span class="token operator">/</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x751F;&#x6210;key</span>
+<span class="token keyword">function</span> <span class="token function">generateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>  CryptoJS<span class="token punctuation">.</span>enc<span class="token punctuation">.</span>Utf8<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&quot;1234123412341234&quot;</span><span class="token punctuation">)</span>  <span class="token comment">// &#x5341;&#x516D;&#x4F4D;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x4F5C;&#x4E3A;&#x5BC6;&#x94A5;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// &#x52A0;&#x5BC6;&#x65B9;&#x6CD5;</span>
+<span class="token keyword">function</span> <span class="token function">Encrypt</span><span class="token punctuation">(</span><span class="token parameter">word</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span>  CryptoJS<span class="token punctuation">.</span><span class="token constant">AES</span><span class="token punctuation">.</span><span class="token function">encrypt</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">iv</span><span class="token operator">:</span> iv<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">outputObj</span><span class="token punctuation">(</span><span class="token parameter">jsonData</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> word <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>jsonData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token function">Encrypt</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string-property property">&quot;key&quot;</span><span class="token operator">:</span> key<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">iv</span><span class="token operator">:</span> iv<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p><img src="../../images/image-20241031110441680.png" alt="image-20241031110441680"></p>
+<p>yakit&#x70ED;&#x52A0;&#x8F7D;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-js">m <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string-property property">&quot;username&quot;</span><span class="token operator">:</span><span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span><span class="token string-property property">&quot;password&quot;</span><span class="token operator">:</span>password<span class="token punctuation">}</span>
+<span class="token comment">//&#x8F6C;&#x5316;&#x4E3A;json&#x5B57;&#x7B26;&#x4E32;</span>
+data <span class="token operator">=</span> json<span class="token punctuation">.</span><span class="token function">dumps</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span>
+
+key <span class="token operator">=</span> codec<span class="token punctuation">.</span><span class="token function">DecodeHex</span><span class="token punctuation">(</span><span class="token string">&quot;31323334313233343132333431323334&quot;</span><span class="token punctuation">)</span><span class="token operator">~</span>
+iv <span class="token operator">=</span> codec<span class="token punctuation">.</span><span class="token function">DecodeHex</span><span class="token punctuation">(</span><span class="token string">&quot;1383d3da1795e731f78388eefc50dd03&quot;</span><span class="token punctuation">)</span><span class="token operator">~</span>
+signature <span class="token operator">=</span> codec<span class="token punctuation">.</span><span class="token function">AESCBCEncryptWithPKCS7Padding</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> data<span class="token punctuation">,</span> iv<span class="token punctuation">)</span><span class="token operator">~</span>
+signature <span class="token operator">=</span> codec<span class="token punctuation">.</span><span class="token function">EncodeBase64</span><span class="token punctuation">(</span>signature<span class="token punctuation">)</span>
+<span class="token keyword">return</span> signature
+</code></pre>
+<h3 id="aes-cbc&#x6A21;&#x5F0F;&#xFF08;keyiv&#x901A;&#x8FC7;rsa&#x52A0;&#x5BC6;&#x4F20;&#x8F93;&#xFF09;">AES CBC&#x6A21;&#x5F0F;&#xFF08;Key/IV&#x901A;&#x8FC7;RSA&#x52A0;&#x5BC6;&#x4F20;&#x8F93;&#xFF09;</h3>
+<p>&#x5168;&#x52A0;&#x5BC6;&#x6D41;&#x7A0B;</p>
+<p>&#x670D;&#x52A1;&#x7AEF;&#xFF1A;pub1&#xFF0C;pri1&#xFF0C;key1&#xFF0C;iv1
+&#x5BA2;&#x6237;&#x7AEF;&#xFF1A;pub2&#xFF0C;pri2&#xFF0C;key2&#xFF0C;iv2</p>
+<p>&#x8BF7;&#x6C42;&#x5305;&#xFF1A;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x968F;&#x673A;&#x751F;&#x6210;aes&#x52A0;&#x5BC6;&#x6240;&#x9700;&#x7684;key2&#x4E0E;iv2&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x7528;pub1&#x52A0;&#x5BC6;key2&#x4E0E;iv2&#xFF0C;key2&#x52A0;&#x5BC6;&#x6570;&#x636E;data&#xFF0C;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x4E3A;{enc_data&#xFF0C;enc_key,enc_iv}</p>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x5148;&#x4F7F;&#x7528;pri1&#x6765;&#x89E3;&#x5BC6;&#x5F97;&#x5230;key2&#x4E0E;iv2&#xFF0C;&#x518D;&#x4F7F;&#x7528;&#x5176;&#x89E3;&#x5BC6;&#x6570;&#x636E;data</p>
+<p>&#x8FD4;&#x56DE;&#x5305;&#xFF1A;</p>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x968F;&#x673A;&#x751F;&#x6210;aes&#x52A0;&#x5BC6;&#x6240;&#x9700;&#x7684;key1&#x4E0E;iv1&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x4F7F;&#x7528;pub2&#x52A0;&#x5BC6;key1&#x4E0E;iv1&#xFF0C;key1&#x52A0;&#x5BC6;&#x6570;&#x636E;data&#xFF0C;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x4E3A;{enc_data&#xFF0C;enc_key,enc_iv}</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x5148;&#x4F7F;&#x7528;pri2&#x6765;&#x89E3;&#x5BC6;&#x5F97;&#x5230;key1&#x4E0E;iv1&#xFF0C;&#x518D;&#x4F7F;&#x7528;&#x5176;&#x89E3;&#x5BC6;&#x6570;&#x636E;data</p>
+<p><img src="../../images/image-20241118225009487.png" alt="image-20241118225009487"></p>
+<h2 id="&#x9632;&#x91CD;&#x653E;">&#x9632;&#x91CD;&#x653E;</h2>
+<h1 id="js&#x6DF7;&#x6DC6;">js&#x6DF7;&#x6DC6;</h1>
+<h2 id="js&#x6DF7;&#x6DC6;&#x4E86;&#x89E3;">js&#x6DF7;&#x6DC6;&#x4E86;&#x89E3;</h2>
+<ul>
+<li>webpack</li>
+</ul>
+<h2 id="jsrpc&#x4F7F;&#x7528;">JSRPC&#x4F7F;&#x7528;</h2>
+<h3 id="console&#x6CE8;&#x5165;jsrpc">console&#x6CE8;&#x5165;jsrpc</h3>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Hlclient</span><span class="token punctuation">(</span><span class="token parameter">wsURL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>wsURL <span class="token operator">=</span> wsURL<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>handlers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">_execjs</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> param</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> res <span class="token operator">=</span> <span class="token function">eval</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token function">resolve</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>socket <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>wsURL<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&apos;wsURL can not be empty!!&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Hlclient</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">connect</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;begin of connect to wsURL: &apos;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wsURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>wsURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>socket<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span><span class="token function">handlerRequest</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;connection failed,reconnect after 10s&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>socket<span class="token punctuation">.</span><span class="token function-variable function">onclose</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;rpc&#x5DF2;&#x5173;&#x95ED;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>socket<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&apos;open&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;rpc&#x8FDE;&#x63A5;&#x6210;&#x529F;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>socket<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&apos;error&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&apos;rpc&#x8FDE;&#x63A5;&#x51FA;&#x9519;,&#x8BF7;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6253;&#x5F00;&#x670D;&#x52A1;&#x7AEF;:&apos;</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">Hlclient</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">send</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Hlclient</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">regAction</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">func_name<span class="token punctuation">,</span> func</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> func_name <span class="token operator">!==</span> <span class="token string">&apos;string&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;an func_name must be string&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> func <span class="token operator">!==</span> <span class="token string">&apos;function&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;must be function&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;register func_name: &quot;</span> <span class="token operator">+</span> func_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">[</span>func_name<span class="token punctuation">]</span> <span class="token operator">=</span> func<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">//&#x6536;&#x5230;&#x6D88;&#x606F;&#x540E;&#x8FD9;&#x91CC;&#x5904;&#x7406;&#xFF0C;</span>
+<span class="token class-name">Hlclient</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">handlerRequest</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">requestJson</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>requestJson<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;catch error&quot;</span><span class="token punctuation">,</span> requestJson<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        result <span class="token operator">=</span> <span class="token function">transjson</span><span class="token punctuation">(</span>requestJson<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//console.log(result)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">[</span><span class="token string">&apos;action&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sendResult</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;need request param {action}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> action <span class="token operator">=</span> result<span class="token punctuation">[</span><span class="token string">&quot;action&quot;</span><span class="token punctuation">]</span>
+    <span class="token keyword">var</span> theHandler <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">[</span>action<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>theHandler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sendResult</span><span class="token punctuation">(</span>action<span class="token punctuation">,</span> <span class="token string">&apos;action not found&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">[</span><span class="token string">&quot;param&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">theHandler</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                _this<span class="token punctuation">.</span><span class="token function">sendResult</span><span class="token punctuation">(</span>action<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> param <span class="token operator">=</span> result<span class="token punctuation">[</span><span class="token string">&quot;param&quot;</span><span class="token punctuation">]</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            param <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token function">theHandler</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span><span class="token function">sendResult</span><span class="token punctuation">(</span>action<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> param<span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;error: &quot;</span> <span class="token operator">+</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        _this<span class="token punctuation">.</span><span class="token function">sendResult</span><span class="token punctuation">(</span>action<span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Hlclient</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sendResult</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">action<span class="token punctuation">,</span> e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> e <span class="token operator">===</span> <span class="token string">&apos;object&apos;</span> <span class="token operator">&amp;&amp;</span> e <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            e <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token comment">//&#x4E0D;&#x662F;json&#x65E0;&#x9700;&#x64CD;&#x4F5C;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>action <span class="token operator">+</span> <span class="token function">atob</span><span class="token punctuation">(</span><span class="token string">&quot;aGxeX14&quot;</span><span class="token punctuation">)</span> <span class="token operator">+</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">transjson</span><span class="token punctuation">(</span><span class="token parameter">formdata</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">&quot;action&quot;:(?&lt;actionName&gt;.*?),</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span>
+    <span class="token keyword">var</span> actionName <span class="token operator">=</span> regex<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span>formdata<span class="token punctuation">)</span><span class="token punctuation">.</span>groups<span class="token punctuation">.</span>actionName
+    stringfystring <span class="token operator">=</span> formdata<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">{..data..:.*..\w+..:\s...*?..}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    stringfystring <span class="token operator">=</span> stringfystring<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\\&quot;</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&apos;&quot;&apos;</span><span class="token punctuation">)</span>
+    paramstring <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>stringfystring<span class="token punctuation">)</span>
+    tens <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">{&quot;action&quot;:</span><span class="token template-punctuation string">`</span></span> <span class="token operator">+</span> actionName <span class="token operator">+</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">,&quot;param&quot;:{}}</span><span class="token template-punctuation string">`</span></span>
+    tjson <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>tens<span class="token punctuation">)</span>
+    tjson<span class="token punctuation">.</span>param <span class="token operator">=</span> paramstring
+    <span class="token keyword">return</span> tjson
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6CE8;&#x518C;&#x76D1;&#x542C;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> demo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Hlclient</span><span class="token punctuation">(</span><span class="token string">&quot;ws://127.0.0.1:12080/ws?group=zzz&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x901A;&#x8FC7;vjstools&#x6216;&#x8005;&#x5173;&#x952E;&#x5B57;&#x5BFB;&#x627E;&#x65AD;&#x70B9;">&#x901A;&#x8FC7;v_jstools&#x6216;&#x8005;&#x5173;&#x952E;&#x5B57;&#x5BFB;&#x627E;&#x65AD;&#x70B9;</h3>
+<p>v_jstools&#x914D;&#x7F6E;</p>
+<pre class="language-"><code>hook-console
+hook-function
+hook-eval
+&#x52FE;&#x9009; `&#x662F;&#x5426;&#x5728;&#x8C03;&#x8BD5;&#x8F93;&#x51FA;&#x65F6;&#xFF0C;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x51FA;&#x53D1;&#x7684;&#x5730;&#x5740;`
+&#x52FE;&#x9009;  `&#x662F;&#x5426;&#x542F;&#x7528;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x52A0;&#x89E3;&#x5BC6;&#x51FD;&#x6570;&#x6302;&#x94A9;&#x8F93;&#x51FA;&#x529F;&#x80FD;`
+hook-JSON.parse
+hook-JSON.stringify
+hook-escape
+hook-atob
+hook-btoa
+</code></pre><ul>
+<li>v_jstools&#xFF1A;HOOK json &#x5B9A;&#x4F4D;</li>
+</ul>
+<ul>
+<li><p>&#x5173;&#x952E;&#x5B57;</p>
+<pre class="language-"><code>encrypt
+decrypt
+aes
+&#x52A0;&#x5BC6;&#x5E93;
+&#x8BF7;&#x6C42;&#x5934;&#x952E;&#x503C;
+....
+</code></pre></li>
+</ul>
+<h3 id="console&#x6CE8;&#x518C;&#x8BF7;&#x6C42;&#x5305;&#x6240;&#x9700;&#x8981;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;">console&#x6CE8;&#x518C;&#x8BF7;&#x6C42;&#x5305;&#x6240;&#x9700;&#x8981;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;</h3>
+<p>&#x8FD0;&#x884C;&#x5230;&#x65AD;&#x70B9;&#x65F6;&#xFF0C;&#x6CE8;&#x518C;&#x5168;&#x5C40;&#x53D8;&#x91CF;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x590D;&#x5236;&#x9875;&#x9762;&#x8FDB;&#x884C;</strong></p>
+<pre class="language-"><code class="lang-js"><span class="token comment">//&#x65F6;&#x95F4;&#x6233;</span>
+window<span class="token punctuation">.</span>time <span class="token operator">=</span> Date<span class="token punctuation">.</span>parse
+<span class="token comment">//requestId</span>
+window<span class="token punctuation">.</span>id <span class="token operator">=</span> p
+<span class="token comment">//v&#x51FD;&#x6570;</span>
+window<span class="token punctuation">.</span>v1 <span class="token operator">=</span> v
+<span class="token comment">//&#x7B7E;&#x540D;</span>
+window<span class="token punctuation">.</span>m <span class="token operator">=</span> a<span class="token punctuation">.</span>a<span class="token punctuation">.</span><span class="token constant">MD5</span>
+<span class="token comment">//&#x5047;&#x8BBE;&#x52A0;&#x5BC6;&#x51FD;&#x6570;let data = r.encVal(m)&#xFF0C;&#x8C03;&#x7528;&#x52A0;&#x5BC6;&#x5373;&#x4E3A;enc.encVal(param)</span>
+window<span class="token punctuation">.</span>enc <span class="token operator">=</span> r
+</code></pre>
+<h3 id="&#x6CE8;&#x518C;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x51FD;&#x6570;">&#x6CE8;&#x518C;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x51FD;&#x6570;</h3>
+<pre class="language-"><code class="lang-js"><span class="token comment">// enc&#x4E3A;jsrpc&#x51FD;&#x6570;&#x540D;&#x5373;action=enc</span>
+demo<span class="token punctuation">.</span><span class="token function">regAction</span><span class="token punctuation">(</span><span class="token string">&quot;enc&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>param</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x8BF7;&#x6C42;&#x9700;&#x8981;&#x7684;&#x5404;&#x79CD;&#x503C;</span>
+    <span class="token keyword">let</span> timestamp <span class="token operator">=</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> requestid <span class="token operator">=</span> <span class="token function">id</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> v_data <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token function">v1</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> sign <span class="token operator">=</span> <span class="token function">m</span><span class="token punctuation">(</span>v_data <span class="token operator">+</span> requestid <span class="token operator">+</span> timestamp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x8C03;&#x7528;&#x6CE8;&#x518C;&#x7684;&#x5168;&#x5C40;&#x51FD;&#x6570;&#x83B7;&#x5F97;&#x503C;</span>
+    <span class="token keyword">let</span> encstr <span class="token operator">=</span> <span class="token function">enc</span><span class="token punctuation">(</span>v_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token comment">// &#x8FD4;&#x56DE;&#x6570;&#x636E;</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;timestamp&quot;</span><span class="token operator">:</span>timestamp<span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;requestid&quot;</span><span class="token operator">:</span>requestid<span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;encstr&quot;</span><span class="token operator">:</span>encstr<span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;sign&quot;</span><span class="token operator">:</span>sign
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-"><code class="lang-js">demo<span class="token punctuation">.</span><span class="token function">regAction</span><span class="token punctuation">(</span><span class="token string">&quot;dec&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>param</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x8BF7;&#x6C42;&#x9700;&#x8981;&#x7684;&#x5404;&#x79CD;&#x503C;</span>
+    <span class="token keyword">let</span> timestamp <span class="token operator">=</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> requestid <span class="token operator">=</span> <span class="token function">id</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> v_data <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token function">v1</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> sign <span class="token operator">=</span> <span class="token function">m</span><span class="token punctuation">(</span>v_data <span class="token operator">+</span> requestid <span class="token operator">+</span> timestamp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x8C03;&#x7528;&#x6CE8;&#x518C;&#x7684;&#x5168;&#x5C40;&#x51FD;&#x6570;&#x83B7;&#x5F97;&#x503C;</span>
+    <span class="token keyword">let</span> encstr <span class="token operator">=</span> <span class="token function">dec</span><span class="token punctuation">(</span>v_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token comment">// &#x8FD4;&#x56DE;&#x6570;&#x636E;</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;timestamp&quot;</span><span class="token operator">:</span>timestamp<span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;requestid&quot;</span><span class="token operator">:</span>requestid<span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;encstr&quot;</span><span class="token operator">:</span>encstr<span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;sign&quot;</span><span class="token operator">:</span>sign
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x8C03;&#x8BD5;jsrpc">&#x8C03;&#x8BD5;jsrpc</h3>
+<pre class="language-"><code class="lang-http">POST /go
+
+group=zzz&amp;action=req&amp;data=
+</code></pre>
+<h3 id="&#x7F16;&#x5199;&#x8BF7;&#x6C42;&#x66FF;&#x6362;&#x4EE3;&#x7801;">&#x7F16;&#x5199;&#x8BF7;&#x6C42;&#x66FF;&#x6362;&#x4EE3;&#x7801;</h3>
+<h4 id="1&#x8054;&#x52A8;yakit&#x70ED;&#x52A0;&#x8F7D;">1.&#x8054;&#x52A8;Yakit&#x70ED;&#x52A0;&#x8F7D;</h4>
+<p>&#x8BF7;&#x6C42;&#x52A0;&#x5BC6;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x5B9A;&#x4E49;&#x52A0;&#x5BC6;&#x51FD;&#x6570;</span>
+func <span class="token function">get_enc</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">//JSrpc&#x7684;group</span>
+    group <span class="token operator">=</span> <span class="token string">&quot;zzz&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//jsrpc&#x7684;action</span>
+    action <span class="token operator">=</span> <span class="token string">&quot;enc&quot;</span><span class="token punctuation">;</span>
+
+    rsp<span class="token punctuation">,</span>rep<span class="token punctuation">,</span>err <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">Post</span><span class="token punctuation">(</span><span class="token string">&quot;http://127.0.0.1:12080/go&quot;</span><span class="token punctuation">,</span>poc<span class="token punctuation">.</span><span class="token function">replaceBody</span><span class="token punctuation">(</span><span class="token string">&quot;group=&quot;</span><span class="token operator">+</span>group<span class="token operator">+</span><span class="token string">&quot;&amp;action=&quot;</span><span class="token operator">+</span>action<span class="token operator">+</span><span class="token string">&quot;&amp;param=&quot;</span><span class="token operator">+</span>data<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">,</span>poc<span class="token punctuation">.</span><span class="token function">appendHeader</span><span class="token punctuation">(</span><span class="token string">&quot;content-type&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;application/x-www-form-urlencoded&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> json<span class="token punctuation">.</span><span class="token function">loads</span><span class="token punctuation">(</span>rsp<span class="token punctuation">.</span><span class="token function">GetBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// beforeRequest &#x5141;&#x8BB8;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5305;&#x524D;&#x518D;&#x505A;&#x4E00;&#x6B21;&#x5904;&#x7406;&#xFF0C;&#x5B9A;&#x4E49;&#x4E3A; func(origin []byte) []byte</span>
+beforeRequest <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">req</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x4F53;</span>
+    req_body <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">GetHTTPPacketBody</span><span class="token punctuation">(</span>req<span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x901A;&#x8FC7;jsprc&#x8C03;&#x7528;&#x83B7;&#x53D6;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;</span>
+    res <span class="token operator">=</span> <span class="token function">get_enc</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>req_body<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    res <span class="token operator">=</span> json<span class="token punctuation">.</span><span class="token function">loads</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+
+    <span class="token comment">//&#x4FEE;&#x6539;&#x8BF7;&#x6C42;&#x5934;</span>
+    req <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">ReplaceHTTPPacketHeader</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> <span class="token string">&quot;requestId&quot;</span><span class="token punctuation">,</span> res<span class="token punctuation">[</span><span class="token string">&quot;requestid&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    req <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">ReplaceHTTPPacketHeader</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> <span class="token string">&quot;timestamp&quot;</span><span class="token punctuation">,</span> res<span class="token punctuation">[</span><span class="token string">&quot;timestamp&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    req <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">ReplaceHTTPPacketHeader</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> <span class="token string">&quot;sign&quot;</span><span class="token punctuation">,</span> res<span class="token punctuation">[</span><span class="token string">&quot;sign&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment">//&#x8BF7;&#x6C42;&#x4F53;&#x66FF;&#x6362;&#x4E3A;&#x52A0;&#x5BC6;&#x6570;&#x636E;</span>
+    req <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">ReplaceHTTPPacketBody</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">[</span><span class="token string">&quot;encstr&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x8FD4;&#x56DE;&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x6570;&#x636E;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>req<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x89E3;&#x5BC6;&#x8BF7;&#x6C42;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x5B9A;&#x4E49;&#x89E3;&#x5BC6;&#x5BC6;&#x51FD;&#x6570;</span>
+func <span class="token function">get_dec</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">//JSrpc&#x7684;group</span>
+    group <span class="token operator">=</span> <span class="token string">&quot;zzz&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//jsrpc&#x7684;action</span>
+    action <span class="token operator">=</span> <span class="token string">&quot;dec&quot;</span><span class="token punctuation">;</span>
+
+    rsp<span class="token punctuation">,</span>rep<span class="token punctuation">,</span>err <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">Post</span><span class="token punctuation">(</span><span class="token string">&quot;http://127.0.0.1:12080/go&quot;</span><span class="token punctuation">,</span>poc<span class="token punctuation">.</span><span class="token function">replaceBody</span><span class="token punctuation">(</span><span class="token string">&quot;group=&quot;</span><span class="token operator">+</span>group<span class="token operator">+</span><span class="token string">&quot;&amp;action=&quot;</span><span class="token operator">+</span>action<span class="token operator">+</span><span class="token string">&quot;&amp;param=&quot;</span><span class="token operator">+</span>data<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">,</span>poc<span class="token punctuation">.</span><span class="token function">appendHeader</span><span class="token punctuation">(</span><span class="token string">&quot;content-type&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;application/x-www-form-urlencoded&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> json<span class="token punctuation">.</span><span class="token function">loads</span><span class="token punctuation">(</span>rsp<span class="token punctuation">.</span><span class="token function">GetBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// afterRequest &#x5141;&#x8BB8;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x54CD;&#x5E94;&#x505A;&#x5904;&#x7406;&#xFF0C;&#x5B9A;&#x4E49;&#x4E3A; func(origin []byte) []byte</span>
+afterRequest <span class="token operator">=</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">rsp</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x4F53;</span>
+    rsp_body <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">GetHTTPPacketBody</span><span class="token punctuation">(</span>rsp<span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x901A;&#x8FC7;jsprc&#x8C03;&#x7528;&#x83B7;&#x53D6;&#x660E;&#x6587;</span>
+    res <span class="token operator">=</span> <span class="token function">get_dec</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>rsp_body<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">// &#x66FF;&#x6362;&#x54CD;&#x5E94;&#x4F53;</span>
+    rsp <span class="token operator">=</span> poc<span class="token punctuation">.</span><span class="token function">ReplaceBody</span><span class="token punctuation">(</span>rsp<span class="token punctuation">,</span> res<span class="token punctuation">,</span> <span class="token boolean">false</span> <span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x8FD4;&#x56DE;&#x89E3;&#x7801;&#x540E;&#x7684;&#x6570;&#x636E;</span>
+     <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>rsp<span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="2mitm&#x4E2D;&#x8F6C;">2.mitm&#x4E2D;&#x8F6C;</h4>
+<h5 id="mitmpy">mitm.py</h5>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> json
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> hashlib
+<span class="token keyword">import</span> uuid
+<span class="token keyword">from</span> mitmproxy <span class="token keyword">import</span> http
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> requests
+
+<span class="token comment"># &#x9650;&#x5236;&#x57DF;&#x540D;</span>
+domain <span class="token operator">=</span> <span class="token string">&quot;http://39.98.108.20:8085/api/&quot;</span>
+
+<span class="token keyword">def</span> <span class="token function">request</span><span class="token punctuation">(</span>flow<span class="token punctuation">:</span> http<span class="token punctuation">.</span>HTTPFlow<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> flow<span class="token punctuation">.</span>request<span class="token punctuation">.</span>pretty_url<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span>domain<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># &#x63D0;&#x53D6;&#x539F;&#x59CB;&#x8BF7;&#x6C42;&#x4F53;</span>
+        original_body <span class="token operator">=</span> flow<span class="token punctuation">.</span>request<span class="token punctuation">.</span>content<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span>
+        data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;group&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;zzz&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;action&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;req&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;param&quot;</span><span class="token punctuation">:</span> original_body<span class="token punctuation">}</span>
+        res <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">&quot;http://127.0.0.1:12080/&#x6CE8;&#x518C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&quot;</span><span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span>
+        res_json <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>res<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">]</span>
+        data_json <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>res_json<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>data_json<span class="token punctuation">)</span>
+
+        <span class="token comment"># &#x5BF9;&#x8BF7;&#x6C42;&#x4F53;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x5904;&#x7406;&#xFF08;&#x8FD9;&#x91CC;&#x5047;&#x8BBE;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#x662F;&#x7B80;&#x5355;&#x7684;&#x54C8;&#x5E0C;&#xFF09;</span>
+        encrypted_body <span class="token operator">=</span> data_json<span class="token punctuation">[</span><span class="token string">&quot;encstr&quot;</span><span class="token punctuation">]</span>
+
+        <span class="token comment"># &#x66FF;&#x6362;&#x8BF7;&#x6C42;&#x4F53;</span>
+        flow<span class="token punctuation">.</span>request<span class="token punctuation">.</span>text <span class="token operator">=</span> encrypted_body
+
+        <span class="token comment"># &#x751F;&#x6210; requestId&#xFF0C;sign &#x548C; timestamp</span>
+        request_id <span class="token operator">=</span> data_json<span class="token punctuation">[</span><span class="token string">&quot;requestid&quot;</span><span class="token punctuation">]</span>
+        timestamp <span class="token operator">=</span> data_json<span class="token punctuation">[</span><span class="token string">&quot;timestamp&quot;</span><span class="token punctuation">]</span>    
+        sign <span class="token operator">=</span> data_json<span class="token punctuation">[</span><span class="token string">&quot;sign&quot;</span><span class="token punctuation">]</span>
+
+        <span class="token comment"># &#x6DFB;&#x52A0;&#x6216;&#x66FF;&#x6362;&#x8BF7;&#x6C42;&#x5934;</span>
+        flow<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&quot;requestId&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> request_id
+        flow<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&quot;timestamp&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>timestamp<span class="token punctuation">)</span>
+        flow<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&quot;sign&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> sign
+</code></pre>
+<p>&#x542F;&#x52A8;</p>
+<pre class="language-"><code class="lang-cmd">mitmproxy -p 8083 -s mitm.py
+</code></pre>
+<p><img src="../../images/image-20241024233838350.png" alt="image-20241024233838350"></p>
+<h5 id="&#x8BBE;&#x7F6E;burp&#x4E0A;&#x6E38;&#x4EE3;&#x7406;">&#x8BBE;&#x7F6E;burp&#x4E0A;&#x6E38;&#x4EE3;&#x7406;</h5>
+<p><img src="../../images/&#x5C4F;&#x5E55;&#x622A;&#x56FE; 2024-10-24 234142.png" alt="&#x5C4F;&#x5E55;&#x622A;&#x56FE; 2024-10-24 234142"></p>
+<p>&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#x6548;&#x679C;</p>
+<p><img src="../../images/image-20241024234420050.png" alt="image-20241024234420050"></p>
+<p>mitmproxy&#x6309;&#x56DE;&#x8F66;&#x5065;&#x67E5;&#x770B;&#x5177;&#x4F53;flow</p>
+<h2 id="&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</h2>
+<h3 id="cap4j&#x6846;&#x67B6;">Cap4j&#x6846;&#x67B6;</h3>
+<p>&#x67D0;&#x94F6;&#x884C;&#x5F00;&#x53D1;&#x6846;&#x67B6;</p>
+<ul>
+<li>&#x9632;&#x7BE1;&#x6539;X-VALID-Token</li>
+<li>&#x9632;&#x91CD;&#x653E;X-AntiReply-Token&#xFF08;&#x5BC6;&#x6587;&#x6BCF;&#x6B21;&#x4E0D;&#x540C;&#xFF09;</li>
+<li>&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;AUTH&#x52A0;&#x5BC6;&#xFF08;&#x5BC6;&#x6587;&#x6BCF;&#x6B21;&#x4E0D;&#x540C;&#xFF09;</li>
+<li>&#x5B9A;&#x65F6;&#x8BF7;&#x6C42;/api/refershtoken&#x63A5;&#x53E3;</li>
+</ul>
+<p>&#x60C5;&#x51B5;1</p>
+<p>&#x5982;&#x679C;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4E3A;JSON&#x683C;&#x5F0F;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;POST&#x8BF7;&#x6C42;&#x6539;&#x4E3A;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#x5373;&#x53EF;&#x7ED5;&#x8FC7;</p>
+<p>&#x60C5;&#x51B5;2</p>
+<p>&#x5982;&#x679C;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x4E3A;JSON&#x683C;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;jsrpc+yakit&#x8FDB;&#x884C;&#x7ED5;&#x8FC7;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;<strong>&#x4F1A;&#x5B9A;&#x65F6;&#x8BF7;&#x6C42;<code>/api/refershtoken</code>&#x63A5;&#x53E3;&#x4F1A;&#x5237;&#x65B0;<code>access-token</code>&#xFF0C;&#x5BFC;&#x81F4;&#x751F;&#x6210;&#x7684;X-AntiReply-Token&#xFF0C;AUTH&#x4F1A;&#x6539;&#x53D8;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x5168;&#x5C40;&#x53D8;&#x91CF;</strong></p>
+<h1 id="&#x5176;&#x4ED6;&#x53C2;&#x8003;&#x6848;&#x4F8B;">&#x5176;&#x4ED6;&#x53C2;&#x8003;&#x6848;&#x4F8B;</h1>
+<p><a href="https://xz.aliyun.com/t/15969?time__1311=GqjxcD2DnD0Du7Dl2%2BY0%3Dt53wDg7QDmOAbD" target="_blank">https://xz.aliyun.com/t/15969?time__1311=GqjxcD2DnD0Du7Dl2%2BY0%3Dt53wDg7QDmOAbD</a>
+<a href="https://xz.aliyun.com/t/16497?time__1311=GuD%3Dqmx%2Bxfxx%2FD0lWGkDuCagYY5Kw%2B4pD" target="_blank">https://xz.aliyun.com/t/16497?time__1311=GuD%3Dqmx%2Bxfxx%2FD0lWGkDuCagYY5Kw%2B4pD</a></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Khaz 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2024-12-06 21:30:56
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                        
+                    </section>
+                    
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+        
+        <a href="../AI大模型.html" class="navigation navigation-next navigation-unique" aria-label="Next page: AI大模型">
+            <i class="fa fa-angle-right"></i>
+        </a>
+        
+        
+        
+    </div>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"前端加密渗透","level":"1.2.2.13.1","depth":4,"next":{"title":"AI大模型","level":"1.2.2.14","depth":3,"path":"01.渗透测试/02.Web安全/AI大模型.md","ref":"01.渗透测试/02.Web安全/AI大模型.md","articles":[]},"previous":{"title":"13.前端加密对抗","level":"1.2.2.13","depth":3,"ref":"","articles":[{"title":"前端加密渗透","level":"1.2.2.13.1","depth":4,"path":"01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.md","ref":"01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","hide-element","code","theme-d4t","-lunr","-search","-sharing","search-pro-fixed","-highlight","chapter-fold","expandable-chapters","popup","donate","tbfed-pagefooter","github","flexible-alerts","prism","back-to-top-button","auto-scroll-table","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-d4t":{},"tbfed-pagefooter":{"copyright":"Copyright &copy Khaz 2024","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"],"lang":{"flow":"typescript"},"ignore":["mermaid","eval-js","ascii","result","manifest","payload","google","tree","java_out","log4j2","jsp","class","Exception","stack","c#","xml-dtd","C++","twig","jinja2","exception","tpl"]},"github":{"url":"https://github.com/"},"d4t":{"search-placeholder":"请输入关键字搜索","logo":"/README.assets/logo.svg","favicon":"/README.assets/favicon.ico"},"livereload":{},"splitter":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"search-pro-fixed":{},"donate":{"alipay":"/README.assets/gzh_1.png","alipayText":"点点广告🙏","button":"支持作者","title":"","wechat":"/README.assets/gzh_0.png","wechatText":"关闭Adblock"},"hide-element":{"elements":[".gitbook-link",".title",".treeview__copyright",".treeview__main-title"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Khaz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Khaz's 知识库","gitbook":"*","description":"个人的部分知识技能","theme-default":{"showLevel":true}},"file":{"path":"01.渗透测试/02.Web安全/13.前端加密对抗/前端加密渗透.md","mtime":"2024-12-06T13:30:56.054Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-29T12:32:08.665Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro-fixed/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro-fixed/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-d4t/script.js"></script>
+        
+    
+
+    </body>
+</html>
+
